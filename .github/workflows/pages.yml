@@ -24,11 +24,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Extract v0.5.26 source
+      - name: Extract v0.5.27 source
         run: |
           mkdir -p _site
-          base64 --decode cyber-incident-explorer-v0.5.26.zip.b64 > _site/cyber-incident-explorer-v0.5.26.zip
-          unzip -q _site/cyber-incident-explorer-v0.5.26.zip -d _site
+          base64 --decode cyber-incident-explorer-v0.5.27.zip.b64 > _site/cyber-incident-explorer-v0.5.27.zip
+          unzip -q _site/cyber-incident-explorer-v0.5.27.zip -d _site
           touch _site/.nojekyll
 
       - name: Configure Pages
