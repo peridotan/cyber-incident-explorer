@@ -24,11 +24,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Extract v0.5.27 source
+      - name: Package v0.5.27 source with license
         run: |
           mkdir -p _site
-          base64 --decode cyber-incident-explorer-v0.5.27.zip.b64 > _site/cyber-incident-explorer-v0.5.27.zip
-          unzip -q _site/cyber-incident-explorer-v0.5.27.zip -d _site
+          base64 --decode cyber-incident-explorer-v0.5.27.zip.b64 > /tmp/cyber-incident-explorer-v0.5.27.zip
+          unzip -q /tmp/cyber-incident-explorer-v0.5.27.zip -d _site
+          cp LICENSE CONTRIBUTING.md _site/
+          (cd _site && zip -q -FS cyber-incident-explorer-v0.5.27.zip index.html README.md QA-REPORT.md LICENSE CONTRIBUTING.md)
           touch _site/.nojekyll
 
       - name: Configure Pages
