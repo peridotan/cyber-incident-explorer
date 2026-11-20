@@ -1,9 +1,9 @@
-# Cyber Incident Explorer v0.5.34
+# Cyber Incident Explorer v0.5.35
 
 架空の企業システム構成図を見ながら、サイバー攻撃の進行、対策の作用点、効果の限界を学ぶ日本語のWeb教材です。
 
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
-**ソースZIP:** [cyber-incident-explorer-v0.5.34.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.34.zip)
+**ソースZIP:** [cyber-incident-explorer-v0.5.35.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.35.zip)
 
 ## 収録シナリオ
 
@@ -15,13 +15,32 @@
 - 公開WebアプリケーションへのSQLインジェクション
 - **DDoS／サービス停止（05）**
 - **ビジネスメール詐欺（06）**
-- **内部不正／情報持ち出し（07、新規）**
+- **内部不正／情報持ち出し（07）**
+- **AIアプリへの攻撃（08、新規）**
 
 ## 学習の進め方
 
 1. シナリオを選び、対策をOFFにして攻撃を最後まで実行します。
 2. 完了後の「対策を変えて比較」を押し、対策を選んで再実行します。
 3. 前回と今回の結果を比べ、「解説」で作用範囲と限界を確認します。
+
+## v0.5.35の変更（08 AIアプリへの攻撃）
+
+- 08「AIアプリへの攻撃」を実装。**計10シナリオ**から選べます。既存9件の画面と操作方法は維持しています。
+- **攻撃の6ステップ：** ①正規利用者が公開文書の要約を依頼 → ②AIアプリが悪意ある指示を含む外部文書を取得 → ③AIが文書本文の指示を権限ある命令と誤認 → ④社内機密文書APIの閲覧を試行 → ⑤ツールを使って不正な宛先への外部POSTを試行 → ⑥送信成立または阻止。
+- **技術対策は3件のみを切り替え対象とする：**
+  1. **社内文書APIの最小権限**：STEP 04で、本来不要な機密文書の閲覧をバックエンド認可で拒否。
+  2. **外部送信ツールの実行権限**：STEP 05で、要約タスクに許可されていない任意宛先POSTツールを実行前に拒否。
+  3. **出口通信の宛先許可制御**：STEP 05で、許可外の攻撃者ドメインへの通信をProxy／FWで拒否。
+- 正規の要約依頼は青点線、攻撃・不正ツール操作は赤線、阻止地点は緑×、未到達の後続操作は灰線で表現します。
+- **過去の事実を消さない：** 読取後に送信を止めても、AIが機密文書を参照した履歴は残ります。
+- モデルへの注意喚起、一般的なプロンプトフィルタ、ログ通知だけで必ず防げるという設定にはせず、モデルとは独立した **API・ツール・ネットワークの強制的認可** を比較します。
+- **固定条件：** 教材上、外部文書の命令をAIが誤採用したと仮定。各防御スイッチは今回の操作と通信先に作用するポリシーが正しく設定されている場合です。実際のAIモデル、社内API、外部通信は呼び出しません。
+
+**参考資料**
+- [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)
+- [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/)
+- [OWASP Excessive Agency（2025年版）](https://owasp.github.io/www-project-top-10-for-large-language-model-applications/2_0_vulns/LLM06_ExcessiveAgency.html)
 
 ## v0.5.34の変更（07 内部不正／情報持ち出し）
 
