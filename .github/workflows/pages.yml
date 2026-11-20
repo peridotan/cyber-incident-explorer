@@ -24,11 +24,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build v0.5.34 site and downloadable source ZIP
+      - name: Build v0.5.35 site and downloadable source ZIP
         run: |
           mkdir -p _site
           cp index.html README.md QA-REPORT.md LICENSE CONTRIBUTING.md _site/
-          (cd _site && zip -q -FS cyber-incident-explorer-v0.5.34.zip index.html README.md QA-REPORT.md LICENSE CONTRIBUTING.md)
+          (cd _site && zip -q -FS cyber-incident-explorer-v0.5.35.zip index.html README.md QA-REPORT.md LICENSE CONTRIBUTING.md)
           touch _site/.nojekyll
 
       - name: Configure Pages
