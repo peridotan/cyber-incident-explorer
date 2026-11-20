@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#101b2c" name="theme-color"/>
 <meta content="システム構成図を見ながらサイバー攻撃と防御の関係を学ぶ、架空のインシデント学習シミュレーター。" name="description"/>
-<title>Cyber Incident Explorer v0.5.38 — システム構成図で学ぶサイバーインシデント</title>
+<title>Cyber Incident Explorer v0.5.39 — システム構成図で学ぶサイバーインシデント</title>
 
 <style>:root{color-scheme:dark;--bg:#0b1422;--panel:#142238;--panel-2:#182940;--line:#2b405b;--text:#eff5ff;--muted:#a3b5cb;--muted2:#7c94af;--blue:#69b5ef;--danger:#fa777e;--success:#55d6ac;--warn:#f4b96e;--shade:#101d30;--radius:15px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% -10%,#1b344e 0,transparent 39%),var(--bg);font-family:Inter,"Noto Sans JP","Yu Gothic",Meiryo,system-ui,sans-serif;color:var(--text);line-height:1.5}button,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,.asset:focus-visible,.diagram-scroller:focus-visible{outline:3px solid #83bff0;outline-offset:3px}.shell{min-height:100vh}.top-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px clamp(22px,4vw,70px);border-bottom:1px solid #253b54;background:#111e2eeb}.brand-group{display:flex;align-items:center;gap:14px}.brand-symbol{width:42px;height:42px;display:grid;place-items:center;color:#7eddd5;background:#183746;border:1px solid #2e6c78;border-radius:12px}.brand-symbol svg{width:25px}.brand-name{font-size:calc(15px * var(--font-scale, 1));letter-spacing:.10em;font-weight:850;white-space:nowrap}.brand-name span{color:#66d6c4}.brand-sub{font-size:calc(11px * var(--font-scale, 1));color:var(--muted);letter-spacing:.05em}.header-right{display:flex;align-items:center;gap:18px}.vtag{font-size:calc(10px * var(--font-scale, 1));color:#83cbde;letter-spacing:.06em;background:#183243;border:1px solid #2f6071;border-radius:999px;padding:6px 10px;white-space:nowrap}.ghost-btn{border:1px solid var(--line);background:#1b2b42;color:#c3d4e7;padding:8px 13px;border-radius:9px;font-size:calc(12px * var(--font-scale, 1))}.ghost-btn:hover{background:#283d57}.main{max-width:1760px;margin:auto;padding:27px clamp(18px,3.5vw,62px) 26px}.intro{display:flex;justify-content:space-between;align-items:center;gap:28px;margin-bottom:21px}.intro-copy{max-width:930px}.kicker,.section-id{font-size:calc(11px * var(--font-scale, 1));letter-spacing:.13em;font-weight:750;color:#74ced0}.intro h1{font-size:clamp(23px,2.05vw,31px);line-height:1.35;letter-spacing:-.025em;margin:7px 0}.intro p{margin:0;color:#b4c5d8;font-size:calc(13px * var(--font-scale, 1))}.scenario-selector{flex:0 0 295px;border:1px solid var(--line);background:linear-gradient(135deg,#1b2c44,#182840);border-radius:12px;padding:12px 14px}.scenario-selector label{display:block;font-size:calc(11px * var(--font-scale, 1));font-weight:750;color:#8fb2ce;margin-bottom:7px}.scenario-selector select{width:100%;background:#101e31;border:1px solid #49627d;color:#f4f8ff;border-radius:8px;padding:9px;font-size:calc(12px * var(--font-scale, 1))}.scenario-selector>span{display:block;font-size:calc(10px * var(--font-scale, 1));margin-top:7px;color:#9faec5}.panel{background:linear-gradient(160deg,#17253a,#131f33);border:1px solid #30435c;border-radius:var(--radius);box-shadow:0 12px 32px #00000018}.playback{padding:17px 21px 16px;margin-bottom:16px}.playback-head,.diagram-head,.defense-title,.detail-head,.log-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.playback-head h2,.diagram-head h2,.defense-title h2,.detail-panel h2,.log-panel h2{margin:1px 0;font-size:calc(18px * var(--font-scale, 1));letter-spacing:.01em}.step-position{font-size:calc(12px * var(--font-scale, 1));color:#a8bfd6;background:#1f334a;padding:6px 10px;border-radius:8px;font-weight:750}.timeline{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:14px 0}.timeline-step{position:relative;text-align:left;border:1px solid #314660;background:#122137;border-radius:10px;min-height:76px;padding:10px 12px 9px 13px;color:var(--muted);transition:border-color .14s,background .14s}.timeline-step strong{display:block;font-size:calc(13px * var(--font-scale, 1));color:#d8e5f5;font-weight:750}.timeline-step small{display:block;font-size:calc(10px * var(--font-scale, 1));margin-top:5px;color:#839bb5}.timeline-step .number{font-size:calc(10px * var(--font-scale, 1));font-weight:800;color:#80a1c4}.timeline-step.active{background:#20334d;border-color:#6ab7d8;box-shadow:0 0 0 1px #4788a7}.timeline-step.active strong{color:white}.timeline-step.completed::before{position:absolute;content:"";height:3px;background:#58cba9;left:12px;right:12px;bottom:0;border-radius:4px}.timeline-step:disabled{opacity:.6}.transport{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid #2b4059;padding-top:13px}.transport-buttons{display:flex;gap:8px;align-items:center}.transport-icon,.transport-text{background:#1d3047;color:#d5e7f8;border:1px solid #35526c;border-radius:8px;min-width:39px;height:36px}.transport-icon{font-size:calc(27px * var(--font-scale, 1));line-height:1}.transport-icon:disabled{opacity:.4;cursor:default}.transport-text{padding:0 13px;font-size:calc(12px * var(--font-scale, 1))}.action-button{border:1px solid #57bec0;background:#167f89;color:white;font-weight:750;border-radius:9px;padding:8px 21px;min-height:37px;font-size:calc(13px * var(--font-scale, 1))}.action-button:hover{background:#1996a0}.action-button span:first-child{margin-right:7px}.speed-group{display:flex;align-items:center;gap:8px}.speed-group label{font-size:calc(11px * var(--font-scale, 1));color:var(--muted)}.speed-group select{background:#1b2e45;color:white;border:1px solid #3a526d;border-radius:7px;padding:7px 9px;font-size:calc(12px * var(--font-scale, 1))}.work-area{display:grid;grid-template-columns:minmax(0,1fr) 315px;gap:15px;align-items:stretch}.diagram-panel{padding:16px;min-width:0}.diagram-head h2{font-size:calc(19px * var(--font-scale, 1))}.diagram-head p{margin:3px 0 0;color:var(--muted);font-size:calc(11px * var(--font-scale, 1))}.view-switch{display:flex;background:#0d1a2c;border:1px solid #3a516b;border-radius:10px;overflow:hidden;padding:3px;flex-shrink:0}.view-switch button{font-size:calc(11px * var(--font-scale, 1));background:transparent;color:#a8bbd0;border:0;border-radius:7px;padding:9px 12px;white-space:nowrap}.view-switch button.selected{background:#2b4965;color:#fff;box-shadow:0 1px 4px #0008}.diagram-topline{display:flex;justify-content:space-between;align-items:center;gap:9px;margin:15px 0 10px}.mode-hint{font-size:calc(11px * var(--font-scale, 1));color:#c7dae9}.legend{display:flex;gap:13px;align-items:center;font-size:calc(10px * var(--font-scale, 1));color:#abbfd2;white-space:nowrap}.legend>span{display:flex;align-items:center;gap:5px}.legend-mark{width:7px;height:7px;display:inline-block;border-radius:50%;background:#708aa7}.legend-mark.danger{background:var(--danger)}.legend-mark.success{background:var(--success)}.diagram-scroller{width:100%;background:#101c2d;border:1px solid #28425d;border-radius:12px;overflow:auto;scrollbar-width:thin;scrollbar-color:#365d78 #102138}.diagram-scroller svg{display:block;width:100%;min-width:920px;height:auto;aspect-ratio:1440/680}.diagram-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:11px}.selected-event{display:flex;gap:10px;align-items:center}.selected-event div{display:flex;flex-direction:column}.selected-event strong{font-size:calc(13px * var(--font-scale, 1))}.selected-event span:last-child{font-size:calc(11px * var(--font-scale, 1));color:#b1c4d8}.event-indicator{width:10px;height:10px;border-radius:50%;background:var(--danger);box-shadow:0 0 0 5px #e65a6a16;flex-shrink:0}.event-indicator.success{background:var(--success);box-shadow:0 0 0 5px #51cda21c}.event-indicator.idle{background:#6f849e;box-shadow:none}.small-meta{font-size:calc(10px * var(--font-scale, 1));color:#8ca2bd;max-width:300px;text-align:right}.defense-panel{padding:17px 16px;display:flex;flex-direction:column;min-width:0}.defense-title h2{font-size:calc(17px * var(--font-scale, 1))}.on-count{background:#213851;border:1px solid #34536e;color:#91c9d7;font-size:calc(11px * var(--font-scale, 1));padding:6px 8px;border-radius:7px;white-space:nowrap}.defense-instruction{font-size:calc(11px * var(--font-scale, 1));margin:7px 0 14px;color:#b0c0d3}.bulk-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:11px}.bulk-controls button{padding:10px 5px;font-size:calc(12px * var(--font-scale, 1));border-radius:9px;font-weight:750}.all-on{border:1px solid #2d937d;background:#17463f;color:#7ae2bc}.all-off{border:1px solid #556a85;background:#26364d;color:#d5e4f1}.bulk-controls button:hover{filter:brightness(1.16)}.defense-controls{display:grid;gap:7px}.defense-card{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:10px 10px;border:1px solid #31465f;background:#14253a;border-radius:10px}.defense-card.on{background:#133c3a;border-color:#2b8079}.defense-copy{min-width:0}.defense-copy strong{display:block;font-size:calc(12px * var(--font-scale, 1));line-height:1.35}.defense-copy small{display:block;font-size:calc(10px * var(--font-scale, 1));color:#98b4cc;margin-top:3px}.toggle{display:block;border:0;flex:0 0 38px;width:38px;height:23px;border-radius:20px;background:#455a72;padding:3px;transition:background .15s}.toggle::before{content:"";display:block;width:17px;height:17px;background:#fff;border-radius:50%;box-shadow:0 1px 3px #0005;transition:transform .15s}.toggle.on{background:#28b294}.toggle.on::before{transform:translateX(15px)}.outcome-summary{margin-top:14px;border-radius:10px;background:#0d1c30;border:1px solid #36506b;padding:12px}.outcome-head{display:flex;justify-content:space-between;gap:5px;align-items:center;color:#91aecd;font-size:calc(10px * var(--font-scale, 1));margin-bottom:6px}.outcome-mark{height:7px;width:7px;border-radius:50%;background:var(--danger)}.outcome-mark.safe{background:var(--success)}.outcome-mark.warn{background:var(--warn)}.outcome-summary>strong{font-size:calc(14px * var(--font-scale, 1));display:block;line-height:1.4}.outcome-summary p{font-size:calc(11px * var(--font-scale, 1));line-height:1.65;color:#aec0d3;margin:8px 0 0}.control-note{display:flex;gap:8px;margin-top:auto;padding-top:13px;color:#92abc3}.control-note span{font-size:calc(14px * var(--font-scale, 1))}.control-note p{font-size:calc(10px * var(--font-scale, 1));line-height:1.6;margin:0}.detail-layout{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin-top:16px}.detail-panel,.log-panel{padding:18px 20px}.detail-head{margin-top:10px}.english-label{font-size:calc(10px * var(--font-scale, 1));letter-spacing:.13em;color:#83c7d9;font-weight:800}.detail-head h2{margin:4px 0;font-size:calc(23px * var(--font-scale, 1))}.status-badge{font-size:calc(11px * var(--font-scale, 1));border:1px solid #844950;background:#3d2838;border-radius:99px;padding:6px 11px;color:#ffd1d4;white-space:nowrap}.status-badge.safe{background:#164c40;border-color:#257b69;color:#b7f7de}.status-badge.neutral{background:#27384e;border-color:#4b5f75;color:#cbd8e6}.detail-panel>p{font-size:calc(13px * var(--font-scale, 1));color:#c7d5e5;line-height:1.85}.learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.learn-grid>div{background:#10243a;border:1px solid #294761;border-radius:10px;padding:11px}.learn-grid strong{font-size:calc(11px * var(--font-scale, 1));color:#7ccee0}.learn-grid p{color:#c1d3e3;font-size:calc(11px * var(--font-scale, 1));line-height:1.75;margin:6px 0 0}.learning-tip{display:flex;gap:10px;align-items:start;border-left:3px solid #e1aa67;background:#3d332c55;border-radius:3px;padding:11px;margin-top:12px}.learning-tip strong{font-size:calc(11px * var(--font-scale, 1));color:#f5c88b;white-space:nowrap}.learning-tip span{font-size:calc(11px * var(--font-scale, 1));color:#e7d9c7}.technique-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.technique-list a,.technique-list span{font-size:calc(11px * var(--font-scale, 1));text-decoration:none;color:#8acff0;background:#1b334b;border:1px solid #3b6281;padding:6px 9px;border-radius:7px}.technique-list a:hover{text-decoration:underline}.log-head>div>span{font-size:calc(10px * var(--font-scale, 1));color:var(--muted)}.log-console{background:#0b1829;border:1px solid #2c465f;border-radius:9px;margin:14px 0 11px;padding:10px;min-height:160px;max-height:260px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:calc(11px * var(--font-scale, 1));line-height:1.7}.log-line{display:grid;grid-template-columns:67px 41px 1fr;gap:8px;margin-bottom:5px}.log-line span:first-child{color:#7896b4}.log-level{color:#9db6ce}.log-level.warn{color:#ffa2a7}.log-level.ok{color:#71dab6}.log-message{color:#c2d3e4;overflow-wrap:anywhere}.effect-head{font-size:calc(11px * var(--font-scale, 1));color:#acbfd3;margin-bottom:8px}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.result-item{border:1px solid #304760;background:#1a2d44;padding:9px 6px;border-radius:8px;text-align:center}.result-item span{display:block;font-size:calc(10px * var(--font-scale, 1));color:#92acc5}.result-item strong{display:block;font-size:calc(12px * var(--font-scale, 1));margin-top:5px}.result-item .danger{color:#ff949c}.result-item .safe{color:#70d4ac}.result-item .neutral{color:#a5b6ca}.references-panel{display:grid;grid-template-columns:300px 1fr;gap:24px;padding:28px 3px 16px}.references-panel h2{margin:5px 0;font-size:calc(19px * var(--font-scale, 1))}.references-panel p{margin:0;font-size:calc(12px * var(--font-scale, 1));color:var(--muted)}.reference-links{display:flex;flex-wrap:wrap;gap:7px;align-content:center}.reference-links a{color:#b1dbf6;border:1px solid #35516e;background:#172c43;border-radius:8px;padding:7px 10px;font-size:calc(11px * var(--font-scale, 1));text-decoration:none}.reference-links a:hover{text-decoration:underline}.footer{padding:15px 0;border-top:1px solid #2c4057;display:flex;justify-content:space-between;gap:14px;color:#8096b0;font-size:calc(10px * var(--font-scale, 1))}.guide-dialog{border:1px solid #3e607d;background:#192940;border-radius:14px;color:var(--text);padding:23px;width:min(540px,calc(100% - 32px));box-shadow:0 22px 100px #000c}.guide-dialog::backdrop{background:#000a}.dialog-head{display:flex;align-items:center;justify-content:space-between}.dialog-head h2{margin:0}.dialog-head button{border:0;background:transparent;color:white;font-size:calc(25px * var(--font-scale, 1))}.guide-dialog ol{font-size:calc(13px * var(--font-scale, 1));line-height:1.95;color:#d1dce9;padding-left:22px}.guide-dialog p{font-size:calc(12px * var(--font-scale, 1));color:#aabfd4}.guide-dialog .action-button{margin-top:9px}
 /* Logical architecture diagram */
@@ -636,6 +636,21 @@
 .asset.ai-warning .asset-status{fill:#f1ce81}
 .asset.ai-warning .status-dot{fill:#e7b860}
 </style>
+<style>
+/* v0.5.39 — scenario-focused diagram. All coordinates and simulation paths stay intact. */
+#architectureDiagram .asset-icon{display:none}
+#architectureDiagram .asset-title{font-weight:800;letter-spacing:0}
+#architectureDiagram .asset-caption{font-weight:550}
+#architectureDiagram .zone rect{fill-opacity:.55;stroke-opacity:.68}
+#architectureDiagram .route-over{stroke-width:3.8;filter:none}
+#architectureDiagram .route-over.route-current{stroke-width:4.2;filter:drop-shadow(0 0 2px #d5485640)}
+#architectureDiagram .route-over.route-planned,
+#architectureDiagram .route-over.route-unreachable{stroke-width:2.1;filter:none}
+#architectureDiagram .route-over.route-blocked,
+#architectureDiagram .route-over.blocked{stroke-width:3.8;filter:none}
+#architectureDiagram .map-foot-note{font-size:12px}
+#architectureDiagram .asset:focus-visible .asset-bg{stroke:#b5eaff;stroke-width:3}
+</style>
 </head>
 <body>
 <div class="shell">
@@ -644,7 +659,7 @@
 <div aria-hidden="true" class="brand-symbol"><svg viewbox="0 0 36 36"><path d="M18 3 31 9v11c0 8-5.5 11.5-13 14C10.5 31.5 5 28 5 20V9z" fill="none" stroke="currentColor" stroke-width="2.2"></path><path d="M11 18h14M18 11v14" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path></svg></div>
 <div><div class="brand-name">CYBER <span>INCIDENT</span> EXPLORER</div><div class="brand-sub">システム構成図で学ぶサイバーインシデント</div></div>
 </div>
-<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><button aria-controls="scenarioGuidePanel" aria-expanded="false" class="ghost-btn scenario-guide-trigger" id="scenarioGuideButton" type="button">📖 この攻撃を学ぶ</button><span class="vtag">v0.5.38</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
+<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><button aria-controls="scenarioGuidePanel" aria-expanded="false" class="ghost-btn scenario-guide-trigger" id="scenarioGuideButton" type="button">📖 この攻撃を学ぶ</button><span class="vtag">v0.5.39</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
 </header>
 <main class="main">
 <section aria-label="シナリオの概要" class="intro">
@@ -653,7 +668,7 @@
 <h1 id="introTitle">VPNからサーバーへの侵入を、どう防ぐ？</h1>
 <p id="introDescription">侵入経路はリモートアクセスと悪性メールの2種類。通信・権限・不正実行を別々に評価します。</p>
 </div>
-<div class="scenario-selector"><label for="scenarioSelect">学習シナリオ</label><select aria-label="学習シナリオ" id="scenarioSelect"><optgroup label="01｜ランサムウェア"><option value="ransomware-direct">01-A　リモートアクセス経由</option><option value="ransomware-email">01-B　悪性メール添付経由</option></optgroup><optgroup label="02｜認証情報・SaaS"><option value="phishing">02　フィッシング → SaaS侵害</option></optgroup><optgroup label="03｜サプライチェーン"><option value="vendor-access">03-A　委託先・保守接続経由</option><option value="supply-chain">03-B　正規ソフトウェア更新経由</option></optgroup><optgroup label="04｜公開Webへの攻撃"><option value="web-app">04　公開WebアプリのSQLインジェクション</option></optgroup><optgroup label="05｜可用性"><option value="ddos">05　DDoS／サービス停止</option></optgroup><optgroup label="06｜メール詐欺"><option value="bec">06　ビジネスメール詐欺（BEC）</option></optgroup><optgroup label="07–08｜新しい脅威"><option value="insider">07　内部不正／情報持ち出し</option><option value="ai">08　AIアプリへの攻撃</option></optgroup></select><span>攻撃経路で防御の作用点が変化／構成図は共通</span></div>
+<div class="scenario-selector"><label for="scenarioSelect">学習シナリオ</label><select aria-label="学習シナリオ" id="scenarioSelect"><optgroup label="01｜ランサムウェア"><option value="ransomware-direct">01-A　リモートアクセス経由</option><option value="ransomware-email">01-B　悪性メール添付経由</option></optgroup><optgroup label="02｜認証情報・SaaS"><option value="phishing">02　フィッシング → SaaS侵害</option></optgroup><optgroup label="03｜サプライチェーン"><option value="vendor-access">03-A　委託先・保守接続経由</option><option value="supply-chain">03-B　正規ソフトウェア更新経由</option></optgroup><optgroup label="04｜公開Webへの攻撃"><option value="web-app">04　公開WebアプリのSQLインジェクション</option></optgroup><optgroup label="05｜可用性"><option value="ddos">05　DDoS／サービス停止</option></optgroup><optgroup label="06｜メール詐欺"><option value="bec">06　ビジネスメール詐欺（BEC）</option></optgroup><optgroup label="07–08｜新しい脅威"><option value="insider">07　内部不正／情報持ち出し</option><option value="ai">08　AIアプリへの攻撃</option></optgroup></select><span>攻撃経路で対策の作用点が変化／今回は関係する機器のみ表示</span></div>
 <div aria-label="今回のシナリオ前提" class="response-options scenario-assumption" id="scenarioOptions"><p id="edrExplanation">社員PC経由：この例ではPC EDRが探索時に検知・隔離に成功する想定です。</p></div>
 </section>
 <section aria-label="攻撃ステップと再生操作" class="playback panel">
@@ -673,7 +688,7 @@
 <section aria-labelledby="diagramTitle" class="diagram-panel panel">
 <div class="diagram-head"><div><div class="section-id">02 / SYSTEM ARCHITECTURE</div><h2 id="diagramTitle">システム構成図</h2><p>機器をクリックすると、その地点で何が起き、なぜ進めるかを解説します。</p></div><div class="diagram-actions"><button class="ghost-btn compact-inspector-btn" id="detailButton" type="button">解説・ログ</button><button aria-pressed="false" class="ghost-btn zoom-btn" id="zoomButton" type="button">⛶ 図を拡大</button><div aria-label="構成図の表示モード" class="view-switch" role="group"><button data-mode="system" type="button">通常構成</button><button aria-pressed="true" class="selected" data-mode="attack" type="button">攻撃経路</button><button data-mode="defense" type="button">防御対策</button></div></div></div>
 <div class="diagram-topline"><div class="mode-hint" id="modeHint">グレー線は論理接続（向きなし）。赤／緑の小矢印が進行・遮断方向を示します。通常構成線とは重ねません。</div><div class="legend"><span><i class="legend-mark danger"></i>通過済み</span><span><i class="legend-mark success"></i>阻止 ×</span><span><i class="legend-mark planned"></i>予定・未到達</span></div></div>
-<div aria-label="スクロール可能なシステム構成図" class="diagram-scroller" id="diagramScroller" tabindex="0"><svg aria-labelledby="svgDiagramTitle svgDiagramDesc" id="architectureDiagram" role="img" viewbox="0 0 1440 680" xmlns="http://www.w3.org/2000/svg"><title id="svgDiagramTitle">架空企業の共通システム構成図</title><desc id="svgDiagramDesc">社外、境界、社内LAN、認証基盤、サーバー群、クラウド、バックアップ、SOCの8領域。境界のWAFと出口SWG・DLPを別に表示。攻撃経路全体を描き、通過済みを赤、遮断地点を緑の×、予定・未到達を灰色で示します。</desc></svg></div>
+<div aria-label="スクロール可能なシステム構成図" class="diagram-scroller" id="diagramScroller" tabindex="0"><svg aria-labelledby="svgDiagramTitle svgDiagramDesc" id="architectureDiagram" role="img" viewbox="0 0 1440 680" xmlns="http://www.w3.org/2000/svg"><title id="svgDiagramTitle">シナリオに関係する機器の構成図</title><desc id="svgDiagramDesc">社外、境界、社内LAN、認証基盤、サーバー群、クラウド、バックアップ、SOCの8領域。境界のWAFと出口SWG・DLPを別に表示。攻撃経路全体を描き、通過済みを赤、遮断地点を緑の×、予定・未到達を灰色で示します。</desc></svg></div>
 <div class="diagram-foot"><div class="selected-event"><span aria-hidden="true" class="event-indicator" id="eventIndicator"></span><div><strong id="eventTitle">初期侵入</strong><span id="eventSummary">VPNへの不正ログインを試みています。</span><span class="cause-hint" id="causeHint">なぜここを通れる？ ステップの条件を確認できます。</span></div></div><button class="why-button" id="whyButton" type="button">ⓘ なぜ進める？</button><div class="small-meta">※ 通信線は教育上の概念表現です。図は実在企業の構成ではありません。</div></div>
 </section>
 <aside aria-label="対策・攻撃解説パネル" class="defense-panel panel"><div aria-label="右側の表示" class="sidebar-view-tabs" role="tablist"><button aria-controls="defenseView" aria-selected="true" id="defensePanelTab" role="tab" type="button">⚙ 対策</button><button aria-controls="scenarioGuidePanel" aria-selected="false" id="learningPanelTab" role="tab" type="button">📖 解説</button></div><div aria-labelledby="defensePanelTab" class="sidebar-view" id="defenseView" role="tabpanel">
@@ -720,7 +735,7 @@
 </section>
 <section aria-labelledby="refTitle" class="references-panel"><div><div class="section-id">OFFICIAL REFERENCES</div><h2 id="refTitle">一次情報で学ぶ</h2><p>MITRE ATT&amp;CKの攻撃戦術・技法と、NIST CSF 2.0の対応・復旧を確認できます。</p></div><div class="reference-links" id="referenceList"></div></section>
 </dialog>
-<footer class="footer"><span>Cyber Incident Explorer · v0.5.38</span><span>学習用シミュレーション / 実際の通信やマルウェアは実行しません</span></footer>
+<footer class="footer"><span>Cyber Incident Explorer · v0.5.39</span><span>学習用シミュレーション / 実際の通信やマルウェアは実行しません</span></footer>
 </main>
 </div>
 <dialog class="guide-dialog" id="guideDialog" aria-labelledby="guideTitle">
@@ -1515,6 +1530,85 @@ window.CyberGuides.insider={
   const phDeviceStep={attacker:0,mail:0,pc:1,fake:1,idp:2,saas:2,storage:3,share:4,clouddlp:4,outside:4,siem:2};
   const deviceStage=d=>isAi()?(aiSteps[d.id]??0):isInsider()?(insiderSteps[d.id]??0):isBec()?(becSteps[d.id]??0):isDdos()?(ddosDeviceStep[d.id]??0):isWeb()?(webDeviceStep[d.id]??0):isVendor()?(vendorDeviceStep[d.id]??0):isPhishing()?(phDeviceStep[d.id]??0):isSupply()?(supplyDeviceStep[d.id]??0):isEmail()&&d.id==='mail'?0:d.step;
   const inactiveDevice=d=>isAi()?!aiActive.has(d.id):isInsider()?!insiderActive.has(d.id):isBec()?!becActive.has(d.id):isDdos()?!ddosActive.has(d.id):isWeb()?!webActive.has(d.id):isVendor()?!vendorActive.has(d.id):isPhishing()?!phActive.has(d.id):isSupply()?!supplyActive.has(d.id):isEmail()?(['vpn','wanfw'].includes(d.id)||!!d.future&&d.id!=='mail'):!!d.future;
+
+  // The explanatory scene shows only components used for this scenario.
+  // The global SVG geometry remains unchanged so historical route coordinates,
+  // defenses and incident states are never recalculated or silently altered.
+  const focusRansomDirect=new Set(['attacker','wanfw','vpn','dns','segfw','files','outside','backup']);
+  const focusRansomEmail=new Set(['attacker','mail','pc','segfw','files','swg','dlp','outside','edr','backup']);
+  function focusDevices(){
+    const source=isAi()?aiActive:isInsider()?insiderActive:isBec()?becActive:
+      isDdos()?ddosActive:isWeb()?webActive:isVendor()?vendorActive:
+      isPhishing()?phActive:isSupply()?supplyActive:
+      state.attackRoute==='direct'?focusRansomDirect:focusRansomEmail;
+    const ids=new Set(source);
+    // Passive monitoring is covered in the explanation, not the main attack path.
+    // 03 software-update and 01-B retain EDR management because response happens there.
+    ids.delete('siem');
+    // At the overlapping external node, scenario semantics choose vendor or supplier.
+    if(isBec()||isVendor())ids.delete('supplier');
+    else ids.delete('vendor');
+    return ids;
+  }
+  function fitDiagramText(node,device){
+    // A wide text area is more useful than repeated decorative icons.
+    const x=device.x+14, maxWidth=device.w-25;
+    const textSpecs=[
+      ['.asset-title',16,10.5],['.asset-caption',12,9.5],['.asset-status',11.5,9.0]
+    ];
+    textSpecs.forEach(([selector,desired,min])=>{
+      const el=node.querySelector(selector);
+      if(!el)return;
+      const full=el.textContent;
+      if(selector!=='.asset-status')el.setAttribute('x',String(x));
+      const available=selector==='.asset-status'?device.w-35:maxWidth;
+      el.style.fontSize=`calc(${desired}px * var(--font-scale, 1))`;
+      // Size proportional to the measured width, avoiding repeated layout/reflow.
+      const measured=el.getComputedTextLength();
+      if(measured>available){
+        const fitted=Math.max(min,Math.floor((desired*available/measured-.2)*2)/2);
+        el.style.fontSize=`calc(${fitted}px * var(--font-scale, 1))`;
+      }
+      if(el.getComputedTextLength()>available){
+        // A deliberate ellipsis is preferable to clipped, unreadable glyphs;
+        // the full label remains available in this element's tooltip.
+        let short=full;
+        while(short.length>2 && el.getComputedTextLength()>available){
+          short=short.slice(0,-1);
+          el.textContent=short+'…';
+        }
+        el.setAttribute('aria-label',full);
+        const existing=el.querySelector('title');
+        if(!existing)el.append(svgNode('title',{},full));
+      }
+    });
+  }
+  function focusDiagramZones(visibleIds){
+    const visibleZones=new Set();
+    devices.forEach(d=>{if(!visibleIds.has(d.id))return;
+      const region=zones.find(z=>d.x>=z.x && d.x<z.x+z.w && d.y>=z.y && d.y<z.y+z.h);
+      if(region)visibleZones.add(region.id);
+    });
+    all('#zones .zone').forEach((el,i)=>{
+      const zone=zones[i];
+      const visible=visibleZones.has(zone.id);
+      el.style.display=visible?'':'none';
+      el.setAttribute('aria-hidden',String(!visible));
+      if(!visible)return;
+      const relevant=devices.filter(d=>visibleIds.has(d.id) && d.x>=zone.x && d.x<zone.x+zone.w && d.y>=zone.y && d.y<zone.y+zone.h);
+      const bottom=Math.max(...relevant.map(d=>d.y+d.h));
+      el.querySelector('rect').setAttribute('height',String(Math.min(zone.h,Math.max(98,bottom-zone.y+13))));
+    });
+    // A modest, fixed-aspect crop enlarges the relevant equipment when there is
+    // no far-right SaaS node. Routes retain their original global coordinates.
+    const wide=isPhishing()||isBec()||(state.attackRoute==='email'&&!isAi()&&!isInsider());
+    const camera=wide?'0 0 1440 680':isDdos()?'0 15 1080 510':'0 15 1250 590';
+    $('architectureDiagram').setAttribute('viewBox',camera);
+    // The top legend and the HTML footer already explain line states.
+    for(const id of ['archLegendPrimary','archLegendSecondary'])$(id)?.setAttribute('display',wide?'inline':'none');
+    const desc=$('svgDiagramDesc');
+    if(desc)desc.textContent='今回のシナリオに関係する機器と領域のみ表示しています。赤は攻撃経路、緑の×は阻止、灰色は未到達です。機器の詳細はクリックで確認できます。';
+  }
   const activeNodes=()=>isAi()?{aiDataAcl:['files'],aiToolPolicy:['pam'],aiEgress:['swg']}:isInsider()?{insiderAcl:['files'],insiderDownload:['pc'],insiderCasb:['swg'],insiderDlp:['dlp']}:isBec()?{becMfa:['mail'],becDevice:['mail'],becContain:['admin'],becOutbound:['saas']}:isDdos()?{ddosUpstream:['wanfw']}:isWeb()?{webWaf:['waf'],safeSql:['web'],dbLeastPrivilege:['db'],webAudit:['siem']}:isVendor()?{mfa:['vpn'],vendorJit:['pam'],segmentation:['segfw'],fileAcl:['files'],vendorTransfer:['vpn'],vendorAudit:['siem']}:isPhishing()?{mailFilter:['mail'],prMfa:['idp'],conditional:['idp'],leastPrivilege:['storage'],sharePolicy:['share'],saasDlp:['clouddlp']}:isSupply()?{signatureCheck:['pc'],updateReview:['pc'],edr:['pc','edr'],segmentation:['segfw'],fileAcl:['files'],egress:['swg'],dlp:['dlp']}:controlNodes;
   const commonRansomControls=[
     scenario.controls[0],
@@ -2111,7 +2205,7 @@ window.CyberGuides.insider={
     {id:'pDlpToReceiver',scene:'phishing',hop:4,d:'M1402 514 H1412 V665 H208 V529 H189'},
     // 08 AI: external document is untrusted DATA, the user request is not malicious.
     {id:'aAttackDoc',scene:'ai',hop:0,d:'M110 214 V234'},
-    {id:'aDocApp',scene:'ai',hop:1,d:'M189 271 H211 V607 H870 V332 H890'},
+    {id:'aDocApp',scene:'ai',hop:1,d:'M189 271 H211 V570 H870 V332 H890'},
     {id:'aAppAgent',scene:'ai',hop:2,d:'M890 302 H848'},
     {id:'aAgentFiles',scene:'ai',hop:3,d:'M848 281 H872 V231 H1050 V207'},
     {id:'aFilesAgent',scene:'ai',hop:3,d:'M1006 160 H967 V214 H760 V240'},
@@ -2166,7 +2260,7 @@ window.CyberGuides.insider={
     {id:'top-storage-share',scene:'phishing',d:'M1289 402 V419'},
     {id:'top-share-dlp',scene:'phishing',d:'M1289 475 V486'},
     {id:'top-ai-user',scene:'ai',d:'M624 185 H648 V423 H876 V320 H890'},
-    {id:'top-ai-document',scene:'ai',d:'M189 271 H211 V607 H870 V332 H890'},
+    {id:'top-ai-document',scene:'ai',d:'M189 271 H211 V570 H870 V332 H890'},
     {id:'top-ai-agent',scene:'ai',d:'M890 302 H848'},
     {id:'top-ai-file',scene:'ai',d:'M848 281 H872 V231 H1050 V207'},
     {id:'top-ai-file-response',scene:'ai',d:'M1006 160 H967 V214 H760 V240'},
@@ -2206,7 +2300,7 @@ window.CyberGuides.insider={
   function svgNode(tag,attrs={},content=''){const element=document.createElementNS(svgNS,tag);Object.entries(attrs).forEach(([key,val])=>element.setAttribute(key,String(val)));if(content)element.innerHTML=content;return element;}
   function buildDiagram(){
     const svg=$('architectureDiagram');
-    const defs=svgNode('defs',{},`<pattern id="grid" width="23" height="23" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#29445e"/></pattern><marker id="arrow-attack" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" viewBox="0 0 11 10" refX="10" refY="5" orient="auto"><path d="M1 1L10 5L1 9" stroke="#ff7885" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" fill="none"/></marker><marker id="arrow-plan" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" viewBox="0 0 11 10" refX="10" refY="5" orient="auto"><path d="M1 1L10 5L1 9" stroke="#859bb2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></marker><marker id="arrow-block" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" viewBox="0 0 11 10" refX="10" refY="5" orient="auto"><path d="M1 1L10 5L1 9" stroke="#5ce0b3" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" fill="none"/></marker>`);svg.append(defs);
+    const defs=svgNode('defs',{},`<pattern id="grid" width="23" height="23" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#29445e"/></pattern><marker id="arrow-attack" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="8" viewBox="0 0 11 10" refX="10" refY="5" orient="auto"><path d="M1 1L10 5L1 9" stroke="#ff7885" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" fill="none"/></marker><marker id="arrow-plan" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" viewBox="0 0 11 10" refX="10" refY="5" orient="auto"><path d="M1 1L10 5L1 9" stroke="#859bb2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></marker><marker id="arrow-block" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="8" viewBox="0 0 11 10" refX="10" refY="5" orient="auto"><path d="M1 1L10 5L1 9" stroke="#5ce0b3" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" fill="none"/></marker>`);svg.append(defs);
     svg.append(svgNode('rect',{x:0,y:0,width:1440,height:680,class:'map-bg'}),svgNode('rect',{x:0,y:0,width:1440,height:680,fill:'url(#grid)',class:'arch-grid'}));
     const groups=svgNode('g',{id:'zones'});zones.forEach(z=>groups.append(svgNode('g',{class:'zone'},`<rect x="${z.x}" y="${z.y}" width="${z.w}" height="${z.h}" rx="11"/><text class="zone-title" x="${z.x+15}" y="${z.y+27}">${escapeHtml(z.title)}</text><text class="zone-sub" x="${z.x+15}" y="${z.y+43}">${escapeHtml(z.sub)}</text><path class="zone-line" d="M${z.x+14} ${z.y+53}H${z.x+z.w-14}"/>`)));svg.append(groups);
     const webZoneNotes=svgNode('g',{id:'webZoneNotes',display:'none'});webZoneNotes.innerHTML='<rect x="882" y="251" width="115" height="105" rx="7" fill="none" stroke="#f0b66b" stroke-opacity=".7" stroke-dasharray="5 4"/><rect x="1001" y="251" width="138" height="105" rx="7" fill="none" stroke="#7c98db" stroke-opacity=".7" stroke-dasharray="5 4"/><text x="890" y="247" font-size="11" fill="#f0c589">論理DMZ</text><text x="1007" y="247" font-size="11" fill="#b7cbff">内部DB</text>';svg.append(webZoneNotes);
@@ -2219,7 +2313,7 @@ window.CyberGuides.insider={
     svg.append(impact);
     svg.append(svgNode('g',{id:'routeStops','aria-label':'攻撃が遮断された地点'}));
     svg.append(svgNode('text',{id:'archLegendPrimary',class:'map-foot-note',x:35,y:633},'赤線＝通過した経路 ／ 緑の×＝遮断地点 ／ 灰線＝今後の想定経路 ／ 暗号化は機器の状態'));
-    svg.append(svgNode('text',{id:'archLegendSecondary',class:'map-foot-note',x:35,y:649},'※ グレーの機器も将来のシナリオで利用できるように共通配置しています。'));
+    svg.append(svgNode('text',{id:'archLegendSecondary',class:'map-foot-note',x:35,y:649},'※ 今回のシナリオで使う機器だけを表示。点線の区画は論理的な所属を示します。'));
     svg.append(svgNode('text',{id:'externalShareRouteNote',class:'map-foot-note',x:760,y:660,display:'none'},'SaaSの外部共有 → 社外の攻撃者側アカウント（転送ではなく共有権限の付与）')); 
   }
   function nodePresentation(id,e){
@@ -2487,6 +2581,7 @@ window.CyberGuides.insider={
     const sharedRouteNote=$('externalShareRouteNote');if(sharedRouteNote)sharedRouteNote.setAttribute('display',isPhishing()&&view==='attack'?'inline':'none');
     // 通常構成では論理接続のみ、攻撃経路では攻撃線のみを描画。重ね描きを避ける。
     all('[data-base]').forEach(el=>el.classList.toggle('hidden',view!=='system'||!(el.dataset.scenario===state.scenario||(isEmail()&&el.dataset.scenario==='ransomware'&&!['top-fw-vpn','top-vpn-pc'].includes(el.dataset.base)))));
+    const visibleFocus=focusDevices();
     all('[data-device]').forEach(el=>{const id=el.dataset.device,d=devices.find(item=>item.id===id);const p=nodePresentation(id,e),defenseActive=Object.keys(activeNodes()).some(key=>state.controls[key]&&activeNodes()[key].includes(id)&&(isPhishing()||relevantControl(key)));el.classList.remove('afflicted','stopped','defended','focus','ai-warning');el.classList.toggle('future-asset',inactiveDevice(d));el.style.display=((isVendor()||isBec())&&id==='supplier')||(!(isVendor()||isBec())&&id==='vendor')?'none':'';let kind='',label='構成要素';if(view==='attack'){kind=p.kind;label=p.label;}else if(view==='defense'){kind=defenseActive?'defended':'';label=defenseActive?'対策適用中':(inactiveDevice(d)?'今回未使用':'構成要素');}else{label=inactiveDevice(d)?'今回未使用':'構成要素';}if(kind)el.classList.add(kind);if(isAi()&&view==='attack'&&((id==='supplier'&&e.retrieved)||(id==='web'&&e.retrieved)||(id==='files'&&e.apiResponseReceived)))el.classList.add('ai-warning');if(view==='attack'&&deviceStage(d)===state.step&&!inactiveDevice(d))el.classList.add('focus');el.querySelector('.asset-status').textContent=label;
       const shownName=isAi()&&aiNames[id]?aiNames[id][0]:isInsider()&&insiderNames[id]?insiderNames[id][0]:isBec()&&becNames[id]?becNames[id][0]:isDdos()&&ddosNames[id]?ddosNames[id][0]:id==='outside'?(isWeb()?'攻撃者側の取得先':isPhishing()?'外部アカウント':isVendor()?'委託先経由の取得先':'外部転送先'):d.name;
       if(isAi()&&aiNames[id]){el.querySelector('.asset-title').textContent=shownName;el.querySelector('.asset-caption').textContent=aiNames[id][1];el.querySelector('title').textContent=shownName+'：クリックすると役割を表示';}
@@ -2518,10 +2613,17 @@ window.CyberGuides.insider={
         const icon=({vendor:'monitor',mail:'key',pc:'mail',admin:'shield',files:'mail',saas:'shield',storage:'monitor'})[id];
         if(icon)el.querySelector('.asset-icon').innerHTML=iconPaths[icon];
       }
-      el.setAttribute('aria-label',`${shownName}、${label}。クリックすると地点の役割と通過条件を表示`);if(inactiveDevice(d))el.style.opacity=isDdos()?'.12':view==='system'?'.68':'.44';else el.style.opacity='1';});
+      el.setAttribute('aria-label',`${shownName}、${label}。クリックすると地点の役割と通過条件を表示`);
+      const displayed=visibleFocus.has(id)&&el.style.display!=='none';
+      el.style.display=displayed?'':'none';
+      el.setAttribute('aria-hidden',String(!displayed));
+      el.style.opacity='1';
+      if(displayed)fitDiagramText(el,d);
+    });
+    focusDiagramZones(visibleFocus);
     const aiLegend=$('archLegendPrimary'),aiNote=$('archLegendSecondary');
     if(aiLegend)aiLegend.textContent=isAi()?'赤＝不正操作 ／ 橙点線＝URL取得で届いた未信頼データ ／ 青点線＝正規の要約依頼 ／ 緑×＝遮断':'赤線＝通過した経路 ／ 緑の×＝遮断地点 ／ 灰線＝今後の想定経路 ／ 暗号化は機器の状態';
-    if(aiNote)aiNote.textContent=isAi()?'※ 社内文書APIは侵害されず、過剰権限でAI Agentへ応答した状態を示します。':'※ グレーの機器も将来のシナリオで利用できるように共通配置しています。';
+    if(aiNote)aiNote.textContent=isAi()?'※ 社内文書APIは侵害されず、過剰権限でAI Agentへ応答した状態を示します。':'※ 今回のシナリオで使う機器だけを表示。点線の区画は論理的な所属を示します。';
     // Full-route learning display: planned segments remain visible, successfully
     // traversed segments persist after stepping forward, and a failed control
     // marks the EXACT boundary where the attempt is rejected.
@@ -2535,9 +2637,9 @@ window.CyberGuides.insider={
       stopLayer.append(aiDefs);
       stopLayer.append(svgNode('path',{d:'M624 185 H648 V423 H876 V320 H890',stroke:'#71cafa','stroke-width':'2.5','stroke-dasharray':'5 5',fill:'none','marker-end':'url(#arrow-ai-legitimate)','aria-label':'正規利用者からAIアプリへの要約依頼','data-ai-legitimate':'true'}));
       if(e.retrieved){
-        stopLayer.append(svgNode('path',{d:'M189 271 H211 V607 H870 V332 H890',stroke:'#f3be70','stroke-width':'3.0','stroke-linecap':'round','stroke-linejoin':'round','stroke-dasharray':'6 6',fill:'none','marker-end':'url(#arrow-ai-untrusted)','aria-label':'正規のURL取得（HTTPS GET）で得た未信頼な文書データの戻り経路','data-ai-untrusted':'true'}));
+        stopLayer.append(svgNode('path',{d:'M189 271 H211 V570 H870 V332 H890',stroke:'#f3be70','stroke-width':'3.0','stroke-linecap':'round','stroke-linejoin':'round','stroke-dasharray':'6 6',fill:'none','marker-end':'url(#arrow-ai-untrusted)','aria-label':'正規のURL取得（HTTPS GET）で得た未信頼な文書データの戻り経路','data-ai-untrusted':'true'}));
         const fetchLabel=svgNode('g',{'data-ai-fetch-label':'true','aria-label':'公開URLをHTTPS GETで正規取得'});
-        fetchLabel.innerHTML='<rect x="686" y="569" width="183" height="24" rx="5" fill="#3e3526" stroke="#e5b66a"/><text x="778" y="585" font-size="11" fill="#ffe0a1" text-anchor="middle">正規のURL取得：HTTPS GET</text>';
+        fetchLabel.innerHTML='<rect x="686" y="579" width="183" height="24" rx="5" fill="#3e3526" stroke="#e5b66a"/><text x="778" y="595" font-size="11" fill="#ffe0a1" text-anchor="middle">正規のURL取得：HTTPS GET</text>';
         stopLayer.append(fetchLabel);
       }
       if(e.sendAttempted){
@@ -3086,7 +3188,7 @@ window.CyberGuides.insider={
     $('introTitle').textContent=key==='ai'?'URL取得も外部送信に使える？ AIの情報持出しをどこで防ぐ？':key==='insider'?'正規従業員の機密情報持ち出しは、どこで止める？':key==='bec'?'メール乗っ取りから不正送信まで、IT対策はどこで効く？':key==='ddos'?'Webサーバーが侵害されなくても、サービスは止まる？':key==='web-app'?'公開WebアプリのSQLインジェクション、どこで防げる？':key==='vendor-access'?'信頼している保守委託先のアカウントが悪用されたら？':key==='supply-chain-tampered'?'配信された更新ファイルが、途中ですり替えられたら？':key==='supply-chain'?'正規ソフトの更新が、攻撃の入口になる？':key==='phishing'?'フィッシングからSaaS情報漏えいへ、どうつながる？':key==='ransomware-direct'?'VPNからサーバーへの直接侵入は、どう防ぐ？':key==='ransomware-email'?'悪性メールからランサムウェアへ、どうつながる？':'ランサムウェア攻撃は、どこから広がるのか？';
     $('introDescription').textContent=scenario.summary;
     $('caseNumber').textContent=`INTERACTIVE SECURITY LEARNING / CASE ${key==='ransomware-direct'?'01-A':key==='ransomware-email'?'01-B':key==='vendor-access'?'03-A':key==='ai'?'08':key==='insider'?'07':key==='bec'?'06':key==='ddos'?'05':key==='web-app'?'04':key==='supply-chain'?'03-B':key==='supply-chain-tampered'?'補足例':scenario.number}`;
-    document.title=`Cyber Incident Explorer v0.5.38 — ${scenario.category}`;if(sideView==='guide')renderScenarioGuide();
+    document.title=`Cyber Incident Explorer v0.5.39 — ${scenario.category}`;if(sideView==='guide')renderScenarioGuide();
     const refs=$('referenceList');refs.replaceChildren();scenario.references.forEach(ref=>{const a=document.createElement('a');a.href=ref.url;a.textContent=ref.label+' ↗';a.target='_blank';a.rel='noopener noreferrer';refs.append(a);});render();
   }
   // v0.5.18: the full-scenario guide is independent of incident simulation.
