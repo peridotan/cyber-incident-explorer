@@ -1,9 +1,9 @@
-# Cyber Incident Explorer v0.5.29
+# Cyber Incident Explorer v0.5.30
 
 架空の企業システム構成図を見ながら、サイバー攻撃の進行、対策の作用点、効果の限界を学ぶ日本語のWeb教材です。
 
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
-**ソースZIP:** [cyber-incident-explorer-v0.5.29.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.29.zip)
+**ソースZIP:** [cyber-incident-explorer-v0.5.30.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.30.zip)
 
 ## 収録シナリオ
 
@@ -20,6 +20,15 @@
 1. シナリオを選び、対策をOFFにして攻撃を最後まで実行します。
 2. 完了後の「対策を変えて比較」を押し、対策を選んで再実行します。
 3. 前回と今回の結果を比べ、「解説」で作用範囲と限界を確認します。
+
+## v0.5.30の変更（05 DDoS表示のタイミングと矢印）
+
+- **対策OFF：** STEP 03（企業回線の飽和が確定する段階）で「公開Webサービス」を赤色へ変更。「回線飽和・アクセス困難」と表示します。STEP 05まで赤色化を遅らせません。
+- **対策ON：** 回線の保護をSTEP 03で確認し、STEP 04で正常通信が到達したら公開Webを緑色へ。STEP 05で「正常アクセス可能」と表示します。
+- 赤い公開Webは **可用性への影響** を示します。Webサーバー自体の侵害を意味しません。
+- DDoSの青い正常通信の矢印は、SVGマーカーを固定サイズ（`markerUnits="userSpaceOnUse"`、9×8）に変更。線の太さによる不自然な拡大を防ぎ、Webコンポーネントの縁との間隔も調整しました。
+- 下部結果表示と解説のタイミングを合わせ、攻撃の赤線・遮断の緑×・正常利用者の青線の意味を維持しています。
+- 既存6シナリオ、全初期化、対策比較の回帰確認を実施しました。詳細は [QA-REPORT.md](QA-REPORT.md) を参照してください。
 
 ## v0.5.29の変更（DDoS教材の簡素化・正常通信の可視化）
 
