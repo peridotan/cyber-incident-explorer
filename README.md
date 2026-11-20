@@ -1,9 +1,9 @@
-# Cyber Incident Explorer v0.5.27
+# Cyber Incident Explorer v0.5.28
 
 架空の企業システム構成図を見ながら、サイバー攻撃の進行、対策の作用点、効果の限界を学ぶ日本語のWeb教材です。
 
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
-**ソースZIP:** [cyber-incident-explorer-v0.5.27.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.27.zip)
+**ソースZIP:** [cyber-incident-explorer-v0.5.28.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.28.zip)
 
 ## 収録シナリオ
 
@@ -13,12 +13,29 @@
 - サプライチェーン攻撃（委託先・保守接続経由）
 - サプライチェーン攻撃（正規ソフトウェア更新経由）
 - 公開WebアプリケーションへのSQLインジェクション
+- **DDoS／サービス停止（05、新規）**
 
 ## 学習の進め方
 
 1. シナリオを選び、対策をOFFにして攻撃を最後まで実行します。
 2. 完了後の「対策を変えて比較」を押し、対策を選んで再実行します。
 3. 前回と今回の結果を比べ、「解説」で作用範囲と限界を確認します。
+
+## v0.5.28の変更
+
+- 05「DDoS／サービス停止」を追加（学習シナリオ計7件）。L3/L4の大量通信による企業回線飽和と、正常利用者のサービス利用不能を6ステップで可視化。
+- 上流のトラフィック洗浄、CDN／Anycast、WAF、アプリ側のレート制限、可用性監視の5対策を比較可能にしました。
+- 上流の対策は今回の攻撃量・契約容量・経路の条件を満たす場合に限り阻止とし、WAF／レート制限／監視のみでは上流の回線飽和を阻止できないことを明示。
+- 攻撃通信と正常利用者通信を区別し、阻止後の未到達経路は通過済みの赤線にしないようにしました。
+- 公開サイトのHTMLソースを `index.html` として管理し、GitHub Actionsで配布用ZIPを組み立てる方式に変更（従来のv0.5.27のZIP.b64は履歴保持用に残します）。
+- 06 BEC、07 内部不正／情報持ち出し、08 AIアプリへの攻撃は引き続き次期候補です。
+
+**注記：** 本教材のDDoS防御結果は架空の固定条件で決まります。現実の攻撃量、ルーティング、対策サービスの容量・構成によって効果は異なり、個別製品の防御を保証しません。
+
+**参考資料**
+- [MITRE ATT&CK T1498（Network Denial of Service）](https://attack.mitre.org/techniques/T1498/)
+- [MITRE ATT&CK T1498.001（Direct Network Flood）](https://attack.mitre.org/techniques/T1498/001/)
+- [CISA：DDoSへの理解と対応](https://www.cisa.gov/resources-tools/resources/understanding-and-responding-distributed-denial-service-attacks)
 
 ## v0.5.27の変更
 
