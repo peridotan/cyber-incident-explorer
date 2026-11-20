@@ -1,9 +1,9 @@
-# Cyber Incident Explorer v0.5.32
+# Cyber Incident Explorer v0.5.33
 
 架空の企業システム構成図を見ながら、サイバー攻撃の進行、対策の作用点、効果の限界を学ぶ日本語のWeb教材です。
 
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
-**ソースZIP:** [cyber-incident-explorer-v0.5.32.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.32.zip)
+**ソースZIP:** [cyber-incident-explorer-v0.5.33.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.33.zip)
 
 ## 収録シナリオ
 
@@ -21,6 +21,26 @@
 1. シナリオを選び、対策をOFFにして攻撃を最後まで実行します。
 2. 完了後の「対策を変えて比較」を押し、対策を選んで再実行します。
 3. 前回と今回の結果を比べ、「解説」で作用範囲と限界を確認します。
+
+## v0.5.33の変更（06 BECをITセキュリティ中心に再設計）
+
+- 06「ビジネスメール詐欺（BEC）」を、**業務上の口座確認・承認の切り替え主体から、IT防御の作用点を学ぶシナリオ**へ変更しました。旧版の業務統制3スイッチは撤去。
+- **攻撃の6ステップ：** ①取引先のパスワード窃取 → ②非準拠端末からIdP認証を試行 → ③メールボックスの請求情報を不正閲覧 → ④不審な受信ルールを作成 → ⑤正規メールアカウントから不正な口座変更メール送信 → ⑥受信側の経理が独立確認を省略した場合に誤送金。
+- **IT対策の4スイッチ：**
+  1. フィッシング耐性MFA（STEP 02：盗用パスワードだけではログインできない）
+  2. 準拠端末の条件付きアクセス（STEP 02：今回の未管理端末を拒否）
+  3. 不審メールルール検知と**セッション自動失効・アカウント停止**（STEP 04：作成済みルールは残るが、後続送信を止める）
+  4. 不正送信メールの**自動保留**（STEP 05：今回のリスク・内容ルールに一致したメールだけを配送前に保留）
+- 取引先IdP、メールボックス、不審ルール操作、送信メール保護、受信側経理の違いを構成図で示します。過去に起きた不正アクセスや情報閲覧を、後の対策ONによって取り消すことはありません。
+- 折り返し確認・独立承認・送金前照合は**対策切り替え欄ではなく解説の補完策**として扱います。ITだけで金銭被害を必ず阻止できるとは説明しません。
+- 現行の他7シナリオと全体のUI構成を維持。ローカルQA結果は [QA-REPORT.md](QA-REPORT.md) を参照。
+
+**教材の固定条件：** 攻撃者はパスワードのみ窃取し、認証済みセッションや準拠端末は持ちません。自動封じ込め・送信保護は、今回の不審操作・不正メールにルールが一致し自動遮断まで成功する条件です。単なる監視ON、一般的なメールフィルタの導入だけで防御できる意味ではありません。
+
+**参考資料**
+- [CISA：フィッシング耐性MFA](https://www.cisa.gov/sites/default/files/2023-01/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf)
+- [Microsoft：侵害されたメールアカウントへの対応](https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account)
+- [Microsoft：不審な受信ルールの調査](https://learn.microsoft.com/en-us/defender-xdr/alert-grading-playbook-inbox-manipulation-rules)
 
 ## v0.5.32の変更（06 ビジネスメール詐欺：BEC）
 
