@@ -1,9 +1,9 @@
-# Cyber Incident Explorer v0.5.33
+# Cyber Incident Explorer v0.5.34
 
 架空の企業システム構成図を見ながら、サイバー攻撃の進行、対策の作用点、効果の限界を学ぶ日本語のWeb教材です。
 
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
-**ソースZIP:** [cyber-incident-explorer-v0.5.33.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.33.zip)
+**ソースZIP:** [cyber-incident-explorer-v0.5.34.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.34.zip)
 
 ## 収録シナリオ
 
@@ -14,13 +14,33 @@
 - サプライチェーン攻撃（正規ソフトウェア更新経由）
 - 公開WebアプリケーションへのSQLインジェクション
 - **DDoS／サービス停止（05）**
-- **ビジネスメール詐欺（06、新規）**
+- **ビジネスメール詐欺（06）**
+- **内部不正／情報持ち出し（07、新規）**
 
 ## 学習の進め方
 
 1. シナリオを選び、対策をOFFにして攻撃を最後まで実行します。
 2. 完了後の「対策を変えて比較」を押し、対策を選んで再実行します。
 3. 前回と今回の結果を比べ、「解説」で作用範囲と限界を確認します。
+
+## v0.5.34の変更（07 内部不正／情報持ち出し）
+
+- **07「内部不正／情報持ち出し」** を実装。学習可能なシナリオは **9件** になりました。従来の8件と操作体系を維持しています。
+- **攻撃の6ステップ：** 正規の従業員IDでログイン → 業務不要な機密フォルダを参照 → 機密ファイルを会社管理PCに保存 → 同じPCの保存領域で持ち出し準備 → SWG／CASB・DLPを経由して未許可の個人クラウドへアップロード → 外部の個人クラウドが機密情報を受信。
+- **有効なIT対策4件のみ切り替え対象：**
+  1. 機密フォルダの最小権限（RBAC／ACL）：STEP 02で業務上不要なファイル閲覧を拒否
+  2. 管理端末への機密ファイル保存制限：STEP 03で保存を拒否（既に成立した閲覧履歴は残る）
+  3. 未許可クラウドのアップロード制限（SWG／CASB）：STEP 05で個人用クラウドへの送信を拒否
+  4. 機密情報DLP：STEP 05でSWG通過後の検査可能な機密ファイル送信を拒否
+- **認証は成功したまま**、認可・端末への複製・出口制御を別々に評価。MFA・一般的なログ監視・SIEM通知だけでこの正規ユーザーの悪意を止めた扱いにはしません。
+- 機器と処理を区別：IdP、機密File Server、従業員PC、同じPC内の保存領域（別PCではない）、SWG／CASB、DLP、個人クラウド、SIEM。通過済みの赤経路と、緑の阻止地点・未到達区間を連動。
+- **固定条件：** 管理PCからの送信が必ずSWG／CASB・DLPの検査経路を通り、機密ファイルは分類済みで検査可能。対象外経路・暗号化ZIP・画像撮影・個人端末・正規の閲覧権限による悪用には別途対策が必要です。
+- 08「AIアプリへの攻撃」は引き続き準備中です。検証詳細は [QA-REPORT.md](QA-REPORT.md)。
+
+**参考資料**
+- [MITRE ATT&CK T1567.002（Exfiltration to Cloud Storage）](https://attack.mitre.org/techniques/T1567/002/)
+- [CISA Insider Threat Mitigation Guide](https://www.cisa.gov/sites/default/files/publications/Insider%20Threat%20Mitigation%20Guide_Final_508.pdf)
+- [英国NCSC：Reducing data exfiltration by malicious insiders](https://www.ncsc.gov.uk/guidance/reducing-data-exfiltration-by-malicious-insiders)
 
 ## v0.5.33の変更（06 BECをITセキュリティ中心に再設計）
 
