@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#101b2c" name="theme-color"/>
 <meta content="システム構成図を見ながらサイバー攻撃と防御の関係を学ぶ、架空のインシデント学習シミュレーター。" name="description"/>
-<title>Cyber Incident Explorer v0.5.32 — システム構成図で学ぶサイバーインシデント</title>
+<title>Cyber Incident Explorer v0.5.33 — システム構成図で学ぶサイバーインシデント</title>
 
 <style>:root{color-scheme:dark;--bg:#0b1422;--panel:#142238;--panel-2:#182940;--line:#2b405b;--text:#eff5ff;--muted:#a3b5cb;--muted2:#7c94af;--blue:#69b5ef;--danger:#fa777e;--success:#55d6ac;--warn:#f4b96e;--shade:#101d30;--radius:15px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% -10%,#1b344e 0,transparent 39%),var(--bg);font-family:Inter,"Noto Sans JP","Yu Gothic",Meiryo,system-ui,sans-serif;color:var(--text);line-height:1.5}button,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,.asset:focus-visible,.diagram-scroller:focus-visible{outline:3px solid #83bff0;outline-offset:3px}.shell{min-height:100vh}.top-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px clamp(22px,4vw,70px);border-bottom:1px solid #253b54;background:#111e2eeb}.brand-group{display:flex;align-items:center;gap:14px}.brand-symbol{width:42px;height:42px;display:grid;place-items:center;color:#7eddd5;background:#183746;border:1px solid #2e6c78;border-radius:12px}.brand-symbol svg{width:25px}.brand-name{font-size:calc(15px * var(--font-scale, 1));letter-spacing:.10em;font-weight:850;white-space:nowrap}.brand-name span{color:#66d6c4}.brand-sub{font-size:calc(11px * var(--font-scale, 1));color:var(--muted);letter-spacing:.05em}.header-right{display:flex;align-items:center;gap:18px}.vtag{font-size:calc(10px * var(--font-scale, 1));color:#83cbde;letter-spacing:.06em;background:#183243;border:1px solid #2f6071;border-radius:999px;padding:6px 10px;white-space:nowrap}.ghost-btn{border:1px solid var(--line);background:#1b2b42;color:#c3d4e7;padding:8px 13px;border-radius:9px;font-size:calc(12px * var(--font-scale, 1))}.ghost-btn:hover{background:#283d57}.main{max-width:1760px;margin:auto;padding:27px clamp(18px,3.5vw,62px) 26px}.intro{display:flex;justify-content:space-between;align-items:center;gap:28px;margin-bottom:21px}.intro-copy{max-width:930px}.kicker,.section-id{font-size:calc(11px * var(--font-scale, 1));letter-spacing:.13em;font-weight:750;color:#74ced0}.intro h1{font-size:clamp(23px,2.05vw,31px);line-height:1.35;letter-spacing:-.025em;margin:7px 0}.intro p{margin:0;color:#b4c5d8;font-size:calc(13px * var(--font-scale, 1))}.scenario-selector{flex:0 0 295px;border:1px solid var(--line);background:linear-gradient(135deg,#1b2c44,#182840);border-radius:12px;padding:12px 14px}.scenario-selector label{display:block;font-size:calc(11px * var(--font-scale, 1));font-weight:750;color:#8fb2ce;margin-bottom:7px}.scenario-selector select{width:100%;background:#101e31;border:1px solid #49627d;color:#f4f8ff;border-radius:8px;padding:9px;font-size:calc(12px * var(--font-scale, 1))}.scenario-selector>span{display:block;font-size:calc(10px * var(--font-scale, 1));margin-top:7px;color:#9faec5}.panel{background:linear-gradient(160deg,#17253a,#131f33);border:1px solid #30435c;border-radius:var(--radius);box-shadow:0 12px 32px #00000018}.playback{padding:17px 21px 16px;margin-bottom:16px}.playback-head,.diagram-head,.defense-title,.detail-head,.log-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.playback-head h2,.diagram-head h2,.defense-title h2,.detail-panel h2,.log-panel h2{margin:1px 0;font-size:calc(18px * var(--font-scale, 1));letter-spacing:.01em}.step-position{font-size:calc(12px * var(--font-scale, 1));color:#a8bfd6;background:#1f334a;padding:6px 10px;border-radius:8px;font-weight:750}.timeline{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:14px 0}.timeline-step{position:relative;text-align:left;border:1px solid #314660;background:#122137;border-radius:10px;min-height:76px;padding:10px 12px 9px 13px;color:var(--muted);transition:border-color .14s,background .14s}.timeline-step strong{display:block;font-size:calc(13px * var(--font-scale, 1));color:#d8e5f5;font-weight:750}.timeline-step small{display:block;font-size:calc(10px * var(--font-scale, 1));margin-top:5px;color:#839bb5}.timeline-step .number{font-size:calc(10px * var(--font-scale, 1));font-weight:800;color:#80a1c4}.timeline-step.active{background:#20334d;border-color:#6ab7d8;box-shadow:0 0 0 1px #4788a7}.timeline-step.active strong{color:white}.timeline-step.completed::before{position:absolute;content:"";height:3px;background:#58cba9;left:12px;right:12px;bottom:0;border-radius:4px}.timeline-step:disabled{opacity:.6}.transport{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid #2b4059;padding-top:13px}.transport-buttons{display:flex;gap:8px;align-items:center}.transport-icon,.transport-text{background:#1d3047;color:#d5e7f8;border:1px solid #35526c;border-radius:8px;min-width:39px;height:36px}.transport-icon{font-size:calc(27px * var(--font-scale, 1));line-height:1}.transport-icon:disabled{opacity:.4;cursor:default}.transport-text{padding:0 13px;font-size:calc(12px * var(--font-scale, 1))}.action-button{border:1px solid #57bec0;background:#167f89;color:white;font-weight:750;border-radius:9px;padding:8px 21px;min-height:37px;font-size:calc(13px * var(--font-scale, 1))}.action-button:hover{background:#1996a0}.action-button span:first-child{margin-right:7px}.speed-group{display:flex;align-items:center;gap:8px}.speed-group label{font-size:calc(11px * var(--font-scale, 1));color:var(--muted)}.speed-group select{background:#1b2e45;color:white;border:1px solid #3a526d;border-radius:7px;padding:7px 9px;font-size:calc(12px * var(--font-scale, 1))}.work-area{display:grid;grid-template-columns:minmax(0,1fr) 315px;gap:15px;align-items:stretch}.diagram-panel{padding:16px;min-width:0}.diagram-head h2{font-size:calc(19px * var(--font-scale, 1))}.diagram-head p{margin:3px 0 0;color:var(--muted);font-size:calc(11px * var(--font-scale, 1))}.view-switch{display:flex;background:#0d1a2c;border:1px solid #3a516b;border-radius:10px;overflow:hidden;padding:3px;flex-shrink:0}.view-switch button{font-size:calc(11px * var(--font-scale, 1));background:transparent;color:#a8bbd0;border:0;border-radius:7px;padding:9px 12px;white-space:nowrap}.view-switch button.selected{background:#2b4965;color:#fff;box-shadow:0 1px 4px #0008}.diagram-topline{display:flex;justify-content:space-between;align-items:center;gap:9px;margin:15px 0 10px}.mode-hint{font-size:calc(11px * var(--font-scale, 1));color:#c7dae9}.legend{display:flex;gap:13px;align-items:center;font-size:calc(10px * var(--font-scale, 1));color:#abbfd2;white-space:nowrap}.legend>span{display:flex;align-items:center;gap:5px}.legend-mark{width:7px;height:7px;display:inline-block;border-radius:50%;background:#708aa7}.legend-mark.danger{background:var(--danger)}.legend-mark.success{background:var(--success)}.diagram-scroller{width:100%;background:#101c2d;border:1px solid #28425d;border-radius:12px;overflow:auto;scrollbar-width:thin;scrollbar-color:#365d78 #102138}.diagram-scroller svg{display:block;width:100%;min-width:920px;height:auto;aspect-ratio:1440/680}.diagram-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:11px}.selected-event{display:flex;gap:10px;align-items:center}.selected-event div{display:flex;flex-direction:column}.selected-event strong{font-size:calc(13px * var(--font-scale, 1))}.selected-event span:last-child{font-size:calc(11px * var(--font-scale, 1));color:#b1c4d8}.event-indicator{width:10px;height:10px;border-radius:50%;background:var(--danger);box-shadow:0 0 0 5px #e65a6a16;flex-shrink:0}.event-indicator.success{background:var(--success);box-shadow:0 0 0 5px #51cda21c}.event-indicator.idle{background:#6f849e;box-shadow:none}.small-meta{font-size:calc(10px * var(--font-scale, 1));color:#8ca2bd;max-width:300px;text-align:right}.defense-panel{padding:17px 16px;display:flex;flex-direction:column;min-width:0}.defense-title h2{font-size:calc(17px * var(--font-scale, 1))}.on-count{background:#213851;border:1px solid #34536e;color:#91c9d7;font-size:calc(11px * var(--font-scale, 1));padding:6px 8px;border-radius:7px;white-space:nowrap}.defense-instruction{font-size:calc(11px * var(--font-scale, 1));margin:7px 0 14px;color:#b0c0d3}.bulk-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:11px}.bulk-controls button{padding:10px 5px;font-size:calc(12px * var(--font-scale, 1));border-radius:9px;font-weight:750}.all-on{border:1px solid #2d937d;background:#17463f;color:#7ae2bc}.all-off{border:1px solid #556a85;background:#26364d;color:#d5e4f1}.bulk-controls button:hover{filter:brightness(1.16)}.defense-controls{display:grid;gap:7px}.defense-card{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:10px 10px;border:1px solid #31465f;background:#14253a;border-radius:10px}.defense-card.on{background:#133c3a;border-color:#2b8079}.defense-copy{min-width:0}.defense-copy strong{display:block;font-size:calc(12px * var(--font-scale, 1));line-height:1.35}.defense-copy small{display:block;font-size:calc(10px * var(--font-scale, 1));color:#98b4cc;margin-top:3px}.toggle{display:block;border:0;flex:0 0 38px;width:38px;height:23px;border-radius:20px;background:#455a72;padding:3px;transition:background .15s}.toggle::before{content:"";display:block;width:17px;height:17px;background:#fff;border-radius:50%;box-shadow:0 1px 3px #0005;transition:transform .15s}.toggle.on{background:#28b294}.toggle.on::before{transform:translateX(15px)}.outcome-summary{margin-top:14px;border-radius:10px;background:#0d1c30;border:1px solid #36506b;padding:12px}.outcome-head{display:flex;justify-content:space-between;gap:5px;align-items:center;color:#91aecd;font-size:calc(10px * var(--font-scale, 1));margin-bottom:6px}.outcome-mark{height:7px;width:7px;border-radius:50%;background:var(--danger)}.outcome-mark.safe{background:var(--success)}.outcome-mark.warn{background:var(--warn)}.outcome-summary>strong{font-size:calc(14px * var(--font-scale, 1));display:block;line-height:1.4}.outcome-summary p{font-size:calc(11px * var(--font-scale, 1));line-height:1.65;color:#aec0d3;margin:8px 0 0}.control-note{display:flex;gap:8px;margin-top:auto;padding-top:13px;color:#92abc3}.control-note span{font-size:calc(14px * var(--font-scale, 1))}.control-note p{font-size:calc(10px * var(--font-scale, 1));line-height:1.6;margin:0}.detail-layout{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin-top:16px}.detail-panel,.log-panel{padding:18px 20px}.detail-head{margin-top:10px}.english-label{font-size:calc(10px * var(--font-scale, 1));letter-spacing:.13em;color:#83c7d9;font-weight:800}.detail-head h2{margin:4px 0;font-size:calc(23px * var(--font-scale, 1))}.status-badge{font-size:calc(11px * var(--font-scale, 1));border:1px solid #844950;background:#3d2838;border-radius:99px;padding:6px 11px;color:#ffd1d4;white-space:nowrap}.status-badge.safe{background:#164c40;border-color:#257b69;color:#b7f7de}.status-badge.neutral{background:#27384e;border-color:#4b5f75;color:#cbd8e6}.detail-panel>p{font-size:calc(13px * var(--font-scale, 1));color:#c7d5e5;line-height:1.85}.learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.learn-grid>div{background:#10243a;border:1px solid #294761;border-radius:10px;padding:11px}.learn-grid strong{font-size:calc(11px * var(--font-scale, 1));color:#7ccee0}.learn-grid p{color:#c1d3e3;font-size:calc(11px * var(--font-scale, 1));line-height:1.75;margin:6px 0 0}.learning-tip{display:flex;gap:10px;align-items:start;border-left:3px solid #e1aa67;background:#3d332c55;border-radius:3px;padding:11px;margin-top:12px}.learning-tip strong{font-size:calc(11px * var(--font-scale, 1));color:#f5c88b;white-space:nowrap}.learning-tip span{font-size:calc(11px * var(--font-scale, 1));color:#e7d9c7}.technique-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.technique-list a,.technique-list span{font-size:calc(11px * var(--font-scale, 1));text-decoration:none;color:#8acff0;background:#1b334b;border:1px solid #3b6281;padding:6px 9px;border-radius:7px}.technique-list a:hover{text-decoration:underline}.log-head>div>span{font-size:calc(10px * var(--font-scale, 1));color:var(--muted)}.log-console{background:#0b1829;border:1px solid #2c465f;border-radius:9px;margin:14px 0 11px;padding:10px;min-height:160px;max-height:260px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:calc(11px * var(--font-scale, 1));line-height:1.7}.log-line{display:grid;grid-template-columns:67px 41px 1fr;gap:8px;margin-bottom:5px}.log-line span:first-child{color:#7896b4}.log-level{color:#9db6ce}.log-level.warn{color:#ffa2a7}.log-level.ok{color:#71dab6}.log-message{color:#c2d3e4;overflow-wrap:anywhere}.effect-head{font-size:calc(11px * var(--font-scale, 1));color:#acbfd3;margin-bottom:8px}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.result-item{border:1px solid #304760;background:#1a2d44;padding:9px 6px;border-radius:8px;text-align:center}.result-item span{display:block;font-size:calc(10px * var(--font-scale, 1));color:#92acc5}.result-item strong{display:block;font-size:calc(12px * var(--font-scale, 1));margin-top:5px}.result-item .danger{color:#ff949c}.result-item .safe{color:#70d4ac}.result-item .neutral{color:#a5b6ca}.references-panel{display:grid;grid-template-columns:300px 1fr;gap:24px;padding:28px 3px 16px}.references-panel h2{margin:5px 0;font-size:calc(19px * var(--font-scale, 1))}.references-panel p{margin:0;font-size:calc(12px * var(--font-scale, 1));color:var(--muted)}.reference-links{display:flex;flex-wrap:wrap;gap:7px;align-content:center}.reference-links a{color:#b1dbf6;border:1px solid #35516e;background:#172c43;border-radius:8px;padding:7px 10px;font-size:calc(11px * var(--font-scale, 1));text-decoration:none}.reference-links a:hover{text-decoration:underline}.footer{padding:15px 0;border-top:1px solid #2c4057;display:flex;justify-content:space-between;gap:14px;color:#8096b0;font-size:calc(10px * var(--font-scale, 1))}.guide-dialog{border:1px solid #3e607d;background:#192940;border-radius:14px;color:var(--text);padding:23px;width:min(540px,calc(100% - 32px));box-shadow:0 22px 100px #000c}.guide-dialog::backdrop{background:#000a}.dialog-head{display:flex;align-items:center;justify-content:space-between}.dialog-head h2{margin:0}.dialog-head button{border:0;background:transparent;color:white;font-size:calc(25px * var(--font-scale, 1))}.guide-dialog ol{font-size:calc(13px * var(--font-scale, 1));line-height:1.95;color:#d1dce9;padding-left:22px}.guide-dialog p{font-size:calc(12px * var(--font-scale, 1));color:#aabfd4}.guide-dialog .action-button{margin-top:9px}
 /* Logical architecture diagram */
@@ -636,7 +636,7 @@
 <div aria-hidden="true" class="brand-symbol"><svg viewbox="0 0 36 36"><path d="M18 3 31 9v11c0 8-5.5 11.5-13 14C10.5 31.5 5 28 5 20V9z" fill="none" stroke="currentColor" stroke-width="2.2"></path><path d="M11 18h14M18 11v14" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path></svg></div>
 <div><div class="brand-name">CYBER <span>INCIDENT</span> EXPLORER</div><div class="brand-sub">システム構成図で学ぶサイバーインシデント</div></div>
 </div>
-<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><button aria-controls="scenarioGuidePanel" aria-expanded="false" class="ghost-btn scenario-guide-trigger" id="scenarioGuideButton" type="button">📖 この攻撃を学ぶ</button><span class="vtag">v0.5.32</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
+<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><button aria-controls="scenarioGuidePanel" aria-expanded="false" class="ghost-btn scenario-guide-trigger" id="scenarioGuideButton" type="button">📖 この攻撃を学ぶ</button><span class="vtag">v0.5.33</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
 </header>
 <main class="main">
 <section aria-label="シナリオの概要" class="intro">
@@ -712,7 +712,7 @@
 </section>
 <section aria-labelledby="refTitle" class="references-panel"><div><div class="section-id">OFFICIAL REFERENCES</div><h2 id="refTitle">一次情報で学ぶ</h2><p>MITRE ATT&amp;CKの攻撃戦術・技法と、NIST CSF 2.0の対応・復旧を確認できます。</p></div><div class="reference-links" id="referenceList"></div></section>
 </dialog>
-<footer class="footer"><span>Cyber Incident Explorer · v0.5.32</span><span>学習用シミュレーション / 実際の通信やマルウェアは実行しません</span></footer>
+<footer class="footer"><span>Cyber Incident Explorer · v0.5.33</span><span>学習用シミュレーション / 実際の通信やマルウェアは実行しません</span></footer>
 </main>
 </div>
 <dialog class="guide-dialog" id="guideDialog" aria-labelledby="guideTitle">
@@ -1298,59 +1298,61 @@ window.CyberGuides.ddos={
 
 };
 
-/* CASE 06: Business Email Compromise (BEC); fictional, controlled financial-fraud scenario.
-   A REAL supplier mailbox is compromised upstream; sender authenticity is not message intent.
-   Only controls which interrupt this particular payment-fraud chain are switches. */
+/* CASE 06: technical controls against BEC through compromised mailbox.
+   Fixed facts: attacker knows password only, uses an unmanaged device, and the
+   specified security controls detect this particular case when enabled.
+   Business loss at step 6 also assumes accounting follows the false instruction. */
 window.CyberScenarios.bec={
   id:'cie-bec-06',number:'06',category:'ビジネスメール詐欺（BEC）',
-  title:'取引先の本物のメールから届く口座変更は信頼できる？',
-  summary:'既に侵害された取引先の正規メールから、実在の請求に紛れた振込先変更が届くケース。別経路での照合・独立承認・送金前確認で誤送金を防ぎます。',
+  title:'盗まれたパスワードから、不正な送金依頼メールへ進むには？',
+  summary:'取引先のメールアカウントを乗っ取ろうとする攻撃。IdP認証、メールボックス操作、セッション封じ込め、送信制御の各IT対策が作用する地点と限界を比較します。',
   controls:[
-    {id:'becCallback',icon:'phone',label:'登録済み番号への折返し確認',tag:'経理担当が取引先の既知番号へ電話',location:'経理担当者／確認先',asset:'pc',desc:'メール本文や返信に記載された連絡先ではなく、以前から登録されている電話番号で取引先へ照会し、今回は不正な変更だと確認して保留します。',limit:'電話番号台帳の改ざん、確認相手のなりすまし、確認手順の省略があれば保証できません。'},
-    {id:'becApproval',icon:'shield',label:'振込先変更の独立承認',tag:'既存台帳・契約書と突合',location:'承認者／取引先台帳',asset:'admin',desc:'承認者が攻撃メールに依存しない既存の契約・取引先台帳と変更根拠を照合し、不正な変更を拒否する条件です。',limit:'2名が同じ詐欺メールだけを見る「形式的なダブルチェック」では防げません。'},
-    {id:'becBankVerify',icon:'key',label:'送金前の独立口座確認',tag:'銀行送金の最終ゲート',location:'銀行振込／受取口座',asset:'saas',desc:'振込直前に、変更された支払台帳とは独立した確認済みの正規口座情報と比較し、異なる受取口座を保留します。',limit:'既存の取引先台帳と同じ改ざん済みデータだけを照合しても検知できません。実際の銀行で自動的に行われるとは限りません。'}
+    {id:'becMfa',icon:'key',label:'フィッシング耐性MFA',tag:'IdPでパスワード単独ログインを拒否',location:'取引先 IdP／認証',asset:'mail',desc:'攻撃者はパスワードしか持たず、正規のFIDO2／パスキー認証を完了できません。今回はサインイン時点で拒否します。',limit:'セッションCookie窃取、端末侵害、誤設定、本人による承認等はこの例とは異なります。MFA有効化だけで全BECを防げるとは限りません。'},
+    {id:'becDevice',icon:'shield',label:'準拠端末の条件付きアクセス',tag:'IdPで未管理端末を拒否',location:'取引先 IdP／端末条件',asset:'mail',desc:'今回のログイン元は未登録・非準拠の攻撃者端末であり、準拠端末必須ポリシーでメールへのアクセスを拒否します。',limit:'信頼済み端末や有効な既存セッションが悪用される場合、同じ拒否条件になるとは限りません。'},
+    {id:'becContain',icon:'shield-alert',label:'侵害検知とセッション自動失効',tag:'不審な受信ルールを検知し送信前に封じ込め',location:'メール検知／自動対応',asset:'admin',desc:'この例では不審なメールルール操作を検知し、事前設定した自動応答がアカウントを無効化・セッションを失効させて次のメール送信を止めます。',limit:'検知アラートだけでは遮断しません。自動応答の有効化・検知の成立・失効の実効性が必要で、既に閲覧した請求情報や作成済みルールは残ります。'},
+    {id:'becOutbound',icon:'mail',label:'不正送信の自動保留',tag:'今回の送信ルールに一致した場合のみ',location:'送信メール保護',asset:'saas',desc:'アカウントのリスクと振込先変更メールの異常が今回の送信保護ルールに一致し、宛先への配送前に自動で保留します。',limit:'一般的なスパム検知だけで、正規メールアカウントからの不正な支払指示を必ず検知できるわけではありません。既に成立したアカウント侵害や情報閲覧は取り消せません。'}
   ],
   stages:[
-    {id:'bec-supplier',time:'T + 00:00',title:'取引先の正規メールが侵害済み',eyebrow:'COMPROMISED SUPPLIER',framework:{source:'SCENARIO',id:'BEC',name:'外部の実在アカウント侵害'},summary:'攻撃者が取引先の実在するメールアカウントを悪用する前提。自社はまだ侵害されていません。',detail:'今回の起点は、既に侵害された取引先の正規メールアカウントです。自社のMFAやDMARCは、この上流侵害を自動的に止めません。',detect:'取引先側の不審なログインとメール操作、自社側の送信元・内容の不自然さ。',response:'取引先に別経路で連絡し、同アカウントの安全性を確認。',techniques:[],logs:{active:['SUPPLIER / 取引先の正規メールアカウントが攻撃者に悪用されている']},tip:'送信元が本物でも、メール本文の指示が正しいとは限りません。'},
-    {id:'bec-invoice',time:'T + 00:01',title:'実際の請求・支払情報を把握',eyebrow:'INVOICE CONTEXT',framework:{source:'SCENARIO',id:'BEC',name:'既存の商取引情報'},summary:'攻撃者は本物の取引先メール履歴から、請求額や支払予定を把握します。',detail:'架空のケースでは請求そのものは実在し、攻撃者は既存の会話に割り込めます。今回の経理担当はまだ不正な口座変更を受け取っていません。',detect:'取引先メールの不審な閲覧・転送ルールは取引先側の調査対象。',response:'取引先に送信済み請求書とアカウント侵害の範囲を確認。',techniques:[],logs:{active:['SUPPLIER / 実在する請求書と支払予定の情報が攻撃者に知られた']},tip:'架空の請求書ではなく、実在の取引に紛れるため判別が難しくなります。'},
-    {id:'bec-email',time:'T + 00:02',title:'本物のアカウントから変更依頼',eyebrow:'LEGITIMATE MAILBOX',framework:{source:'SCENARIO',id:'BEC',name:'メールの送信元と意図の違い'},summary:'取引先の正規アカウントから、口座変更を求めるメールが経理担当者へ届きます。',detail:'実在メールの返信スレッドに、攻撃者管理の受取口座への変更依頼が紛れます。SPF/DKIM/DMARCが通っても本文の指示が正当とは言えません。',detect:'急な口座変更、既存条件との不一致、支払期日前の不自然な催促。',response:'メールへの返信や本文の電話番号ではなく、事前登録済み連絡先で確認。',techniques:[],logs:{active:['MAIL / 正規の取引先アカウントから口座変更依頼を経理担当へ配送']},tip:'正規の送信ドメインでも、口座変更の真正性は別途確認します。'},
-    {id:'bec-callback',time:'T + 00:03',title:'経理担当者が変更依頼を確認',eyebrow:'OUT-OF-BAND CHECK',framework:{source:'SCENARIO',id:'VERIFY',name:'既知の電話番号による照合'},summary:'経理担当者が口座変更依頼を処理する前に、別経路で真偽を確認できるか判定します。',detail:'登録済み番号へ折返し確認をする場合、今回は取引先が変更を否定し、不正依頼と判明します。メール返信だけでは侵害済みの同じアカウントに戻るため確認になりません。',detect:'既存の登録電話番号・取引先担当者・請求内容との突合。',response:'変更を保留し、取引先へ注意喚起・支払保留。',techniques:[],logs:{active:['ACCOUNTING / 別経路の真正性確認を実施せず、変更依頼を処理予定'],blocked:['ACCOUNTING / 事前登録番号で取引先に確認し、不正変更を発見・保留']},tip:'別経路の確認とは、メール本文に書かれた番号へ電話することではありません。'},
-    {id:'bec-ledger',time:'T + 00:04',title:'振込先台帳の不正変更を試行',eyebrow:'PAYMENT MASTER CHANGE',framework:{source:'SCENARIO',id:'APPROVAL',name:'受取先の承認・更新'},summary:'確認をすり抜けた変更依頼が承認者へ渡り、振込先台帳の更新を試みます。',detail:'独立承認ONなら、承認者が契約・原本台帳など改ざん前の根拠を参照し、不正口座への変更を拒否する想定。複数人が同じ詐欺メールを見るだけの承認ではありません。',detect:'受取口座変更ログ、変更者・承認者、旧口座と新口座。',response:'不正変更を却下し、承認ログ・請求メールを保全。',techniques:[],logs:{active:['PAYMENT MASTER / 不正口座への変更が承認され台帳に登録された'],blocked:['APPROVER / メール以外の根拠を独立照合し、口座変更を拒否']},tip:'承認の人数ではなく、独立した根拠を確認したかが重要です。'},
-    {id:'bec-payment',time:'T + 00:05',title:'不正な受取口座へ送金を試行',eyebrow:'FRAUDULENT PAYMENT',framework:{source:'ATT&CK',id:'T1657',name:'Financial Theft'},summary:'変更された振込先に支払指示が作成され、攻撃者の受取口座への送金を試みます。',detail:'送金前照合ONなら、不正に変更された支払台帳とは独立した正規受取口座情報に基づいて、振込を保留。OFFなら今回の架空条件で誤送金が成立します。',detect:'受取口座の突合、送金保留、振込完了の記録。',response:'送金前なら保留・取引先へ連絡。誤送金済みなら直ちに金融機関へ連絡し、組戻し等を相談・証拠を保全。',techniques:[{id:'T1657',label:'Financial Theft',url:'https://attack.mitre.org/techniques/T1657/'}],logs:{active:['BANK / 変更後の不正受取口座へ送金が実行された'],blocked:['PAYMENT / 独立した正規口座情報と不一致のため振込を保留']},tip:'後からメールを削除しても送金被害はなかったことにはできません。'}
+    {id:'bec-credentials',time:'T + 00:00',title:'取引先のパスワードが窃取される',eyebrow:'STOLEN CREDENTIAL',framework:{source:'ATT&CK',id:'T1078',name:'Valid Accounts'},summary:'フィッシングなどの別経路で、取引先メール利用者のパスワードが攻撃者に渡った前提です。',detail:'このケースではパスワードだけが漏えいし、パスキーの秘密鍵・端末準拠状態・既存セッションは奪われていません。漏えい自体は既成事実で、後段のIT対策がログイン成立を防ぐか評価します。',detect:'既知の漏えい情報、サインイン失敗、本人からの報告。',response:'アカウント保護、認証情報変更、既存セッションの点検。',techniques:[{id:'T1078',label:'Valid Accounts',url:'https://attack.mitre.org/techniques/T1078/'}],logs:{active:['ATTACK / 取引先利用者のパスワードが窃取された（他の認証要素は未窃取）']},tip:'パスワード漏えいと不正ログインの成功は別の出来事です。'},
+    {id:'bec-login',time:'T + 00:01',title:'盗用パスワードでメールへログインを試行',eyebrow:'IDENTITY GATE',framework:{source:'ATT&CK',id:'T1078',name:'Valid Accounts'},summary:'攻撃者の非準拠端末から取引先IdPへ認証要求を送ります。',detail:'MFAがONならパスワードだけではログインできません。準拠端末必須がONなら今回の未管理端末を拒否します。両方ONの場合はMFAを優先表示します。既に奪われたセッションの悪用はこのケースでは扱いません。',detect:'サインインログ、MFAチャレンジ、端末準拠・接続元の判定。',response:'該当サインインの拒否・アカウントリスク調査。',techniques:[{id:'T1078',label:'Valid Accounts',url:'https://attack.mitre.org/techniques/T1078/'}],logs:{active:['IdP / パスワードのみでログイン成立（両認証対策OFF）'],blocked:['IdP / 認証要件を満たさないためサインインを拒否']},tip:'認証を通さなければ、その後のメールボックス操作は未到達です。'},
+    {id:'bec-mailbox',time:'T + 00:02',title:'メールボックスから請求情報を閲覧',eyebrow:'MAILBOX ACCESS',framework:{source:'ATT&CK',id:'T1114',name:'Email Collection'},summary:'不正ログイン後、実在する請求や支払予定のメールを閲覧します。',detail:'正規のメールアカウントにログインできた攻撃者が、既存の請求スレッドや振込予定を調べます。ここで閲覧した情報は、その後にアカウントを停止しても「未閲覧」には戻りません。',detect:'MailItemsAccessedなどの監査、異常なアクセス量・検索。',response:'アクセス履歴の保全と影響メールの確認。',techniques:[{id:'T1114',label:'Email Collection',url:'https://attack.mitre.org/techniques/T1114/'}],logs:{active:['MAILBOX / 請求履歴や支払情報のメールを不正閲覧']},tip:'検知や失効が後から成功しても、閲覧済み情報が戻るわけではありません。'},
+    {id:'bec-rule',time:'T + 00:03',title:'不審な受信ルールを設定・検知',eyebrow:'MAILBOX TAMPERING',framework:{source:'ATT&CK',id:'T1114.003',name:'Email Forwarding Rule'},summary:'攻撃者が受信ルールを変更し、メール操作の異常を検知・自動封じ込めできるか判定します。',detail:'この例では攻撃者が取引先からの返信を隠す不審なルールを作成します。自動封じ込めONなら、その操作を今回は検知し、事前設定された自動対応でアカウント停止とセッション失効が送信前に成功。単なる監視ONとは異なります。ルール作成と既存閲覧の履歴は残ります。',detect:'不審な受信ルール作成、サインインリスク、メールアクセス異常の相関。',response:'自動封じ込め後にルール削除・パスワード再設定・被害調査。',techniques:[{id:'T1114.003',label:'Email Forwarding Rule',url:'https://attack.mitre.org/techniques/T1114/003/'}],logs:{active:['MAILBOX / 不審な受信ルールを設定したがアカウント停止は未実行'],blocked:['SOC / 不審ルール操作を検知し自動でアカウント停止・セッション失効']},tip:'不正ルールは作成済み。封じ込めは後続の送信を止めても過去の操作は消しません。'},
+    {id:'bec-send',time:'T + 00:04',title:'正規メールから不正な口座変更を送信',eyebrow:'FRAUDULENT OUTBOUND',framework:{source:'SCENARIO',id:'BEC',name:'Business Email Compromise'},summary:'侵害された取引先の正規アカウントから支払先変更を要求します。',detail:'被害者が信じやすい本物のスレッドから、攻撃者管理の振込先への変更を求めるメールを送ります。送信保護ONでは、この例のメッセージがリスク・内容のルールに一致し、受信者へ配送される前に自動保留されます。SPF/DKIM/DMARCの成功だけでは不正指示を見抜けません。',detect:'危険なメール送信、口座変更指示、送信履歴、送信制限。',response:'メッセージ保留・取引先からの通知・アカウント修復。',techniques:[],logs:{active:['OUTBOUND / 正規アカウントから不正口座変更メールが配送された'],blocked:['OUTBOUND / 今回の不正メールにポリシーが一致し自動保留（未配送）']},tip:'送信元の真正性と、口座変更指示の正当性は別の問題です。'},
+    {id:'bec-payment',time:'T + 00:05',title:'受信側経理が誤った振込先へ支払',eyebrow:'BUSINESS IMPACT',framework:{source:'ATT&CK',id:'T1657',name:'Financial Theft'},summary:'不正メールが届き、業務確認が省略される固定条件では誤送金が発生します。',detail:'取引先の正規メールから届いた変更依頼を信じ、経理担当が独立照合せずに振り込むという教育上の仮定です。IT対策がすべてOFFなら送金被害に至ります。メール配送後の誤送金をIT対策だけで必ず止められるわけではなく、別経路確認・独立承認も必要です。',detect:'取引先からの否認、受取口座の変更履歴、異常な支払。',response:'金融機関への至急連絡・支払停止／組戻し相談・取引先確認・証拠保全。',techniques:[{id:'T1657',label:'Financial Theft',url:'https://attack.mitre.org/techniques/T1657/'}],logs:{active:['BUSINESS / 受信者が偽指示を信じ、不正口座へ誤送金した']},tip:'ITによるアカウント保護と、金銭被害を避ける業務統制は両方必要です。'}
   ],
   references:[
-    {label:'FBI IC3: Business Email Compromise（正規メールアカウントの侵害と別経路の確認）',url:'https://www.ic3.gov/CrimeInfo/BEC'},
-    {label:'FBI: Business Email Compromise',url:'https://www.fbi.gov/how-we-can-help-you/common-frauds-and-scams/business-email-compromise'},
-    {label:'MITRE ATT&CK T1657: Financial Theft',url:'https://attack.mitre.org/techniques/T1657/'}
+    {label:'CISA：フィッシング耐性MFA',url:'https://www.cisa.gov/sites/default/files/2023-01/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf'},
+    {label:'Microsoft：侵害メールアカウントへの対応',url:'https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account'},
+    {label:'Microsoft：不審な受信ルールの調査',url:'https://learn.microsoft.com/en-us/defender-xdr/alert-grading-playbook-inbox-manipulation-rules'}
   ]
 };
 window.CyberLearning.becStages=[
-  {from:'攻撃者 → 侵害済み取引先メール',passes:'取引先の実在メールアカウントが既に侵害されており、本物の送信元を悪用できた。',stopped:'これは上流の侵害を前提とする。自社のMFAやDMARCで侵害を取り消せない。'},
-  {from:'侵害済み取引先メール（内部の請求情報）',passes:'既存の請求書・支払予定の文脈が攻撃者に知られた。',stopped:'この段階は取引先側の事前侵害と情報収集であり、自社の承認対策は後段に作用する。'},
-  {from:'取引先メール → メール基盤 → 自社経理',passes:'真正なメールアカウントから口座変更依頼が到達した。DMARCを通っても内容の真正性は保証されない。',stopped:'メールアドレスの見た目ではなく変更内容を別経路で確認する。'},
-  {from:'自社経理 → 既知の取引先連絡先',passes:'事前に登録された電話番号へ確認せず、依頼を正当として処理した。',stopped:'登録済みの電話番号で取引先へ照会し、変更依頼が偽物と確認して処理を保留。'},
-  {from:'経理担当 → 承認者 → 支払先台帳',passes:'独立照合がなく不正受取口座へ台帳を変更した。',stopped:'承認者が詐欺メールとは独立した契約・原本を確認し、不正変更を拒否。'},
-  {from:'支払先台帳 → 銀行振込 → 不正受取口座',passes:'送金時の照合がなく、不正受取口座へ資金を送った。',stopped:'変更済み台帳と独立した正規の口座情報で突合し、送金前に保留。'}
+  {from:'攻撃者 → 盗用した認証情報',passes:'取引先アカウントのパスワードのみを窃取済み。認証・端末要件を満たしたわけではない。',stopped:'パスワード漏えいは既成事実。後段の認証要件で悪用を阻止する。'},
+  {from:'攻撃者端末 → 取引先IdP',passes:'フィッシング耐性MFAと端末準拠要件のどちらもOFFのため、不正サインインが成功。',stopped:'フィッシング耐性MFAまたは準拠端末条件により不正サインインを拒否。'},
+  {from:'IdP → 取引先メールボックス',passes:'不正ログイン成立後、請求・支払情報のメールを閲覧した。',stopped:'認証で拒否された場合、メールボックス閲覧は未到達。'},
+  {from:'メールボックス → 不審ルール → 自動封じ込め',passes:'不審な受信ルールを設定したが、自動封じ込めは行われなかった。',stopped:'不審ルールの検知と自動対応でセッション失効・アカウント停止。送信前に封じ込め。'},
+  {from:'請求メール → 送信メール保護 → 受信側',passes:'正規メールアカウントからの不正変更依頼が、送信制御を通過して受信側へ配送された。',stopped:'送信時のルールに今回の不正メールが一致し、配送前に自動保留。'},
+  {from:'受信側経理 → 支払処理（業務影響）',passes:'受信側経理が独立確認を省略し、攻撃者管理の口座へ誤送金した固定条件。',stopped:'IT制御で未配送ならこの不正メールによる誤送金には到達しない。'}
 ];
 window.CyberLearning.becNodes={
-  attacker:{role:'侵害済みの取引先メールを操作する攻撃者。',action:'実在する取引先との請求・振込連絡を悪用する。',access:'今回の起点は取引先側の既存侵害。自社の認証基盤への侵入は想定しない。',next:'正規メールから口座変更依頼を送る。',defense:'取引先への事実確認・支払変更の審査。',signal:'取引先からの急な口座変更通知。'},
-  vendor:{role:'外部取引先の、攻撃者に侵害された実在のメールアカウント。',action:'実在の請求書・既存スレッドを参照し、口座変更メールを送る。',access:'正規アカウントから送るため、メールの送信元認証に成功し得る。',next:'メール配送基盤から自社の経理担当へ届く。',defense:'取引先側のアカウント保護と、受信側の別経路確認。',signal:'請求書情報と急な口座変更の不一致。'},
-  fake:{role:'取引先の実在する担当者へ通じる、事前登録済みの電話番号。',action:'経理担当者がメール以外の電話経路で確認する。',access:'メールに書かれた番号ではなく、予め正当性を確認した登録番号。',next:'不正な口座変更なら振込先更新を保留する。',defense:'登録番号の管理、連絡先変更の独立確認。',signal:'取引先が口座変更を否定。'},
-  mail:{role:'正規メールアカウントから送られたメールを配送する仕組み。',action:'正規の送信元からのメールを経理担当へ配信する。',access:'送信元認証の成功は、指示内容・振込先の正当性を保証しない。',next:'経理担当者による内容確認へ。',defense:'メール内容の注意喚起と支払変更の独立確認。',signal:'支払直前の口座変更依頼。'},
-  pc:{role:'自社の経理担当者と利用端末。',action:'取引先から届いた振込先変更依頼を確認する。',access:'端末は感染・乗っ取りされた想定ではありません。詐欺メールを受け取った状態です。',next:'登録済みの電話番号で真正性を確認し、承認者へ渡すか保留する。',defense:'既知番号への折返し電話。',signal:'急な口座変更、期日の催促。'},
-  admin:{role:'支払先変更を審査する社内の独立承認者。',action:'独立した根拠に基づいて変更前後の振込先を照合する。',access:'同じ詐欺メールだけを見る形式的な二人確認では不十分。',next:'正当な根拠が確認できた場合のみ支払台帳を更新。',defense:'独立承認、職務分掌。',signal:'口座情報の差分と承認記録。'},
-  files:{role:'取引先ごとの振込先を管理する自社の支払先台帳。',action:'承認後に口座情報を変更する。',access:'メール本文の口座と独立している必要がある元情報は、別途管理する。',next:'送金指示の作成へ。',defense:'変更履歴・承認証跡・元台帳との独立照合。',signal:'振込先の変更履歴。'},
-  saas:{role:'銀行振込を行う金融機関の送金画面／支払処理。',action:'登録された受取先への送金指示を受ける。',access:'この教材では銀行が自動で正当性を保証するものではない。',next:'独立照合に不一致がなければ送金を実行。',defense:'送金前の正規受取先照合と保留フロー。',signal:'振込保留・振込完了。'},
-  storage:{role:'攻撃者が管理する不正な受取銀行口座。',action:'独立照合がなければ送金を受け取る。',access:'正規の取引先の口座ではありません。',next:'誤送金の場合、金融機関への速やかな連絡と回収手続きが必要。',defense:'送金前に阻止し、誤送金時は銀行に直ちに連絡。',signal:'送金履歴、受取口座、金額。'}
+  attacker:{role:'盗用した認証情報で取引先メールを悪用しようとする外部攻撃者。',action:'窃取済みのパスワードを攻撃用端末で利用。',access:'取引先の認証要件・メールアクセス権限はまだ別判定。',next:'非準拠端末から取引先IdPへログインを試みる。',defense:'取引先IdPでのMFA・端末準拠要件。',signal:'流出したPWを使った異常なログイン。'},
+  vendor:{role:'攻撃者が使用する未管理・非準拠の外部端末。',action:'窃取したパスワードで取引先IdPへサインイン要求。',access:'この端末は企業が準拠を確認した端末ではない。',next:'認証基盤で本人確認・端末ポリシーを判定する。',defense:'フィッシング耐性MFA、条件付きアクセス。',signal:'端末登録状態・IP・認証失敗。'},
+  fake:{role:'事前の認証情報窃取の例として示した偽ログインサイト。',action:'今回は既にパスワードが盗まれた時点から扱うため、偽サイトの動作自体は再生対象外。',access:'窃取されたパスワードは実際のメール認証とは異なる情報。',next:'取引先IdPの本人確認が次の防御地点。',defense:'フィッシング対策、FIDO2パスキー。',signal:'フィッシングの通報。'},
+  mail:{role:'取引先企業が利用するIdP／サインイン認証サービス。',action:'不審な端末の認証要求で、MFAと端末準拠条件を評価する。',access:'パスワードのみならMFA未完了。未管理端末は条件付きアクセスで拒否可能。',next:'認証成立時のみメールボックスへのアクセスを許可。',defense:'MFA／条件付きアクセス。',signal:'IdPのサインイン・端末準拠ログ。'},
+  pc:{role:'取引先企業のメールボックス（顧客の経理PCではない）。',action:'攻撃者に請求メールを検索・閲覧される。',access:'正規アカウントへのアクセスが成立した場合に限る。',next:'受信ルール変更などの不審操作へ。',defense:'認証制御・メールボックス監査・セッション失効。',signal:'MailItemsAccessed・検索・閲覧ログ。'},
+  admin:{role:'メール操作の不審なルール変更を観測する自動対応地点。',action:'受信ルール作成の異常を分析し、設定済みならアカウント停止・セッション失効を実行。',access:'通知だけでは封じ込めにならず、自動対応機能と検知の成功が必要。',next:'阻止しなければ不正な送信メール作成が続く。',defense:'検知とアカウント無効化・セッション失効の連動。',signal:'不審ルール作成とアカウントリスク。'},
+  files:{role:'実際の請求スレッドを基に、不正な口座変更メールを作成する処理。',action:'自動封じ込めが成功しなければ、不正送信の準備を続ける。',access:'メールボックスの閲覧がすでに成立している。',next:'送信メール保護サービスへメールを提出。',defense:'メールルール監査・自動封じ込め・送信メール制御。',signal:'ルール変更・送信済みアイテム。'},
+  saas:{role:'取引先の送信メールを配送前にチェックするメールセキュリティ。',action:'今回の危険な口座変更指示とリスクシグナルに一致した場合、自動保留。',access:'今回のルールが一致しなければ正規アカウントからのメッセージを配送する。',next:'未保留のメールのみ受信側の経理へ届く。',defense:'自動送信保留・メール監査。',signal:'送信制限イベント・メッセージトレース。'},
+  storage:{role:'口座変更メールを受け取る顧客（取引先の相手方）の経理担当。',action:'送信制御を通過したメールを確認。独立照合がなければ誤送金してしまう架空の条件。',access:'受信だけではIT侵害を意味しない。金銭被害は経理処理という別の条件で成立。',next:'送金被害の防止には、メール技術の防御と独立した支払先確認の両方が必要。',defense:'送信者側のIT保護に加えて、登録済み連絡先への確認・独立承認。',signal:'振込先変更依頼・銀行の支払履歴。'}
 };
 window.CyberGuides.bec={
-  tag:'送金詐欺・業務プロセス',heading:'CASE 06：ビジネスメール詐欺（BEC）',
-  definition:'侵害された取引先の正規メールから、実在の請求スレッドに紛れた振込先変更依頼が届き、誤送金を誘導されるケース。',
-  objective:'取引先への正当な支払を攻撃者の口座へ振り向ける。',
-  prerequisites:['取引先側の正規メールアカウントが既に侵害済み','実在する請求・支払情報と既存スレッドを利用','送金前の独立確認がなければ、変更後の不正口座に支払われる'],
-  outcomes:['送信元認証を通る本物のアカウントからでも詐欺メールが届く','別経路の連絡・独立承認・送金前照合のいずれかで被害を阻止できる','誤送金が起きれば、被害後の銀行連絡・調査が必要'],
-  key:'本人確認済みの送信元と、取引先が本当に指示した支払先は別の確認事項です。攻撃メールから独立した根拠を持つ業務プロセスが重要です。',
-  caveat:'SPF/DKIM/DMARCは偽装ドメイン対策には有効ですが、今回の「正規メールアカウント自体の悪用」を自動で阻止しません。自社MFAも取引先側の侵害を取り消せません。今回の3対策は固定条件で適切に運用された場合に成立する例で、普遍的な成功保証ではありません。'
+  tag:'アカウント侵害・メール送信制御',heading:'CASE 06：ビジネスメール詐欺（BEC）',
+  definition:'盗用パスワードを使った取引先メールのアカウント乗っ取りから、正規メール経由の不正口座変更を経て誤送金につながるケース。',
+  objective:'メールアカウントへの不正ログインから取引先との実在する請求スレッドを悪用し、振込先変更を信じさせる。',
+  prerequisites:['攻撃者はパスワードのみを窃取し、パスキーや認証済みセッションは持たない','攻撃に使う端末は未管理・非準拠','自動封じ込めON時はこのルール操作を検知して送信前に失効できる','送信保護ON時はこの不正変更メールにルールが一致して自動保留できる','メール配送後は受信側が独立確認を省略する場合に誤送金に至る'],
+  outcomes:['IT対策の作用点をIdP認証・メール操作・送信直前の3段階で比較','認証を阻止してもパスワード窃取の事実は残る','自動封じ込めは閲覧済み情報や変更済みルールを元に戻さない','送信後の金銭被害には業務統制も必要'],
+  key:'CIEの対策ON/OFFはIT対策を主役にします。MFAと条件付きアクセスは入口、自動封じ込めは侵害後、送信自動保留は配送前の防御。守る地点が異なることを学びます。',
+  caveat:'本例の自動検知・自動阻止は「今回の攻撃がポリシーに一致し、事前設定された実効性ある自動対応が成功」という限定条件です。単なる通知、DMARC、普通のメールフィルタでは防御成功を保証できません。メールが受信者に届いた場合、電話折返し・独立承認等の業務統制が金銭被害を防ぐ最後の層です。'
 };
 </script><script>(() => {
   'use strict';
@@ -1358,16 +1360,16 @@ window.CyberGuides.bec={
   const cases={ransomware:window.CyberScenarios?.ransomwareVpn,'ransomware-email':window.CyberScenarios?.ransomwareEmail,phishing:window.CyberScenarios?.phishingCloud,'supply-chain':window.CyberScenarios?.supplyChain,'supply-chain-tampered':window.CyberScenarios?.supplyTampered,'vendor-access':window.CyberScenarios?.vendorAccess,'web-app':window.CyberScenarios?.webApp,ddos:window.CyberScenarios?.ddos,bec:window.CyberScenarios?.bec};
   const learning = window.CyberLearning;
   if (!scenario || !learning) { document.body.textContent='シナリオデータを読み込めませんでした。'; return; }
-  const state={scenario:'ransomware',attackRoute:'pc',edrResponse:'early',phishingAction:'entered',supplyMode:'signed',step:0,maxReached:-1,history:[],historyControls:[],playing:false,timer:null,mode:'attack',speed:2200,selectedLocation:null,incidentSnapshot:null,recovery:{contained:false,restored:false},compareMode:false,previousOutcome:null,controls:{mfa:false,mailFilter:false,signatureCheck:false,updateReview:false,segmentation:false,egress:false,dlp:false,edr:false,backup:false,serverEdr:false,fileAcl:false,writeAcl:false,vendorJit:false,vendorTransfer:false,vendorAudit:false,webWaf:false,safeSql:false,dbLeastPrivilege:false,webAudit:false,ddosUpstream:false,becCallback:false,becApproval:false,becBankVerify:false},lastAction:''};
+  const state={scenario:'ransomware',attackRoute:'pc',edrResponse:'early',phishingAction:'entered',supplyMode:'signed',step:0,maxReached:-1,history:[],historyControls:[],playing:false,timer:null,mode:'attack',speed:2200,selectedLocation:null,incidentSnapshot:null,recovery:{contained:false,restored:false},compareMode:false,previousOutcome:null,controls:{mfa:false,mailFilter:false,signatureCheck:false,updateReview:false,segmentation:false,egress:false,dlp:false,edr:false,backup:false,serverEdr:false,fileAcl:false,writeAcl:false,vendorJit:false,vendorTransfer:false,vendorAudit:false,webWaf:false,safeSql:false,dbLeastPrivilege:false,webAudit:false,ddosUpstream:false,becMfa:false,becDevice:false,becContain:false,becOutbound:false},lastAction:''};
   const isPhishing=()=>state.scenario==='phishing';
   const isSupply=()=>state.scenario==='supply-chain';
   const isVendor=()=>state.scenario==='vendor-access';
   const isWeb=()=>state.scenario==='web-app';
   const isDdos=()=>state.scenario==='ddos';
   const isBec=()=>state.scenario==='bec';
-  const becActive=new Set(['attacker','vendor','fake','mail','pc','admin','files','saas','storage']);
-  const becSteps={attacker:0,vendor:0,fake:3,mail:2,pc:2,admin:4,files:4,saas:5,storage:5};
-  const becNames={attacker:['攻撃者','取引先メールを悪用'],vendor:['取引先メール','正規アカウントが侵害'],fake:['取引先の確認先','事前登録の電話番号'],mail:['メール配送基盤','正規の送信元から配信'],pc:['経理担当者','請求・振込先の確認'],admin:['独立承認者','契約・原本を照合'],files:['振込先台帳','支払先の登録情報'],saas:['銀行振込','送金の最終確認'],storage:['不正受取口座','攻撃者が管理']};
+  const becActive=new Set(['attacker','vendor','mail','pc','admin','files','saas','storage']);
+  const becSteps={attacker:0,vendor:0,fake:0,mail:1,pc:2,admin:3,files:3,saas:4,storage:5};
+  const becNames={attacker:['攻撃者','盗用したパスワード'],vendor:['攻撃者の端末','未管理・非準拠'],fake:['偽ログインサイト','事前窃取の例'],mail:['取引先IdP','MFA／端末準拠判定'],pc:['取引先メール箱','請求スレッドを閲覧'],admin:['自動封じ込め','ルール異常を検知'],files:['不正メール準備','受信ルールは作成済み'],saas:['送信メール保護','異常な送信を保留'],storage:['受信側の経理','支払・金銭被害']};
   const ddosActive=new Set(['attacker','supplier','wanfw','vpn','web']);
   const ddosDeviceStep={attacker:0,supplier:3,wanfw:2,vpn:2,web:4};
   const ddosNames={attacker:['外部ボット群','大量トラフィック'],supplier:['一般利用者','正常なアクセス'],wanfw:['上流DDoS対策','悪性通信を除去・分散'],vpn:['企業接続回線','帯域・混雑点'],web:['公開Webサービス','利用状況を確認']};
@@ -1382,7 +1384,7 @@ window.CyberGuides.bec={
   const phDeviceStep={attacker:0,mail:0,pc:1,fake:1,idp:2,saas:2,storage:3,share:4,clouddlp:4,outside:4,siem:2};
   const deviceStage=d=>isBec()?(becSteps[d.id]??0):isDdos()?(ddosDeviceStep[d.id]??0):isWeb()?(webDeviceStep[d.id]??0):isVendor()?(vendorDeviceStep[d.id]??0):isPhishing()?(phDeviceStep[d.id]??0):isSupply()?(supplyDeviceStep[d.id]??0):isEmail()&&d.id==='mail'?0:d.step;
   const inactiveDevice=d=>isBec()?!becActive.has(d.id):isDdos()?!ddosActive.has(d.id):isWeb()?!webActive.has(d.id):isVendor()?!vendorActive.has(d.id):isPhishing()?!phActive.has(d.id):isSupply()?!supplyActive.has(d.id):isEmail()?(['vpn','wanfw'].includes(d.id)||!!d.future&&d.id!=='mail'):!!d.future;
-  const activeNodes=()=>isBec()?{becCallback:['pc','fake'],becApproval:['admin','files'],becBankVerify:['saas']}:isDdos()?{ddosUpstream:['wanfw']}:isWeb()?{webWaf:['waf'],safeSql:['web'],dbLeastPrivilege:['db'],webAudit:['siem']}:isVendor()?{mfa:['vpn'],vendorJit:['pam'],segmentation:['segfw'],fileAcl:['files'],vendorTransfer:['vpn'],vendorAudit:['siem']}:isPhishing()?{mailFilter:['mail'],prMfa:['idp'],conditional:['idp'],leastPrivilege:['storage'],sharePolicy:['share'],saasDlp:['clouddlp']}:isSupply()?{signatureCheck:['pc'],updateReview:['pc'],edr:['pc','edr'],segmentation:['segfw'],fileAcl:['files'],egress:['swg'],dlp:['dlp']}:controlNodes;
+  const activeNodes=()=>isBec()?{becMfa:['mail'],becDevice:['mail'],becContain:['admin'],becOutbound:['saas']}:isDdos()?{ddosUpstream:['wanfw']}:isWeb()?{webWaf:['waf'],safeSql:['web'],dbLeastPrivilege:['db'],webAudit:['siem']}:isVendor()?{mfa:['vpn'],vendorJit:['pam'],segmentation:['segfw'],fileAcl:['files'],vendorTransfer:['vpn'],vendorAudit:['siem']}:isPhishing()?{mailFilter:['mail'],prMfa:['idp'],conditional:['idp'],leastPrivilege:['storage'],sharePolicy:['share'],saasDlp:['clouddlp']}:isSupply()?{signatureCheck:['pc'],updateReview:['pc'],edr:['pc','edr'],segmentation:['segfw'],fileAcl:['files'],egress:['swg'],dlp:['dlp']}:controlNodes;
   const commonRansomControls=[
     scenario.controls[0],
     {id:'mailFilter',icon:'mail',label:'メール／添付ファイル防御',tag:'メールセキュリティ',location:'メールサービス',asset:'mail',desc:'01-Bでは当該悪性添付ファイルを配信前に検知・隔離できる例。',limit:'正規に見えるメールや未知のファイルを必ず検知できるとは限らない。'},
@@ -1424,7 +1426,7 @@ window.CyberGuides.bec={
   // toggled later. The next, not-yet-executed step uses the then-current settings.
   const initialRansom=()=>({entry:false,emailDelivered:false,serverAlerted:false,isolated:false,isolatedAt:null,edrAlertedAt:null,edrDetected:false,lateral:false,egressAllowed:false,dlpAllowed:false,exfil:false,encrypted:false,serverBlocked:false,fwPassed:false,readAllowed:false,writeAllowed:false,backupPrepared:false,pcControlAssumed:false,serverExecutionAssumed:false});
   const initialPhishing=()=>({delivered:false,phished:false,login:false,read:false,shareAllowed:false,exfil:false});
-  const initialBec=()=>({supplierCompromised:false,invoiceRead:false,emailDelivered:false,callbackRejected:false,accountChanged:false,approvalRejected:false,bankHeld:false,paidFraud:false,blockedBy:null});
+  const initialBec=()=>({passwordStolen:false,signInAttempted:false,login:false,invoiceRead:false,ruleCreated:false,contained:false,mailAttempted:false,outboundHeld:false,emailDelivered:false,paidFraud:false,blockedBy:null});
   const initialDdos=()=>({traffic:false,concentrated:false,saturated:false,normalDelayed:false,normalAccess:false,webReachable:false,outage:false,blockedBy:null});
   const initialWeb=()=>({request:false,wafPassed:false,queryExecuted:false,read:false,exfil:false,auditAlert:false});
   const initialVendor=()=>({vendorCompromised:false,entry:false,privileged:false,fwPassed:false,read:false,download:false,exfil:false,auditAlert:false});
@@ -1450,12 +1452,12 @@ window.CyberGuides.bec={
     const prev=i>0?state.history[i-1]:(isBec()?initialBec():isDdos()?initialDdos():isWeb()?initialWeb():isVendor()?initialVendor():isPhishing()?initialPhishing():isSupply()?initialSupply():initialRansom());
     const facts={...prev};
     if(isBec()){
-      if(i===0)facts.supplierCompromised=true;
-      if(i===1)facts.invoiceRead=facts.supplierCompromised;
-      if(i===2)facts.emailDelivered=facts.invoiceRead;
-      if(i===3){facts.callbackRejected=facts.emailDelivered&&!!c.becCallback;if(facts.callbackRejected)facts.blockedBy='becCallback';}
-      if(i===4&&facts.emailDelivered&&!facts.callbackRejected){facts.approvalRejected=!!c.becApproval;facts.accountChanged=!facts.approvalRejected;if(facts.approvalRejected)facts.blockedBy='becApproval';}
-      if(i===5&&facts.accountChanged){facts.bankHeld=!!c.becBankVerify;facts.paidFraud=!facts.bankHeld;if(facts.bankHeld)facts.blockedBy='becBankVerify';}
+      if(i===0)facts.passwordStolen=true;
+      if(i===1&&facts.passwordStolen){facts.signInAttempted=true;facts.blockedBy=c.becMfa?'becMfa':c.becDevice?'becDevice':null;facts.login=!facts.blockedBy;}
+      if(i===2)facts.invoiceRead=facts.login;
+      if(i===3&&facts.invoiceRead){facts.ruleCreated=true;facts.contained=!!c.becContain;if(facts.contained)facts.blockedBy='becContain';}
+      if(i===4&&facts.ruleCreated&&!facts.contained){facts.mailAttempted=true;facts.outboundHeld=!!c.becOutbound;facts.emailDelivered=!facts.outboundHeld;if(facts.outboundHeld)facts.blockedBy='becOutbound';}
+      if(i===5)facts.paidFraud=facts.emailDelivered;
     }else if(isDdos()){
       // Upstream mitigation is checked BEFORE the link saturation event.
       if(i===0)facts.traffic=true;
@@ -1570,10 +1572,12 @@ window.CyberGuides.bec={
   function stageState(i,e){
     if(e.notStarted)return 'notreached';
     if(isBec()){
-      if(i<=2)return 'affected';
-      if(i===3)return e.callbackRejected?'prevented':'affected';
-      if(i===4)return e.callbackRejected?'notreached':e.approvalRejected?'prevented':'affected';
-      return e.callbackRejected||e.approvalRejected?'notreached':e.bankHeld?'prevented':'affected';
+      if(i===0)return 'affected';
+      if(i===1)return e.login?'affected':'prevented';
+      if(i===2)return !e.login?'notreached':'affected';
+      if(i===3)return !e.invoiceRead?'notreached':e.contained?'prevented':'affected';
+      if(i===4)return !e.ruleCreated||e.contained?'notreached':e.outboundHeld?'prevented':'affected';
+      return e.emailDelivered?'affected':'notreached';
     }
     if(isDdos()){
       if(i<2)return 'affected';
@@ -1624,8 +1628,8 @@ window.CyberGuides.bec={
     if(e.notStarted)return '開始前';
     const st=stageState(i,e);if(st==='notreached')return '未到達';
     if(isBec()){
-      const ok=['取引先の正規メールを悪用','実在請求情報を把握','変更依頼メールを配送','別経路で確認せず通過','不正受取口座へ台帳変更','不正口座に誤送金'];
-      const stopped=['','','','既知の電話番号で偽依頼と判明','独立承認で口座変更を拒否','送金前の独立照合で保留'];
+      const ok=['パスワードを窃取','盗用IDでログイン成立','請求メールを不正閲覧','不審なルールを設定','不正口座変更メールを配送','不正口座へ誤送金'];
+      const stopped={1:e.blockedBy==='becMfa'?'フィッシング耐性MFAで拒否':'準拠端末条件で拒否',3:'不審ルールを検知・自動封じ込め',4:'送信メール保護で自動保留'};
       return st==='prevented'?stopped[i]:st==='notreached'?'未到達':ok[i];
     }
     if(isDdos()){
@@ -1671,12 +1675,12 @@ window.CyberGuides.bec={
   function outcome(e){
     if(e.notStarted)return{text:'攻撃開始前・対策を設定してください',tone:'warn',detail:'対策をON/OFFしてから「攻撃開始」を押します。進行中の変更は次の未実行ステップから反映され、過去は変わりません。'};
     if(isBec()){
-      if(e.notStarted)return {text:'口座変更詐欺の開始前',tone:'neutral',detail:'取引先の正規メールは既に侵害された前提。自社側での別経路照合・独立承認・送金前確認を比較します。'};
-      if(e.paidFraud)return {text:'不正受取口座への誤送金が発生',tone:'danger',detail:'正規の取引先アカウントからの不正変更を信じて送金。金融機関への緊急連絡と影響調査が必要です。'};
-      if(e.blockedBy==='becCallback')return {text:'既知番号への確認で口座変更を阻止',tone:'safe',detail:'取引先の正規アカウントは侵害済みのままですが、自社の支払台帳と送金は守られました。'};
-      if(e.blockedBy==='becApproval')return {text:'独立承認で不正な口座変更を拒否',tone:'safe',detail:'メールを受信した事実は残ります。承認者が独立した証拠により変更を拒否したため送金被害はありません。'};
-      if(e.blockedBy==='becBankVerify')return {text:'銀行振込前の照合で送金を保留',tone:'warn',detail:'振込先台帳は既に不正変更されましたが、送金前の独立照合で被害を防ぎました。台帳修正と監査が必要です。'};
-      return {text:e.accountChanged?'不正な振込先台帳が更新された':e.emailDelivered?'正規メールから口座変更依頼が届いた':'取引先の正規メールが悪用された',tone:'warn',detail:'メール送信元認証の成功だけで口座変更を確定してはいけません。'};
+      if(e.paidFraud)return{text:'不正口座への誤送金が発生',tone:'danger',detail:'攻撃者が正規メールから不正な依頼を送信。受信側が独立確認をしなかった条件で送金被害が成立しました。'};
+      if(e.blockedBy==='becMfa')return{text:'フィッシング耐性MFAで不正ログイン拒否',tone:'safe',detail:'パスワードは漏えいしましたがメールアカウントは未侵害です。セッション窃取等は別の攻撃条件です。'};
+      if(e.blockedBy==='becDevice')return{text:'条件付きアクセスで未準拠端末を拒否',tone:'safe',detail:'盗用PWでのログインを端末準拠ポリシーで拒否しました。'};
+      if(e.blockedBy==='becContain')return{text:'不審ルールを検知し自動封じ込め',tone:'safe',detail:'メール閲覧・不審ルール作成は発生済みですが、セッション失効で後続の送信を止めました。調査とルール削除が必要です。'};
+      if(e.blockedBy==='becOutbound')return{text:'不正な送信メールを配送前に保留',tone:'warn',detail:'取引先メールの侵害と請求情報閲覧は既に発生しましたが、受信側への不正メール配送を防ぎました。'};
+      return{text:e.emailDelivered?'偽の振込先変更メールが受信側に届いた':e.invoiceRead?'請求情報を不正閲覧':e.login?'取引先メールへの不正ログイン成立':'盗用パスワードを準備',tone:'warn',detail:'メールアカウントの防御と、届いたメールの支払指示が正しいかの確認は別問題です。'};
     }
     if(isDdos()){
       if(state.step<2)return{text:'攻撃トラフィックが上流に集中',tone:'warn',detail:'まだ企業の接続回線飽和は評価していません。Webサーバーは侵害されていません。'};
@@ -1752,7 +1756,7 @@ window.CyberGuides.bec={
     return{text:e.exfil?'情報流出は発生・書込権限で暗号化阻止':'閲覧・暗号化を権限と出口対策で制限',tone:'warn',detail:'情報流出に必要な読取権限と、暗号化に必要な書込権限は独立して判定しています。端末侵害の調査は引き続き必要です。'};
   }
   function eventsForStage(i,e){const st=scenario.stages[i],kind=stageState(i,e);if(isBec()){
-      if(kind==='notreached')return ['SIM / 前段の確認・承認で詐欺が阻止されたため未到達'];
+      if(kind==='notreached')return ['SIM / 前段のIT対策で後続の不正操作は未到達'];
       return kind==='prevented'?(st.logs.blocked||[]):(st.logs.active||[]);
     }if(isDdos()){
       if(kind==='notreached')return ['SIM / 上流緩和により、このイベントは未到達'];
@@ -1893,15 +1897,14 @@ window.CyberGuides.bec={
     {id:'pStorageToShare',scene:'phishing',hop:4,d:'M1289 402 V419'},
     {id:'pShareToDlp',scene:'phishing',hop:4,d:'M1289 475 V486'},
     {id:'pDlpToReceiver',scene:'phishing',hop:4,d:'M1402 514 H1412 V665 H208 V529 H189'},
-    // 06 BEC: supplier compromise, genuine mailbox delivery, approval, payment and receiving account.
+    // 06 BEC: password-only access attempt -> IdP -> mailbox -> auto containment -> outbound protection.
     {id:'bAttackVendor',scene:'bec',hop:0,d:'M110 214 V234'},
-    {id:'bVendorMail',scene:'bec',hop:2,d:'M189 252 H206 V95 H1290 V118'},
+    {id:'bVendorMail',scene:'bec',hop:1,d:'M189 252 H209 V95 H1290 V118'},
     {id:'bMailAccounting',scene:'bec',hop:2,d:'M1177 158 H1155 V109 H535 V123'},
-    {id:'bAccountingApprover',scene:'bec',hop:4,d:'M535 207 V240'},
-    {id:'bApproverLedger',scene:'bec',hop:4,d:'M624 282 H641 V220 H1068 V207'},
-    {id:'bLedgerBank',scene:'bec',hop:5,d:'M1132 167 H1155 V260 H1177'},
-    {id:'bBankCheck',scene:'bec',hop:5,d:'M1289 283 V300'},
-    {id:'bBankFraud',scene:'bec',hop:5,d:'M1289 300 V322'},
+    {id:'bAccountingApprover',scene:'bec',hop:3,d:'M535 207 V240'},
+    {id:'bApproverLedger',scene:'bec',hop:3,d:'M624 282 H641 V220 H1068 V207'},
+    {id:'bLedgerBank',scene:'bec',hop:4,d:'M1132 167 H1155 V260 H1177'},
+    {id:'bBankCheck',scene:'bec',hop:4,d:'M1289 300 V322'},
     {id:'dBotUpstream',scene:'ddos',hop:0,d:'M189 170 H212 V141 H236'},
     {id:'dConcentrate',scene:'ddos',hop:1,d:'M262 137 H373'},
     {id:'dUpstreamLink',scene:'ddos',hop:2,d:'M317 181 V197'},
@@ -1933,11 +1936,11 @@ window.CyberGuides.bec={
     {id:'top-saas-storage',scene:'phishing',d:'M1289 300 V322'},
     {id:'top-storage-share',scene:'phishing',d:'M1289 402 V419'},
     {id:'top-share-dlp',scene:'phishing',d:'M1289 475 V486'},
-    {id:'top-bec-supplier',scene:'bec',d:'M110 214 V234'},
-    {id:'top-bec-mail',scene:'bec',d:'M189 252 H206 V95 H1290 V118 M1177 158 H1155 V109 H535 V123'},
-    {id:'top-bec-verification',scene:'bec',d:'M446 184 H425 V407 H209 V353 H189'},
-    {id:'top-bec-approval',scene:'bec',d:'M535 207 V240 M624 282 H641 V220 H1068 V207'},
-    {id:'top-bec-payment',scene:'bec',d:'M1132 167 H1155 V260 H1177 M1289 300 V322'},
+    {id:'top-bec-actor',scene:'bec',d:'M110 214 V234'},
+    {id:'top-bec-idp',scene:'bec',d:'M189 252 H209 V95 H1290 V118'},
+    {id:'top-bec-mailbox',scene:'bec',d:'M1177 158 H1155 V109 H535 V123'},
+    {id:'top-bec-operations',scene:'bec',d:'M535 207 V240 M624 282 H641 V220 H1068 V207'},
+    {id:'top-bec-outbound',scene:'bec',d:'M1132 167 H1155 V260 H1177 M1289 300 V322'},
     {id:'top-ddos-upstream',scene:'ddos',d:'M189 170 H212 V141 H236'},
     {id:'top-ddos-link',scene:'ddos',d:'M317 181 V200'},
     {id:'top-ddos-users',scene:'ddos',d:'M189 271 H209 V193 H250 V178'},
@@ -1983,15 +1986,14 @@ window.CyberGuides.bec={
     if(isBec()){
       const t=state.step,neutral={kind:'',label:'未到達'};
       const map={
-        attacker:{kind:'afflicted',label:'取引先のメールを悪用'},
-        vendor:{kind:'afflicted',label:t<2?'正規アカウント侵害':'不正な変更メール送信'},
-        fake:t<3?neutral:e.callbackRejected?{kind:'defended',label:'既知番号で偽依頼を確認'}:{kind:'',label:'確認先は未使用'},
-        mail:t<2?neutral:{kind:'afflicted',label:'本物の送信元から配送'},
-        pc:t<2?neutral:e.callbackRejected?{kind:'stopped',label:'別経路で変更を保留'}:{kind:'afflicted',label:'不正な依頼を受信'},
-        admin:t<4?neutral:e.callbackRejected?neutral:e.approvalRejected?{kind:'stopped',label:'独立承認で拒否'}:{kind:'afflicted',label:'不正変更を承認'},
-        files:t<4?neutral:e.callbackRejected?neutral:e.accountChanged?{kind:'afflicted',label:'受取口座を不正変更'}:{kind:'defended',label:'変更を拒否'},
-        saas:t<5?neutral:e.accountChanged?(e.bankHeld?{kind:'stopped',label:'振込前に保留'}:{kind:'afflicted',label:'不正先への送金指示'}):neutral,
-        storage:t<5?neutral:e.paidFraud?{kind:'afflicted',label:'誤送金を受領'}:neutral
+        attacker:{kind:'afflicted',label:'窃取PWを準備'},
+        vendor:{kind:'afflicted',label:'攻撃者の非準拠端末'},
+        mail:t<1?neutral:e.login?{kind:'afflicted',label:'不正ログイン成立'}:{kind:'stopped',label:e.blockedBy==='becMfa'?'MFAで認証拒否':'端末条件で拒否'},
+        pc:t<2?neutral:e.invoiceRead?{kind:'afflicted',label:'請求メールを不正閲覧'}:neutral,
+        admin:t<3?neutral:e.ruleCreated?(e.contained?{kind:'stopped',label:'自動失効で送信阻止'}:{kind:'afflicted',label:'不審ルールを設定'}):neutral,
+        files:t<3?neutral:e.contained?neutral:e.ruleCreated?{kind:'afflicted',label:'不正送信を準備'}:neutral,
+        saas:t<4?neutral:e.outboundHeld?{kind:'stopped',label:'不正メールを保留'}:e.emailDelivered?{kind:'afflicted',label:'送信制御を通過'}:neutral,
+        storage:t<4?neutral:e.paidFraud?{kind:'afflicted',label:'誤送金が発生'}:e.emailDelivered?{kind:'afflicted',label:'不正メールを受信'}:neutral
       };return map[id]||{kind:'',label:'今回未使用'};
     }
     if(isDdos()){
@@ -2052,7 +2054,7 @@ window.CyberGuides.bec={
     }
   }
   const stopDevices={bApproverLedger:'files',bBankCheck:'saas',dUpstreamLink:'wanfw',wWafInspect:'waf',wWebSql:'web',wDbRead:'db',vVendorVpn:'vpn',vAdminPam:'pam',vPamFw:'segfw',vFileRead:'files',vFilesVpn:'vpn',sSwgToPc:'pc',sEdrContainment:'pc',sPcToFw:'segfw',sFwToFiles:'files',sExfilToSwg:'swg',sExfilSwgToDlp:'dlp',eAttackToMail:'mail',entry:'vpn',edrContainment:'pc',lateralToFiles:'files',directLateral:'segfw',lateral:'segfw',exfilToSwg:'swg',exfilSwgToDlp:'dlp',pAttackToMail:'mail',pAttackerToIdp:'idp',pSaasToStorage:'storage',pStorageToShare:'share',pShareToDlp:'clouddlp'};
-  const stopLabels={bApproverLedger:'独立承認で不正な振込先変更を拒否',bBankCheck:'独立口座情報と不一致のため送金保留',dUpstreamLink:'上流の洗浄／分散により企業接続回線の飽和を阻止',wWafInspect:'WAFの検査ルールでこのSQLi要求を拒否',wWebSql:'パラメータ化SQLで不正構文の実行を阻止',wDbRead:'DBアカウントの最小権限で機密テーブルの閲覧を拒否',vVendorVpn:'保守VPNのMFAでログイン拒否',vAdminPam:'PAMが無承認の特権要求を拒否',vPamFw:'内部FWが保守対象外の宛先を拒否',vFileRead:'File Serverが機密ファイルの閲覧を拒否',vFilesVpn:'保守セッションのファイル転送を禁止',sSwgToPc:'更新管理：悪性版の本番導入を保留',sEdrContainment:'PC EDRが更新プログラム実行後に隔離',sPcToFw:'内部FWが重要共有への通信を拒否',sFwToFiles:'File Serverの権限で閲覧拒否',sExfilToSwg:'SWGが転送先を拒否',sExfilSwgToDlp:'DLPが機密ファイル送信を拒否',
+  const stopLabels={bApproverLedger:'自動封じ込めで後続の不正送信を停止',bBankCheck:'送信メール保護で不正メールを配送前に保留',dUpstreamLink:'上流の洗浄／分散により企業接続回線の飽和を阻止',wWafInspect:'WAFの検査ルールでこのSQLi要求を拒否',wWebSql:'パラメータ化SQLで不正構文の実行を阻止',wDbRead:'DBアカウントの最小権限で機密テーブルの閲覧を拒否',vVendorVpn:'保守VPNのMFAでログイン拒否',vAdminPam:'PAMが無承認の特権要求を拒否',vPamFw:'内部FWが保守対象外の宛先を拒否',vFileRead:'File Serverが機密ファイルの閲覧を拒否',vFilesVpn:'保守セッションのファイル転送を禁止',sSwgToPc:'更新管理：悪性版の本番導入を保留',sEdrContainment:'PC EDRが更新プログラム実行後に隔離',sPcToFw:'内部FWが重要共有への通信を拒否',sFwToFiles:'File Serverの権限で閲覧拒否',sExfilToSwg:'SWGが転送先を拒否',sExfilSwgToDlp:'DLPが機密ファイル送信を拒否',
     eAttackToMail:'メールの添付ファイル検査で隔離',entry:'VPN GatewayのMFA',edrContainment:'EDRによる従業員PCの隔離',lateral:'内部FWのセグメント制御',directLateral:'内部FWの通信拒否',lateralToFiles:'File Serverのアクセス権限で拒否',
     exfilToSwg:'SWGの通信先制御',exfilSwgToDlp:'DLPの情報持ち出し制御',
     pAttackToMail:'メールサービスで隔離',pAttackerToIdp:'IdPの認証制御',
@@ -2094,13 +2096,13 @@ window.CyberGuides.bec={
     let attempt=false,blocked=false;
     if(isBec()){
       switch(link.id){
-        case 'bAttackVendor':attempt=at.supplierCompromised;break;
-        case 'bVendorMail':case 'bMailAccounting':attempt=at.emailDelivered;break;
-        case 'bAccountingApprover':attempt=at.emailDelivered&&!at.callbackRejected;break;
-        case 'bApproverLedger':attempt=at.emailDelivered&&!at.callbackRejected;blocked=attempt&&!at.accountChanged;break;
-        case 'bLedgerBank':attempt=at.accountChanged;break;
-        case 'bBankCheck':attempt=at.accountChanged;blocked=attempt&&at.bankHeld;break;
-        case 'bBankFraud':attempt=at.paidFraud;break;
+        case 'bAttackVendor':attempt=at.passwordStolen;break;
+        case 'bVendorMail':attempt=at.signInAttempted;blocked=attempt&&!at.login;break;
+        case 'bMailAccounting':attempt=at.invoiceRead;break;
+        case 'bAccountingApprover':attempt=at.ruleCreated;break;
+        case 'bApproverLedger':attempt=at.ruleCreated;blocked=attempt&&at.contained;break;
+        case 'bLedgerBank':attempt=at.mailAttempted;break;
+        case 'bBankCheck':attempt=at.mailAttempted;blocked=attempt&&at.outboundHeld;break;
         default:return 'hidden';
       }
     }else if(isDdos()){
@@ -2187,7 +2189,7 @@ window.CyberGuides.bec={
   }
   function renderDiagram(e){const view=state.mode;
     // Web case uses one fixed diagram: public Web/AP in a logical DMZ and a private DB.
-    all('#zones .zone').forEach((el,i)=>{const names=isBec()?['取引先・攻撃元','今回未使用','自社経理・承認','今回未使用','支払先台帳','メール・銀行','今回未使用','今回未使用']:isDdos()?['社外・利用者','上流／接続回線','今回未使用','今回未使用','公開サービス','今回未使用','今回未使用','今回未使用']:zones.map(z=>z.title);el.querySelector('.zone-title').textContent=names[i];});
+    all('#zones .zone').forEach((el,i)=>{const names=isBec()?['攻撃者と外部端末','今回未使用','メールボックス操作','認証・制御','請求メール操作','クラウドメール基盤','今回未使用','監視・運用']:isDdos()?['社外・利用者','上流／接続回線','今回未使用','今回未使用','公開サービス','今回未使用','今回未使用','今回未使用']:zones.map(z=>z.title);el.querySelector('.zone-title').textContent=names[i];});
     const webZone=$('webZoneNotes');if(webZone)webZone.setAttribute('display',isWeb()?'inline':'none');
     const sharedRouteNote=$('externalShareRouteNote');if(sharedRouteNote)sharedRouteNote.setAttribute('display',isPhishing()&&view==='attack'?'inline':'none');
     // 通常構成では論理接続のみ、攻撃経路では攻撃線のみを描画。重ね描きを避ける。
@@ -2210,7 +2212,11 @@ window.CyberGuides.bec={
         el.querySelector('.asset-caption').textContent=isWeb()?'HTTPS応答で情報を受信':isPhishing()?'攻撃者側・共有権限':isVendor()?'保守VPNから取得':'攻撃者側の受信先';
         el.querySelector('title').textContent=shownName+'：クリックすると、この地点で何が起きるかを表示';
       }
-      if(id==='fake')el.querySelector('.asset-icon').innerHTML=isBec()?iconPaths.phone:iconPaths.monitor;
+      if(id==='fake')el.querySelector('.asset-icon').innerHTML=iconPaths.monitor;
+      if(isBec()){
+        const icon=({vendor:'monitor',mail:'key',pc:'mail',admin:'shield',files:'mail',saas:'shield',storage:'monitor'})[id];
+        if(icon)el.querySelector('.asset-icon').innerHTML=iconPaths[icon];
+      }
       el.setAttribute('aria-label',`${shownName}、${label}。クリックすると地点の役割と通過条件を表示`);if(inactiveDevice(d))el.style.opacity=isDdos()?'.12':view==='system'?'.68':'.44';else el.style.opacity='1';});
     // Full-route learning display: planned segments remain visible, successfully
     // traversed segments persist after stepping forward, and a failed control
@@ -2218,16 +2224,6 @@ window.CyberGuides.bec={
     const stopLayer=$('routeStops');
     stopLayer.replaceChildren();
     const rejected=[];
-    if(isBec()&&view==='attack'&&state.step>=3&&!e.notStarted){
-      // Genuine verification is a trusted blue PHONE call, not an attacker route.
-      if(e.callbackRejected){
-        const defs=svgNode('defs');defs.innerHTML='<marker id="arrow-bec-phone" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="8" viewBox="0 0 9 8" refX="8" refY="4" orient="auto"><path d="M2 1L8 4L2 7" stroke="#71cafa" stroke-width="1.6" fill="none"/></marker>';stopLayer.append(defs);
-        stopLayer.append(svgNode('path',{d:'M446 184 H425 V407 H209 V353 H189',stroke:'#71cafa','stroke-width':'3',fill:'none','stroke-linecap':'round','marker-end':'url(#arrow-bec-phone)','data-bec-verified':'true','aria-label':'経理担当者から登録済み取引先電話番号への真正性確認'}));
-        const mark=svgNode('g',{class:'block-stop','data-stop-route':'bCallback','aria-label':'登録番号で確認し不正な口座変更を停止',transform:'translate(535 215)'});
-        mark.innerHTML='<title>経理担当が正規の電話番号で確認し、口座変更依頼を保留</title><circle class="block-stop-halo" r="19"/><circle class="block-stop-disc" r="13"/><path d="M-6 -6L6 6M6 -6L-6 6"/>';stopLayer.append(mark);
-        rejected.push('登録済み電話番号で確認し、変更依頼を保留');
-      }
-    }
     // Normal traffic is independent of the DDoS attack path: blue, never red.
     // Topology is ALWAYS user -> upstream DDoS node -> enterprise link -> public Web.
     // With upstream protection ON, show the COMPLETE legitimate path through
@@ -2323,8 +2319,8 @@ window.CyberGuides.bec={
       $('causeHint').textContent=e.notStarted?'上流緩和は回線飽和前に作用し、WAFや監視のみでは止まりません。':status==='affected'?`結果：${guide.passes}`:status==='prevented'?`阻止：${guide.stopped}`:'前段階で回線飽和を阻止したため未到達です。';
     }
     if(isBec()){
-      $('eventSummary').textContent=e.notStarted?'正規の取引先メールが悪用されたケース。口座変更の業務プロセスを追跡します。':status==='notreached'?'前の確認・承認で不正依頼が阻止されたため、この処理は未到達です。':status==='prevented'?stageLabel(state.step,e):step.summary;
-      $('causeHint').textContent=e.notStarted?'送信元認証だけでは支払先変更の真正性を確認できません。':status==='affected'?`通過の理由：${guide.passes}`:status==='prevented'?`阻止の理由：${guide.stopped}`:'前段の確認・承認により、この操作は行われていません。';
+      $('eventSummary').textContent=e.notStarted?'盗用パスワードから不正な送信メールまで、IT防御地点を比較します。':status==='notreached'?'前の認証・自動封じ込め・送信制御で阻止されたため、この処理は未到達です。':status==='prevented'?stageLabel(state.step,e):step.summary;
+      $('causeHint').textContent=e.notStarted?'認証・セッション制御・メール配送前の自動保留は作用点が異なります。':status==='affected'?`通過の理由：${guide.passes}`:status==='prevented'?`阻止の理由：${guide.stopped}`:'前段のIT対策により、この操作は行われていません。';
     }
     if(isWeb()){
       $('eventSummary').textContent=e.notStarted?'対策を設定して、公開Webへの要求から情報流出までを追跡します。':status==='notreached'?'前段階で拒否されたため、機密データの取得には至りません。':status==='prevented'?stageLabel(state.step,e):step.summary;
@@ -2343,7 +2339,7 @@ window.CyberGuides.bec={
       $('causeHint').textContent=e.notStarted?'上流DDoS対策は攻撃だけを緩和し、一般利用者の通信は通します。':!e.saturated&&state.step>=3?`正常利用：${guide.stopped}`:status==='affected'?`結果：${guide.passes}`:status==='prevented'?`阻止：${guide.stopped}`:'被害発生なし：上流で攻撃通信を緩和しました。';
     }
     if(isBec()){
-      $('causeHint').textContent=e.notStarted?'自社MFAやDMARCだけでは正規メール経由のBECを防げません。':status==='notreached'?'前段階で詐欺を止めたため未到達です。':status==='prevented'?`阻止の理由：${guide.stopped}`:`通過の理由：${guide.passes}`;
+      $('causeHint').textContent=e.notStarted?'取引先のメールアカウントに対する技術的対策を比較します。':status==='notreached'?'前段のIT対策で止めたため未到達です。':status==='prevented'?`阻止の理由：${guide.stopped}`:`通過の理由：${guide.passes}`;
     }
     if(!isPhishing()&&e.serverAlerted&&!e.serverBlocked&&state.step>=4){$('causeHint').textContent='Server EDRは検知・通知のみで悪性処理を停止せず、暗号化は発生しました。過去の情報流出も消せません。';}
     if(!isPhishing()&&e.serverBlocked&&state.step>=4){$('eventSummary').textContent='Server EDRがサーバー上の暗号化処理を停止。ただし不正アクセスと情報流出は発生済み。';$('causeHint').textContent='【今回の前提】File Serverへの不正アクセス・情報流出は発生済み。Server EDRがサーバー上の悪性プロセスを暗号化前に停止しました。VPN侵入と情報流出の事実は残ります。';}
@@ -2371,7 +2367,7 @@ window.CyberGuides.bec={
     }
     $('eventIndicator').className='event-indicator '+(status==='prevented'?'success':status==='notreached'?'idle':'');
     $('modeHint').textContent=view==='system'?'グレー線＝正規の論理接続（方向なし）':`赤＝通過済み（明るい赤＝現在）／ 緑×＝遮断 ／ 灰点線＝未実行・未到達${rejected.length?' ｜ 遮断：'+rejected.join('・'):''}`;
-    if(isBec()&&view==='attack'&&e.callbackRejected)$('modeHint').textContent+=' ｜ 青線＝既知番号への確認電話（攻撃経路ではない）';
+
     if(isDdos()&&view==='attack'&&state.step>=3)$('modeHint').textContent+=e.normalAccess?' ｜ 青実線＝一般利用者の通信（公開Webへ正常到達）':' ｜ 青点線＝一般利用者の通信（回線飽和で遅延）';
     if(view==='attack'&&isSupply()&&state.supplyMode==='tampered')$('modeHint').textContent+=' ｜ 灰細線＝正規提供元からの配布（赤＝すり替え後）';
     all('[data-mode]').forEach(el=>{const selected=el.dataset.mode===view;el.classList.toggle('selected',selected);el.setAttribute('aria-pressed',String(selected));});
@@ -2379,14 +2375,14 @@ window.CyberGuides.bec={
   // ノードごとの詳細と、現在の防御ON/OFFでの成立条件を突き合わせる。
   function conditionAtNode(id,e){if(isBec()){
       if(e.notStarted)return '攻撃開始前';
-      if(id==='vendor')return '取引先の正規メールは既に侵害済み';
-      if(id==='fake')return e.callbackRejected?'登録済み電話番号で偽依頼を確認':'この確認先を使うかが防御の分岐';
-      if(id==='pc')return e.callbackRejected?'変更を保留':e.emailDelivered?'正規メールから不正依頼を受信':'依頼は未到達';
-      if(id==='admin')return e.approvalRejected?'独立した根拠を確認して却下':e.accountChanged?'不正変更を承認':'まだ承認していない';
-      if(id==='files')return e.accountChanged?'不正な受取口座へ台帳変更済み':'支払先の変更なし';
-      if(id==='saas')return e.bankHeld?'独立照合で振込保留':e.paidFraud?'誤送金済み':'送金未実施';
-      if(id==='storage')return e.paidFraud?'攻撃者口座に誤送金':'入金なし';
-      return '取引先の正規メールが悪用された事例';
+      if(id==='vendor')return e.passwordStolen?'攻撃者端末に盗用PWがある':'盗用PWの利用前';
+      if(id==='mail')return state.step<1?'認証判定前':e.login?'不正ログイン成立':e.blockedBy==='becMfa'?'フィッシング耐性MFAで拒否':'準拠端末条件で拒否';
+      if(id==='pc')return e.invoiceRead?'請求メールを不正閲覧済み':'メール閲覧は未到達';
+      if(id==='admin')return e.contained?'自動失効済み。閲覧・ルール作成の履歴あり':e.ruleCreated?'ルールを変更したが自動封じ込めなし':'不審操作前';
+      if(id==='files')return e.contained?'送信準備は未到達（ルール作成履歴は残る）':e.ruleCreated?'不正な口座変更メールを準備中':'送信準備は未到達';
+      if(id==='saas')return e.outboundHeld?'送信メールを配送前に保留':e.emailDelivered?'送信制御を通過':'不正メールの送信前';
+      if(id==='storage')return e.paidFraud?'受信側が誤送金':e.emailDelivered?'不正依頼メールを受信':'不正メールは未配送';
+      return 'パスワード盗用から送信メールまでのIT防御を学ぶ例';
     }if(isDdos()){
       if(e.notStarted)return '攻撃開始前';
       if(id==='wanfw')return state.step<2?'公開IPへの集中を観測中':e.saturated?'今回の上流緩和は無効':'上流緩和で回線飽和を阻止';
@@ -2468,8 +2464,8 @@ window.CyberGuides.bec={
     $('locationPath').textContent=future?'将来シナリオ用：このシナリオの攻撃経路には含みません。':`STEP ${String(deviceStage(device)+1).padStart(2,'0')} / ${String(scenario.stages.length).padStart(2,'0')}｜${isSupply()&&state.supplyMode==='tampered'&&deviceStage(device)===0?'配布途中のすり替え（提供元は未侵害）':guide.from}`;
     const kind=stageState(deviceStage(device),e);
     const badge=$('locationState');badge.textContent=future?'今回のシナリオでは未使用':`現在の対策設定：${conditionAtNode(id,e)}`;
-    const nodeBlocked=isBec()?((id==='pc'&&e.callbackRejected)||(id==='admin'&&e.approvalRejected)||(id==='saas'&&e.bankHeld)):isDdos()?(id==='wanfw'&&state.step>=2&&!e.saturated):isWeb()?((id==='waf'&&state.step>=1&&!e.wafPassed)||(id==='web'&&state.step>=2&&e.wafPassed&&!e.queryExecuted)||(id==='db'&&state.step>=3&&e.queryExecuted&&!e.read)):isVendor()?((id==='vpn'&&state.step>=1&&!e.entry)||(id==='pam'&&state.step>=2&&e.entry&&!e.privileged)||(id==='segfw'&&state.step>=3&&e.privileged&&!e.fwPassed)||(id==='files'&&state.step>=4&&e.fwPassed&&!e.read)):isSupply()?((id==='pc'&&state.step>=1&&!e.installed)||(id==='pc'&&e.isolated)||(id==='segfw'&&state.step>=3&&e.executed&&!e.isolated&&!e.fwPassed)||(id==='files'&&state.step>=3&&e.fwPassed&&!e.lateral)||(id==='swg'&&state.step>=4&&e.lateral&&!e.egressAllowed)||(id==='dlp'&&state.step>=4&&e.egressAllowed&&!e.dlpAllowed)):isPhishing()?((id==='mail'&&!e.delivered)||(id==='idp'&&e.phished&&!e.login)||(id==='storage'&&e.login&&!e.read)||(id==='share'&&e.read&&!e.shareAllowed)||(id==='clouddlp'&&e.shareAllowed&&!e.exfil)):((id==='swg'&&e.lateral&&!e.egressAllowed)||(id==='dlp'&&e.egressAllowed&&!e.dlpAllowed));
-    const nodeIdle=isBec()?(id==='storage'&&!e.paidFraud):isDdos()?(id==='waf'||id==='siem'||id==='supplier'&&state.step<3):isWeb()?(id==='outside'&&!e.exfil):isVendor()?(id==='outside'&&!e.exfil):isSupply()?((id==='outside'&&!e.exfil)||(id==='dlp'&&!e.egressAllowed)):isPhishing()?((id==='outside'&&!e.exfil)||(id==='clouddlp'&&!e.shareAllowed)):((id==='swg'&&!e.lateral)||(id==='dlp'&&!e.egressAllowed)||(id==='outside'&&!e.exfil));
+    const nodeBlocked=isBec()?((id==='mail'&&e.signInAttempted&&!e.login)||(id==='admin'&&e.contained)||(id==='saas'&&e.outboundHeld)):isDdos()?(id==='wanfw'&&state.step>=2&&!e.saturated):isWeb()?((id==='waf'&&state.step>=1&&!e.wafPassed)||(id==='web'&&state.step>=2&&e.wafPassed&&!e.queryExecuted)||(id==='db'&&state.step>=3&&e.queryExecuted&&!e.read)):isVendor()?((id==='vpn'&&state.step>=1&&!e.entry)||(id==='pam'&&state.step>=2&&e.entry&&!e.privileged)||(id==='segfw'&&state.step>=3&&e.privileged&&!e.fwPassed)||(id==='files'&&state.step>=4&&e.fwPassed&&!e.read)):isSupply()?((id==='pc'&&state.step>=1&&!e.installed)||(id==='pc'&&e.isolated)||(id==='segfw'&&state.step>=3&&e.executed&&!e.isolated&&!e.fwPassed)||(id==='files'&&state.step>=3&&e.fwPassed&&!e.lateral)||(id==='swg'&&state.step>=4&&e.lateral&&!e.egressAllowed)||(id==='dlp'&&state.step>=4&&e.egressAllowed&&!e.dlpAllowed)):isPhishing()?((id==='mail'&&!e.delivered)||(id==='idp'&&e.phished&&!e.login)||(id==='storage'&&e.login&&!e.read)||(id==='share'&&e.read&&!e.shareAllowed)||(id==='clouddlp'&&e.shareAllowed&&!e.exfil)):((id==='swg'&&e.lateral&&!e.egressAllowed)||(id==='dlp'&&e.egressAllowed&&!e.dlpAllowed));
+    const nodeIdle=isBec()?(id==='storage'&&!e.emailDelivered):isDdos()?(id==='waf'||id==='siem'||id==='supplier'&&state.step<3):isWeb()?(id==='outside'&&!e.exfil):isVendor()?(id==='outside'&&!e.exfil):isSupply()?((id==='outside'&&!e.exfil)||(id==='dlp'&&!e.egressAllowed)):isPhishing()?((id==='outside'&&!e.exfil)||(id==='clouddlp'&&!e.shareAllowed)):((id==='swg'&&!e.lateral)||(id==='dlp'&&!e.egressAllowed)||(id==='outside'&&!e.exfil));
     badge.className='location-state '+(future||nodeIdle?'neutral':nodeBlocked||kind==='prevented'?'safe':kind==='notreached'?'neutral':'warning');
     $('locationRole').textContent=info.role;
     $('locationAction').textContent=info.action;
@@ -2547,7 +2543,7 @@ window.CyberGuides.bec={
     $('recoveryInfo').textContent=!e.entry?'侵入は阻止されました。対応不要な被害を作りません。':e.restored?'File Serverは復旧。ただし既存の侵入・流出の履歴は保持。':e.encrypted?'暗号化は発生済み。封じ込めにはセッション失効・侵入経路遮断・影響調査が必要。バックアップは事前に保存・検証済みの比較条件です。':'侵入の事実は残ります。封じ込めボタンは、認証情報の停止・侵入経路の遮断・証拠保全を確認した学習用の操作です。';
   }
   function nextCheckpoint(control){
-    const steps=isBec()?{becCallback:[3],becApproval:[4],becBankVerify:[5]}:isDdos()?{ddosUpstream:[2]}:isWeb()?{webWaf:[1],safeSql:[2],dbLeastPrivilege:[3],webAudit:[5]}:isVendor()?{mfa:[1],vendorJit:[2],segmentation:[3],fileAcl:[4],vendorTransfer:[4],vendorAudit:[5]}:isPhishing()?{mailFilter:[0],prMfa:[2],conditional:[2],leastPrivilege:[3],sharePolicy:[4],saasDlp:[4]}:isSupply()?{signatureCheck:[1],updateReview:[1],edr:[2],segmentation:[3],fileAcl:[3],egress:[4],dlp:[4]}:{mfa:isEmail()?[]:[0],mailFilter:isEmail()?[0]:[],segmentation:[2],egress:[3],dlp:[3],edr:state.attackRoute!=='direct'?[1]:[],fileAcl:[2],writeAcl:[2,4],serverEdr:state.attackRoute==='direct'?[4]:[],backup:[0]};
+    const steps=isBec()?{becMfa:[1],becDevice:[1],becContain:[3],becOutbound:[4]}:isDdos()?{ddosUpstream:[2]}:isWeb()?{webWaf:[1],safeSql:[2],dbLeastPrivilege:[3],webAudit:[5]}:isVendor()?{mfa:[1],vendorJit:[2],segmentation:[3],fileAcl:[4],vendorTransfer:[4],vendorAudit:[5]}:isPhishing()?{mailFilter:[0],prMfa:[2],conditional:[2],leastPrivilege:[3],sharePolicy:[4],saasDlp:[4]}:isSupply()?{signatureCheck:[1],updateReview:[1],edr:[2],segmentation:[3],fileAcl:[3],egress:[4],dlp:[4]}:{mfa:isEmail()?[]:[0],mailFilter:isEmail()?[0]:[],segmentation:[2],egress:[3],dlp:[3],edr:state.attackRoute!=='direct'?[1]:[],fileAcl:[2],writeAcl:[2,4],serverEdr:state.attackRoute==='direct'?[4]:[],backup:[0]};
     return (steps[control]||[]).find(i=>i>state.maxReached);
   }
   function controlChangeNotice(label,id,enabled){
@@ -2561,7 +2557,7 @@ window.CyberGuides.bec={
   function renderControls(){
     $('scenarioSelect').value=variantKey();
     $('scenarioOptions').hidden=false;
-    $('edrExplanation').textContent=isBec()?'06：侵害済みの正規取引先メールから口座変更依頼。別経路確認・独立承認・送金前照合が作用します。':isDdos()?'05：上流DDoS対策は攻撃通信を除去・分散。正常な一般利用者のアクセスは維持します。':isWeb()?'04：公開WebへのSQLi例。WAF／安全なSQL／DB最小権限を別判定。監査だけで自動遮断されません。':isVendor()?'03-A：委託先のパスワードだけを盗用。保守接続とPAM・宛先・ファイル転送を別々に判定。監査は停止を自動実行しません。':isPhishing()?'02：メールが届いても入力しない場合はID流出なし。メール検査・利用者判断・MFAは別の防御です。':isSupply()?(state.supplyMode==='tampered'?'03-A：配布途中の差し替え。署名の強制検証で不一致を拒否できます。EDRは停止成否が別条件。':'03-B：正規署名付き悪性更新。署名検証は安全を保証せず、EDRも停止成否は別条件。'):isEmail()?
+    $('edrExplanation').textContent=isBec()?'06：盗用PWの悪用。IdPのMFA／端末条件、メールの自動封じ込め、送信の自動保留が作用します。':isDdos()?'05：上流DDoS対策は攻撃通信を除去・分散。正常な一般利用者のアクセスは維持します。':isWeb()?'04：公開WebへのSQLi例。WAF／安全なSQL／DB最小権限を別判定。監査だけで自動遮断されません。':isVendor()?'03-A：委託先のパスワードだけを盗用。保守接続とPAM・宛先・ファイル転送を別々に判定。監査は停止を自動実行しません。':isPhishing()?'02：メールが届いても入力しない場合はID流出なし。メール検査・利用者判断・MFAは別の防御です。':isSupply()?(state.supplyMode==='tampered'?'03-A：配布途中の差し替え。署名の強制検証で不一致を拒否できます。EDRは停止成否が別条件。':'03-B：正規署名付き悪性更新。署名検証は安全を保証せず、EDRも停止成否は別条件。'):isEmail()?
       '01-B：悪性添付の配信後に社員が実行した例。EDR ONでも隔離に成功するかは別条件です。':state.attackRoute==='direct'?
       '01-A：VPN接続とは別にFile Serverへのアクセス権と悪性実行手段が必要。Server EDRは検知だけの場合もあります。':
       '01-A：VPN認証後、別途PCへのログオン権限を悪用。EDR ONでも通知のみなら侵害は進行します。';
@@ -2572,7 +2568,7 @@ window.CyberGuides.bec={
     const assumptionSelect=document.createElement('select');
     let assumptionTitle, choices, selected;
     if(isBec()){
-      assumptionTitle='今回のBEC前提';choices=[['bec','取引先の正規メール侵害済み・本物の請求を悪用']];selected='bec';
+      assumptionTitle='今回のBEC前提';choices=[['bec','パスワードのみ盗用・攻撃者端末は非準拠']];selected='bec';
     }else if(isDdos()){
       assumptionTitle='今回のネットワーク条件';choices=[['ddos','攻撃量は未対策回線容量超・上流防御容量内']];selected='ddos';
     }else if(isWeb()){
@@ -2596,7 +2592,7 @@ window.CyberGuides.bec={
     assumptionSelect.disabled=isBec()||isDdos()||isWeb()||isVendor()||state.maxReached>=0||(!isPhishing()&&selected==='none');
     assumptionSelect.setAttribute('aria-label',assumptionTitle);
     assumptionSelect.addEventListener('change',()=>{if(state.maxReached>=0)return;stopPlayback();if(isPhishing())state.phishingAction=assumptionSelect.value;else state.edrResponse=assumptionSelect.value;state.lastAction='攻撃開始前の条件を変更。';render();});
-    const note=document.createElement('small');note.textContent=isBec()?'送信元が正規でも依頼の真正性は別問題。自社の3つの業務対策を比較します。':isDdos()?'上流緩和が今回の攻撃量・保護経路に対応できる場合の判定です。':isWeb()?'WAF ONは今回の既知パターンに作用。すべての攻撃に必ず有効なわけではありません。':isVendor()?'正規の委託先IDでも、接続先や特権の追加許可が必要です。':isPhishing()?'利用者の判断とメール検査の成否は別です。':selected==='none'?'対象EDRはOFFです。この条件は作用しません。':'この教材では検知できた場合を想定。通知と隔離成功は別条件です。';
+    const note=document.createElement('small');note.textContent=isBec()?'IT防御は今回の固定条件で作用。通知だけでは自動停止になりません。':isDdos()?'上流緩和が今回の攻撃量・保護経路に対応できる場合の判定です。':isWeb()?'WAF ONは今回の既知パターンに作用。すべての攻撃に必ず有効なわけではありません。':isVendor()?'正規の委託先IDでも、接続先や特権の追加許可が必要です。':isPhishing()?'利用者の判断とメール検査の成否は別です。':selected==='none'?'対象EDRはOFFです。この条件は作用しません。':'この教材では検知できた場合を想定。通知と隔離成功は別条件です。';
     assumption.append(assumptionSelect,note);root.append(assumption);
     activeControls().forEach(c=>{
       const enabled=state.controls[c.id],item=document.createElement('div');
@@ -2625,8 +2621,16 @@ window.CyberGuides.bec={
   }
   function renderOutcome(e){if(isBec()){
     const o=outcome(e);$('outcomeText').textContent=o.text;$('outcomeDetail').textContent=o.detail;$('outcomeMark').className='outcome-mark '+o.tone;
-    const rows=[['取引先メール侵害',0,e.supplierCompromised?'発生':'未実行'],['不正変更メール',2,e.emailDelivered?'配信':'未実行'],['登録済み番号の確認',3,e.callbackRejected?'偽依頼と判明':'確認なし'],['振込先台帳',4,e.callbackRejected?'未到達':e.approvalRejected?'変更を拒否':e.accountChanged?'不正変更':'未実行'],['送金直前照合',5,e.callbackRejected||e.approvalRejected?'未到達':e.bankHeld?'送金保留':'照合なし'],['誤送金',5,e.callbackRejected||e.approvalRejected?'未到達':e.bankHeld?'防止':e.paidFraud?'発生':'未実行']];
-    $('resultGrid').replaceChildren(...rows.map(([name,i,value])=>{const el=document.createElement('div'),v=(e.notStarted||state.step<i)?'未実行':value,t=['偽依頼と判明','変更を拒否','送金保留','防止'].includes(v)?'safe':['発生','不正変更','配信'].includes(v)?'danger':'neutral';el.className='result-item';el.innerHTML=`<span>${name}</span><strong class="${t}">${v}</strong>`;return el;}));return;
+    const rows=[
+      ['パスワード窃取',0,e.passwordStolen?'発生':'未実行'],
+      ['IdPサインイン',1,e.login?'不正ログイン':e.signInAttempted?'拒否':'未実行'],
+      ['請求メール閲覧',2,!e.login?'未到達':e.invoiceRead?'不正閲覧':'未実行'],
+      ['不審メールルール',3,!e.invoiceRead?'未到達':e.ruleCreated?'作成済み':'未実行'],
+      ['自動封じ込め',3,!e.invoiceRead?'未到達':e.contained?'セッション失効':'自動停止なし'],
+      ['不正メール配送',4,!e.ruleCreated||e.contained?'未到達':e.outboundHeld?'自動保留':e.emailDelivered?'配信':'未実行'],
+      ['金銭被害',5,!e.emailDelivered?'未到達':e.paidFraud?'誤送金':'未実行']
+    ];
+    $('resultGrid').replaceChildren(...rows.map(([name,i,value])=>{const el=document.createElement('div'),v=(e.notStarted||state.step<i)?'未実行':value,t=['拒否','セッション失効','自動保留'].includes(v)?'safe':['発生','不正ログイン','不正閲覧','作成済み','配信','誤送金'].includes(v)?'danger':'neutral';el.className='result-item';el.innerHTML=`<span>${name}</span><strong class="${t}">${v}</strong>`;return el;}));return;
   }if(isDdos()){
     const o=outcome(e);$('outcomeText').textContent=o.text;$('outcomeDetail').textContent=o.detail;$('outcomeMark').className='outcome-mark '+o.tone;
     const rows=[['大量通信発生',0,e.traffic?'発生':'未実行'],['公開IPへ集中',1,e.concentrated?'発生':'未実行'],['企業回線飽和',2,e.saturated?'発生':'阻止'],['一般利用者',3,e.normalAccess?'アクセス可能':'遅延・失敗'],['公開Web',e.saturated?2:4,e.saturated?(state.step<4?'利用困難（回線飽和）':'利用困難'):e.webReachable?'利用可能':'確認待ち'],['サービス停止',5,e.outage?'発生':'防止']].map(([t,i,value])=>[t,e.notStarted||state.step<i?'未実行':value,e.notStarted||state.step<i?'neutral':['阻止','アクセス可能','利用可能','防止'].includes(value)?'safe':(['発生','遅延・失敗','利用困難'].includes(value)||value.startsWith('利用困難（'))?'danger':'neutral']);
@@ -2703,10 +2707,10 @@ window.CyberGuides.bec={
     state.edrResponse='early';state.phishingAction='entered';state.selectedLocation=null;
     // 共通システム構成を維持：シナリオ選択では導入済み対策をリセットしない。
     $('scenarioSelect').value=key;
-    $('introTitle').textContent=key==='bec'?'本物の取引先メールでも、振込先の変更を信じていい？':key==='ddos'?'Webサーバーが侵害されなくても、サービスは止まる？':key==='web-app'?'公開WebアプリのSQLインジェクション、どこで防げる？':key==='vendor-access'?'信頼している保守委託先のアカウントが悪用されたら？':key==='supply-chain-tampered'?'配信された更新ファイルが、途中ですり替えられたら？':key==='supply-chain'?'正規ソフトの更新が、攻撃の入口になる？':key==='phishing'?'フィッシングからSaaS情報漏えいへ、どうつながる？':key==='ransomware-direct'?'VPNからサーバーへの直接侵入は、どう防ぐ？':key==='ransomware-email'?'悪性メールからランサムウェアへ、どうつながる？':'ランサムウェア攻撃は、どこから広がるのか？';
+    $('introTitle').textContent=key==='bec'?'メール乗っ取りから不正送信まで、IT対策はどこで効く？':key==='ddos'?'Webサーバーが侵害されなくても、サービスは止まる？':key==='web-app'?'公開WebアプリのSQLインジェクション、どこで防げる？':key==='vendor-access'?'信頼している保守委託先のアカウントが悪用されたら？':key==='supply-chain-tampered'?'配信された更新ファイルが、途中ですり替えられたら？':key==='supply-chain'?'正規ソフトの更新が、攻撃の入口になる？':key==='phishing'?'フィッシングからSaaS情報漏えいへ、どうつながる？':key==='ransomware-direct'?'VPNからサーバーへの直接侵入は、どう防ぐ？':key==='ransomware-email'?'悪性メールからランサムウェアへ、どうつながる？':'ランサムウェア攻撃は、どこから広がるのか？';
     $('introDescription').textContent=scenario.summary;
     $('caseNumber').textContent=`INTERACTIVE SECURITY LEARNING / CASE ${key==='ransomware-direct'?'01-A':key==='ransomware-email'?'01-B':key==='vendor-access'?'03-A':key==='bec'?'06':key==='ddos'?'05':key==='web-app'?'04':key==='supply-chain'?'03-B':key==='supply-chain-tampered'?'補足例':scenario.number}`;
-    document.title=`Cyber Incident Explorer v0.5.32 — ${scenario.category}`;if(sideView==='guide')renderScenarioGuide();
+    document.title=`Cyber Incident Explorer v0.5.33 — ${scenario.category}`;if(sideView==='guide')renderScenarioGuide();
     const refs=$('referenceList');refs.replaceChildren();scenario.references.forEach(ref=>{const a=document.createElement('a');a.href=ref.url;a.textContent=ref.label+' ↗';a.target='_blank';a.rel='noopener noreferrer';refs.append(a);});render();
   }
   // v0.5.18: the full-scenario guide is independent of incident simulation.
@@ -2750,7 +2754,7 @@ window.CyberGuides.bec={
   // The active defense guide is derived from the same scenario and checkpoint facts
   // as the visual diagram; it does not assume that every enabled control blocks an attack.
   function guideControlsForStep(i){
-    if(isBec())return [[],[],[],['becCallback'],['becApproval'],['becBankVerify']][i]||[];
+    if(isBec())return [[],['becMfa','becDevice'],[],['becContain'],['becOutbound'],[]][i]||[];
     if(isDdos())return [[],[],['ddosUpstream'],[],[],[]][i]||[];
     if(isWeb())return [[],['webWaf'],['safeSql'],['dbLeastPrivilege'],[],['webAudit']][i]||[];
     if(isVendor())return [[],['mfa'],['vendorJit'],['segmentation'],['fileAcl','vendorTransfer'],['vendorAudit']][i]||[];
@@ -2897,7 +2901,7 @@ window.CyberGuides.bec={
     all('[data-mode]').forEach(el=>el.addEventListener('click',()=>{state.mode=el.dataset.mode;renderDiagram(evaluation());}));
     $('logCopyButton').addEventListener('click',async()=>{const value=logLines(evaluation()).map(l=>`[${l.time}] ${l.level} ${l.text}`).join('\n');try{await navigator.clipboard.writeText(value);$('logCopyButton').textContent='コピーしました';}catch{const input=document.createElement('textarea');input.value=value;input.style.cssText='position:fixed;opacity:0';document.body.append(input);input.select();const success=document.execCommand('copy');$('logCopyButton').textContent=success?'コピーしました':'コピーできませんでした';input.remove();}setTimeout(()=>$('logCopyButton').textContent='ログをコピー',1600);});
     const refs=$('referenceList');scenario.references.forEach(ref=>{const a=document.createElement('a');a.href=ref.url;a.textContent=ref.label+' ↗';a.target='_blank';a.rel='noopener noreferrer';refs.append(a);});const detailDialog=$('detailDialog');$('detailButton').addEventListener('click',()=>detailDialog.showModal());$('closeDetailButton').addEventListener('click',()=>detailDialog.close());
-    $('whyButton').addEventListener('click',()=>{const ids=isBec()?['vendor','vendor','mail','pc','files','saas']:isDdos()?['attacker','wanfw','wanfw','supplier','web','web']:isWeb()?['wanfw','waf','web','db','outside','siem']:isVendor()?['vendor','vpn','pam','segfw','files','siem']:isPhishing()?['mail','fake','idp','storage','share']:isSupply()?['supplier','pc','pc','files','swg','siem']:state.attackRoute==='direct'?['vpn','dns','segfw','vpn','files','backup']:isEmail()?['mail','pc','segfw','swg','files','backup']:['vpn','pc','segfw','swg','files','backup'];openLocation(ids[state.step]);});
+    $('whyButton').addEventListener('click',()=>{const ids=isBec()?['vendor','mail','pc','admin','saas','storage']:isDdos()?['attacker','wanfw','wanfw','supplier','web','web']:isWeb()?['wanfw','waf','web','db','outside','siem']:isVendor()?['vendor','vpn','pam','segfw','files','siem']:isPhishing()?['mail','fake','idp','storage','share']:isSupply()?['supplier','pc','pc','files','swg','siem']:state.attackRoute==='direct'?['vpn','dns','segfw','vpn','files','backup']:isEmail()?['mail','pc','segfw','swg','files','backup']:['vpn','pc','segfw','swg','files','backup'];openLocation(ids[state.step]);});
     $('closeLocationButton').addEventListener('click',()=>$('locationDialog').close());
     $('goRelatedStepButton').addEventListener('click',()=>{if(!state.selectedLocation)return;const d=devices.find(x=>x.id===state.selectedLocation);if(d&&!inactiveDevice(d))setStep(deviceStage(d));$('locationDialog').close();});
     const diagramPanel=document.querySelector('.diagram-panel');$('zoomButton').addEventListener('click',()=>{const zoomed=diagramPanel.classList.toggle('zoomed');$('zoomButton').textContent=zoomed?'× 拡大を終了':'⛶ 図を拡大';$('zoomButton').setAttribute('aria-pressed',String(zoomed));});
