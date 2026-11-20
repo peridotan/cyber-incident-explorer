@@ -1,9 +1,9 @@
-# Cyber Incident Explorer v0.5.30
+# Cyber Incident Explorer v0.5.31
 
 架空の企業システム構成図を見ながら、サイバー攻撃の進行、対策の作用点、効果の限界を学ぶ日本語のWeb教材です。
 
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
-**ソースZIP:** [cyber-incident-explorer-v0.5.30.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.30.zip)
+**ソースZIP:** [cyber-incident-explorer-v0.5.31.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.31.zip)
 
 ## 収録シナリオ
 
@@ -20,6 +20,14 @@
 1. シナリオを選び、対策をOFFにして攻撃を最後まで実行します。
 2. 完了後の「対策を変えて比較」を押し、対策を選んで再実行します。
 3. 前回と今回の結果を比べ、「解説」で作用範囲と限界を確認します。
+
+## v0.5.31の変更（DDoS正常通信の接続経路）
+
+- CASE 05の一般利用者の青い通信経路を、必ず **「一般利用者 → 上流DDoS対策 → 企業接続回線 → 公開Webサービス」** の順に修正しました。一般利用者が上流DDoS対策を飛ばして企業回線へ直接接続したように見える経路は廃止。
+- 上流DDoS対策への入口、上流から企業接続回線への出口、企業回線から公開Webへの通信を別々の矢印で表示します。青い矢印は実際の機器の境界を指し、攻撃の赤線とは混同しない構成です。
+- 対策ONでは青実線で正常通信が公開Webまで通過。対策OFFでも設置点を通る通信の経路は同じですが、緩和されない攻撃で企業回線が飽和するため、青点線は企業回線までで停止・遅延を示します。
+- 「通常構成」の灰色の論理接続と、STEP 04の学習解説にも同じ接続順序を反映しました。
+- ブラウザで対策OFF／ONの6ステップ、正常経路3区間、既存6シナリオの各バリエーションを回帰検証しました。詳細は [QA-REPORT.md](QA-REPORT.md) を参照。
 
 ## v0.5.30の変更（05 DDoS表示のタイミングと矢印）
 
