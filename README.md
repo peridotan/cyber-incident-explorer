@@ -1,9 +1,9 @@
-# Cyber Incident Explorer v0.5.36
+# Cyber Incident Explorer v0.5.37
 
 架空の企業システム構成図を見ながら、サイバー攻撃の進行、対策の作用点、効果の限界を学ぶ日本語のWeb教材です。
 
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
-**ソースZIP:** [cyber-incident-explorer-v0.5.36.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.36.zip)
+**ソースZIP:** [cyber-incident-explorer-v0.5.37.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.37.zip)
 
 ## 収録シナリオ
 
@@ -23,6 +23,18 @@
 1. シナリオを選び、対策をOFFにして攻撃を最後まで実行します。
 2. 完了後の「対策を変えて比較」を押し、対策を選んで再実行します。
 3. 前回と今回の結果を比べ、「解説」で作用範囲と限界を確認します。
+
+## v0.5.37の変更（08：URL取得機能のGET悪用も情報流出経路に追加）
+
+- **シナリオの前提を明示：** 正規利用者が公開レポートのURLを指定して要約を依頼し、AI業務アプリが許可済みURLへHTTPS GETで取得します。外部文書の本文は攻撃者が改ざん可能な**未信頼データ**ですが、取得自体は正規処理です。
+- **攻撃経路を選択可能に：** 08の「今回の外部流出経路」で **GET（URL取得ツールの悪用）／POST（外部送信ツールの悪用）** を切り替えて比較できます。GET経路では、Agentが取得済み機密情報をクエリパラメータに含めた攻撃者宛てURLへのアクセスを要求する想定です。実際のネットワーク通信は発生しません。
+- **技術対策の作用範囲：** ①文書APIの最小権限（STEP 04）、②**タスク単位のツール／URL制御**（STEP 05：正規のGETは許可、攻撃者宛てGETと不正なPOSTを実行前に拒否）、③**GET／POST双方に適用する出口宛先制御**（STEP 05）。対策は3つのまま、効果のない監視スイッチは追加していません。
+- **重要な限界：** ドメインの許可リストだけでは、許可済みドメインへのクエリ・送信内容による漏えいを必ず防げません。URLのホスト・パス・クエリ・リダイレクト先・解決された宛先、ツール引数、タスクとの整合を評価する必要があります。
+- **図の連動：** 青点線＝正規の要約依頼、橙点線＝公開URL取得で戻った未信頼文書本文、赤＝Agentによる不正なAPI・GET／POST操作、緑×＝防御地点。STEP 05では選択したGET／POSTを明示します。
+- **履歴：** 後段の送信を拒否してもSTEP 04で成立した機密文書の読取は消しません。既存9シナリオを変更せず、08の比較・全初期化も維持。
+- [OWASP：AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) ／ [OWASP：LLM Prompt Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html) ／ [OWASP：SSRF Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)。
+
+**固定条件：** 正規の公開URLと攻撃者の受信先は別ホスト。攻撃者は外部文書の本文を改ざんでき、Agentは指示を誤採用し、GET・POSTの外部要求は制御OFFの場合に成立します。対策ONでは今回のタスク外URL・引数・未承認送信先を確実に拒否すると仮定します。実製品の検知率やあらゆる漏えいの阻止を保証するものではありません。
 
 ## v0.5.36の変更（08：AI Agentを中心とした通信経路と信頼境界の修正）
 
