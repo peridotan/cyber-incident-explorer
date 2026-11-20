@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#101b2c" name="theme-color"/>
 <meta content="システム構成図を見ながらサイバー攻撃と防御の関係を学ぶ、架空のインシデント学習シミュレーター。" name="description"/>
-<title>Cyber Incident Explorer v0.5.28 — システム構成図で学ぶサイバーインシデント</title>
+<title>Cyber Incident Explorer v0.5.29 — システム構成図で学ぶサイバーインシデント</title>
 
 <style>:root{color-scheme:dark;--bg:#0b1422;--panel:#142238;--panel-2:#182940;--line:#2b405b;--text:#eff5ff;--muted:#a3b5cb;--muted2:#7c94af;--blue:#69b5ef;--danger:#fa777e;--success:#55d6ac;--warn:#f4b96e;--shade:#101d30;--radius:15px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% -10%,#1b344e 0,transparent 39%),var(--bg);font-family:Inter,"Noto Sans JP","Yu Gothic",Meiryo,system-ui,sans-serif;color:var(--text);line-height:1.5}button,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,.asset:focus-visible,.diagram-scroller:focus-visible{outline:3px solid #83bff0;outline-offset:3px}.shell{min-height:100vh}.top-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px clamp(22px,4vw,70px);border-bottom:1px solid #253b54;background:#111e2eeb}.brand-group{display:flex;align-items:center;gap:14px}.brand-symbol{width:42px;height:42px;display:grid;place-items:center;color:#7eddd5;background:#183746;border:1px solid #2e6c78;border-radius:12px}.brand-symbol svg{width:25px}.brand-name{font-size:calc(15px * var(--font-scale, 1));letter-spacing:.10em;font-weight:850;white-space:nowrap}.brand-name span{color:#66d6c4}.brand-sub{font-size:calc(11px * var(--font-scale, 1));color:var(--muted);letter-spacing:.05em}.header-right{display:flex;align-items:center;gap:18px}.vtag{font-size:calc(10px * var(--font-scale, 1));color:#83cbde;letter-spacing:.06em;background:#183243;border:1px solid #2f6071;border-radius:999px;padding:6px 10px;white-space:nowrap}.ghost-btn{border:1px solid var(--line);background:#1b2b42;color:#c3d4e7;padding:8px 13px;border-radius:9px;font-size:calc(12px * var(--font-scale, 1))}.ghost-btn:hover{background:#283d57}.main{max-width:1760px;margin:auto;padding:27px clamp(18px,3.5vw,62px) 26px}.intro{display:flex;justify-content:space-between;align-items:center;gap:28px;margin-bottom:21px}.intro-copy{max-width:930px}.kicker,.section-id{font-size:calc(11px * var(--font-scale, 1));letter-spacing:.13em;font-weight:750;color:#74ced0}.intro h1{font-size:clamp(23px,2.05vw,31px);line-height:1.35;letter-spacing:-.025em;margin:7px 0}.intro p{margin:0;color:#b4c5d8;font-size:calc(13px * var(--font-scale, 1))}.scenario-selector{flex:0 0 295px;border:1px solid var(--line);background:linear-gradient(135deg,#1b2c44,#182840);border-radius:12px;padding:12px 14px}.scenario-selector label{display:block;font-size:calc(11px * var(--font-scale, 1));font-weight:750;color:#8fb2ce;margin-bottom:7px}.scenario-selector select{width:100%;background:#101e31;border:1px solid #49627d;color:#f4f8ff;border-radius:8px;padding:9px;font-size:calc(12px * var(--font-scale, 1))}.scenario-selector>span{display:block;font-size:calc(10px * var(--font-scale, 1));margin-top:7px;color:#9faec5}.panel{background:linear-gradient(160deg,#17253a,#131f33);border:1px solid #30435c;border-radius:var(--radius);box-shadow:0 12px 32px #00000018}.playback{padding:17px 21px 16px;margin-bottom:16px}.playback-head,.diagram-head,.defense-title,.detail-head,.log-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.playback-head h2,.diagram-head h2,.defense-title h2,.detail-panel h2,.log-panel h2{margin:1px 0;font-size:calc(18px * var(--font-scale, 1));letter-spacing:.01em}.step-position{font-size:calc(12px * var(--font-scale, 1));color:#a8bfd6;background:#1f334a;padding:6px 10px;border-radius:8px;font-weight:750}.timeline{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:14px 0}.timeline-step{position:relative;text-align:left;border:1px solid #314660;background:#122137;border-radius:10px;min-height:76px;padding:10px 12px 9px 13px;color:var(--muted);transition:border-color .14s,background .14s}.timeline-step strong{display:block;font-size:calc(13px * var(--font-scale, 1));color:#d8e5f5;font-weight:750}.timeline-step small{display:block;font-size:calc(10px * var(--font-scale, 1));margin-top:5px;color:#839bb5}.timeline-step .number{font-size:calc(10px * var(--font-scale, 1));font-weight:800;color:#80a1c4}.timeline-step.active{background:#20334d;border-color:#6ab7d8;box-shadow:0 0 0 1px #4788a7}.timeline-step.active strong{color:white}.timeline-step.completed::before{position:absolute;content:"";height:3px;background:#58cba9;left:12px;right:12px;bottom:0;border-radius:4px}.timeline-step:disabled{opacity:.6}.transport{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid #2b4059;padding-top:13px}.transport-buttons{display:flex;gap:8px;align-items:center}.transport-icon,.transport-text{background:#1d3047;color:#d5e7f8;border:1px solid #35526c;border-radius:8px;min-width:39px;height:36px}.transport-icon{font-size:calc(27px * var(--font-scale, 1));line-height:1}.transport-icon:disabled{opacity:.4;cursor:default}.transport-text{padding:0 13px;font-size:calc(12px * var(--font-scale, 1))}.action-button{border:1px solid #57bec0;background:#167f89;color:white;font-weight:750;border-radius:9px;padding:8px 21px;min-height:37px;font-size:calc(13px * var(--font-scale, 1))}.action-button:hover{background:#1996a0}.action-button span:first-child{margin-right:7px}.speed-group{display:flex;align-items:center;gap:8px}.speed-group label{font-size:calc(11px * var(--font-scale, 1));color:var(--muted)}.speed-group select{background:#1b2e45;color:white;border:1px solid #3a526d;border-radius:7px;padding:7px 9px;font-size:calc(12px * var(--font-scale, 1))}.work-area{display:grid;grid-template-columns:minmax(0,1fr) 315px;gap:15px;align-items:stretch}.diagram-panel{padding:16px;min-width:0}.diagram-head h2{font-size:calc(19px * var(--font-scale, 1))}.diagram-head p{margin:3px 0 0;color:var(--muted);font-size:calc(11px * var(--font-scale, 1))}.view-switch{display:flex;background:#0d1a2c;border:1px solid #3a516b;border-radius:10px;overflow:hidden;padding:3px;flex-shrink:0}.view-switch button{font-size:calc(11px * var(--font-scale, 1));background:transparent;color:#a8bbd0;border:0;border-radius:7px;padding:9px 12px;white-space:nowrap}.view-switch button.selected{background:#2b4965;color:#fff;box-shadow:0 1px 4px #0008}.diagram-topline{display:flex;justify-content:space-between;align-items:center;gap:9px;margin:15px 0 10px}.mode-hint{font-size:calc(11px * var(--font-scale, 1));color:#c7dae9}.legend{display:flex;gap:13px;align-items:center;font-size:calc(10px * var(--font-scale, 1));color:#abbfd2;white-space:nowrap}.legend>span{display:flex;align-items:center;gap:5px}.legend-mark{width:7px;height:7px;display:inline-block;border-radius:50%;background:#708aa7}.legend-mark.danger{background:var(--danger)}.legend-mark.success{background:var(--success)}.diagram-scroller{width:100%;background:#101c2d;border:1px solid #28425d;border-radius:12px;overflow:auto;scrollbar-width:thin;scrollbar-color:#365d78 #102138}.diagram-scroller svg{display:block;width:100%;min-width:920px;height:auto;aspect-ratio:1440/680}.diagram-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:11px}.selected-event{display:flex;gap:10px;align-items:center}.selected-event div{display:flex;flex-direction:column}.selected-event strong{font-size:calc(13px * var(--font-scale, 1))}.selected-event span:last-child{font-size:calc(11px * var(--font-scale, 1));color:#b1c4d8}.event-indicator{width:10px;height:10px;border-radius:50%;background:var(--danger);box-shadow:0 0 0 5px #e65a6a16;flex-shrink:0}.event-indicator.success{background:var(--success);box-shadow:0 0 0 5px #51cda21c}.event-indicator.idle{background:#6f849e;box-shadow:none}.small-meta{font-size:calc(10px * var(--font-scale, 1));color:#8ca2bd;max-width:300px;text-align:right}.defense-panel{padding:17px 16px;display:flex;flex-direction:column;min-width:0}.defense-title h2{font-size:calc(17px * var(--font-scale, 1))}.on-count{background:#213851;border:1px solid #34536e;color:#91c9d7;font-size:calc(11px * var(--font-scale, 1));padding:6px 8px;border-radius:7px;white-space:nowrap}.defense-instruction{font-size:calc(11px * var(--font-scale, 1));margin:7px 0 14px;color:#b0c0d3}.bulk-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:11px}.bulk-controls button{padding:10px 5px;font-size:calc(12px * var(--font-scale, 1));border-radius:9px;font-weight:750}.all-on{border:1px solid #2d937d;background:#17463f;color:#7ae2bc}.all-off{border:1px solid #556a85;background:#26364d;color:#d5e4f1}.bulk-controls button:hover{filter:brightness(1.16)}.defense-controls{display:grid;gap:7px}.defense-card{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:10px 10px;border:1px solid #31465f;background:#14253a;border-radius:10px}.defense-card.on{background:#133c3a;border-color:#2b8079}.defense-copy{min-width:0}.defense-copy strong{display:block;font-size:calc(12px * var(--font-scale, 1));line-height:1.35}.defense-copy small{display:block;font-size:calc(10px * var(--font-scale, 1));color:#98b4cc;margin-top:3px}.toggle{display:block;border:0;flex:0 0 38px;width:38px;height:23px;border-radius:20px;background:#455a72;padding:3px;transition:background .15s}.toggle::before{content:"";display:block;width:17px;height:17px;background:#fff;border-radius:50%;box-shadow:0 1px 3px #0005;transition:transform .15s}.toggle.on{background:#28b294}.toggle.on::before{transform:translateX(15px)}.outcome-summary{margin-top:14px;border-radius:10px;background:#0d1c30;border:1px solid #36506b;padding:12px}.outcome-head{display:flex;justify-content:space-between;gap:5px;align-items:center;color:#91aecd;font-size:calc(10px * var(--font-scale, 1));margin-bottom:6px}.outcome-mark{height:7px;width:7px;border-radius:50%;background:var(--danger)}.outcome-mark.safe{background:var(--success)}.outcome-mark.warn{background:var(--warn)}.outcome-summary>strong{font-size:calc(14px * var(--font-scale, 1));display:block;line-height:1.4}.outcome-summary p{font-size:calc(11px * var(--font-scale, 1));line-height:1.65;color:#aec0d3;margin:8px 0 0}.control-note{display:flex;gap:8px;margin-top:auto;padding-top:13px;color:#92abc3}.control-note span{font-size:calc(14px * var(--font-scale, 1))}.control-note p{font-size:calc(10px * var(--font-scale, 1));line-height:1.6;margin:0}.detail-layout{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin-top:16px}.detail-panel,.log-panel{padding:18px 20px}.detail-head{margin-top:10px}.english-label{font-size:calc(10px * var(--font-scale, 1));letter-spacing:.13em;color:#83c7d9;font-weight:800}.detail-head h2{margin:4px 0;font-size:calc(23px * var(--font-scale, 1))}.status-badge{font-size:calc(11px * var(--font-scale, 1));border:1px solid #844950;background:#3d2838;border-radius:99px;padding:6px 11px;color:#ffd1d4;white-space:nowrap}.status-badge.safe{background:#164c40;border-color:#257b69;color:#b7f7de}.status-badge.neutral{background:#27384e;border-color:#4b5f75;color:#cbd8e6}.detail-panel>p{font-size:calc(13px * var(--font-scale, 1));color:#c7d5e5;line-height:1.85}.learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.learn-grid>div{background:#10243a;border:1px solid #294761;border-radius:10px;padding:11px}.learn-grid strong{font-size:calc(11px * var(--font-scale, 1));color:#7ccee0}.learn-grid p{color:#c1d3e3;font-size:calc(11px * var(--font-scale, 1));line-height:1.75;margin:6px 0 0}.learning-tip{display:flex;gap:10px;align-items:start;border-left:3px solid #e1aa67;background:#3d332c55;border-radius:3px;padding:11px;margin-top:12px}.learning-tip strong{font-size:calc(11px * var(--font-scale, 1));color:#f5c88b;white-space:nowrap}.learning-tip span{font-size:calc(11px * var(--font-scale, 1));color:#e7d9c7}.technique-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.technique-list a,.technique-list span{font-size:calc(11px * var(--font-scale, 1));text-decoration:none;color:#8acff0;background:#1b334b;border:1px solid #3b6281;padding:6px 9px;border-radius:7px}.technique-list a:hover{text-decoration:underline}.log-head>div>span{font-size:calc(10px * var(--font-scale, 1));color:var(--muted)}.log-console{background:#0b1829;border:1px solid #2c465f;border-radius:9px;margin:14px 0 11px;padding:10px;min-height:160px;max-height:260px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:calc(11px * var(--font-scale, 1));line-height:1.7}.log-line{display:grid;grid-template-columns:67px 41px 1fr;gap:8px;margin-bottom:5px}.log-line span:first-child{color:#7896b4}.log-level{color:#9db6ce}.log-level.warn{color:#ffa2a7}.log-level.ok{color:#71dab6}.log-message{color:#c2d3e4;overflow-wrap:anywhere}.effect-head{font-size:calc(11px * var(--font-scale, 1));color:#acbfd3;margin-bottom:8px}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.result-item{border:1px solid #304760;background:#1a2d44;padding:9px 6px;border-radius:8px;text-align:center}.result-item span{display:block;font-size:calc(10px * var(--font-scale, 1));color:#92acc5}.result-item strong{display:block;font-size:calc(12px * var(--font-scale, 1));margin-top:5px}.result-item .danger{color:#ff949c}.result-item .safe{color:#70d4ac}.result-item .neutral{color:#a5b6ca}.references-panel{display:grid;grid-template-columns:300px 1fr;gap:24px;padding:28px 3px 16px}.references-panel h2{margin:5px 0;font-size:calc(19px * var(--font-scale, 1))}.references-panel p{margin:0;font-size:calc(12px * var(--font-scale, 1));color:var(--muted)}.reference-links{display:flex;flex-wrap:wrap;gap:7px;align-content:center}.reference-links a{color:#b1dbf6;border:1px solid #35516e;background:#172c43;border-radius:8px;padding:7px 10px;font-size:calc(11px * var(--font-scale, 1));text-decoration:none}.reference-links a:hover{text-decoration:underline}.footer{padding:15px 0;border-top:1px solid #2c4057;display:flex;justify-content:space-between;gap:14px;color:#8096b0;font-size:calc(10px * var(--font-scale, 1))}.guide-dialog{border:1px solid #3e607d;background:#192940;border-radius:14px;color:var(--text);padding:23px;width:min(540px,calc(100% - 32px));box-shadow:0 22px 100px #000c}.guide-dialog::backdrop{background:#000a}.dialog-head{display:flex;align-items:center;justify-content:space-between}.dialog-head h2{margin:0}.dialog-head button{border:0;background:transparent;color:white;font-size:calc(25px * var(--font-scale, 1))}.guide-dialog ol{font-size:calc(13px * var(--font-scale, 1));line-height:1.95;color:#d1dce9;padding-left:22px}.guide-dialog p{font-size:calc(12px * var(--font-scale, 1));color:#aabfd4}.guide-dialog .action-button{margin-top:9px}
 /* Logical architecture diagram */
@@ -636,7 +636,7 @@
 <div aria-hidden="true" class="brand-symbol"><svg viewbox="0 0 36 36"><path d="M18 3 31 9v11c0 8-5.5 11.5-13 14C10.5 31.5 5 28 5 20V9z" fill="none" stroke="currentColor" stroke-width="2.2"></path><path d="M11 18h14M18 11v14" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path></svg></div>
 <div><div class="brand-name">CYBER <span>INCIDENT</span> EXPLORER</div><div class="brand-sub">システム構成図で学ぶサイバーインシデント</div></div>
 </div>
-<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><button aria-controls="scenarioGuidePanel" aria-expanded="false" class="ghost-btn scenario-guide-trigger" id="scenarioGuideButton" type="button">📖 この攻撃を学ぶ</button><span class="vtag">v0.5.28</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
+<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><button aria-controls="scenarioGuidePanel" aria-expanded="false" class="ghost-btn scenario-guide-trigger" id="scenarioGuideButton" type="button">📖 この攻撃を学ぶ</button><span class="vtag">v0.5.29</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
 </header>
 <main class="main">
 <section aria-label="シナリオの概要" class="intro">
@@ -712,7 +712,7 @@
 </section>
 <section aria-labelledby="refTitle" class="references-panel"><div><div class="section-id">OFFICIAL REFERENCES</div><h2 id="refTitle">一次情報で学ぶ</h2><p>MITRE ATT&amp;CKの攻撃戦術・技法と、NIST CSF 2.0の対応・復旧を確認できます。</p></div><div class="reference-links" id="referenceList"></div></section>
 </dialog>
-<footer class="footer"><span>Cyber Incident Explorer · v0.5.28</span><span>学習用シミュレーション / 実際の通信やマルウェアは実行しません</span></footer>
+<footer class="footer"><span>Cyber Incident Explorer · v0.5.29</span><span>学習用シミュレーション / 実際の通信やマルウェアは実行しません</span></footer>
 </main>
 </div>
 <dialog class="guide-dialog" id="guideDialog" aria-labelledby="guideTitle">
@@ -1245,27 +1245,24 @@ window.CyberGuides={
  }
 };
 </script><script>
-/* CASE 05: volumetric network DDoS. Deterministic, fictional educational model.
-   Under fixed assumptions, upstream capacity covers the attack. A downstream WAF,
-   application rate limiter, and monitoring alone do not protect a saturated link. */
+/* CASE 05: volumetric network DDoS. Deterministic educational model.
+   One upstream protection switch combines filtering and protected CDN / Anycast delivery.
+   This is not a claim that any CDN/Anycast deployment alone can stop L3/L4 floods.
+   Normal user traffic is modeled independently from attacker traffic. */
 window.CyberScenarios.ddos = {
   id: 'cie-ddos-05', number: '05', category: 'DDoS／サービス停止',
   title: '回線が飽和したら、公開Webサービスはどうなる？',
-  summary: 'L3/L4の大量通信で企業の接続回線が飽和する架空の例。上流DDoS緩和、CDN／Anycast、WAF、アプリのレート制限、可用性監視の作用点と限界を比較します。',
+  summary: 'L3/L4の大量通信で企業回線が飽和する例です。「上流DDoS対策」で攻撃を回線手前で緩和し、一般利用者が公開Webを使い続けられるかを比較します。',
   controls: [
-    {id:'ddosScrub',icon:'shield',label:'上流DDoSトラフィック洗浄',tag:'接続回線の手前で緩和',location:'上流ISP／洗浄',asset:'wanfw',desc:'上流側で今回の悪性トラフィックを除去。想定処理能力の範囲内なら企業回線の飽和を阻止。',limit:'契約容量を超える場合、直接オリジンへ届く別経路、未保護の宛先などでは防げない場合があります。'},
-    {id:'ddosAnycast',icon:'network',label:'CDN／Anycastの上流緩和',tag:'公開経路を上流で分散',location:'上流ISP／洗浄',asset:'wanfw',desc:'今回は公開サービス経路が保護され、攻撃量が処理容量内という前提で回線飽和を抑える。',limit:'オリジン直通経路がある場合や上流保護が適切でない構成では回線を守れない場合があります。'},
-    {id:'ddosWaf',icon:'shield',label:'WAF（HTTP攻撃対策）',tag:'本件のL3/L4回線飽和は対象外',location:'WAF',asset:'waf',desc:'公開WebへのHTTPリクエストを検査。今回は回線の容量問題が手前で発生するため阻止しない。',limit:'L7のHTTPリクエスト大量送信には効果がある場合がありますが、今回とは攻撃レイヤーが異なります。'},
-    {id:'ddosRate',icon:'activity',label:'アプリ側のレート制限',tag:'回線より後段の制御',location:'公開Web/AP',asset:'web',desc:'Web/APで要求頻度を制限しますが、このケースの上流回線飽和を阻止しません。',limit:'正常利用者がWeb/APまで到達できない状況では、アプリ内部の制御だけで回線を復旧できません。'},
-    {id:'ddosMonitor',icon:'scan-eye',label:'可用性監視・アラート',tag:'検知のみ／自動緩和なし',location:'SIEM / SOC',asset:'siem',desc:'サービス低下を監視・通知し、調査と緊急対応の判断材料にする。通信の遮断は行わない。',limit:'検知は阻止ではありません。上流緩和依頼などの対応が必要です。'}
+    {id:'ddosUpstream',icon:'shield',label:'上流DDoS対策（攻撃通信の除去・分散）',tag:'企業回線の手前で悪性通信を緩和',location:'上流ISP／保護サービス',asset:'wanfw',desc:'攻撃通信を上流で識別・除去する「洗浄（スクラビング）」や、保護されたCDN／Anycastの分散・緩和基盤を組み合わせ、正常な利用者のアクセス経路を確保する教材上の対策です。',limit:'洗浄は悪性通信の除去、CDNは配信・エッジ処理、Anycastは経路分散という異なる役割です。保護されないオリジン直通経路や容量超過があれば防げません。CDN／Anycastの導入だけでDDoS耐性が保証されるわけではありません。'}
   ],
   stages: [
     {id:'ddos-source',time:'T + 00:00',title:'大量の攻撃通信が発生',eyebrow:'VOLUMETRIC FLOOD',framework:{source:'ATT&CK',id:'T1498',name:'Network Denial of Service'},summary:'複数の外部送信元から大量トラフィックが発生します。',detail:'架空のボット群が公開IPに大量のL3/L4トラフィックを送る前提です。マルウェア実行やWebアプリの脆弱性悪用はこのシナリオでは扱いません。',detect:'送信元IPの分散、pps/bpsの急増、プロトコル・宛先分布。',response:'ネットワーク事業者やDDoS対策事業者へ連絡し、上流での緩和策を準備。',techniques:[{id:'T1498',label:'Network Denial of Service',url:'https://attack.mitre.org/techniques/T1498/'}],logs:{active:['NET / 複数の送信元から大量トラフィックが発生']},tip:'DDoSの被害は、サーバー侵害がなくても発生します。'},
     {id:'ddos-converge',time:'T + 00:01',title:'公開IPにトラフィック集中',eyebrow:'UPSTREAM CONGESTION',framework:{source:'ATT&CK',id:'T1498.001',name:'Direct Network Flood'},summary:'トラフィックが企業の公開IP宛てに集中します。',detail:'攻撃通信はインターネットの上流経路まで到達します。まだ企業接続回線の容量超過は判定していません。',detect:'上流側の宛先単位トラフィック、帯域利用率とパケット数。',response:'対象の公開IP・経路と通信特性を確認。上流の洗浄設備や保護経路を確認。',techniques:[{id:'T1498.001',label:'Direct Network Flood',url:'https://attack.mitre.org/techniques/T1498/001/'}],logs:{active:['UPSTREAM / 公開IP宛のトラフィックが急増']},tip:'この時点でWebサーバーが乗っ取られたことにはなりません。'},
-    {id:'ddos-link',time:'T + 00:02',title:'企業の接続回線が飽和',eyebrow:'LINK CAPACITY CHECK',framework:{source:'SCENARIO',id:'CAPACITY',name:'Network Capacity'},summary:'企業回線の手前で上流緩和が機能するか判定します。',detail:'未対策の攻撃量は企業接続回線の容量を超えます。一方、上流の洗浄または保護されたCDN／Anycast経路は今回の攻撃を処理できるという、教材上の固定条件です。',detect:'ISPのトラフィック量、回線のドロップ・パケットロス・利用率。',response:'上流DDoS緩和の有効化・保護経路の確認・オリジンへの直通経路の見直し。',techniques:[{id:'T1498',label:'Network Denial of Service',url:'https://attack.mitre.org/techniques/T1498/'}],logs:{active:['LINK / 接続回線の容量を超過し、回線飽和が発生'],blocked:['UPSTREAM / 洗浄・分散により今回のトラフィックを緩和。接続回線は飽和せず']},tip:'WAFの後段にあるアプリ側の処理能力と、回線容量は別の制約です。'},
-    {id:'ddos-user',time:'T + 00:03',title:'正常な利用者の通信も遅延',eyebrow:'LEGITIMATE USER IMPACT',framework:{source:'SCENARIO',id:'AVAILABILITY',name:'Normal User Access'},summary:'一般利用者のアクセスも回線混雑の影響を受けます。',detail:'攻撃トラフィックと正常なトラフィックが同じ企業接続回線を使うため、接続遅延やパケットロスが増えます。上流で緩和できていれば、この影響は発生しない想定です。',detect:'合成監視・ユーザー体感・応答時間・パケットロスの増加。',response:'正常利用者への影響を確認し、上流緩和・通信経路の変更を調整。',techniques:[],logs:{active:['USER / 正常な利用者も遅延・パケットロスの影響を受ける']},tip:'WAFやアプリのレート制限をONにしても、今回は回線の飽和を解消しません。'},
-    {id:'ddos-monitor',time:'T + 00:04',title:'可用性の異常を監視',eyebrow:'DETECTION NOT PREVENTION',framework:{source:'SCENARIO',id:'MONITORING',name:'Availability Monitoring'},summary:'可用性監視が有効なら、サービス低下を検知して通知します。',detail:'監視ONのときにアラートが出る想定です。監視OFFならこの監視基盤による通知はありません。ただし監視機能は攻撃通信そのものを止めません。',detect:'外形監視、サービス応答遅延、アラート・SOC対応履歴。',response:'状況把握、ネットワーク事業者へのエスカレーション、影響告知。',techniques:[],logs:{active:['MONITOR / 検知は即時の通信遮断を意味しない']},tip:'「検知した」と「止めた」を混同しないでください。'},
-    {id:'ddos-outage',time:'T + 00:05',title:'サービス停止・事業影響',eyebrow:'BUSINESS AVAILABILITY',framework:{source:'SCENARIO',id:'IMPACT',name:'Business Impact'},summary:'緩和されない大量通信により公開サービスが利用困難になります。',detail:'未対策の回線飽和が継続し、公開サービスの可用性が失われる教材条件です。上流で阻止できた場合、後続の正常通信遅延・サービス停止は未到達となります。',detect:'可用性指標、問い合わせ、業務影響の範囲と継続時間。',response:'上流緩和・保護経路の再確認、サービス復旧、通信ログの保存、利用者連絡。',techniques:[],logs:{active:['BUSINESS / サービス利用が困難になり事業影響が発生']},tip:'回線保護と復旧は別です。監視で発見しただけではサービスは回復しません。'}
+    {id:'ddos-link',time:'T + 00:02',title:'上流DDoS対策の判定',eyebrow:'UPSTREAM MITIGATION',framework:{source:'SCENARIO',id:'CAPACITY',name:'Network Capacity'},summary:'上流のDDoS緩和により、企業回線の飽和を防げるか判定します。',detail:'今回の教材では未対策の攻撃量が回線容量を超えます。一方、ON時は攻撃を処理できる容量と保護経路が整っているため、攻撃通信を上流で緩和できると仮定します。',detect:'上流の攻撃量、回線利用率、ドロップ・パケットロス。',response:'保護経路・容量・オリジン直通経路の確認。',techniques:[{id:'T1498',label:'Network Denial of Service',url:'https://attack.mitre.org/techniques/T1498/'}],logs:{active:['LINK / 上流緩和なし。企業の接続回線が飽和'],blocked:['UPSTREAM / 攻撃通信を回線の手前で緩和']},tip:'上流DDoS対策は単なる「回線の増速」ではなく、悪性通信の除去や保護経路への誘導が重要です。'},
+    {id:'ddos-user',time:'T + 00:03',title:'一般利用者の通信を確認',eyebrow:'LEGITIMATE TRAFFIC',framework:{source:'SCENARIO',id:'AVAILABILITY',name:'Normal User Access'},summary:'攻撃通信とは別に、一般利用者のアクセスが通るか確認します。',detail:'上流防御OFFなら回線飽和で正常通信も遅延・失敗します。ONなら攻撃通信だけが緩和され、正常通信は保護経路を通過する想定です。',detect:'一般利用者の応答時間、接続成功、パケットロス。',response:'正常な通信が維持されているか外形・利用者観点で確認。',techniques:[],logs:{active:['USER / 未対策の回線飽和で正常アクセスが遅延・失敗']},tip:'重要なのは攻撃を止めるだけでなく、正規利用者が利用を継続できることです。'},
+    {id:'ddos-service-access',time:'T + 00:04',title:'公開Webへの到達を確認',eyebrow:'PUBLIC WEB ACCESS',framework:{source:'SCENARIO',id:'SERVICE',name:'Service Reachability'},summary:'正常な通信が公開Webに届き、サービスを利用できるか確認します。',detail:'上流防御ONなら正常利用者が公開Webサービスへアクセスできます。防御OFFなら回線飽和で利用困難です。WAF・アプリ側レート制限は回線より後段のため、このL3/L4回線飽和の防止策には含めません。',detect:'Web応答、正常アクセスの成功率、外形監視。',response:'利用可能性と正規ユーザーへの影響を確認。',techniques:[],logs:{active:['WEB / 回線飽和により正常なアクセスが困難']},tip:'可用性監視は状況把握に役立ちますが、防御スイッチとは扱いません。'},
+    {id:'ddos-outage',time:'T + 00:05',title:'サービス停止か継続かを判定',eyebrow:'BUSINESS AVAILABILITY',framework:{source:'SCENARIO',id:'IMPACT',name:'Business Impact'},summary:'上流DDoS対策の有無による事業影響の違いを確認します。',detail:'防御OFFでは回線飽和によって公開サービスを利用できず、事業影響が発生します。ONでは攻撃通信の緩和が成功し、正常利用者が公開Webを使い続けられます。',detect:'可用性指標、正常アクセス、事業影響。',response:'必要な復旧・影響調査、保護経路とルールの継続的見直し。',techniques:[],logs:{active:['BUSINESS / 正常アクセスが遮られ、サービス利用不可']},tip:'今回の「利用可能」は固定した攻撃量・容量・経路条件での結果であり、実サービスの保証ではありません。'}
   ],
   references:[
     {label:'MITRE ATT&CK T1498: Network Denial of Service',url:'https://attack.mitre.org/techniques/T1498/'},
@@ -1274,30 +1271,31 @@ window.CyberScenarios.ddos = {
   ]
 };
 window.CyberLearning.ddosStages = [
-  {from:'ボット群 → インターネット上流',passes:'多数の送信元が大量通信を開始します。',stopped:'まだ上流の通信発生を止めたわけではありません。'},
-  {from:'インターネット上流 → 公開IP',passes:'公開IPへ大量トラフィックが集中しました。',stopped:'公開IP宛の大量通信は観測されています。'},
-  {from:'上流ネットワーク → 企業接続回線',passes:'上流の緩和がなく、攻撃量が接続回線容量を超えました。',stopped:'上流の洗浄／保護されたCDN経路が今回の攻撃を緩和しました。'},
-  {from:'一般利用者 → 接続回線',passes:'同じ回線を使う正常通信にも遅延が発生しました。',stopped:'上流で緩和されたため、正常利用者への回線飽和の影響は発生していません。'},
-  {from:'サービス監視・SOC',passes:'監視の有無にかかわらず、前段の通信影響は続いています。',stopped:'上流で防止されたため可用性低下に到達しません。'},
-  {from:'公開Webサービスと業務影響',passes:'回線飽和が解消されず、利用者が公開サービスにアクセスできません。',stopped:'接続回線が保護されており今回のサービス停止は発生しません。'}
+  {from:'外部ボット群 → インターネット上流',passes:'大量の攻撃通信が発生します。',stopped:'攻撃発生そのものは防御の有無にかかわらず観測されます。'},
+  {from:'インターネット上流 → 公開IP',passes:'企業の公開IPへ大量の通信が集中しました。',stopped:'上流へ攻撃が到達したこと自体は消えません。'},
+  {from:'上流DDoS対策 → 企業回線',passes:'上流で悪性通信が緩和されず、企業回線が飽和しました。',stopped:'上流で攻撃通信を除去・分散し、企業回線の容量を保護しました。'},
+  {from:'一般利用者 → 上流保護経路',passes:'回線飽和で正常利用者も遅延・接続失敗しました。',stopped:'上流の攻撃通信だけを緩和し、正常利用者の通信は通過しています。'},
+  {from:'一般利用者 → 公開Webサービス',passes:'回線が飽和し、正常通信が公開Webへ届きません。',stopped:'正常な通信は保護経路を通り、公開Webサービスへアクセスできます。'},
+  {from:'公開Webサービスの稼働',passes:'正常なアクセスができず、サービス停止・事業影響が発生しました。',stopped:'公開Webは利用可能で、今回のDDoSによるサービス停止は発生しません。'}
 ];
 window.CyberLearning.ddosNodes={
-  attacker:{role:'大量トラフィックを送る外部ボット群。',action:'複数の送信元から企業の公開IPに大量通信を送ります。',access:'公開先のIPアドレスへ送信できても、サーバーの管理権限を得たわけではありません。',next:'通信はISPなどの上流ネットワークに集まります。',defense:'上流でのトラフィック洗浄と容量確保。',signal:'bps/pps、送信元分布、宛先集中。'},
-  supplier:{role:'通常の顧客・一般利用者。',action:'公開Webサービスを通常どおり利用しようとします。',access:'攻撃ではなく正常な通信です。回線が飽和すると正常利用者も接続できなくなります。',next:'企業接続回線を通って公開サービスに向かいます。',defense:'上流DDoS緩和・サービス経路保護。',signal:'応答時間、接続失敗、ユーザー体感。'},
-  wanfw:{role:'企業回線より手前のISP・上流DDoS緩和基盤。',action:'大量通信を観測し、対策ONなら契約条件内で洗浄・分散します。',access:'この基盤は企業内Web/APより上流にあり、回線飽和前に対応できます。',next:'残りの通信が企業接続回線に流れます。',defense:'上流トラフィック洗浄、保護されたCDN／Anycast経路。',signal:'緩和ログ、回線入口の通信量、攻撃属性。'},
+  attacker:{role:'大量トラフィックを送る外部ボット群。',action:'複数の送信元から企業の公開IPに大量通信を送ります。',access:'公開先のIPアドレスへ送信できても、サーバーの管理権限を得たわけではありません。',next:'大量通信は上流DDoS対策へ到達します。',defense:'上流でのトラフィック洗浄と容量確保。',signal:'bps/pps、送信元分布、宛先集中。'},
+  supplier:{role:'通常の顧客・一般利用者。',action:'公開Webサービスを通常どおり利用しようとします。',access:'攻撃ではなく正常な通信です。回線が飽和すると正常利用者も接続できなくなります。',next:'保護された正常通信は企業回線を経て公開Webへ到達します。',defense:'上流DDoS緩和・サービス経路保護。',signal:'応答時間、接続失敗、ユーザー体感。'},
+  wanfw:{role:'企業回線より手前のISP・上流DDoS緩和基盤。',action:'攻撃通信と正常通信を区別し、対策ONなら悪性通信だけを除去・分散します。',access:'この基盤は企業内Web/APより上流にあり、回線飽和前に対応できます。',next:'残りの通信が企業接続回線に流れます。',defense:'上流DDoS対策：攻撃通信の洗浄（除去）・分散、正規通信の許可。',signal:'緩和ログ、回線入口の通信量、攻撃属性。'},
   vpn:{role:'企業のインターネット接続回線（この例ではVPNではありません）。',action:'流入通信が回線容量を超えると正常通信も遅延します。',access:'企業内Web/APの処理能力とは別のネットワーク帯域上限です。',next:'正常利用者が公開サービスに到達できるかを左右します。',defense:'ISP側の緩和、保護経路、接続回線の適切な容量設計。',signal:'帯域使用率、パケットロス、遅延。'},
   waf:{role:'Webアプリの前段にあるHTTP要求検査。',action:'この大量L3/L4通信の主な混雑点はWAFより前の回線です。',access:'今回の条件ではWAFをONにしても回線飽和を解消できません。',next:'L7 HTTP負荷への対応は別シナリオで扱います。',defense:'WAFはアプリ層の検査・遮断に利用します。',signal:'HTTPリクエスト・ルール検知（今回の回線飽和と区別）。'},
-  web:{role:'社外公開のWebアプリ／サービス。',action:'回線飽和により利用者の通信が届かず、利用不能となります。',access:'サーバーOSやデータが侵害されたという意味ではありません。',next:'サービス可用性の回復にはネットワーク側の緩和が必要です。',defense:'DDoS防御経路の保護、BCP・冗長化。',signal:'外形監視、正常アクセス数、応答状況。'},
-  siem:{role:'サービス監視・SOC。',action:'設定が有効なら可用性低下を検知・通知します。',access:'監視だけで大量通信の遮断が実行されるわけではありません。',next:'ISPへの連絡、緩和依頼、復旧確認へつなぎます。',defense:'可用性監視、DDoS緩和サービスとの連携、手順整備。',signal:'アラート、対象IP・影響時間・回復時刻。'}
+  web:{role:'社外公開のWebアプリ／サービス。',action:'防御OFFなら回線飽和で利用困難。防御ONなら正常なアクセスを受け付けます。',access:'サーバーOSやデータが侵害されたという意味ではありません。',next:'サービス可用性の回復にはネットワーク側の緩和が必要です。',defense:'DDoS防御経路の保護、BCP・冗長化。',signal:'外形監視、正常アクセス数、応答状況。'},
+  siem:{role:'サービス監視・SOC。',action:'可用性状態を確認し、必要に応じて担当者へ通知します。',access:'監視だけで大量通信の遮断が実行されるわけではありません。',next:'ISPへの連絡、緩和依頼、復旧確認へつなぎます。',defense:'可用性監視、DDoS緩和サービスとの連携、手順整備。',signal:'アラート、対象IP・影響時間・回復時刻。'}
 };
 window.CyberGuides.ddos={
   tag:'可用性への攻撃',heading:'CASE 05：DDoS／サービス停止',
-  definition:'分散した送信元からの大量通信により、企業の接続回線を飽和させ、Webサービスへの正常アクセスを妨害する架空のL3/L4型DDoSです。',
-  objective:'サービスの可用性を低下させ、正常な利用者がアクセスできない状態を作る。',
-  prerequisites:['攻撃量が企業接続回線の許容量を上回る','公開サービスの正常通信が同じ接続回線を利用する','上流緩和の契約容量は今回の攻撃を処理可能と仮定する'],
-  outcomes:['Webサーバー侵害がなくても正常利用者の通信が遅延','未対策なら回線が飽和しサービス停止','監視ONは検知・通知のみで自動停止しない'],
-  key:'企業の接続回線が先に飽和した場合、下流のWAFやアプリのレート制限をONにしても回線は守れません。上流の防御と単なる検知を分けて学びます。',
-  caveat:'これはL3/L4の大量トラフィックによる回線飽和の例であり、HTTP大量送信等のL7攻撃は別扱いです。防御成功は今回の固定した容量・経路条件による学習用判定です。'
+  definition:'分散送信元からの大量のL3/L4通信で企業回線を飽和させ、Webサービスへの正常アクセスを妨害する攻撃です。',
+  objective:'企業の接続回線を飽和させ、正規利用者の公開Webサービス利用を妨げる。',
+  prerequisites:['未対策では攻撃量が企業接続回線の容量を超える','対策ON時は攻撃量を処理できる上流容量と保護経路を確保している','正常利用者と公開Web自体は稼働し、他の障害はない'],
+  outcomes:['未対策なら回線飽和によって一般利用者がアクセスできない','上流対策ONなら攻撃を緩和し、青線で示す正常通信が公開Webまで到達する','公開Webサーバーの侵害とは異なる可用性への攻撃'],
+  key:'「洗浄（スクラビング）」は悪性通信の選別・除去、CDNは配信とエッジ処理、Anycastは複数拠点への経路分散です。今回の1つのスイッチは、必要な上流防御と保護経路が整った構成をまとめて表現します。',
+  caveat:'今回のL3/L4回線飽和には下流のWAF・アプリ側レート制限は対策になりません。可用性監視は検知・通知であり防止ではないため、切替欄には表示しません。CDN／Anycastを導入するだけで、すべてのDDoSを防げるわけではありません。'
+
 };
 
 </script><script>(() => {
@@ -1306,15 +1304,15 @@ window.CyberGuides.ddos={
   const cases={ransomware:window.CyberScenarios?.ransomwareVpn,'ransomware-email':window.CyberScenarios?.ransomwareEmail,phishing:window.CyberScenarios?.phishingCloud,'supply-chain':window.CyberScenarios?.supplyChain,'supply-chain-tampered':window.CyberScenarios?.supplyTampered,'vendor-access':window.CyberScenarios?.vendorAccess,'web-app':window.CyberScenarios?.webApp,ddos:window.CyberScenarios?.ddos};
   const learning = window.CyberLearning;
   if (!scenario || !learning) { document.body.textContent='シナリオデータを読み込めませんでした。'; return; }
-  const state={scenario:'ransomware',attackRoute:'pc',edrResponse:'early',phishingAction:'entered',supplyMode:'signed',step:0,maxReached:-1,history:[],historyControls:[],playing:false,timer:null,mode:'attack',speed:2200,selectedLocation:null,incidentSnapshot:null,recovery:{contained:false,restored:false},compareMode:false,previousOutcome:null,controls:{mfa:false,mailFilter:false,signatureCheck:false,updateReview:false,segmentation:false,egress:false,dlp:false,edr:false,backup:false,serverEdr:false,fileAcl:false,writeAcl:false,vendorJit:false,vendorTransfer:false,vendorAudit:false,webWaf:false,safeSql:false,dbLeastPrivilege:false,webAudit:false,ddosScrub:false,ddosAnycast:false,ddosWaf:false,ddosRate:false,ddosMonitor:false},lastAction:''};
+  const state={scenario:'ransomware',attackRoute:'pc',edrResponse:'early',phishingAction:'entered',supplyMode:'signed',step:0,maxReached:-1,history:[],historyControls:[],playing:false,timer:null,mode:'attack',speed:2200,selectedLocation:null,incidentSnapshot:null,recovery:{contained:false,restored:false},compareMode:false,previousOutcome:null,controls:{mfa:false,mailFilter:false,signatureCheck:false,updateReview:false,segmentation:false,egress:false,dlp:false,edr:false,backup:false,serverEdr:false,fileAcl:false,writeAcl:false,vendorJit:false,vendorTransfer:false,vendorAudit:false,webWaf:false,safeSql:false,dbLeastPrivilege:false,webAudit:false,ddosUpstream:false},lastAction:''};
   const isPhishing=()=>state.scenario==='phishing';
   const isSupply=()=>state.scenario==='supply-chain';
   const isVendor=()=>state.scenario==='vendor-access';
   const isWeb=()=>state.scenario==='web-app';
   const isDdos=()=>state.scenario==='ddos';
-  const ddosActive=new Set(['attacker','supplier','wanfw','vpn','waf','web','siem']);
-  const ddosDeviceStep={attacker:0,supplier:3,wanfw:2,vpn:2,waf:2,web:5,siem:4};
-  const ddosNames={attacker:['外部ボット群','大量トラフィック'],supplier:['一般利用者','正常なアクセス'],wanfw:['上流ISP／洗浄','回線の手前で緩和'],vpn:['企業接続回線','帯域・混雑点'],waf:['WAF','HTTP検査（下流）'],web:['公開Webサービス','可用性が低下'],siem:['可用性監視','検知・通知のみ']};
+  const ddosActive=new Set(['attacker','supplier','wanfw','vpn','web']);
+  const ddosDeviceStep={attacker:0,supplier:3,wanfw:2,vpn:2,web:4};
+  const ddosNames={attacker:['外部ボット群','大量トラフィック'],supplier:['一般利用者','正常なアクセス'],wanfw:['上流DDoS対策','悪性通信を除去・分散'],vpn:['企業接続回線','帯域・混雑点'],web:['公開Webサービス','利用状況を確認']};
   const webActive=new Set(['attacker','wanfw','waf','web','db','outside','siem']);
   const webDeviceStep={attacker:0,wanfw:0,waf:1,web:2,db:3,outside:4,siem:5};
   const vendorActive=new Set(['attacker','vendor','vpn','admin','pam','segfw','files','outside','siem']);
@@ -1326,7 +1324,7 @@ window.CyberGuides.ddos={
   const phDeviceStep={attacker:0,mail:0,pc:1,fake:1,idp:2,saas:2,storage:3,share:4,clouddlp:4,outside:4,siem:2};
   const deviceStage=d=>isDdos()?(ddosDeviceStep[d.id]??0):isWeb()?(webDeviceStep[d.id]??0):isVendor()?(vendorDeviceStep[d.id]??0):isPhishing()?(phDeviceStep[d.id]??0):isSupply()?(supplyDeviceStep[d.id]??0):isEmail()&&d.id==='mail'?0:d.step;
   const inactiveDevice=d=>isDdos()?!ddosActive.has(d.id):isWeb()?!webActive.has(d.id):isVendor()?!vendorActive.has(d.id):isPhishing()?!phActive.has(d.id):isSupply()?!supplyActive.has(d.id):isEmail()?(['vpn','wanfw'].includes(d.id)||!!d.future&&d.id!=='mail'):!!d.future;
-  const activeNodes=()=>isDdos()?{ddosScrub:['wanfw'],ddosAnycast:['wanfw'],ddosWaf:['waf'],ddosRate:['web'],ddosMonitor:['siem']}:isWeb()?{webWaf:['waf'],safeSql:['web'],dbLeastPrivilege:['db'],webAudit:['siem']}:isVendor()?{mfa:['vpn'],vendorJit:['pam'],segmentation:['segfw'],fileAcl:['files'],vendorTransfer:['vpn'],vendorAudit:['siem']}:isPhishing()?{mailFilter:['mail'],prMfa:['idp'],conditional:['idp'],leastPrivilege:['storage'],sharePolicy:['share'],saasDlp:['clouddlp']}:isSupply()?{signatureCheck:['pc'],updateReview:['pc'],edr:['pc','edr'],segmentation:['segfw'],fileAcl:['files'],egress:['swg'],dlp:['dlp']}:controlNodes;
+  const activeNodes=()=>isDdos()?{ddosUpstream:['wanfw']}:isWeb()?{webWaf:['waf'],safeSql:['web'],dbLeastPrivilege:['db'],webAudit:['siem']}:isVendor()?{mfa:['vpn'],vendorJit:['pam'],segmentation:['segfw'],fileAcl:['files'],vendorTransfer:['vpn'],vendorAudit:['siem']}:isPhishing()?{mailFilter:['mail'],prMfa:['idp'],conditional:['idp'],leastPrivilege:['storage'],sharePolicy:['share'],saasDlp:['clouddlp']}:isSupply()?{signatureCheck:['pc'],updateReview:['pc'],edr:['pc','edr'],segmentation:['segfw'],fileAcl:['files'],egress:['swg'],dlp:['dlp']}:controlNodes;
   const commonRansomControls=[
     scenario.controls[0],
     {id:'mailFilter',icon:'mail',label:'メール／添付ファイル防御',tag:'メールセキュリティ',location:'メールサービス',asset:'mail',desc:'01-Bでは当該悪性添付ファイルを配信前に検知・隔離できる例。',limit:'正規に見えるメールや未知のファイルを必ず検知できるとは限らない。'},
@@ -1368,7 +1366,7 @@ window.CyberGuides.ddos={
   // toggled later. The next, not-yet-executed step uses the then-current settings.
   const initialRansom=()=>({entry:false,emailDelivered:false,serverAlerted:false,isolated:false,isolatedAt:null,edrAlertedAt:null,edrDetected:false,lateral:false,egressAllowed:false,dlpAllowed:false,exfil:false,encrypted:false,serverBlocked:false,fwPassed:false,readAllowed:false,writeAllowed:false,backupPrepared:false,pcControlAssumed:false,serverExecutionAssumed:false});
   const initialPhishing=()=>({delivered:false,phished:false,login:false,read:false,shareAllowed:false,exfil:false});
-  const initialDdos=()=>({traffic:false,concentrated:false,saturated:false,normalDelayed:false,monitorAlert:false,outage:false,blockedBy:null});
+  const initialDdos=()=>({traffic:false,concentrated:false,saturated:false,normalDelayed:false,normalAccess:false,webReachable:false,outage:false,blockedBy:null});
   const initialWeb=()=>({request:false,wafPassed:false,queryExecuted:false,read:false,exfil:false,auditAlert:false});
   const initialVendor=()=>({vendorCompromised:false,entry:false,privileged:false,fwPassed:false,read:false,download:false,exfil:false,auditAlert:false});
   const initialSupply=()=>({supplierCompromised:false,deliveryTampered:false,updateOffered:false,signatureValid:false,signatureChecked:false,signatureRejected:false,installed:false,executed:false,edrDetected:false,isolated:false,isolatedAt:null,entry:false,fwPassed:false,lateral:false,egressAllowed:false,dlpAllowed:false,exfil:false});
@@ -1395,9 +1393,9 @@ window.CyberGuides.ddos={
       // Upstream mitigation is checked BEFORE the link saturation event.
       if(i===0)facts.traffic=true;
       if(i===1)facts.concentrated=facts.traffic;
-      if(i===2){facts.blockedBy=c.ddosScrub?'ddosScrub':c.ddosAnycast?'ddosAnycast':null;facts.saturated=facts.concentrated&&!facts.blockedBy;}
-      if(i===3)facts.normalDelayed=facts.saturated;
-      if(i===4)facts.monitorAlert=facts.normalDelayed&&!!c.ddosMonitor;
+      if(i===2){facts.blockedBy=c.ddosUpstream?'ddosUpstream':null;facts.saturated=facts.concentrated&&!facts.blockedBy;}
+      if(i===3){facts.normalDelayed=facts.saturated;facts.normalAccess=facts.concentrated&&!facts.saturated;}
+      if(i===4)facts.webReachable=facts.normalAccess;
       if(i===5)facts.outage=facts.normalDelayed;
     }else if(isWeb()){
       // Each checkpoint records distinct facts; WAF, safe SQL, and DB rights are different gates.
@@ -1553,8 +1551,9 @@ window.CyberGuides.ddos={
     if(e.notStarted)return '開始前';
     const st=stageState(i,e);if(st==='notreached')return '未到達';
     if(isDdos()){
-      const ok=['大量トラフィックを送信','公開IPに通信集中','接続回線が飽和','一般利用者の通信が遅延',e.monitorAlert?'可用性低下を検知・通知':'監視アラートなし・障害は継続','サービス停止・事業影響'];
-      return st==='notreached'?'未到達':st==='prevented'?(e.blockedBy==='ddosScrub'?'上流の洗浄で回線保護':'CDN／Anycastの上流緩和で回線保護'):ok[i];
+      const ok=['大量トラフィックを送信','公開IPに通信集中','接続回線が飽和','一般利用者の通信が遅延','公開Webへの正常アクセスが困難','サービス停止・事業影響'];
+      const protectedLabels=['','','上流で攻撃通信を緩和','一般利用者の通信は正常','公開Webに正常アクセス','Webサービスを継続利用可能'];
+      return st==='notreached'||st==='prevented'?protectedLabels[i]:ok[i];
     }
     if(isWeb()){
       const passed=['不審なHTTPリクエストが到達','WAFが要求を許可','脆弱なSQL処理が成立','機密テーブルの照会に成功','HTTPS応答で機密データが漏えい','脆弱性修正・影響調査が必要'];
@@ -1595,9 +1594,9 @@ window.CyberGuides.ddos={
     if(e.notStarted)return{text:'攻撃開始前・対策を設定してください',tone:'warn',detail:'対策をON/OFFしてから「攻撃開始」を押します。進行中の変更は次の未実行ステップから反映され、過去は変わりません。'};
     if(isDdos()){
       if(state.step<2)return{text:'攻撃トラフィックが上流に集中',tone:'warn',detail:'まだ企業の接続回線飽和は評価していません。Webサーバーは侵害されていません。'};
-      if(!e.saturated)return{text:'上流緩和で企業回線を保護',tone:'safe',detail:'今回の処理容量・経路条件の範囲内で攻撃通信を緩和。正常利用者の遅延やサービス停止には至っていません。'};
+      if(!e.saturated)return{text:state.step>=4?'対策成功：一般利用者は公開Webを利用可能':'上流DDoS対策で企業回線を保護',tone:'safe',detail:'攻撃通信を上流で緩和し、正常通信は通過します。今回の条件では一般利用者が公開Webを正常に利用できます。'};
       if(state.step<3)return{text:'企業の接続回線が飽和',tone:'warn',detail:'回線容量超過が発生。WAF・アプリのレート制限では、この位置の混雑を防げません。'};
-      if(state.step<5)return{text:e.monitorAlert?'サービス影響を監視で検知（遮断なし）':'正常利用者に遅延・接続障害',tone:'danger',detail:e.monitorAlert?'監視で検知・通知しましたが、攻撃通信の遮断や回線復旧は未実施です。':'正常利用者の通信に影響。監視をONにしても攻撃は自動停止しません。'};
+      if(state.step<5)return{text:'正常利用者に遅延・接続障害',tone:'danger',detail:'回線が飽和して、一般利用者は公開Webに正常アクセスできません。'};
       return{text:'DDoSでサービス停止・事業影響',tone:'danger',detail:'回線飽和が継続して可用性が低下。Webサーバーの侵害や機密情報流出を示すものではありません。'};
     }
     if(isWeb()){
@@ -1668,8 +1667,8 @@ window.CyberGuides.ddos={
   }
   function eventsForStage(i,e){const st=scenario.stages[i],kind=stageState(i,e);if(isDdos()){
       if(kind==='notreached')return ['SIM / 上流緩和により、このイベントは未到達'];
-      if(i===2&&kind==='prevented')return [(e.blockedBy==='ddosScrub'?'UPSTREAM / トラフィック洗浄が有効':'CDN / 保護経路の緩和が有効'),'LINK / 接続回線は飽和しなかった'];
-      if(i===4)return [e.monitorAlert?'SOC / 可用性低下を検知・通知（自動遮断なし）':'SOC / 監視アラートなし（障害自体は継続）'];
+      if(i===2&&kind==='prevented')return ['UPSTREAM / 攻撃通信を上流で緩和し、正常通信を通過','LINK / 接続回線は飽和しなかった'];
+      if(i===4)return ['WEB / 回線飽和により正常利用者がアクセス困難'];
       return st.logs.active||[];
     }if(isWeb()){
       if(kind==='notreached')return ['SIM / 前段階で拒否されており未到達'];
@@ -1878,7 +1877,7 @@ window.CyberGuides.ddos={
     if(e.notStarted)return{kind:'',label:id==='attacker'?'攻撃開始前':'未到達'};
     if(isDdos()){
       const t=state.step,neutral={kind:'',label:'未到達'};
-      const p={attacker:{kind:'afflicted',label:'大量トラフィック発生'},wanfw:t<2?{kind:'',label:'大量通信を観測'}:e.saturated?{kind:'afflicted',label:'上流緩和なし'}:{kind:'stopped',label:'上流で緩和成功'},vpn:t<2?neutral:e.saturated?{kind:'afflicted',label:'回線帯域が飽和'}:{kind:'defended',label:'回線容量を保護'},supplier:t<3?neutral:e.normalDelayed?{kind:'afflicted',label:'正常通信も遅延'}:neutral,waf:{kind:'',label:'回線より下流（対象外）'},web:t<5?{kind:'',label:'サービス可用性の判定前'}:e.outage?{kind:'afflicted',label:'利用不能（未侵害）'}:neutral,siem:t<4?{kind:'',label:'可用性監視'}:e.monitorAlert?{kind:'defended',label:'検知・通知（遮断なし）'}:{kind:'',label:e.saturated?'自動緩和なし':'監視対象の障害なし'}};
+      const p={attacker:{kind:'afflicted',label:'大量トラフィック発生'},wanfw:t<2?{kind:'',label:'攻撃通信を観測'}:e.saturated?{kind:'afflicted',label:'上流対策OFF'}:{kind:'stopped',label:'攻撃通信を緩和'},vpn:t<2?neutral:e.saturated?{kind:'afflicted',label:'接続回線が飽和'}:{kind:'defended',label:'正常通信の回線を保護'},supplier:t<3?neutral:e.normalDelayed?{kind:'afflicted',label:'正常通信が遅延'}:{kind:'defended',label:'正常アクセスを維持'},web:t<4?{kind:'',label:'アクセス結果の判定前'}:e.webReachable?{kind:'defended',label:'正常アクセス可能'}:{kind:'afflicted',label:'正常アクセス困難'}};
       return p[id]||{kind:'',label:'今回未使用'};
     }
     if(isWeb()){
@@ -2058,7 +2057,7 @@ window.CyberGuides.ddos={
   }
   function renderDiagram(e){const view=state.mode;
     // Web case uses one fixed diagram: public Web/AP in a logical DMZ and a private DB.
-    all('#zones .zone').forEach((el,i)=>{const names=isDdos()?['社外・利用者','上流／接続回線','今回未使用','今回未使用','公開サービス','今回未使用','今回未使用','監視・運用']:zones.map(z=>z.title);el.querySelector('.zone-title').textContent=names[i];});
+    all('#zones .zone').forEach((el,i)=>{const names=isDdos()?['社外・利用者','上流／接続回線','今回未使用','今回未使用','公開サービス','今回未使用','今回未使用','今回未使用']:zones.map(z=>z.title);el.querySelector('.zone-title').textContent=names[i];});
     const webZone=$('webZoneNotes');if(webZone)webZone.setAttribute('display',isWeb()?'inline':'none');
     const sharedRouteNote=$('externalShareRouteNote');if(sharedRouteNote)sharedRouteNote.setAttribute('display',isPhishing()&&view==='attack'?'inline':'none');
     // 通常構成では論理接続のみ、攻撃経路では攻撃線のみを描画。重ね描きを避ける。
@@ -2084,9 +2083,29 @@ window.CyberGuides.ddos={
     const stopLayer=$('routeStops');
     stopLayer.replaceChildren();
     const rejected=[];
-    // Normal user traffic is informational (blue dashed), not a red attack path.
-    if(isDdos()&&view==='attack'&&e.normalDelayed){
-      stopLayer.append(svgNode('path',{d:'M189 271 H209 V241 H236',stroke:'#8bb9e5','stroke-width':'3','stroke-dasharray':'7 6',fill:'none','data-normal-traffic':'true','aria-label':'回線飽和で遅延した正常利用者の通信'}));
+    // Normal traffic is independent of the DDoS attack path: blue, never red.
+    // With upstream protection ON, show the COMPLETE legitimate path through
+    // the protected link to the Web service, even though attack damage is not reached.
+    if(isDdos()&&view==='attack'&&state.step>=3&&!e.notStarted){
+      const userPathProtected=e.normalAccess;
+      const normalDefs=svgNode('defs');
+      normalDefs.innerHTML='<marker id="arrow-ddos-normal" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" viewBox="0 0 9 8"><path d="M1 1L8 4L1 7" stroke="#71cafa" stroke-width="1.6" fill="none"/></marker>';
+      stopLayer.append(normalDefs);
+      const normalPath=svgNode('path',{
+        d:userPathProtected?'M189 271 H209 V241 H236 M359 181 V200 M398 241 H420 V434 H869 V302 H890':'M189 271 H209 V241 H236',
+        stroke:'#71cafa','stroke-width':userPathProtected?'4':'3','stroke-linecap':'round',
+        'stroke-linejoin':'round',fill:'none',
+        'stroke-dasharray':userPathProtected?'none':'6 5',
+        'marker-end':userPathProtected?'url(#arrow-ddos-normal)':'none',
+        'data-normal-traffic':'true','data-normal-status':userPathProtected?'accessible':'delayed',
+        'aria-label':userPathProtected?'一般利用者の正常通信が公開Webへ到達':'一般利用者の正常通信が回線飽和で遅延'
+      });
+      stopLayer.append(normalPath);
+      if(userPathProtected){
+        const label=svgNode('g',{'data-normal-service-label':'true','aria-label':'正常アクセス可能'});
+        label.innerHTML='<rect x="637" y="397" width="208" height="27" rx="7" fill="#163e58" stroke="#4dbde9"/><text x="741" y="415" text-anchor="middle" fill="#bcecff" font-size="12" font-weight="700">正常通信 → Web利用可能</text>';
+        stopLayer.append(label);
+      }
     }
     // An unaffected supplier is drawn as a trusted grey origin, never as a red attacker hop.
     // The colored interception point is a logical delivery intermediary, not a new server.
@@ -2143,7 +2162,7 @@ window.CyberGuides.ddos={
     }
     const status=stageState(state.step,e),step=scenario.stages[state.step];$('eventTitle').textContent=`${step.title} — ${stageLabel(state.step,e)}`;$('eventSummary').textContent=e.notStarted?'まだ攻撃を実行していません。対策を設定して「攻撃開始」を押してください。':e.isolatedAt===state.step?`EDRが侵害端末を隔離。ここまでの侵入や探索は残りますが、以後の行動は停止します。`:status==='notreached'?'前段階で攻撃が阻止され、このステップには到達していません。':(!isPhishing()&&!isVendor()&&!isWeb()&&!isDdos()&&state.step===5)?(e.restored?'File Serverの復元を完了。侵入・流出・暗号化の履歴は残ります。':e.encrypted?e.recoverable?'暗号化被害あり。まず封じ込め、次にバックアップから復元します。':'暗号化被害あり。復旧用バックアップが不足しています。':e.entry?'侵入履歴あり。封じ込めと影響調査が必要です。':'侵入阻止。監視とログ確認を続けます。'):step.summary;const guide={...(isDdos()?learning.ddosStages:isWeb()?learning.webStages:isVendor()?learning.vendorStages:isPhishing()?learning.phishingStages:isSupply()?learning.supplyStages:learning.stages)[state.step]};
     if(isDdos()){
-      $('eventSummary').textContent=e.notStarted?'大量通信・上流緩和・正常利用者への影響を追跡します。':status==='notreached'?'上流で緩和したため、この後続イベントは起きていません。':status==='prevented'?stageLabel(state.step,e):step.summary;
+      $('eventSummary').textContent=e.notStarted?'攻撃通信と一般利用者の正常通信を別々に追跡します。':!e.saturated&&state.step>=3?(state.step===3?'上流で攻撃通信を緩和。一般利用者の正常通信は通過しています。':state.step===4?'一般利用者は保護された経路で公開Webに正常アクセスできます。':'公開Webサービスは継続利用可能。今回のサービス停止は発生しません。'):status==='prevented'?stageLabel(state.step,e):step.summary;
       $('causeHint').textContent=e.notStarted?'上流緩和は回線飽和前に作用し、WAFや監視のみでは止まりません。':status==='affected'?`結果：${guide.passes}`:status==='prevented'?`阻止：${guide.stopped}`:'前段階で回線飽和を阻止したため未到達です。';
     }
     if(isWeb()){
@@ -2160,7 +2179,7 @@ window.CyberGuides.ddos={
     }
     if(isPhishing()&&state.step===1){guide.passes='社員が偽サイトへパスワードを入力したため、攻撃者に知られた。';guide.stopped='社員は不審なURLを開かず、パスワードを入力しなかった。';}
     if(isEmail()&&state.step<2){guide.passes=state.step===0?'メール検査がこの添付ファイルを隔離しなかったため配信された。':'社員が悪性添付ファイルを開いたことを仮定し、PC上で不正な処理が実行された。';guide.stopped=state.step===0?'メールセキュリティが添付ファイルを隔離した。':'PC EDRが悪性動作を検知し端末を隔離した。';}const blockedCause=isPhishing()?(state.step===2?(controlsAt(state.step).prMfa?'FIDO2の本人確認を満たさず認証拒否。':'端末準拠の条件を満たさず認証拒否。'):state.step===4?(controlsAt(state.step).sharePolicy?'外部共有設定で拒否。SaaS DLPには到達しません。':'SaaS DLPが機密情報の共有を拒否。'):guide.stopped):e.isolatedAt===state.step?`EDRがSTEP ${state.step+1}で端末を隔離。既に起きた行動は残りますが、以後の攻撃はこの端末から続きません。`:state.step===3&&status==='prevented'&&!e.isolated?(!e.egressAllowed?'SWGが接続先・アプリのポリシーで外向き通信を遮断。DLPには到達していません。':'SWGが通信を許可した後、DLPが機密データの送信を拒否。'):guide.stopped;$('causeHint').textContent=e.notStarted?'対策を事前設定できます。進行中のON/OFFは、次の未実行ステップから適用されます。':!isPhishing()&&!isVendor()&&state.step===5?'対応状態：'+(e.contained?'封じ込め済み':'封じ込め未完了')+'／'+(e.restored?'安全な復元を実施済み':e.recoverable?'バックアップは利用可能、復元未実施':'復元未実施')+'。既に発生した侵害・流出は変わりません。':status==='affected'?`通過の理由：${guide.passes}`:status==='prevented'?`阻止の理由：${blockedCause}`:`未到達：${e.isolated&&!isPhishing()?`EDRがSTEP ${e.isolatedAt+1}で侵害端末を隔離済み。後続操作は発生しません。`:'前の段階で阻止したため、この操作は発生しません。'}`;     if(isDdos()){
-      $('causeHint').textContent=e.notStarted?'DDoSはサーバー侵害ではなく可用性への攻撃です。':status==='affected'?`結果：${guide.passes}${state.step===4&&e.monitorAlert?'／アラートは通知のみで遮断しません。':''}`:status==='prevented'?`阻止：${guide.stopped}`:'未到達：上流で攻撃量を緩和しました。';
+      $('causeHint').textContent=e.notStarted?'上流DDoS対策は攻撃だけを緩和し、一般利用者の通信は通します。':!e.saturated&&state.step>=3?`正常利用：${guide.stopped}`:status==='affected'?`結果：${guide.passes}`:status==='prevented'?`阻止：${guide.stopped}`:'被害発生なし：上流で攻撃通信を緩和しました。';
     }
     if(!isPhishing()&&e.serverAlerted&&!e.serverBlocked&&state.step>=4){$('causeHint').textContent='Server EDRは検知・通知のみで悪性処理を停止せず、暗号化は発生しました。過去の情報流出も消せません。';}
     if(!isPhishing()&&e.serverBlocked&&state.step>=4){$('eventSummary').textContent='Server EDRがサーバー上の暗号化処理を停止。ただし不正アクセスと情報流出は発生済み。';$('causeHint').textContent='【今回の前提】File Serverへの不正アクセス・情報流出は発生済み。Server EDRがサーバー上の悪性プロセスを暗号化前に停止しました。VPN侵入と情報流出の事実は残ります。';}
@@ -2188,7 +2207,7 @@ window.CyberGuides.ddos={
     }
     $('eventIndicator').className='event-indicator '+(status==='prevented'?'success':status==='notreached'?'idle':'');
     $('modeHint').textContent=view==='system'?'グレー線＝正規の論理接続（方向なし）':`赤＝通過済み（明るい赤＝現在）／ 緑×＝遮断 ／ 灰点線＝未実行・未到達${rejected.length?' ｜ 遮断：'+rejected.join('・'):''}`;
-    if(isDdos()&&view==='attack'&&e.normalDelayed)$('modeHint').textContent+=' ｜ 青点線＝正常利用者の通信（攻撃ではない）';
+    if(isDdos()&&view==='attack'&&state.step>=3)$('modeHint').textContent+=e.normalAccess?' ｜ 青実線＝一般利用者の通信（公開Webへ正常到達）':' ｜ 青点線＝一般利用者の通信（回線飽和で遅延）';
     if(view==='attack'&&isSupply()&&state.supplyMode==='tampered')$('modeHint').textContent+=' ｜ 灰細線＝正規提供元からの配布（赤＝すり替え後）';
     all('[data-mode]').forEach(el=>{const selected=el.dataset.mode===view;el.classList.toggle('selected',selected);el.setAttribute('aria-pressed',String(selected));});
   }
@@ -2197,9 +2216,10 @@ window.CyberGuides.ddos={
       if(e.notStarted)return '攻撃開始前';
       if(id==='wanfw')return state.step<2?'公開IPへの集中を観測中':e.saturated?'今回の上流緩和は無効':'上流緩和で回線飽和を阻止';
       if(id==='vpn')return state.step<2?'まだ回線飽和を判定していない':e.saturated?'企業接続回線が飽和':'接続回線は保護された';
-      if(id==='supplier')return e.normalDelayed?'正常利用者の通信にも遅延が発生':'正常利用者への影響なし／未判定';
-      if(id==='waf'||id==='web')return 'WAF／アプリ側の制限だけでは今回の上流回線飽和を防げない';
-      if(id==='siem')return e.monitorAlert?'検知・通知のみで通信遮断なし':'監視による自動遮断なし';
+      if(id==='supplier')return state.step<3?'一般利用者への影響は未判定':e.normalAccess?'公開Webへの正常アクセスを維持':'回線飽和で正常アクセスに障害';
+      if(id==='web')return state.step<4?'公開Webへの到達確認前':e.webReachable?'正常な利用者がアクセス可能':'回線飽和で正常利用者のアクセス困難';
+      if(id==='waf')return 'WAFは今回のL3/L4回線飽和の防御地点ではありません';
+      if(id==='siem')return '監視は検知・通知であり、攻撃を直接阻止する対策ではありません';
       return '今回のサービス拒否はシステム侵害を意味しません';
     }
     if(isWeb()){
@@ -2274,7 +2294,7 @@ window.CyberGuides.ddos={
     const kind=stageState(deviceStage(device),e);
     const badge=$('locationState');badge.textContent=future?'今回のシナリオでは未使用':`現在の対策設定：${conditionAtNode(id,e)}`;
     const nodeBlocked=isDdos()?(id==='wanfw'&&state.step>=2&&!e.saturated):isWeb()?((id==='waf'&&state.step>=1&&!e.wafPassed)||(id==='web'&&state.step>=2&&e.wafPassed&&!e.queryExecuted)||(id==='db'&&state.step>=3&&e.queryExecuted&&!e.read)):isVendor()?((id==='vpn'&&state.step>=1&&!e.entry)||(id==='pam'&&state.step>=2&&e.entry&&!e.privileged)||(id==='segfw'&&state.step>=3&&e.privileged&&!e.fwPassed)||(id==='files'&&state.step>=4&&e.fwPassed&&!e.read)):isSupply()?((id==='pc'&&state.step>=1&&!e.installed)||(id==='pc'&&e.isolated)||(id==='segfw'&&state.step>=3&&e.executed&&!e.isolated&&!e.fwPassed)||(id==='files'&&state.step>=3&&e.fwPassed&&!e.lateral)||(id==='swg'&&state.step>=4&&e.lateral&&!e.egressAllowed)||(id==='dlp'&&state.step>=4&&e.egressAllowed&&!e.dlpAllowed)):isPhishing()?((id==='mail'&&!e.delivered)||(id==='idp'&&e.phished&&!e.login)||(id==='storage'&&e.login&&!e.read)||(id==='share'&&e.read&&!e.shareAllowed)||(id==='clouddlp'&&e.shareAllowed&&!e.exfil)):((id==='swg'&&e.lateral&&!e.egressAllowed)||(id==='dlp'&&e.egressAllowed&&!e.dlpAllowed));
-    const nodeIdle=isDdos()?(id==='waf'||id==='supplier'&&!e.normalDelayed):isWeb()?(id==='outside'&&!e.exfil):isVendor()?(id==='outside'&&!e.exfil):isSupply()?((id==='outside'&&!e.exfil)||(id==='dlp'&&!e.egressAllowed)):isPhishing()?((id==='outside'&&!e.exfil)||(id==='clouddlp'&&!e.shareAllowed)):((id==='swg'&&!e.lateral)||(id==='dlp'&&!e.egressAllowed)||(id==='outside'&&!e.exfil));
+    const nodeIdle=isDdos()?(id==='waf'||id==='siem'||id==='supplier'&&state.step<3):isWeb()?(id==='outside'&&!e.exfil):isVendor()?(id==='outside'&&!e.exfil):isSupply()?((id==='outside'&&!e.exfil)||(id==='dlp'&&!e.egressAllowed)):isPhishing()?((id==='outside'&&!e.exfil)||(id==='clouddlp'&&!e.shareAllowed)):((id==='swg'&&!e.lateral)||(id==='dlp'&&!e.egressAllowed)||(id==='outside'&&!e.exfil));
     badge.className='location-state '+(future||nodeIdle?'neutral':nodeBlocked||kind==='prevented'?'safe':kind==='notreached'?'neutral':'warning');
     $('locationRole').textContent=info.role;
     $('locationAction').textContent=info.action;
@@ -2352,7 +2372,7 @@ window.CyberGuides.ddos={
     $('recoveryInfo').textContent=!e.entry?'侵入は阻止されました。対応不要な被害を作りません。':e.restored?'File Serverは復旧。ただし既存の侵入・流出の履歴は保持。':e.encrypted?'暗号化は発生済み。封じ込めにはセッション失効・侵入経路遮断・影響調査が必要。バックアップは事前に保存・検証済みの比較条件です。':'侵入の事実は残ります。封じ込めボタンは、認証情報の停止・侵入経路の遮断・証拠保全を確認した学習用の操作です。';
   }
   function nextCheckpoint(control){
-    const steps=isDdos()?{ddosScrub:[2],ddosAnycast:[2],ddosWaf:[],ddosRate:[],ddosMonitor:[4]}:isWeb()?{webWaf:[1],safeSql:[2],dbLeastPrivilege:[3],webAudit:[5]}:isVendor()?{mfa:[1],vendorJit:[2],segmentation:[3],fileAcl:[4],vendorTransfer:[4],vendorAudit:[5]}:isPhishing()?{mailFilter:[0],prMfa:[2],conditional:[2],leastPrivilege:[3],sharePolicy:[4],saasDlp:[4]}:isSupply()?{signatureCheck:[1],updateReview:[1],edr:[2],segmentation:[3],fileAcl:[3],egress:[4],dlp:[4]}:{mfa:isEmail()?[]:[0],mailFilter:isEmail()?[0]:[],segmentation:[2],egress:[3],dlp:[3],edr:state.attackRoute!=='direct'?[1]:[],fileAcl:[2],writeAcl:[2,4],serverEdr:state.attackRoute==='direct'?[4]:[],backup:[0]};
+    const steps=isDdos()?{ddosUpstream:[2]}:isWeb()?{webWaf:[1],safeSql:[2],dbLeastPrivilege:[3],webAudit:[5]}:isVendor()?{mfa:[1],vendorJit:[2],segmentation:[3],fileAcl:[4],vendorTransfer:[4],vendorAudit:[5]}:isPhishing()?{mailFilter:[0],prMfa:[2],conditional:[2],leastPrivilege:[3],sharePolicy:[4],saasDlp:[4]}:isSupply()?{signatureCheck:[1],updateReview:[1],edr:[2],segmentation:[3],fileAcl:[3],egress:[4],dlp:[4]}:{mfa:isEmail()?[]:[0],mailFilter:isEmail()?[0]:[],segmentation:[2],egress:[3],dlp:[3],edr:state.attackRoute!=='direct'?[1]:[],fileAcl:[2],writeAcl:[2,4],serverEdr:state.attackRoute==='direct'?[4]:[],backup:[0]};
     return (steps[control]||[]).find(i=>i>state.maxReached);
   }
   function controlChangeNotice(label,id,enabled){
@@ -2366,7 +2386,7 @@ window.CyberGuides.ddos={
   function renderControls(){
     $('scenarioSelect').value=variantKey();
     $('scenarioOptions').hidden=false;
-    $('edrExplanation').textContent=isDdos()?'05：L3/L4の回線飽和。上流防御は回線の手前で作用。WAF・アプリ制限・監視だけでは今回の攻撃を止めません。':isWeb()?'04：公開WebへのSQLi例。WAF／安全なSQL／DB最小権限を別判定。監査だけで自動遮断されません。':isVendor()?'03-A：委託先のパスワードだけを盗用。保守接続とPAM・宛先・ファイル転送を別々に判定。監査は停止を自動実行しません。':isPhishing()?'02：メールが届いても入力しない場合はID流出なし。メール検査・利用者判断・MFAは別の防御です。':isSupply()?(state.supplyMode==='tampered'?'03-A：配布途中の差し替え。署名の強制検証で不一致を拒否できます。EDRは停止成否が別条件。':'03-B：正規署名付き悪性更新。署名検証は安全を保証せず、EDRも停止成否は別条件。'):isEmail()?
+    $('edrExplanation').textContent=isDdos()?'05：上流DDoS対策は攻撃通信を除去・分散。正常な一般利用者のアクセスは維持します。':isWeb()?'04：公開WebへのSQLi例。WAF／安全なSQL／DB最小権限を別判定。監査だけで自動遮断されません。':isVendor()?'03-A：委託先のパスワードだけを盗用。保守接続とPAM・宛先・ファイル転送を別々に判定。監査は停止を自動実行しません。':isPhishing()?'02：メールが届いても入力しない場合はID流出なし。メール検査・利用者判断・MFAは別の防御です。':isSupply()?(state.supplyMode==='tampered'?'03-A：配布途中の差し替え。署名の強制検証で不一致を拒否できます。EDRは停止成否が別条件。':'03-B：正規署名付き悪性更新。署名検証は安全を保証せず、EDRも停止成否は別条件。'):isEmail()?
       '01-B：悪性添付の配信後に社員が実行した例。EDR ONでも隔離に成功するかは別条件です。':state.attackRoute==='direct'?
       '01-A：VPN接続とは別にFile Serverへのアクセス権と悪性実行手段が必要。Server EDRは検知だけの場合もあります。':
       '01-A：VPN認証後、別途PCへのログオン権限を悪用。EDR ONでも通知のみなら侵害は進行します。';
@@ -2428,7 +2448,7 @@ window.CyberGuides.ddos={
   }
   function renderOutcome(e){if(isDdos()){
     const o=outcome(e);$('outcomeText').textContent=o.text;$('outcomeDetail').textContent=o.detail;$('outcomeMark').className='outcome-mark '+o.tone;
-    const rows=[['大量通信発生',0,e.traffic?'発生':'未実行'],['公開IPへ集中',1,e.concentrated?'発生':'未実行'],['回線飽和',2,e.saturated?'発生':'阻止'],['正常利用者',3,e.saturated?(e.normalDelayed?'遅延':'未実行'):'未到達'],['可用性監視',4,e.saturated?(e.monitorAlert?'検知（非遮断）':'通知なし'):'未到達'],['サービス停止',5,e.saturated?(e.outage?'発生':'未実行'):'未到達']].map(([t,i,value])=>[t,e.notStarted||state.step<i?'未実行':value,e.notStarted||state.step<i?'neutral':['阻止'].includes(value)?'safe':['発生','遅延'].includes(value)?'danger':'neutral']);
+    const rows=[['大量通信発生',0,e.traffic?'発生':'未実行'],['公開IPへ集中',1,e.concentrated?'発生':'未実行'],['企業回線飽和',2,e.saturated?'発生':'阻止'],['一般利用者',3,e.normalAccess?'アクセス可能':'遅延・失敗'],['公開Web',4,e.webReachable?'利用可能':'利用困難'],['サービス停止',5,e.outage?'発生':'防止']].map(([t,i,value])=>[t,e.notStarted||state.step<i?'未実行':value,e.notStarted||state.step<i?'neutral':['阻止','アクセス可能','利用可能','防止'].includes(value)?'safe':['発生','遅延・失敗','利用困難'].includes(value)?'danger':'neutral']);
     $('resultGrid').replaceChildren(...rows.map(([t,value,tone])=>{const el=document.createElement('div');el.className='result-item';el.innerHTML=`<span>${t}</span><strong class="${tone}">${value}</strong>`;return el;}));return;
   }if(isWeb()){
     const o=outcome(e);$('outcomeText').textContent=o.text;$('outcomeDetail').textContent=o.detail;$('outcomeMark').className='outcome-mark '+o.tone;
@@ -2505,7 +2525,7 @@ window.CyberGuides.ddos={
     $('introTitle').textContent=key==='ddos'?'Webサーバーが侵害されなくても、サービスは止まる？':key==='web-app'?'公開WebアプリのSQLインジェクション、どこで防げる？':key==='vendor-access'?'信頼している保守委託先のアカウントが悪用されたら？':key==='supply-chain-tampered'?'配信された更新ファイルが、途中ですり替えられたら？':key==='supply-chain'?'正規ソフトの更新が、攻撃の入口になる？':key==='phishing'?'フィッシングからSaaS情報漏えいへ、どうつながる？':key==='ransomware-direct'?'VPNからサーバーへの直接侵入は、どう防ぐ？':key==='ransomware-email'?'悪性メールからランサムウェアへ、どうつながる？':'ランサムウェア攻撃は、どこから広がるのか？';
     $('introDescription').textContent=scenario.summary;
     $('caseNumber').textContent=`INTERACTIVE SECURITY LEARNING / CASE ${key==='ransomware-direct'?'01-A':key==='ransomware-email'?'01-B':key==='vendor-access'?'03-A':key==='ddos'?'05':key==='web-app'?'04':key==='supply-chain'?'03-B':key==='supply-chain-tampered'?'補足例':scenario.number}`;
-    document.title=`Cyber Incident Explorer v0.5.28 — ${scenario.category}`;if(sideView==='guide')renderScenarioGuide();
+    document.title=`Cyber Incident Explorer v0.5.29 — ${scenario.category}`;if(sideView==='guide')renderScenarioGuide();
     const refs=$('referenceList');refs.replaceChildren();scenario.references.forEach(ref=>{const a=document.createElement('a');a.href=ref.url;a.textContent=ref.label+' ↗';a.target='_blank';a.rel='noopener noreferrer';refs.append(a);});render();
   }
   // v0.5.18: the full-scenario guide is independent of incident simulation.
@@ -2549,7 +2569,7 @@ window.CyberGuides.ddos={
   // The active defense guide is derived from the same scenario and checkpoint facts
   // as the visual diagram; it does not assume that every enabled control blocks an attack.
   function guideControlsForStep(i){
-    if(isDdos())return [[],[],['ddosScrub','ddosAnycast'],['ddosWaf','ddosRate'],['ddosMonitor'],[]][i]||[];
+    if(isDdos())return [[],[],['ddosUpstream'],[],[],[]][i]||[];
     if(isWeb())return [[],['webWaf'],['safeSql'],['dbLeastPrivilege'],[],['webAudit']][i]||[];
     if(isVendor())return [[],['mfa'],['vendorJit'],['segmentation'],['fileAcl','vendorTransfer'],['vendorAudit']][i]||[];
     if(isPhishing())return [
@@ -2569,7 +2589,7 @@ window.CyberGuides.ddos={
     return ransomware[i]||[];
   }
   function guideEmptyStepNote(i){
-    if(isDdos())return i===5?'上流でのDDoS緩和を行わなければ、監視で検知してもサービス停止は防げません。':'今回の攻撃はL3/L4の回線飽和であり、アプリ層のWAF処理とは異なります。';
+    if(isDdos())return i>=3?'上流防御ONなら正常通信が公開Webに到達します。OFFなら回線が飽和し、通常の利用者にも影響します。':'今回の攻撃はL3/L4の回線飽和です。WAFやアプリ側レート制限は、今回の防御スイッチに含めません。';
     if(isWeb()&&i===0)return '公開HTTPSを受け付けることは、攻撃成功を意味しません。WAF・アプリ・DBを別に評価します。';
     if(isWeb()&&i===4)return 'DBで取得できた機密情報が、正規のHTTPS応答に含まれる想定です。社員PC用SWG・DLPを通りません。';
     if(isWeb()&&i===5)return '監査は検知と調査を助けますが自動遮断ではありません。脆弱性の修正と影響機能の停止が必要です。';
@@ -2694,7 +2714,7 @@ window.CyberGuides.ddos={
     all('[data-mode]').forEach(el=>el.addEventListener('click',()=>{state.mode=el.dataset.mode;renderDiagram(evaluation());}));
     $('logCopyButton').addEventListener('click',async()=>{const value=logLines(evaluation()).map(l=>`[${l.time}] ${l.level} ${l.text}`).join('\n');try{await navigator.clipboard.writeText(value);$('logCopyButton').textContent='コピーしました';}catch{const input=document.createElement('textarea');input.value=value;input.style.cssText='position:fixed;opacity:0';document.body.append(input);input.select();const success=document.execCommand('copy');$('logCopyButton').textContent=success?'コピーしました':'コピーできませんでした';input.remove();}setTimeout(()=>$('logCopyButton').textContent='ログをコピー',1600);});
     const refs=$('referenceList');scenario.references.forEach(ref=>{const a=document.createElement('a');a.href=ref.url;a.textContent=ref.label+' ↗';a.target='_blank';a.rel='noopener noreferrer';refs.append(a);});const detailDialog=$('detailDialog');$('detailButton').addEventListener('click',()=>detailDialog.showModal());$('closeDetailButton').addEventListener('click',()=>detailDialog.close());
-    $('whyButton').addEventListener('click',()=>{const ids=isDdos()?['attacker','wanfw','wanfw','supplier','siem','web']:isWeb()?['wanfw','waf','web','db','outside','siem']:isVendor()?['vendor','vpn','pam','segfw','files','siem']:isPhishing()?['mail','fake','idp','storage','share']:isSupply()?['supplier','pc','pc','files','swg','siem']:state.attackRoute==='direct'?['vpn','dns','segfw','vpn','files','backup']:isEmail()?['mail','pc','segfw','swg','files','backup']:['vpn','pc','segfw','swg','files','backup'];openLocation(ids[state.step]);});
+    $('whyButton').addEventListener('click',()=>{const ids=isDdos()?['attacker','wanfw','wanfw','supplier','web','web']:isWeb()?['wanfw','waf','web','db','outside','siem']:isVendor()?['vendor','vpn','pam','segfw','files','siem']:isPhishing()?['mail','fake','idp','storage','share']:isSupply()?['supplier','pc','pc','files','swg','siem']:state.attackRoute==='direct'?['vpn','dns','segfw','vpn','files','backup']:isEmail()?['mail','pc','segfw','swg','files','backup']:['vpn','pc','segfw','swg','files','backup'];openLocation(ids[state.step]);});
     $('closeLocationButton').addEventListener('click',()=>$('locationDialog').close());
     $('goRelatedStepButton').addEventListener('click',()=>{if(!state.selectedLocation)return;const d=devices.find(x=>x.id===state.selectedLocation);if(d&&!inactiveDevice(d))setStep(deviceStage(d));$('locationDialog').close();});
     const diagramPanel=document.querySelector('.diagram-panel');$('zoomButton').addEventListener('click',()=>{const zoomed=diagramPanel.classList.toggle('zoomed');$('zoomButton').textContent=zoomed?'× 拡大を終了':'⛶ 図を拡大';$('zoomButton').setAttribute('aria-pressed',String(zoomed));});

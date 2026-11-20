@@ -1,9 +1,9 @@
-# Cyber Incident Explorer v0.5.28
+# Cyber Incident Explorer v0.5.29
 
 架空の企業システム構成図を見ながら、サイバー攻撃の進行、対策の作用点、効果の限界を学ぶ日本語のWeb教材です。
 
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
-**ソースZIP:** [cyber-incident-explorer-v0.5.28.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.28.zip)
+**ソースZIP:** [cyber-incident-explorer-v0.5.29.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.29.zip)
 
 ## 収録シナリオ
 
@@ -20,6 +20,17 @@
 1. シナリオを選び、対策をOFFにして攻撃を最後まで実行します。
 2. 完了後の「対策を変えて比較」を押し、対策を選んで再実行します。
 3. 前回と今回の結果を比べ、「解説」で作用範囲と限界を確認します。
+
+## v0.5.29の変更（DDoS教材の簡素化・正常通信の可視化）
+
+- CASE 05の対策切り替えを **「上流DDoS対策（攻撃通信の除去・分散）」の1件** に一本化しました。
+- WAF・アプリ側レート制限・可用性監視は、今回のL3/L4回線飽和を防ぐ切り替え対策から外し、解説に作用範囲と限界を記載しました。
+- 洗浄（悪性通信を識別・除去）、CDN（エッジ配信・処理）、Anycast（経路・拠点の分散）の違いを明確にし、単にCDN／Anycastを導入すればDDoSが防げるという誤解を避けました。
+- 防御ONでは、**青実線**で「一般利用者→保護経路→企業接続回線→公開Webサービス」の正常アクセスを表示し、Webを「正常アクセス可能」と判定します。
+- 防御OFFでは、**青点線**で正常通信の遅延と回線飽和を表示します。攻撃経路（赤）、遮断（緑×）、正常通信（青）を区別します。
+- ON/OFF比較、全初期化、攻撃履歴の保持、既存6シナリオの回帰テストを実施しました。詳細は [QA-REPORT.md](QA-REPORT.md) を参照してください。
+
+**学習上の前提：** ONで守れるのは今回の固定条件（攻撃量が緩和容量内、保護経路・オリジン側の構成が適切、Web自体は正常）での例です。すべての環境での防御を保証するものではありません。
 
 ## v0.5.28の変更
 
@@ -49,7 +60,7 @@
 
 ## GitHub Pages
 
-静的なHTMLで構成されています。mainブランチへの更新時にGitHub ActionsがZIPを展開し、サイトとソースZIPを公開します。
+静的なHTMLで構成されています。mainブランチへの更新時にGitHub Actionsがリポジトリ内の `index.html` をサイトとして公開し、配布用のソースZIPを生成します。
 
 ## 利用・改良・改善提案
 
