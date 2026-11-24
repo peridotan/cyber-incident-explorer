@@ -125,3 +125,25 @@ for (const size of sizes.filter(x => x.width < 1920)) {
     });
   }
 }
+
+
+for (const scenario of ['ransomware-direct', 'ransomware-email']) {
+  test(`write ACL keeps past access red but marks encryption write rejected: ${scenario}`, async ({ page }, testInfo) => {
+    await page.goto(url);
+    await page.locator('#scenarioSelect').selectOption(scenario);
+    const acl = page.getByRole('switch', { name: /共有ファイル書込制限/ });
+    await acl.click();
+    await expect(page.getByRole('switch', { name: /共有ファイル書込制限/ })).toHaveAttribute('aria-checked', 'true');
+    for (let step = 0; step < 6; step++) await page.locator('#nextButton').click();
+
+    const server = page.locator('#architectureDiagram [data-device="files"]');
+    await expect(server).toHaveClass(/afflicted/); // Historical read access remains visible.
+    await expect(server.locator('.asset-status')).toContainText('書込拒否');
+    await expect(page.locator('#fileImpactMarker')).toBeVisible();
+    await expect(page.locator('#fileImpactMarker')).toHaveClass(/safe/);
+    await expect(page.locator('#fileImpactMarker text')).toContainText('暗号化阻止');
+    await expect(page.locator('#fileImpactMarker')).toHaveAttribute('aria-label', /書込権限不足/);
+    await expect(page.locator('#outcomeText')).toContainText('情報流出');
+    await page.screenshot({path: testInfo.outputPath(`write-acl-${scenario}.png`), fullPage: true});
+  });
+}
