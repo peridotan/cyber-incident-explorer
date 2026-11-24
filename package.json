@@ -1,0 +1,10 @@
+{
+  "name": "cyber-incident-explorer-browser-qa",
+  "private": true,
+  "scripts": {
+    "test:browser": "playwright test --config tests/browser/playwright.config.cjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}
