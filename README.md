@@ -1,9 +1,9 @@
-# Cyber Incident Explorer v0.5.41
+# Cyber Incident Explorer v0.5.42
 
 架空の企業システム構成図を見ながら、サイバー攻撃の進行、対策の作用点、効果の限界を学ぶ日本語のWeb教材です。
 
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
-**ソースZIP:** [cyber-incident-explorer-v0.5.41.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.41.zip)
+**ソースZIP:** [cyber-incident-explorer-v0.5.42.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.42.zip)
 
 ## 収録シナリオ
 
@@ -23,6 +23,13 @@
 1. シナリオを選び、対策をOFFにして攻撃を最後まで実行します。
 2. 完了後の「対策を変えて比較」を押し、対策を選んで再実行します。
 3. 前回と今回の結果を比べ、「解説」で作用範囲と限界を確認します。
+
+## v0.5.42の変更（公開品質修正）
+
+- 阻止理由を実際に作用した対策ID・作用点・阻止位置に合わせ、複数対策ON時は最初に適用された制御を説明します。保守セッション転送制限時のVPN機器表示も遮断状態に揃えました。
+- 構成図上部の長い凡例を折り返し、文字120%でも本文サイズを縮小せず読めるようにしました。
+- フィッシング→SaaS侵害に封じ込め・影響調査のSTEP 06を設け、認証・共有の結果に合わせた説明を表示します。セッション失効や共有解除を自動実行したり、既に閲覧・取得された情報を取り消したりする表現はしません。
+- 回帰確認の内容と公開判定は [QA-REPORT.md](QA-REPORT.md) を参照してください。
 
 ## v0.5.41の変更（公開後の初回利用レビュー）
 
