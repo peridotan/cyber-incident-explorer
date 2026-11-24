@@ -33,7 +33,7 @@ jobs:
         with:
           name: cie-browser-qa
           path: |
-            test-results/
-            playwright-report/
+            tests/browser/test-results/
+            tests/browser/playwright-report/
           if-no-files-found: warn
           retention-days: 14
