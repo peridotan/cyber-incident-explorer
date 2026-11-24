@@ -91,3 +91,37 @@ test('phishing final step and restart', async ({ page }, testInfo) => {
   await page.locator('#restartButton').click();
   await expect(page.locator('#stepPosition')).toContainText('開始前');
 });
+
+
+for (const size of sizes.filter(x => x.width < 1920)) {
+  for (const theme of themes) {
+    test(`blocked AI legend: ${size.width} / 120% / ${theme}`, async ({ page }, testInfo) => {
+      await page.setViewportSize(size);
+      await openApp(page, 'ai');
+      await page.locator('#themeSelect').selectOption(theme);
+      await page.locator('#fontSizeSelect').selectOption('lg');
+      await page.locator('#appearanceButton').click();
+      const toggle = page.locator('#defenseControls [role="switch"]').first();
+      await expect(toggle).toHaveAttribute('aria-checked', 'false');
+      await toggle.click();
+      await expect(page.locator('#defenseControls [role="switch"]').first()).toHaveAttribute('aria-checked', 'true');
+      for (let step = 0; step < 6; step++) await page.locator('#nextButton').click();
+      const measurements = await page.evaluate(() => {
+        const parent = document.querySelector('.diagram-topline').getBoundingClientRect();
+        const hint = document.querySelector('#modeHint');
+        const bounds = hint.getBoundingClientRect();
+        return {
+          hintText: hint.textContent.trim(),
+          width: document.documentElement.scrollWidth,
+          available: document.documentElement.clientWidth,
+          clipped: bounds.right > parent.right + 2 || bounds.left < parent.left - 2 ||
+            bounds.bottom > parent.bottom + 2 || hint.scrollWidth > hint.clientWidth + 2
+        };
+      });
+      await page.screenshot({path: testInfo.outputPath(`blocked-${size.width}-${theme}.png`), fullPage: true});
+      expect(measurements.hintText).toContain('遮断：');
+      expect(measurements.clipped).toBe(false);
+      expect(measurements.width).toBeLessThanOrEqual(measurements.available + 2);
+    });
+  }
+}
