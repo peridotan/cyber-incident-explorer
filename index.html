@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#101b2c" name="theme-color"/>
 <meta content="システム構成図を見ながらサイバー攻撃と防御の関係を学ぶ、架空のインシデント学習シミュレーター。" name="description"/>
-<title>Cyber Incident Explorer v0.5.41 — システム構成図で学ぶサイバーインシデント</title>
+<title>Cyber Incident Explorer v0.5.42 — システム構成図で学ぶサイバーインシデント</title>
 
 <style>:root{color-scheme:dark;--bg:#0b1422;--panel:#142238;--panel-2:#182940;--line:#2b405b;--text:#eff5ff;--muted:#a3b5cb;--muted2:#7c94af;--blue:#69b5ef;--danger:#fa777e;--success:#55d6ac;--warn:#f4b96e;--shade:#101d30;--radius:15px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% -10%,#1b344e 0,transparent 39%),var(--bg);font-family:Inter,"Noto Sans JP","Yu Gothic",Meiryo,system-ui,sans-serif;color:var(--text);line-height:1.5}button,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,.asset:focus-visible,.diagram-scroller:focus-visible{outline:3px solid #83bff0;outline-offset:3px}.shell{min-height:100vh}.top-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px clamp(22px,4vw,70px);border-bottom:1px solid #253b54;background:#111e2eeb}.brand-group{display:flex;align-items:center;gap:14px}.brand-symbol{width:42px;height:42px;display:grid;place-items:center;color:#7eddd5;background:#183746;border:1px solid #2e6c78;border-radius:12px}.brand-symbol svg{width:25px}.brand-name{font-size:calc(15px * var(--font-scale, 1));letter-spacing:.10em;font-weight:850;white-space:nowrap}.brand-name span{color:#66d6c4}.brand-sub{font-size:calc(11px * var(--font-scale, 1));color:var(--muted);letter-spacing:.05em}.header-right{display:flex;align-items:center;gap:18px}.vtag{font-size:calc(10px * var(--font-scale, 1));color:#83cbde;letter-spacing:.06em;background:#183243;border:1px solid #2f6071;border-radius:999px;padding:6px 10px;white-space:nowrap}.ghost-btn{border:1px solid var(--line);background:#1b2b42;color:#c3d4e7;padding:8px 13px;border-radius:9px;font-size:calc(12px * var(--font-scale, 1))}.ghost-btn:hover{background:#283d57}.main{max-width:1760px;margin:auto;padding:27px clamp(18px,3.5vw,62px) 26px}.intro{display:flex;justify-content:space-between;align-items:center;gap:28px;margin-bottom:21px}.intro-copy{max-width:930px}.kicker,.section-id{font-size:calc(11px * var(--font-scale, 1));letter-spacing:.13em;font-weight:750;color:#74ced0}.intro h1{font-size:clamp(23px,2.05vw,31px);line-height:1.35;letter-spacing:-.025em;margin:7px 0}.intro p{margin:0;color:#b4c5d8;font-size:calc(13px * var(--font-scale, 1))}.scenario-selector{flex:0 0 295px;border:1px solid var(--line);background:linear-gradient(135deg,#1b2c44,#182840);border-radius:12px;padding:12px 14px}.scenario-selector label{display:block;font-size:calc(11px * var(--font-scale, 1));font-weight:750;color:#8fb2ce;margin-bottom:7px}.scenario-selector select{width:100%;background:#101e31;border:1px solid #49627d;color:#f4f8ff;border-radius:8px;padding:9px;font-size:calc(12px * var(--font-scale, 1))}.scenario-selector>span{display:block;font-size:calc(10px * var(--font-scale, 1));margin-top:7px;color:#9faec5}.panel{background:linear-gradient(160deg,#17253a,#131f33);border:1px solid #30435c;border-radius:var(--radius);box-shadow:0 12px 32px #00000018}.playback{padding:17px 21px 16px;margin-bottom:16px}.playback-head,.diagram-head,.defense-title,.detail-head,.log-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.playback-head h2,.diagram-head h2,.defense-title h2,.detail-panel h2,.log-panel h2{margin:1px 0;font-size:calc(18px * var(--font-scale, 1));letter-spacing:.01em}.step-position{font-size:calc(12px * var(--font-scale, 1));color:#a8bfd6;background:#1f334a;padding:6px 10px;border-radius:8px;font-weight:750}.timeline{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:14px 0}.timeline-step{position:relative;text-align:left;border:1px solid #314660;background:#122137;border-radius:10px;min-height:76px;padding:10px 12px 9px 13px;color:var(--muted);transition:border-color .14s,background .14s}.timeline-step strong{display:block;font-size:calc(13px * var(--font-scale, 1));color:#d8e5f5;font-weight:750}.timeline-step small{display:block;font-size:calc(10px * var(--font-scale, 1));margin-top:5px;color:#839bb5}.timeline-step .number{font-size:calc(10px * var(--font-scale, 1));font-weight:800;color:#80a1c4}.timeline-step.active{background:#20334d;border-color:#6ab7d8;box-shadow:0 0 0 1px #4788a7}.timeline-step.active strong{color:white}.timeline-step.completed::before{position:absolute;content:"";height:3px;background:#58cba9;left:12px;right:12px;bottom:0;border-radius:4px}.timeline-step:disabled{opacity:.6}.transport{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid #2b4059;padding-top:13px}.transport-buttons{display:flex;gap:8px;align-items:center}.transport-icon,.transport-text{background:#1d3047;color:#d5e7f8;border:1px solid #35526c;border-radius:8px;min-width:39px;height:36px}.transport-icon{font-size:calc(27px * var(--font-scale, 1));line-height:1}.transport-icon:disabled{opacity:.4;cursor:default}.transport-text{padding:0 13px;font-size:calc(12px * var(--font-scale, 1))}.action-button{border:1px solid #57bec0;background:#167f89;color:white;font-weight:750;border-radius:9px;padding:8px 21px;min-height:37px;font-size:calc(13px * var(--font-scale, 1))}.action-button:hover{background:#1996a0}.action-button span:first-child{margin-right:7px}.speed-group{display:flex;align-items:center;gap:8px}.speed-group label{font-size:calc(11px * var(--font-scale, 1));color:var(--muted)}.speed-group select{background:#1b2e45;color:white;border:1px solid #3a526d;border-radius:7px;padding:7px 9px;font-size:calc(12px * var(--font-scale, 1))}.work-area{display:grid;grid-template-columns:minmax(0,1fr) 315px;gap:15px;align-items:stretch}.diagram-panel{padding:16px;min-width:0}.diagram-head h2{font-size:calc(19px * var(--font-scale, 1))}.diagram-head p{margin:3px 0 0;color:var(--muted);font-size:calc(11px * var(--font-scale, 1))}.view-switch{display:flex;background:#0d1a2c;border:1px solid #3a516b;border-radius:10px;overflow:hidden;padding:3px;flex-shrink:0}.view-switch button{font-size:calc(11px * var(--font-scale, 1));background:transparent;color:#a8bbd0;border:0;border-radius:7px;padding:9px 12px;white-space:nowrap}.view-switch button.selected{background:#2b4965;color:#fff;box-shadow:0 1px 4px #0008}.diagram-topline{display:flex;justify-content:space-between;align-items:center;gap:9px;margin:15px 0 10px}.mode-hint{font-size:calc(11px * var(--font-scale, 1));color:#c7dae9}.legend{display:flex;gap:13px;align-items:center;font-size:calc(10px * var(--font-scale, 1));color:#abbfd2;white-space:nowrap}.legend>span{display:flex;align-items:center;gap:5px}.legend-mark{width:7px;height:7px;display:inline-block;border-radius:50%;background:#708aa7}.legend-mark.danger{background:var(--danger)}.legend-mark.success{background:var(--success)}.diagram-scroller{width:100%;background:#101c2d;border:1px solid #28425d;border-radius:12px;overflow:auto;scrollbar-width:thin;scrollbar-color:#365d78 #102138}.diagram-scroller svg{display:block;width:100%;min-width:920px;height:auto;aspect-ratio:1440/680}.diagram-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:11px}.selected-event{display:flex;gap:10px;align-items:center}.selected-event div{display:flex;flex-direction:column}.selected-event strong{font-size:calc(13px * var(--font-scale, 1))}.selected-event span:last-child{font-size:calc(11px * var(--font-scale, 1));color:#b1c4d8}.event-indicator{width:10px;height:10px;border-radius:50%;background:var(--danger);box-shadow:0 0 0 5px #e65a6a16;flex-shrink:0}.event-indicator.success{background:var(--success);box-shadow:0 0 0 5px #51cda21c}.event-indicator.idle{background:#6f849e;box-shadow:none}.small-meta{font-size:calc(10px * var(--font-scale, 1));color:#8ca2bd;max-width:300px;text-align:right}.defense-panel{padding:17px 16px;display:flex;flex-direction:column;min-width:0}.defense-title h2{font-size:calc(17px * var(--font-scale, 1))}.on-count{background:#213851;border:1px solid #34536e;color:#91c9d7;font-size:calc(11px * var(--font-scale, 1));padding:6px 8px;border-radius:7px;white-space:nowrap}.defense-instruction{font-size:calc(11px * var(--font-scale, 1));margin:7px 0 14px;color:#b0c0d3}.bulk-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:11px}.bulk-controls button{padding:10px 5px;font-size:calc(12px * var(--font-scale, 1));border-radius:9px;font-weight:750}.all-on{border:1px solid #2d937d;background:#17463f;color:#7ae2bc}.all-off{border:1px solid #556a85;background:#26364d;color:#d5e4f1}.bulk-controls button:hover{filter:brightness(1.16)}.defense-controls{display:grid;gap:7px}.defense-card{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:10px 10px;border:1px solid #31465f;background:#14253a;border-radius:10px}.defense-card.on{background:#133c3a;border-color:#2b8079}.defense-copy{min-width:0}.defense-copy strong{display:block;font-size:calc(12px * var(--font-scale, 1));line-height:1.35}.defense-copy small{display:block;font-size:calc(10px * var(--font-scale, 1));color:#98b4cc;margin-top:3px}.toggle{display:block;border:0;flex:0 0 38px;width:38px;height:23px;border-radius:20px;background:#455a72;padding:3px;transition:background .15s}.toggle::before{content:"";display:block;width:17px;height:17px;background:#fff;border-radius:50%;box-shadow:0 1px 3px #0005;transition:transform .15s}.toggle.on{background:#28b294}.toggle.on::before{transform:translateX(15px)}.outcome-summary{margin-top:14px;border-radius:10px;background:#0d1c30;border:1px solid #36506b;padding:12px}.outcome-head{display:flex;justify-content:space-between;gap:5px;align-items:center;color:#91aecd;font-size:calc(10px * var(--font-scale, 1));margin-bottom:6px}.outcome-mark{height:7px;width:7px;border-radius:50%;background:var(--danger)}.outcome-mark.safe{background:var(--success)}.outcome-mark.warn{background:var(--warn)}.outcome-summary>strong{font-size:calc(14px * var(--font-scale, 1));display:block;line-height:1.4}.outcome-summary p{font-size:calc(11px * var(--font-scale, 1));line-height:1.65;color:#aec0d3;margin:8px 0 0}.control-note{display:flex;gap:8px;margin-top:auto;padding-top:13px;color:#92abc3}.control-note span{font-size:calc(14px * var(--font-scale, 1))}.control-note p{font-size:calc(10px * var(--font-scale, 1));line-height:1.6;margin:0}.detail-layout{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin-top:16px}.detail-panel,.log-panel{padding:18px 20px}.detail-head{margin-top:10px}.english-label{font-size:calc(10px * var(--font-scale, 1));letter-spacing:.13em;color:#83c7d9;font-weight:800}.detail-head h2{margin:4px 0;font-size:calc(23px * var(--font-scale, 1))}.status-badge{font-size:calc(11px * var(--font-scale, 1));border:1px solid #844950;background:#3d2838;border-radius:99px;padding:6px 11px;color:#ffd1d4;white-space:nowrap}.status-badge.safe{background:#164c40;border-color:#257b69;color:#b7f7de}.status-badge.neutral{background:#27384e;border-color:#4b5f75;color:#cbd8e6}.detail-panel>p{font-size:calc(13px * var(--font-scale, 1));color:#c7d5e5;line-height:1.85}.learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.learn-grid>div{background:#10243a;border:1px solid #294761;border-radius:10px;padding:11px}.learn-grid strong{font-size:calc(11px * var(--font-scale, 1));color:#7ccee0}.learn-grid p{color:#c1d3e3;font-size:calc(11px * var(--font-scale, 1));line-height:1.75;margin:6px 0 0}.learning-tip{display:flex;gap:10px;align-items:start;border-left:3px solid #e1aa67;background:#3d332c55;border-radius:3px;padding:11px;margin-top:12px}.learning-tip strong{font-size:calc(11px * var(--font-scale, 1));color:#f5c88b;white-space:nowrap}.learning-tip span{font-size:calc(11px * var(--font-scale, 1));color:#e7d9c7}.technique-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.technique-list a,.technique-list span{font-size:calc(11px * var(--font-scale, 1));text-decoration:none;color:#8acff0;background:#1b334b;border:1px solid #3b6281;padding:6px 9px;border-radius:7px}.technique-list a:hover{text-decoration:underline}.log-head>div>span{font-size:calc(10px * var(--font-scale, 1));color:var(--muted)}.log-console{background:#0b1829;border:1px solid #2c465f;border-radius:9px;margin:14px 0 11px;padding:10px;min-height:160px;max-height:260px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:calc(11px * var(--font-scale, 1));line-height:1.7}.log-line{display:grid;grid-template-columns:67px 41px 1fr;gap:8px;margin-bottom:5px}.log-line span:first-child{color:#7896b4}.log-level{color:#9db6ce}.log-level.warn{color:#ffa2a7}.log-level.ok{color:#71dab6}.log-message{color:#c2d3e4;overflow-wrap:anywhere}.effect-head{font-size:calc(11px * var(--font-scale, 1));color:#acbfd3;margin-bottom:8px}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.result-item{border:1px solid #304760;background:#1a2d44;padding:9px 6px;border-radius:8px;text-align:center}.result-item span{display:block;font-size:calc(10px * var(--font-scale, 1));color:#92acc5}.result-item strong{display:block;font-size:calc(12px * var(--font-scale, 1));margin-top:5px}.result-item .danger{color:#ff949c}.result-item .safe{color:#70d4ac}.result-item .neutral{color:#a5b6ca}.references-panel{display:grid;grid-template-columns:300px 1fr;gap:24px;padding:28px 3px 16px}.references-panel h2{margin:5px 0;font-size:calc(19px * var(--font-scale, 1))}.references-panel p{margin:0;font-size:calc(12px * var(--font-scale, 1));color:var(--muted)}.reference-links{display:flex;flex-wrap:wrap;gap:7px;align-content:center}.reference-links a{color:#b1dbf6;border:1px solid #35516e;background:#172c43;border-radius:8px;padding:7px 10px;font-size:calc(11px * var(--font-scale, 1));text-decoration:none}.reference-links a:hover{text-decoration:underline}.footer{padding:15px 0;border-top:1px solid #2c4057;display:flex;justify-content:space-between;gap:14px;color:#8096b0;font-size:calc(10px * var(--font-scale, 1))}.guide-dialog{border:1px solid #3e607d;background:#192940;border-radius:14px;color:var(--text);padding:23px;width:min(540px,calc(100% - 32px));box-shadow:0 22px 100px #000c}.guide-dialog::backdrop{background:#000a}.dialog-head{display:flex;align-items:center;justify-content:space-between}.dialog-head h2{margin:0}.dialog-head button{border:0;background:transparent;color:white;font-size:calc(25px * var(--font-scale, 1))}.guide-dialog ol{font-size:calc(13px * var(--font-scale, 1));line-height:1.95;color:#d1dce9;padding-left:22px}.guide-dialog p{font-size:calc(12px * var(--font-scale, 1));color:#aabfd4}.guide-dialog .action-button{margin-top:9px}
 /* Logical architecture diagram */
@@ -628,7 +628,7 @@
 :root[data-theme="light"] .guide-compare-note{color:#765021!important}
 
 
-/* v0.5.41: approachable learning controls; advanced functions are still available. */
+/* v0.5.42: approachable learning controls; advanced functions are still available. */
 .transport{align-items:center;flex-wrap:wrap;row-gap:8px}
 .transport-advanced{margin-left:auto;position:relative;z-index:12}
 .transport-advanced summary{list-style:none;cursor:pointer;font-size:calc(11px * var(--font-scale,1));color:var(--muted);padding:8px 11px;border:1px solid var(--line);border-radius:8px;background:#17283d;white-space:nowrap}
@@ -644,6 +644,11 @@
 .scenario-guide-footer{justify-content:space-between;gap:8px;flex-wrap:wrap}
 .scenario-guide-footer .ghost-btn{padding:8px 9px;font-size:calc(11px * var(--font-scale,1))}
 @media(max-width:740px){.transport-advanced{margin-left:0}.transport-buttons{flex-wrap:wrap}}
+
+/* Keep the diagram key readable when the result legend grows or text is enlarged. */
+.diagram-topline{flex-wrap:wrap;align-items:flex-start}
+.mode-hint{flex:1 1 100%;min-width:0;white-space:normal;overflow-wrap:anywhere}
+.legend{flex-wrap:wrap;white-space:normal;justify-content:flex-start;min-width:0}
 </style>
 <style>
 /* CASE 08 only: receiving untrusted DATA and returning an over-permitted API response
@@ -654,7 +659,7 @@
 .asset.ai-warning .status-dot{fill:#e7b860}
 </style>
 <style>
-/* v0.5.41 — scenario-focused diagram. All coordinates and simulation paths stay intact. */
+/* v0.5.42 — scenario-focused diagram. All coordinates and simulation paths stay intact. */
 #architectureDiagram .asset-icon{display:none}
 #architectureDiagram .asset-title{font-weight:800;letter-spacing:0}
 #architectureDiagram .asset-caption{font-weight:550}
@@ -676,7 +681,7 @@
 <div aria-hidden="true" class="brand-symbol"><svg viewbox="0 0 36 36"><path d="M18 3 31 9v11c0 8-5.5 11.5-13 14C10.5 31.5 5 28 5 20V9z" fill="none" stroke="currentColor" stroke-width="2.2"></path><path d="M11 18h14M18 11v14" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path></svg></div>
 <div><div class="brand-name">CYBER <span>INCIDENT</span> EXPLORER</div><div class="brand-sub">システム構成図で学ぶサイバーインシデント</div></div>
 </div>
-<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><span class="vtag">v0.5.41</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
+<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><span class="vtag">v0.5.42</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
 </header>
 <main class="main">
 <section aria-label="シナリオの概要" class="intro">
@@ -754,7 +759,7 @@
 </section>
 <section aria-labelledby="refTitle" class="references-panel"><div><div class="section-id">OFFICIAL REFERENCES</div><h2 id="refTitle">一次情報で学ぶ</h2><p>MITRE ATT&amp;CKの攻撃戦術・技法と、NIST CSF 2.0の対応・復旧を確認できます。</p></div><div class="reference-links" id="referenceList"></div></section>
 </dialog>
-<footer class="footer"><span>Cyber Incident Explorer · v0.5.41</span><span>学習用シミュレーション / 実際の通信やマルウェアは実行しません</span></footer>
+<footer class="footer"><span>Cyber Incident Explorer · v0.5.42</span><span>学習用シミュレーション / 実際の通信やマルウェアは実行しません</span></footer>
 </main>
 </div>
 <dialog class="guide-dialog" id="guideDialog" aria-labelledby="guideTitle">
@@ -913,7 +918,11 @@ window.CyberScenarios.phishingCloud={
     summary:'SaaSの外部共有を成立させ、外部アカウントに閲覧権限を与える（実取得は未確認）。',detail:'攻撃者はSaaSの共有API・UIを使い、機密ファイルを外部アカウントへ共有します。この例では先に「共有ポリシー」を判定し、許可された場合に「SaaS DLP」が内容を検査します。社内SWG経由のHTTPSアップロードではありません。共有成立と実際のダウンロード・複製は別で、ここでは実取得を確認していません。',
     detect:'外部ゲストの追加、匿名リンク生成、SaaS監査ログ、DLP検査結果。',response:'外部共有・リンクの失効、権限の見直し、ダウンロード監査ログの確認、情報露出範囲の調査。',
     techniques:[{id:'T1537',label:'Transfer Data to Cloud Account',url:'https://attack.mitre.org/techniques/T1537/'}],
-    logs:{active:['SAAS / 共有設定の変更と外部アカウントへのアクセスを許可','AUDIT / 外部共有イベントを記録'],blocked:['SAAS / 外部共有または機密情報のポリシーで拒否'],skipped:['SAAS / 機密データを閲覧できず外部共有に至らない']},tip:'SaaS内部の共有では社内SWGを経由しない。SaaSの権限・共有制御・クラウドDLPが重要。'}
+    logs:{active:['SAAS / 共有設定の変更と外部アカウントへのアクセスを許可','AUDIT / 外部共有イベントを記録'],blocked:['SAAS / 外部共有または機密情報のポリシーで拒否'],skipped:['SAAS / 機密データを閲覧できず外部共有に至らない']},tip:'SaaS内部の共有では社内SWGを経由しない。SaaSの権限・共有制御・クラウドDLPが重要。'},
+  {id:'response',time:'T + 00:30',title:'封じ込め・影響調査',eyebrow:'INCIDENT RESPONSE',framework:{source:'SCENARIO',id:'RESPONSE',name:'アカウント・共有の対応'},
+    summary:'認証セッションと外部共有を確認し、露出範囲を調査する。',detail:'SaaSアカウントの侵害が成立した場合は、アカウントを保護して既存セッションを失効させ、外部共有設定・リンクを個別に確認します。共有を解除しても、既に閲覧・ダウンロードされたデータの複製や情報露出は自動的に取り消されません。このステップは対応手順の確認であり、シミュレーション内で共有解除や復旧を自動実行するものではありません。',
+    detect:'IdPの認証・セッション履歴、SaaSの共有監査ログ、外部ゲストとダウンロードの履歴。',response:'侵害アカウントの保護とセッション失効、外部共有の確認・必要な失効、データ露出範囲の調査。',
+    techniques:[],logs:{active:['IR / 侵害アカウント・SaaSセッション・共有監査ログを確認','IR / 必要に応じ共有を失効し、既存の閲覧・取得履歴を調査'],blocked:['IR / 認証・共有が阻止された段階とログを確認し、監視を継続'],skipped:['IR / 前段階で認証に至らず、監視とメール・IdPログを確認']},tip:'アカウントや共有リンクの失効は、過去の閲覧・取得や露出を取り消すものではありません。'}
  ],
  references:[
   {label:'ATT&CK T1566.002 — Spearphishing Link',url:'https://attack.mitre.org/techniques/T1566/002/'},
@@ -1772,7 +1781,7 @@ window.CyberGuides.insider={
     }else if(isPhishing()){
       if(i===0)facts.delivered=!c.mailFilter;
       if(i===1)facts.phished=facts.delivered&&state.phishingAction==='entered';
-      if(i===2)facts.login=facts.phished&&!c.prMfa&&!c.conditional;
+      if(i===2){facts.blockedBy=facts.phished?(c.prMfa?'prMfa':c.conditional?'conditional':null):null;facts.login=facts.phished&&!facts.blockedBy;}
       if(i===3)facts.read=facts.login&&!c.leastPrivilege;
       if(i===4){facts.shareAllowed=facts.read&&!c.sharePolicy;facts.exfil=facts.shareAllowed&&!c.saasDlp;}
     }else if(isSupply()){
@@ -1902,6 +1911,7 @@ window.CyberGuides.insider={
       return e.entry?'affected':'prevented';
     }
     if(isPhishing()){
+      if(i===5)return e.login?'affected':'prevented';
       if(i===0)return e.delivered?'affected':'prevented';
       if(i===1)return !e.delivered?'notreached':e.phished?'affected':'prevented';
       if(i===2)return !e.phished?'notreached':e.login?'affected':'prevented';
@@ -1962,6 +1972,7 @@ window.CyberGuides.insider={
       return st==='affected'?ok[i]:ng[i];
     }
     if(isPhishing()){
+      if(i===5)return e.login?'侵害アカウントとSaaSセッションの封じ込め・影響調査が必要':'不正ログイン未成立・メール／IdPログを確認';
       if(st==='affected')return ['メール配信','認証情報流出','不正ログイン','機密資料を閲覧','外部共有成立（実取得未確認）'][i];
       return ['メールで隔離',i===1?'入力なし・認証情報流出なし':'未到達',controlsAt(i).prMfa?'MFAで拒否':'端末条件で拒否','権限で拒否',controlsAt(i).sharePolicy?'共有制限で拒否':'SaaS DLPで拒否'][i];
     }
@@ -2037,6 +2048,7 @@ window.CyberGuides.insider={
       return{text:e.contained?'情報取得を阻止・委託先接続停止済み':'機密ファイルの持出しを阻止',tone:'warn',detail:e.read?'ファイルの閲覧は成立しましたが、保守セッションの転送制限で外部取得を拒否。':'File Serverで機密ファイルの閲覧を拒否。'};
     }
     if(isPhishing()){
+      if(state.step===5){if(!e.login)return{text:'不正ログインなし・監視を継続',tone:'safe',detail:'メールとIdPの記録を確認します。メール隔離、認証拒否、未閲覧の履歴はそのまま保持されます。'};if(e.shareAllowed)return{text:'SaaS侵害の封じ込め・影響調査',tone:e.exfil?'danger':'warn',detail:'侵害アカウントの保護とセッション失効、外部共有の確認・必要な失効、露出範囲の調査が必要です。共有を解除しても既に閲覧された情報は消えず、実取得された複製は回収できません。この画面で対応を自動実行していません。'};return{text:'SaaSアカウント侵害の封じ込め・監査',tone:'warn',detail:'侵害アカウントの保護とセッション失効、閲覧履歴と共有設定の確認が必要です。外部共有は前段階で阻止されており、この画面で対応を自動実行していません。'};}
       if(state.step>=1&&e.delivered&&!e.phished)return{text:'偽URLを開かず、認証情報の流出なし',tone:'safe',detail:'メールは届きましたが、利用者は不審と判断して偽サイトへパスワードを入力しませんでした。攻撃者の不正ログインは未到達です。'};
       if(state.step<4&&e.delivered&&e.login&&e.read)return{text:'機密ファイルの閲覧まで発生',tone:'warn',detail:'外部共有はまだ実行されていません。次のステップで共有ポリシーやSaaS DLPの対策が反映されます。'};
       if(state.step<3&&e.login)return{text:'不正ログイン成立（次はSaaS閲覧）',tone:'warn',detail:'不正ログインは履歴として残ります。最小権限の変更は未実行の機密資料閲覧にのみ適用されます。'};
@@ -2080,7 +2092,7 @@ window.CyberGuides.insider={
     if(e.encrypted)return{text:e.restored?'File Server復旧済み（暗号化履歴あり）':'情報流出は阻止、暗号化被害が発生',tone:'warn',detail:e.restored?'過去の侵入と暗号化は消えません。検証済みのバックアップからFile Serverを復元済みです。':e.recoverable?'流出は防ぎましたが暗号化済み。バックアップからの復元は、封じ込め後に別途実行してください。':'外部転送は防ぎましたが暗号化被害が発生。安全な復旧手段の再検討が必要です。'};
     return{text:e.exfil?'情報流出は発生・書込権限で暗号化阻止':'閲覧・暗号化を権限と出口対策で制限',tone:'warn',detail:'情報流出に必要な読取権限と、暗号化に必要な書込権限は独立して判定しています。端末侵害の調査は引き続き必要です。'};
   }
-  function eventsForStage(i,e){const st=scenario.stages[i],kind=stageState(i,e);if(isAi()){if(kind==='notreached')return ['SIM / 上流のAPI認可または外部通信制御で未到達'];if(i===4&&kind==='prevented')return e.blockedBy==='aiToolPolicy'?['TOOL / タスク外の'+aiRequestMethod()+'宛先・引数を実行前に拒否','PROXY / ツール未実行のため通信なし']:['TOOL / '+aiRequestMethod()+'の呼出しは通過','PROXY / 攻撃者ホストへの'+aiRequestMethod()+'を拒否'];if(i===4&&kind==='affected')return ['TOOL / '+aiRequestMethod()+'要求と引数チェックを通過','PROXY / 攻撃者ホストへの通信を許可'];return kind==='prevented'?(st.logs.blocked||[]):(st.logs.active||[]);}if(isInsider()){if(kind==='notreached')return ['SIM / 前段のIT制御で未到達'];if(i===4&&kind==='prevented')return e.blockedBy==='insiderCasb'?['CASB / 未承認個人クラウドへのアップロードを拒否','DLP / CASBで遮断済みのため検査対象にならない']:['SWG / 送信先を許可','DLP / 機密分類に一致し外部送信を拒否'];return kind==='prevented'?(st.logs.blocked||[]):(st.logs.active||[]);}if(isBec()){
+  function eventsForStage(i,e){const st=scenario.stages[i],kind=stageState(i,e);if(isPhishing()&&i===5){if(!e.login)return ['IR / 不正ログインは成立していない。メール・IdPの記録を確認し監視を継続'];const logs=['IR / 侵害アカウントの保護・既存セッション失効が必要','IR / SaaS監査ログから閲覧・外部共有の状態を確認'];if(e.shareAllowed)logs.push('IR / 外部共有は成立済み（実取得未確認）。共有解除を検討し、閲覧・ダウンロード監査ログから露出範囲を調査');else logs.push('IR / 今回の共有操作は前段のポリシーで阻止。設定・監査ログを確認');return logs;}if(isAi()){if(kind==='notreached')return ['SIM / 上流のAPI認可または外部通信制御で未到達'];if(i===4&&kind==='prevented')return e.blockedBy==='aiToolPolicy'?['TOOL / タスク外の'+aiRequestMethod()+'宛先・引数を実行前に拒否','PROXY / ツール未実行のため通信なし']:['TOOL / '+aiRequestMethod()+'の呼出しは通過','PROXY / 攻撃者ホストへの'+aiRequestMethod()+'を拒否'];if(i===4&&kind==='affected')return ['TOOL / '+aiRequestMethod()+'要求と引数チェックを通過','PROXY / 攻撃者ホストへの通信を許可'];return kind==='prevented'?(st.logs.blocked||[]):(st.logs.active||[]);}if(isInsider()){if(kind==='notreached')return ['SIM / 前段のIT制御で未到達'];if(i===4&&kind==='prevented')return e.blockedBy==='insiderCasb'?['CASB / 未承認個人クラウドへのアップロードを拒否','DLP / CASBで遮断済みのため検査対象にならない']:['SWG / 送信先を許可','DLP / 機密分類に一致し外部送信を拒否'];return kind==='prevented'?(st.logs.blocked||[]):(st.logs.active||[]);}if(isBec()){
       if(kind==='notreached')return ['SIM / 前段のIT対策で後続の不正操作は未到達'];
       return kind==='prevented'?(st.logs.blocked||[]):(st.logs.active||[]);
     }if(isDdos()){
@@ -2390,7 +2402,7 @@ window.CyberGuides.insider={
     }
     if(isVendor()){
       const t=state.step,neutral={kind:'',label:'未到達'};
-      const map={attacker:{kind:'afflicted',label:'委託先のIDを窃取'},vendor:{kind:'afflicted',label:'委託先アカウント侵害'},vpn:t<1?neutral:e.entry?{kind:'afflicted',label:'委託先ログイン成立'}:{kind:'stopped',label:'MFAで接続拒否'},admin:t<2?neutral:e.entry?{kind:'afflicted',label:'保守作業環境に到達'}:neutral,pam:t<2?neutral:!e.entry?neutral:e.privileged?{kind:'afflicted',label:'常設特権を利用'}:{kind:'stopped',label:'JIT特権を拒否'},segfw:t<3?neutral:!e.privileged?neutral:e.fwPassed?{kind:'afflicted',label:'重要サーバーへ通信許可'}:{kind:'stopped',label:'接続先を拒否'},files:t<4?neutral:!e.fwPassed?neutral:e.read?{kind:'afflicted',label:'機密ファイル閲覧履歴'}:{kind:'stopped',label:'閲覧権限で拒否'},outside:t<4?neutral:e.exfil?{kind:'afflicted',label:'VPN経由でファイル受領'}:{kind:'',label:'ファイル未取得'},siem:t<5?{kind:'',label:'ログ収集'}:e.auditAlert?{kind:'defended',label:'異常検知・対応待ち'}:{kind:'',label:'監査の自動阻止なし'}};
+      const map={attacker:{kind:'afflicted',label:'委託先のIDを窃取'},vendor:{kind:'afflicted',label:'委託先アカウント侵害'},vpn:t<1?neutral:!e.entry?{kind:'stopped',label:'MFAで接続拒否'}:t>=4&&e.read&&!e.download?{kind:'stopped',label:'保守セッションの転送を拒否'}:{kind:'afflicted',label:'委託先ログイン成立'},admin:t<2?neutral:e.entry?{kind:'afflicted',label:'保守作業環境に到達'}:neutral,pam:t<2?neutral:!e.entry?neutral:e.privileged?{kind:'afflicted',label:'常設特権を利用'}:{kind:'stopped',label:'JIT特権を拒否'},segfw:t<3?neutral:!e.privileged?neutral:e.fwPassed?{kind:'afflicted',label:'重要サーバーへ通信許可'}:{kind:'stopped',label:'接続先を拒否'},files:t<4?neutral:!e.fwPassed?neutral:e.read?{kind:'afflicted',label:'機密ファイル閲覧履歴'}:{kind:'stopped',label:'閲覧権限で拒否'},outside:t<4?neutral:e.exfil?{kind:'afflicted',label:'VPN経由でファイル受領'}:{kind:'',label:'ファイル未取得'},siem:t<5?{kind:'',label:'ログ収集'}:e.auditAlert?{kind:'defended',label:'異常検知・対応待ち'}:{kind:'',label:'監査の自動阻止なし'}};
       return map[id]||{kind:'',label:'今回未使用'};
     }
     if(isPhishing()){
@@ -2452,6 +2464,67 @@ window.CyberGuides.insider={
       return at.signatureRejected?'コード署名と信頼済み発行元の検証で差し替えを拒否':'事前更新検証で悪性版を検出し、本番導入を保留';
     }
     return stopLabels[link.id]||'攻撃を遮断';
+  }
+  function blockingExplanation(i,e){
+    if(isAi()){
+      if(i===3&&e.blockedBy==='aiDataAcl')return '文書API（aiDataAcl）が委任主体の権限を検証し、機密資料の読取を拒否しました。外部アクセスは未到達です。';
+      if(i===4&&e.blockedBy==='aiToolPolicy')return 'タスク単位のツール／URL制御（aiToolPolicy）が、要約タスク外の'+aiRequestMethod()+'要求を実行前に拒否しました。出口Proxyへ通信は届いていません。';
+      if(i===4&&e.blockedBy==='aiEgress')return '出口通信制御（aiEgress）が、ツール認可を通過した攻撃者宛て'+aiRequestMethod()+'通信を拒否しました。';
+    }
+    if(isWeb()){
+      if(i===1&&!e.wafPassed)return 'WAF（webWaf）がWeb/APへの転送前にSQLi要求を拒否しました。';
+      if(i===2&&e.wafPassed&&!e.queryExecuted)return 'Web/APのパラメータ化SQL（safeSql）が不正なSQL構文の実行を防ぎました。';
+      if(i===3&&e.queryExecuted&&!e.read)return 'Databaseの最小権限（dbLeastPrivilege）が機密テーブルの読取を拒否しました。SWGはこの阻止地点ではありません。';
+    }
+    if(isPhishing()){
+      if(i===0&&!e.delivered)return 'メール／URL防御（mailFilter）が偽メールを配信前に隔離しました。';
+      if(i===2&&!e.login)return e.blockedBy==='prMfa'?'フィッシング耐性MFA（prMfa）がIdP認証を拒否しました。':'条件付きアクセス（conditional）が未準拠端末からのIdP認証を拒否しました。';
+      if(i===3&&e.login&&!e.read)return 'SaaS最小権限（leastPrivilege）がCloud Storageの機密ファイル閲覧を拒否しました。';
+      if(i===4&&e.read&&!e.shareAllowed)return '外部共有ポリシー（sharePolicy）が共有先を拒否しました。SaaS DLPには到達していません。';
+      if(i===4&&e.shareAllowed&&!e.exfil)return 'SaaS DLP（saasDlp）が共有対象の機密情報を検出し、外部共有を拒否しました。';
+    }
+    if(isInsider()){
+      if(i===1&&!e.read)return 'RBAC（insiderAcl）が業務不要な機密フォルダの閲覧を拒否しました。';
+      if(i===2&&!e.downloaded)return '端末保存制限（insiderDownload）が機密ファイルのPC保存を拒否しました。';
+      if(i===4&&!e.egressAllowed)return 'SWG／CASB（insiderCasb）が未承認クラウドへの宛先を拒否しました。DLPには到達していません。';
+      if(i===4&&e.egressAllowed&&!e.uploaded)return 'DLP（insiderDlp）が機密ファイルの外部送信を拒否しました。';
+    }
+    if(isBec()){
+      if(i===1&&!e.login)return e.blockedBy==='becMfa'?'フィッシング耐性MFA（becMfa）がIdP認証を拒否しました。':'条件付きアクセス（becDevice）が未準拠端末からのログインを拒否しました。';
+      if(i===3&&e.contained)return '侵害検知・自動失効（becContain）がセッションを無効化し、後続のメール送信を停止しました。';
+      if(i===4&&e.outboundHeld)return '送信メール保護（becOutbound）が不正メールを配送前に保留しました。';
+    }
+    if(isVendor()){
+      if(i===1&&!e.entry)return '保守VPNのMFA（mfa）が委託先アカウントのログインを拒否しました。';
+      if(i===2&&!e.privileged)return 'PAMの都度承認（vendorJit）が未承認の特権要求を拒否しました。';
+      if(i===3&&!e.fwPassed)return '内部FWの接続先制限（segmentation）が対象外サーバーへの通信を拒否しました。';
+      if(i===4&&!e.read)return 'File Serverの最小権限（fileAcl）が機密ファイル閲覧を拒否しました。';
+      if(i===4&&e.read&&!e.download)return '保守セッション転送制限（vendorTransfer）がファイル転送を拒否しました。';
+    }
+    if(isSupply()){
+      if(i===1&&e.signatureRejected)return 'コード署名の強制検証（signatureCheck）が署名不一致の更新を拒否しました。';
+      if(i===1&&!e.installed)return '段階展開・承認保留（updateReview）が悪性更新の本番導入を保留しました。';
+      if(i===2&&e.isolated)return 'PC EDR（edr）が実行後の異常動作を検知し、端末を隔離しました。実行履歴は残ります。';
+      if(i===3&&e.executed&&!e.fwPassed)return '内部FW（segmentation）が重要共有への通信を拒否しました。';
+      if(i===3&&e.fwPassed&&!e.lateral)return '共有・ファイル権限制限（fileAcl）がFile Serverの閲覧を拒否しました。';
+      if(i===4&&!e.egressAllowed)return '外向き通信制御（egress）が転送先への通信を拒否しました。';
+      if(i===4&&e.egressAllowed&&!e.dlpAllowed)return 'DLP（dlp）が機密ファイルの外部送信を拒否しました。';
+    }
+    if(isDdos()&&i===2&&!e.saturated)return '上流DDoS対策（ddosUpstream）が企業回線に到達する前に攻撃通信を緩和しました。';
+    if(isEmail()&&i===0&&!e.entry)return 'メール／添付防御（mailFilter）が悪性添付を配信前に隔離しました。';
+    if(!isPhishing()&&!isAi()&&!isWeb()&&!isInsider()&&!isBec()&&!isVendor()&&!isSupply()&&!isDdos()){
+      if(e.isolatedAt===i)return 'PC EDR（edr）が侵害端末をSTEP '+(i+1)+'で隔離しました。隔離前に発生した行動の履歴は残ります。';
+      if(i===0&&!e.entry)return '認証制御（mfa）がVPNログインを拒否しました。';
+      if(i===2&&e.entry&&!e.fwPassed)return '内部FW（segmentation）がFile Serverへの通信を拒否しました。';
+      if(i===2&&e.fwPassed&&!e.readAllowed)return 'File Serverの読取権限（fileAcl）が閲覧を拒否しました。';
+      if(i===2&&e.fwPassed&&e.readAllowed&&!e.writeAllowed)return '共有ファイル書込制限（writeAcl）が書込権限を外し、暗号化に必要な変更を拒否しました。読取・流出履歴は別に残ります。';
+      if(i===3&&!e.egressAllowed)return '外向き通信制御（egress）がSWGで攻撃者宛ての通信を拒否しました。';
+      if(i===3&&e.egressAllowed&&!e.dlpAllowed)return 'DLP（dlp）が機密データの外部送信を拒否しました。';
+      if(i===4&&!e.writeAllowed)return '共有ファイル書込制限（writeAcl）がFile Serverへの暗号化書込を拒否しました。先行する侵入・閲覧・流出履歴は残ります。';
+      if(i===4&&e.serverBlocked)return 'Server EDR（serverEdr）がFile Server上の暗号化処理を開始前に停止しました。';
+      if(i===4&&e.isolatedAt===4)return 'PC EDR（edr）が暗号化前に従業員PCを隔離しました。既に起きた流出履歴は残ります。';
+    }
+    return e.isolatedAt===i?'EDRによる端末隔離で後続の操作を停止しました。': '実際に作用した対策と阻止地点を確認してください。';
   }
   function routeStatus(link,e,currentStep=state.step){
     if(!link)return 'hidden';
@@ -2757,6 +2830,7 @@ window.CyberGuides.insider={
       rejected.push('File Server：Server EDRで暗号化前に停止');
     }
     const status=stageState(state.step,e),step=scenario.stages[state.step];$('eventTitle').textContent=`${step.title} — ${stageLabel(state.step,e)}`;$('eventSummary').textContent=e.notStarted?'まだ攻撃を実行していません。対策を設定して「攻撃開始」を押してください。':e.isolatedAt===state.step?`EDRが侵害端末を隔離。ここまでの侵入や探索は残りますが、以後の行動は停止します。`:status==='notreached'?'前段階で攻撃が阻止され、このステップには到達していません。':(!isPhishing()&&!isVendor()&&!isWeb()&&!isDdos()&&!isBec()&&!isInsider()&&!isAi()&&state.step===5)?(e.restored?'File Serverの復元を完了。侵入・流出・暗号化の履歴は残ります。':e.encrypted?e.recoverable?'暗号化被害あり。まず封じ込め、次にバックアップから復元します。':'暗号化被害あり。復旧用バックアップが不足しています。':e.entry?'侵入履歴あり。封じ込めと影響調査が必要です。':'侵入阻止。監視とログ確認を続けます。'):step.summary;const guide={...(isInsider()?learning.insiderStages:isBec()?learning.becStages:isDdos()?learning.ddosStages:isWeb()?learning.webStages:isVendor()?learning.vendorStages:isPhishing()?learning.phishingStages:isSupply()?learning.supplyStages:learning.stages)[state.step]};
+    if(status==='prevented'&&state.step<5){const exactReason=blockingExplanation(state.step,e);if(exactReason)guide.stopped=exactReason;}
     if(isDdos()){
       $('eventSummary').textContent=e.notStarted?'攻撃通信と一般利用者の正常通信を別々に追跡します。':!e.saturated&&state.step>=3?(state.step===3?'上流で攻撃通信を緩和。一般利用者の正常通信は通過しています。':state.step===4?'一般利用者は保護された経路で公開Webに正常アクセスできます。':'公開Webサービスは継続利用可能。今回のサービス停止は発生しません。'):status==='prevented'?stageLabel(state.step,e):step.summary;
       $('causeHint').textContent=e.notStarted?'上流緩和は回線飽和前に作用し、WAFや監視のみでは止まりません。':status==='affected'?`結果：${guide.passes}`:status==='prevented'?`阻止：${guide.stopped}`:'前段階で回線飽和を阻止したため未到達です。';
@@ -2786,6 +2860,7 @@ window.CyberGuides.insider={
       if(state.step===1){guide.passes='差し替えられたファイルを、署名・発行元の検証を強制しない更新機構が導入した。';guide.stopped='署名・発行元の強制検証、または事前更新検証で導入を拒否した。';}
     }
     if(isPhishing()&&state.step===1){guide.passes='社員が偽サイトへパスワードを入力したため、攻撃者に知られた。';guide.stopped='社員は不審なURLを開かず、パスワードを入力しなかった。';}
+    if(isPhishing()&&state.step===5){const responseSummary=!e.login?'不正ログインは成立していません。メールとIdPの記録を確認し、監視を継続します。':e.shareAllowed?'侵害アカウント・セッションを封じ込め、SaaS監査ログで閲覧・外部共有・実取得の有無を調査します。共有を解除しても既に閲覧された情報は消えず、実取得された複製は回収できません。':'侵害アカウント・セッションを封じ込め、SaaS監査ログを確認します。今回の外部共有はポリシーで阻止されました。';$('eventSummary').textContent=responseSummary;$('causeHint').textContent='対応手順の確認です。シミュレーションはセッション失効や共有解除を自動実行しません。実行済みの閲覧・共有がある場合、その履歴と露出は残ります。';}
     if(isEmail()&&state.step<2){guide.passes=state.step===0?'メール検査がこの添付ファイルを隔離しなかったため配信された。':'社員が悪性添付ファイルを開いたことを仮定し、PC上で不正な処理が実行された。';guide.stopped=state.step===0?'メールセキュリティが添付ファイルを隔離した。':'PC EDRが悪性動作を検知し端末を隔離した。';}const blockedCause=isPhishing()?(state.step===2?(controlsAt(state.step).prMfa?'FIDO2の本人確認を満たさず認証拒否。':'端末準拠の条件を満たさず認証拒否。'):state.step===4?(controlsAt(state.step).sharePolicy?'外部共有設定で拒否。SaaS DLPには到達しません。':'SaaS DLPが機密情報の共有を拒否。'):guide.stopped):e.isolatedAt===state.step?`EDRがSTEP ${state.step+1}で端末を隔離。既に起きた行動は残りますが、以後の攻撃はこの端末から続きません。`:state.step===3&&status==='prevented'&&!e.isolated?(!e.egressAllowed?'SWGが接続先・アプリのポリシーで外向き通信を遮断。DLPには到達していません。':'SWGが通信を許可した後、DLPが機密データの送信を拒否。'):guide.stopped;$('causeHint').textContent=e.notStarted?'対策を事前設定できます。進行中のON/OFFは、次の未実行ステップから適用されます。':!isPhishing()&&!isVendor()&&state.step===5?'対応状態：'+(e.contained?'封じ込め済み':'封じ込め未完了')+'／'+(e.restored?'安全な復元を実施済み':e.recoverable?'バックアップは利用可能、復元未実施':'復元未実施')+'。既に発生した侵害・流出は変わりません。':status==='affected'?`通過の理由：${guide.passes}`:status==='prevented'?`阻止の理由：${blockedCause}`:`未到達：${e.isolated&&!isPhishing()?`EDRがSTEP ${e.isolatedAt+1}で侵害端末を隔離済み。後続操作は発生しません。`:'前の段階で阻止したため、この操作は発生しません。'}`;     if(isDdos()){
       $('causeHint').textContent=e.notStarted?'上流DDoS対策は攻撃だけを緩和し、一般利用者の通信は通します。':!e.saturated&&state.step>=3?`正常利用：${guide.stopped}`:status==='affected'?`結果：${guide.passes}`:status==='prevented'?`阻止：${guide.stopped}`:'被害発生なし：上流で攻撃通信を緩和しました。';
     }
@@ -3213,7 +3288,7 @@ window.CyberGuides.insider={
     $('introTitle').textContent=key==='ai'?'外部文書の指示で、AIが社内情報を持ち出す？':key==='insider'?'正規従業員の機密情報持ち出しは、どこで止める？':key==='bec'?'メール乗っ取りから不正送信まで、IT対策はどこで効く？':key==='ddos'?'Webサーバーが侵害されなくても、サービスは止まる？':key==='web-app'?'公開WebアプリのSQLインジェクション、どこで防げる？':key==='vendor-access'?'信頼している保守委託先のアカウントが悪用されたら？':key==='supply-chain-tampered'?'配信された更新ファイルが、途中ですり替えられたら？':key==='supply-chain'?'正規ソフトの更新が、攻撃の入口になる？':key==='phishing'?'フィッシングからSaaS情報漏えいへ、どうつながる？':key==='ransomware-direct'?'VPNからサーバーへの直接侵入は、どう防ぐ？':key==='ransomware-email'?'悪性メールからランサムウェアへ、どうつながる？':'ランサムウェア攻撃は、どこから広がるのか？';
     $('introDescription').textContent=scenario.summary;
     $('caseNumber').textContent=`INTERACTIVE SECURITY LEARNING / CASE ${key==='ransomware-direct'?'01-A':key==='ransomware-email'?'01-B':key==='vendor-access'?'03-A':key==='ai'?'08':key==='insider'?'07':key==='bec'?'06':key==='ddos'?'05':key==='web-app'?'04':key==='supply-chain'?'03-B':key==='supply-chain-tampered'?'補足例':scenario.number}`;
-    document.title=`Cyber Incident Explorer v0.5.41 — ${scenario.category}`;if(sideView==='guide')renderScenarioGuide();
+    document.title=`Cyber Incident Explorer v0.5.42 — ${scenario.category}`;if(sideView==='guide')renderScenarioGuide();
     const refs=$('referenceList');refs.replaceChildren();scenario.references.forEach(ref=>{const a=document.createElement('a');a.href=ref.url;a.textContent=ref.label+' ↗';a.target='_blank';a.rel='noopener noreferrer';refs.append(a);});render();
   }
   // v0.5.18: the full-scenario guide is independent of incident simulation.

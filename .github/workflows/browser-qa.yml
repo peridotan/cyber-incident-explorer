@@ -1,0 +1,39 @@
+name: CIE browser layout QA
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'tests/browser/**'
+      - 'package.json'
+      - '.github/workflows/browser-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install test dependencies
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Browser QA
+        run: npm run test:browser
+      - name: Upload screenshots and test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cie-browser-qa
+          path: |
+            tests/browser/test-results/
+            tests/browser/playwright-report/
+          if-no-files-found: warn
+          retention-days: 14
