@@ -2340,7 +2340,7 @@ window.CyberGuides.insider={
     const icons=svgNode('g',{id:'deviceLayer'});devices.forEach(d=>{const n=svgNode('g',{class:'asset'+(d.future?' future-asset':''),'data-device':d.id,'data-step':d.step,tabindex:0,role:'button','aria-label':d.name+'。地点の説明を表示'});const small=d.w<140;const iconX=d.x+(small?12:13),iconY=d.y+(small?14:15);const inner=`<title>${escapeHtml(d.name)}：クリックすると、この地点で何が起きるかを表示</title><rect class="asset-bg" x="${d.x}" y="${d.y}" width="${d.w}" height="${d.h}" rx="10"/><rect class="asset-rail" x="${d.x+5}" y="${d.y+8}" width="4" height="${d.h-16}" rx="2"/><g class="asset-icon" transform="translate(${iconX} ${iconY}) scale(${small?.76:.85})">${iconPaths[d.icon]}</g><text class="asset-title" x="${d.x+(small?44:52)}" y="${d.y+29}" font-size="${small?'12':'14'}">${escapeHtml(d.name)}</text><text class="asset-caption" x="${d.x+(small?44:52)}" y="${d.y+46}">${escapeHtml(d.sub)}</text><circle class="status-dot" cx="${d.x+16}" cy="${d.y+d.h-17}" r="4"/><text class="asset-status" x="${d.x+27}" y="${d.y+d.h-13}">待機中</text>`;n.innerHTML=inner;n.addEventListener('click',()=>openLocation(d.id));n.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();openLocation(d.id);}});icons.append(n);});svg.append(icons);
     // 暗号化は通信先への移動ではなくファイルサーバー内の被害。宛先のない矢印は描かない。
     const impact=svgNode('g',{id:'fileImpactMarker',class:'file-impact',display:'none','aria-hidden':'true'});
-    impact.innerHTML='<rect x="990" y="91" width="155" height="27" rx="7"/><text x="1073" y="109" text-anchor="middle">暗号化被害</text>';
+    impact.innerHTML='<rect x="958" y="91" width="205" height="27" rx="7"/><text x="1060" y="109" text-anchor="middle">暗号化被害</text>';
     svg.append(impact);
     svg.append(svgNode('g',{id:'routeStops','aria-label':'攻撃が遮断された地点'}));
     svg.append(svgNode('text',{id:'archLegendPrimary',class:'map-foot-note',x:35,y:633},'赤線＝通過した経路 ／ 緑の×＝遮断地点 ／ 灰線＝今後の想定経路 ／ 暗号化は機器の状態'));
@@ -2436,7 +2436,7 @@ window.CyberGuides.insider={
       // Past access persists after isolation: do not turn the firewall or server
       // back into '未到達' merely because the PC is now isolated.
       case'segfw':return t<2?{kind:'',label:'境界制御'}:!e.entry?neutral:e.fwPassed||e.lateral?{kind:'afflicted',label:'通信通過履歴あり'}:e.isolated?neutral:{kind:'stopped',label:'通信を遮断'};
-      case'files':return t<2?neutral:!e.entry?neutral:(e.lateral||e.writeAllowed)?e.restored&&t>=5?{kind:'defended',label:'復旧済み（暗号化履歴あり）'}:e.serverBlocked&&t>=4?{kind:'stopped',label:'暗号化阻止（履歴あり）'}:{kind:'afflicted',label:e.encrypted?'暗号化被害':e.readAllowed&&!e.writeAllowed?'閲覧可・書込拒否':!e.readAllowed&&e.writeAllowed?'読取拒否・書込可':'アクセス履歴あり・未暗号化'}:e.isolated?neutral:{kind:'stopped',label:e.fwPassed?'読取・書込権限で拒否':'到達を阻止'};
+      case'files':return t<2?neutral:!e.entry?neutral:(e.lateral||e.writeAllowed)?e.restored&&t>=5?{kind:'defended',label:'復旧済み（暗号化履歴あり）'}:e.serverBlocked&&t>=4?{kind:'stopped',label:'暗号化阻止（履歴あり）'}:{kind:'afflicted',label:e.encrypted?'暗号化被害':e.readAllowed&&!e.writeAllowed?'閲覧履歴あり・書込拒否':!e.readAllowed&&e.writeAllowed?'読取拒否・書込可':'アクセス履歴あり・未暗号化'}:e.isolated?neutral:{kind:'stopped',label:e.fwPassed?'読取・書込権限で拒否':'到達を阻止'};
       case'outside':return t<3?neutral:!e.lateral?neutral:e.exfil?{kind:'afflicted',label:state.attackRoute==='direct'?'VPN経由でデータ取得':'情報を受信'}:{kind:'',label:'未受信'};
       case'swg':if(state.attackRoute==='direct')return{kind:'',label:'VPN取得経路では非経由'};return t<3?{kind:'',label:'出口制御'}:!e.lateral?neutral:e.egressAllowed?{kind:'afflicted',label:'通信を許可'}:{kind:'stopped',label:'宛先で遮断'};
       case'dlp':if(state.attackRoute==='direct')return{kind:'',label:'VPN取得経路では非経由'};return t<3?{kind:'',label:'情報検査'}:!e.egressAllowed?{kind:'',label:'SWGで遮断済み'}:e.dlpAllowed?{kind:'afflicted',label:'データを許可'}:{kind:'stopped',label:'機密情報で遮断'};
@@ -2714,7 +2714,7 @@ window.CyberGuides.insider={
     });
     focusDiagramZones(visibleFocus);
     const aiLegend=$('archLegendPrimary'),aiNote=$('archLegendSecondary');
-    if(aiLegend)aiLegend.textContent=isAi()?'赤＝不正操作 ／ 橙点線＝URL取得で届いた未信頼データ ／ 青点線＝正規の要約依頼 ／ 緑×＝遮断':'赤線＝通過した経路 ／ 緑の×＝遮断地点 ／ 灰線＝今後の想定経路 ／ 暗号化は機器の状態';
+    if(aiLegend)aiLegend.textContent=isAi()?'赤＝不正操作 ／ 橙点線＝URL取得で届いた未信頼データ ／ 青点線＝正規の要約依頼 ／ 緑×＝遮断':'赤線＝通過履歴 ／ 緑×＝通信遮断 ／ 緑札＝操作拒否 ／ 灰線＝未到達';
     if(aiNote)aiNote.textContent=isAi()?'※ 社内文書APIは侵害されず、過剰権限でAI Agentへ応答した状態を示します。':'※ 今回のシナリオで使う機器だけを表示。点線の区画は論理的な所属を示します。';
     // Full-route learning display: planned segments remain visible, successfully
     // traversed segments persist after stepping forward, and a failed control
@@ -2816,11 +2816,15 @@ window.CyberGuides.insider={
       // completed attacks. They never receive red or green arrows.
     });
     const impact=$('fileImpactMarker');
-    if(!isPhishing() && !isVendor() && !isWeb() && !isDdos() && view==='attack' && state.step>=4 && (e.encrypted || e.serverBlocked || (e.isolatedAt===4&&e.lateral))){
+    // An ACL can reject a FILE WRITE after network access and data reading already succeeded.
+    // Never turn historical red access paths green for this non-network operation.
+    const fileWriteDenied=!isPhishing()&&!isVendor()&&!isSupply()&&!isWeb()&&!isDdos()&&!isBec()&&!isInsider()&&!isAi()&&state.step>=4&&e.fwPassed&&!e.writeAllowed&&!!controlsAt(4).writeAcl;
+    if(!isPhishing()&&!isVendor()&&!isWeb()&&!isDdos()&&view==='attack'&&state.step>=4&&(e.encrypted||e.serverBlocked||fileWriteDenied||(e.isolatedAt===4&&e.lateral))){
       impact.removeAttribute('display');
-      impact.classList.toggle('safe',e.restored || e.serverBlocked || (!e.encrypted&&e.isolatedAt===4));
-      impact.querySelector('text').textContent=e.restored?'✓ 復旧済・暗号化履歴あり':e.encrypted?'! 暗号化被害':e.serverBlocked?'✓ Server EDR：暗号化阻止':'✓ PC隔離：暗号化阻止';
-    } else impact.setAttribute('display','none');
+      impact.classList.toggle('safe',e.restored||e.serverBlocked||fileWriteDenied||(!e.encrypted&&e.isolatedAt===4));
+      impact.querySelector('text').textContent=e.restored?'✓ 復旧済・暗号化履歴あり':e.encrypted?'! 暗号化被害':fileWriteDenied?'✓ 書込拒否・暗号化阻止':e.serverBlocked?'✓ Server EDR：暗号化阻止':'✓ PC隔離：暗号化阻止';
+      impact.setAttribute('aria-label',fileWriteDenied?'読取・持出しの履歴を残したまま、書込権限不足で暗号化操作を拒否しました。':impact.querySelector('text').textContent);
+    }else impact.setAttribute('display','none');
     if(view==='attack'&&!isPhishing()&&!isVendor()&&!isWeb()&&!isDdos()&&!isBec()&&!isInsider()&&!isAi()&&state.step>=4&&e.serverBlocked){
       const stop=svgNode('g',{class:'block-stop',transform:'translate(1117 132)',role:'button',tabindex:0,'aria-label':'Server EDRでサーバー上の暗号化実行を阻止。説明を開く'});
       stop.innerHTML='<title>File Server: Server EDRで暗号化を阻止（過去のアクセス・流出は保持）</title><circle class="block-stop-halo" r="17"/><circle class="block-stop-disc" r="11"/><path d="M-5 -5L5 5M5 -5L-5 5"/>';
