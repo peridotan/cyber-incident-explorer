@@ -87,6 +87,7 @@ test('phishing final step and restart', async ({ page }, testInfo) => {
   }
   await expect(page.locator('#stepPosition')).toContainText('06');
   await page.screenshot({ path: testInfo.outputPath('phishing-step-06.png'), fullPage: true });
+  await page.locator('#transportAdvanced').evaluate(el => { el.open = true; });
   await page.locator('#restartButton').click();
   await expect(page.locator('#stepPosition')).toContainText('01');
 });
