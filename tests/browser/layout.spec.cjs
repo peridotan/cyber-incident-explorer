@@ -175,3 +175,18 @@ for (const viewport of [{width: 1280,height: 720},{width: 1366,height: 768}]) {
     await page.screenshot({path: testInfo.outputPath(`state-semantics-${viewport.width}.png`), fullPage: true});
   });
 }
+
+
+test('AI stage explanation must never reuse VPN ransomware reasoning', async ({page}, testInfo) => {
+  await page.goto(url);
+  await page.locator('#scenarioSelect').selectOption('ai');
+  await page.locator('#nextButton').click();
+  const first = page.locator('#causeHint');
+  await expect(first).toContainText('公開レポート');
+  await expect(first).not.toContainText('VPN');
+  await expect(first).not.toContainText('パスワード');
+  await page.locator('#nextButton').click();
+  await expect(page.locator('#causeHint')).toContainText('HTTPS GET');
+  await expect(page.locator('#causeHint')).not.toContainText('VPN');
+  await page.screenshot({path: testInfo.outputPath('ai-correct-stage-explanation.png'), fullPage: true});
+});
