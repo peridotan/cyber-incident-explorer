@@ -190,3 +190,45 @@ test('AI stage explanation must never reuse VPN ransomware reasoning', async ({p
   await expect(page.locator('#causeHint')).not.toContainText('VPN');
   await page.screenshot({path: testInfo.outputPath('ai-correct-stage-explanation.png'), fullPage: true});
 });
+
+
+const fullFlows = [
+  'ransomware-direct', 'ransomware-email', 'phishing', 'vendor-access',
+  'supply-chain', 'web-app', 'ddos', 'bec', 'insider', 'ai'
+];
+
+for (const scenario of fullFlows) {
+  test(`v1 release gate: full replay, compare and reset - ${scenario}`, async ({ page }, testInfo) => {
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    await page.goto(url);
+    await page.locator('#scenarioSelect').selectOption(scenario);
+    const allSwitches = page.locator('#defenseControls [role="switch"]');
+    expect(await allSwitches.count()).toBeGreaterThan(0);
+    for (let i=0; i<6; i++) await page.locator('#nextButton').click();
+    await expect(page.locator('#stepPosition')).toContainText('06');
+    const baseline = (await page.locator('#outcomeText').innerText()).trim();
+    expect(baseline).not.toBe('');
+    await expect(page.locator('#replayButton')).toBeVisible();
+    await page.locator('#replayButton').click();
+    await expect(page.locator('#stepPosition')).toContainText('開始前');
+    await expect(page.locator('#comparisonResult')).toBeVisible();
+    const protection = page.locator('#defenseControls [role="switch"]').first();
+    await expect(protection).toHaveAttribute('aria-checked', 'false');
+    await protection.click();
+    await expect(page.locator('#defenseControls [role="switch"]').first()).toHaveAttribute('aria-checked', 'true');
+    for (let i=0; i<6; i++) await page.locator('#nextButton').click();
+    await expect(page.locator('#stepPosition')).toContainText('06');
+    const after = (await page.locator('#outcomeText').innerText()).trim();
+    expect(after).not.toBe('');
+    expect(after).not.toBe(baseline);
+    await expect(page.locator('#comparisonResult')).toContainText('結果の比較');
+    await page.screenshot({path:testInfo.outputPath(`release-gate-${scenario}.png`),fullPage:true});
+    await page.locator('#transportAdvanced').evaluate(el=>{el.open=true;});
+    await page.locator('#restartButton').click();
+    await expect(page.locator('#stepPosition')).toContainText('開始前');
+    await expect(page.locator('#defenseControls [role="switch"]').first()).toHaveAttribute('aria-checked', 'false');
+    await expect(page.locator('#comparisonResult')).toBeHidden();
+    expect(errors).toEqual([]);
+  });
+}
