@@ -125,3 +125,68 @@ for (const size of sizes.filter(x => x.width < 1920)) {
     });
   }
 }
+
+
+for (const scenario of ['ransomware-direct', 'ransomware-email']) {
+  test(`write ACL keeps past access red but marks encryption write rejected: ${scenario}`, async ({ page }, testInfo) => {
+    await page.goto(url);
+    await page.locator('#scenarioSelect').selectOption(scenario);
+    const acl = page.getByRole('switch', { name: /共有ファイル書込制限/ });
+    await acl.click();
+    await expect(page.getByRole('switch', { name: /共有ファイル書込制限/ })).toHaveAttribute('aria-checked', 'true');
+    for (let step = 0; step < 6; step++) await page.locator('#nextButton').click();
+
+    const server = page.locator('#architectureDiagram [data-device="files"]');
+    await expect(server).toHaveClass(/afflicted/); // Historical read access remains visible.
+    await expect(server.locator('.asset-status')).toContainText('書込拒否');
+    await expect(page.locator('#fileImpactMarker')).toBeVisible();
+    await expect(page.locator('#fileImpactMarker')).toHaveClass(/safe/);
+    await expect(page.locator('#fileImpactMarker text')).toContainText('暗号化阻止');
+    await expect(page.locator('#fileImpactMarker')).toHaveAttribute('aria-label', /書込権限不足/);
+    await expect(page.locator('#outcomeText')).toContainText('情報流出');
+    await page.screenshot({path: testInfo.outputPath(`write-acl-${scenario}.png`), fullPage: true});
+  });
+}
+
+
+for (const viewport of [{width: 1280,height: 720},{width: 1366,height: 768}]) {
+  test(`all ten scenarios distinguish node status from route status: ${viewport.width}`, async ({page},testInfo) => {
+    await page.setViewportSize(viewport);
+    await page.goto(url);
+    await page.locator('#appearanceButton').click();
+    await page.locator('#fontSizeSelect').selectOption('lg');
+    await page.locator('#appearanceButton').click();
+    const values = await page.locator('#scenarioSelect option').evaluateAll(options => options.map(option => option.value));
+    expect(values).toHaveLength(10);
+    for (const value of values) {
+      await page.locator('#scenarioSelect').selectOption(value);
+      await page.locator('#nextButton').click();
+      const hint = page.locator('#modeHint');
+      await expect(hint).toContainText('機器の赤＝不正な事象・影響');
+      await expect(hint).toContainText('緑×＝遮断');
+      const nodes = await page.locator('#architectureDiagram [data-device].afflicted').count();
+      if (nodes > 0) {
+        const label = await page.locator('#architectureDiagram [data-device].afflicted').first().getAttribute('aria-label');
+        expect(label).toContain('機器の感染を意味しません');
+      }
+      const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+      expect(overflow).toBeLessThanOrEqual(2);
+    }
+    await page.screenshot({path: testInfo.outputPath(`state-semantics-${viewport.width}.png`), fullPage: true});
+  });
+}
+
+
+test('AI stage explanation must never reuse VPN ransomware reasoning', async ({page}, testInfo) => {
+  await page.goto(url);
+  await page.locator('#scenarioSelect').selectOption('ai');
+  await page.locator('#nextButton').click();
+  const first = page.locator('#causeHint');
+  await expect(first).toContainText('公開レポート');
+  await expect(first).not.toContainText('VPN');
+  await expect(first).not.toContainText('パスワード');
+  await page.locator('#nextButton').click();
+  await expect(page.locator('#causeHint')).toContainText('HTTPS GET');
+  await expect(page.locator('#causeHint')).not.toContainText('VPN');
+  await page.screenshot({path: testInfo.outputPath('ai-correct-stage-explanation.png'), fullPage: true});
+});
