@@ -1,3 +1,15 @@
+# Cyber Incident Explorer — 現行版のQA記録
+
+## v0.5.43（2026-11-25）公開済み版の検証サマリー
+
+- **実ブラウザー回帰：47/47 PASS。** Chromium / Playwright GitHub Actions [Run 45518861337](https://github.com/peridotan/cyber-incident-explorer/actions/runs/45518861337)。01-A/01-Bのファイル書込ACL表示、10シナリオのノードと通信の状態説明、AI用STEP説明への修正を含む。
+- **39対策の単独ON検証：v0.5.42時点の隔離テストで39/39 PASS。** v0.5.43では対策判定ロジックを変更していない。ただし隔離テストの再実行可能なソース一式がブラウザーQAワークフローに含まれていることまでは確認できていない。
+- **公開状態：** v0.5.43のPages workflow #21の成功は確認済み。公開URLでの全操作を再測定したことを意味しない。
+- **正式版準備の保留事項：** [v1リリース前総合レビュー](docs/v1-release-readiness.md) を参照。新しい10シナリオE2Eテストの結果を別途記録する。
+- 以下は過去バージョンのQA記録。v0.5.42の42件の結果を、現行v0.5.43の47件と混同しないこと。
+
+---
+
 # Cyber Incident Explorer v0.5.42 公開前QAレポート
 
 - 対象：`peridotan/cyber-incident-explorer` 作業ブランチ `fix/v0.5.42-qa-fixes`
