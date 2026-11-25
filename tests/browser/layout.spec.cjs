@@ -147,3 +147,31 @@ for (const scenario of ['ransomware-direct', 'ransomware-email']) {
     await page.screenshot({path: testInfo.outputPath(`write-acl-${scenario}.png`), fullPage: true});
   });
 }
+
+
+for (const viewport of [{width: 1280,height: 720},{width: 1366,height: 768}]) {
+  test(`all ten scenarios distinguish node status from route status: ${viewport.width}`, async ({page},testInfo) => {
+    await page.setViewportSize(viewport);
+    await page.goto(url);
+    await page.locator('#appearanceButton').click();
+    await page.locator('#fontSizeSelect').selectOption('lg');
+    await page.locator('#appearanceButton').click();
+    const values = await page.locator('#scenarioSelect option').evaluateAll(options => options.map(option => option.value));
+    expect(values).toHaveLength(10);
+    for (const value of values) {
+      await page.locator('#scenarioSelect').selectOption(value);
+      await page.locator('#nextButton').click();
+      const hint = page.locator('#modeHint');
+      await expect(hint).toContainText('機器の赤＝不正な事象・影響');
+      await expect(hint).toContainText('緑×＝遮断');
+      const nodes = await page.locator('#architectureDiagram [data-device].afflicted').count();
+      if (nodes > 0) {
+        const label = await page.locator('#architectureDiagram [data-device].afflicted').first().getAttribute('aria-label');
+        expect(label).toContain('機器の感染を意味しません');
+      }
+      const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+      expect(overflow).toBeLessThanOrEqual(2);
+    }
+    await page.screenshot({path: testInfo.outputPath(`state-semantics-${viewport.width}.png`), fullPage: true});
+  });
+}
