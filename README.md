@@ -42,8 +42,8 @@ GitHub Actionsの `CIE browser layout QA` でも同じブラウザーテスト�
 
 - 全10シナリオ・39対策を収録。攻撃経路、機器の事象、操作の成功・阻止、復旧の違いを構成図とステップ解説で学習できます。
 - Workで発見された表示・説明の不整合をv0.5.44までに修正済み。修正対象7対策の独立再QAに合格。
-- v1.0.0公開前のChromium／Playwright 65件の回帰テストを実施。詳細は [QA-REPORT.md](QA-REPORT.md) と [リリース前レビュー](docs/v1-release-readiness.md) を参照してください。
-- 正式版の変更点と検証範囲は [RELEASE_NOTES.md](RELEASE_NOTES.md) に記載しています。
+- v1.0.0公開前のChromium／Playwright 65件の回帰テストを実施。詳細は [QA-REPORT.md](QA-REPORT.md) と [リリース前レビュー](https://github.com/peridotan/cyber-incident-explorer/blob/main/docs/v1-release-readiness.md) を参照してください。
+- 正式版の変更点と検証範囲は [RELEASE_NOTES.md](https://github.com/peridotan/cyber-incident-explorer/blob/main/RELEASE_NOTES.md) に記載しています。
 
 ## v0.5.44の変更（Work独立操作QAで発見した表示不具合の修正）
 
