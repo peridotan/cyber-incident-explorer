@@ -190,3 +190,43 @@ test('AI stage explanation must never reuse VPN ransomware reasoning', async ({p
   await expect(page.locator('#causeHint')).not.toContainText('VPN');
   await page.screenshot({path: testInfo.outputPath('ai-correct-stage-explanation.png'), fullPage: true});
 });
+
+
+for (const config of [
+  {scenario:'web-app', control:/DBの機密情報アクセス権限|DB.*最小権限/, reason:/Database.*最小権限|DB.*読取.*拒否/},
+  {scenario:'ai', control:/文書APIの権限最小化|文書API.*最小権限/, reason:/文書API.*権限.*拒否|文書API.*読取.*拒否/}
+]) {
+  test(`Work QA-01: correct read-denial attribution in ${config.scenario}`, async ({page}, testInfo) => {
+    await page.goto(url);
+    await page.locator('#scenarioSelect').selectOption(config.scenario);
+    await page.getByRole('switch', {name:config.control}).click();
+    for(let i=0;i<4;i++)await page.locator('#nextButton').click();
+    await expect(page.locator('#causeHint')).toContainText(config.reason);
+    await expect(page.locator('#causeHint')).not.toContainText('SWGが接続先');
+    await page.screenshot({path:testInfo.outputPath(`work-qa-read-denial-${config.scenario}.png`),fullPage:true});
+  });
+}
+
+for (const enabled of [-1,0,1,2,3]) {
+  test(`Work QA-02: phishing final reason is defined, protection ${enabled}`, async ({page},testInfo) => {
+    await page.goto(url);
+    await page.locator('#scenarioSelect').selectOption('phishing');
+    if(enabled>=0)await page.locator('#defenseControls [role="switch"]').nth(enabled).click();
+    for(let i=0;i<6;i++)await page.locator('#nextButton').click();
+    await expect(page.locator('#stepPosition')).toContainText('06');
+    await expect(page.locator('#causeHint')).toContainText('対応手順の確認');
+    await expect(page.locator('#causeHint')).not.toContainText('undefined');
+    await page.screenshot({path:testInfo.outputPath(`work-qa-phishing-${enabled}.png`),fullPage:true});
+  });
+}
+
+test('Work QA-03: upstream DDoS protection preserves normal-user completed states', async ({page},testInfo)=>{
+  await page.goto(url);
+  await page.locator('#scenarioSelect').selectOption('ddos');
+  await page.locator('#defenseControls [role="switch"]').first().click();
+  for(let i=0;i<6;i++)await page.locator('#nextButton').click();
+  const stateTexts=await page.locator('#timeline .timeline-step small').allTextContents();
+  expect(stateTexts.slice(3)).toEqual(['一般利用者の通信は正常','公開Webに正常アクセス','Webサービスを継続利用可能']);
+  await expect(page.locator('#outcomeText')).toContainText('利用可能');
+  await page.screenshot({path:testInfo.outputPath('work-qa-ddos-normal-traffic.png'),fullPage:true});
+});
