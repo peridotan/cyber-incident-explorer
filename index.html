@@ -673,6 +673,53 @@
 #architectureDiagram .map-foot-note{font-size:12px}
 #architectureDiagram .asset:focus-visible .asset-bg{stroke:#b5eaff;stroke-width:3}
 </style>
+<style id="cie-ui-preview">
+/* Presentation-only prototype: keep all simulator code and existing controls. */
+.cie-result-area{flex:0 0 auto;min-width:0;display:grid;gap:4px;margin-top:6px}
+.cie-result-area .outcome-summary{margin:0;padding:7px 10px;min-width:0}
+.cie-result-area .outcome-summary p{font-size:calc(11px * var(--font-scale,1));line-height:1.4;margin:3px 0 0}
+.cie-result-area .outcome-head{font-size:calc(10px * var(--font-scale,1))}
+.cie-result-area .outcome-summary>strong{font-size:calc(13px * var(--font-scale,1))}
+.cie-result-area .comparison-result{margin:0;font-size:calc(11px * var(--font-scale,1))}
+.cie-result-area .comparison-result[hidden]{display:none!important}
+.defense-card{border-radius:6px;box-shadow:none}
+.sidebar-view-tabs button{font-weight:750}
+@media(min-width:1100px) and (min-height:650px){
+ .top-header{padding-inline:16px}
+ .main{padding-inline:14px}
+ .intro{flex-basis:57px;min-height:57px;max-height:57px}
+ .intro .kicker{display:block;font-size:calc(9px * var(--font-scale,1));margin-bottom:2px}
+ .intro h1{font-size:calc(17px * var(--font-scale,1))}
+ .intro .scenario-assumption{height:auto;min-height:42px;max-height:57px;overflow:auto}
+ .scenario-selector{width:320px;flex-basis:320px}
+ .scenario-selector label{display:block;font-size:calc(9px * var(--font-scale,1));margin:0 0 2px}
+ .scenario-selector select{padding:4px 26px 4px 6px}
+ .playback{grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 39px;gap:3px 12px;min-height:74px;max-height:74px;flex-basis:74px}
+ .timeline-step{height:39px}
+ .transport{gap:3px}
+ .transport-advanced summary{padding:4px 8px}
+ .transport-advanced[open]{min-width:0}
+ .transport-advanced-panel{position:absolute;right:0;top:100%;z-index:20}
+ .diagram-panel,.defense-panel{padding:9px}
+ .diagram-foot{min-height:0}
+ .diagram-topline{gap:2px;margin:4px 0}
+ .defense-title h2{font-size:calc(13px * var(--font-scale,1))}
+ .bulk-controls{margin:5px 0;gap:5px}
+ .defense-card{padding:6px 7px}
+ .defense-copy small{display:block;font-size:calc(10px * var(--font-scale,1));line-height:1.35}
+ .defense-controls{gap:4px}
+ .control-note{padding-top:5px}
+ .cie-result-area{max-height:36%;overflow:auto}
+}
+@media(min-width:1100px) and (max-height:740px){
+ .intro{flex-basis:52px;min-height:52px;max-height:52px}
+ .intro .scenario-assumption{max-height:52px}
+ .intro h1{font-size:calc(16px * var(--font-scale,1))}
+ .playback{flex-basis:70px;min-height:70px;max-height:70px}
+ .defense-card{padding:4px 6px}
+ .cie-result-area .outcome-summary{padding:5px 8px}
+}
+</style>
 </head>
 <body>
 <div class="shell">
@@ -681,7 +728,7 @@
 <div aria-hidden="true" class="brand-symbol"><svg viewbox="0 0 36 36"><path d="M18 3 31 9v11c0 8-5.5 11.5-13 14C10.5 31.5 5 28 5 20V9z" fill="none" stroke="currentColor" stroke-width="2.2"></path><path d="M11 18h14M18 11v14" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path></svg></div>
 <div><div class="brand-name">CYBER <span>INCIDENT</span> EXPLORER</div><div class="brand-sub">システム構成図で学ぶサイバーインシデント</div></div>
 </div>
-<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><span class="vtag">v1.0.0</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
+<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><span class="vtag">v1.0.0 · UI preview</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
 </header>
 <main class="main">
 <section aria-label="シナリオの概要" class="intro">
@@ -710,22 +757,23 @@
 </section>
 <div class="work-area">
 <section aria-labelledby="diagramTitle" class="diagram-panel panel">
-<div class="diagram-head"><div><div class="section-id">02 / SYSTEM ARCHITECTURE</div><h2 id="diagramTitle">システム構成図</h2><p>機器を選ぶと、その場所の役割と対策を詳しく見られます。</p></div><div class="diagram-actions"><button aria-pressed="false" class="ghost-btn zoom-btn" id="zoomButton" type="button">⛶ 図を拡大</button><div aria-label="構成図の表示モード" class="view-switch" role="group"><button data-mode="system" type="button">通常構成</button><button aria-pressed="true" class="selected" data-mode="attack" type="button">攻撃経路</button><button data-mode="defense" type="button">防御対策</button></div></div></div>
+<div class="diagram-head"><div><div class="section-id">02 / SYSTEM ARCHITECTURE</div><h2 id="diagramTitle">構成図・対策の作用点</h2><p>機器を選ぶと、その場所の役割と対策を詳しく見られます。</p></div><div class="diagram-actions"><button aria-pressed="false" class="ghost-btn zoom-btn" id="zoomButton" type="button">⛶ 図を拡大</button><div aria-label="構成図の表示モード" class="view-switch" role="group"><button data-mode="system" type="button">通常構成</button><button aria-pressed="true" class="selected" data-mode="attack" type="button">攻撃経路</button><button data-mode="defense" type="button">防御対策</button></div></div></div>
 <div class="diagram-topline"><div class="mode-hint" id="modeHint">グレー線は論理接続（向きなし）。赤／緑の小矢印が進行・遮断方向を示します。通常構成線とは重ねません。</div><div class="legend"><span><i class="legend-mark danger"></i>通過済み</span><span><i class="legend-mark success"></i>阻止 ×</span><span><i class="legend-mark planned"></i>予定・未到達</span></div></div>
 <div aria-label="スクロール可能なシステム構成図" class="diagram-scroller" id="diagramScroller" tabindex="0"><svg aria-labelledby="svgDiagramTitle svgDiagramDesc" id="architectureDiagram" role="img" viewbox="0 0 1440 680" xmlns="http://www.w3.org/2000/svg"><title id="svgDiagramTitle">シナリオに関係する機器の構成図</title><desc id="svgDiagramDesc">社外、境界、社内LAN、認証基盤、サーバー群、クラウド、バックアップ、SOCの8領域。境界のWAFと出口SWG・DLPを別に表示。攻撃経路全体を描き、通過済みを赤、遮断地点を緑の×、予定・未到達を灰色で示します。</desc></svg></div>
 <div class="diagram-foot"><div class="selected-event"><span aria-hidden="true" class="event-indicator" id="eventIndicator"></span><div><strong id="eventTitle">初期侵入</strong><span id="eventSummary">VPNへの不正ログインを試みています。</span><span class="cause-hint" id="causeHint">なぜここを通れる？ ステップの条件を確認できます。</span></div></div><div class="small-meta">※ 通信線は教育上の概念表現です。図は実在企業の構成ではありません。</div></div>
+<div class="cie-result-area"><div class="outcome-summary"><div class="outcome-head"><span>今回の結果（学習用）</span><span class="outcome-mark" id="outcomeMark"></span></div><strong aria-live="polite" id="outcomeText">情報流出と暗号化被害が発生</strong><p id="outcomeDetail"></p></div><p class="comparison-result" hidden="" id="comparisonResult" aria-live="polite"></p></div>
 </section>
 <aside aria-label="対策・攻撃解説パネル" class="defense-panel panel"><div aria-label="右側の表示" class="sidebar-view-tabs" role="tablist"><button aria-controls="defenseView" aria-selected="true" id="defensePanelTab" role="tab" type="button">⚙ 対策</button><button aria-controls="scenarioGuidePanel" aria-selected="false" id="learningPanelTab" role="tab" type="button">📖 ステップ解説</button></div><div aria-labelledby="defensePanelTab" class="sidebar-view" id="defenseView" role="tabpanel">
 <div class="defense-title"><div><div class="section-id">03 / DEFENSE LAB · 攻撃履歴を維持</div><h2 id="defenseTitle">対策の切り替え</h2></div><span class="on-count" id="enabledCount">0 / 6 ON</span></div>
 <p aria-live="polite" class="defense-instruction" id="defenseInstruction">【初めての方】対策OFFで攻撃開始 → 最後に「対策を変えて比較」→ 対策ONでもう一度開始。</p>
-<p class="comparison-result" hidden="" id="comparisonResult" aria-live="polite"></p><div class="bulk-controls" id="allSetupControls"><button class="all-on" id="allOnButton" type="button">✓ 一括ON</button><button class="all-off" id="allOffButton" type="button">一括OFF</button></div>
+<div class="bulk-controls" id="allSetupControls"><button class="all-on" id="allOnButton" type="button">✓ 一括ON</button><button class="all-off" id="allOffButton" type="button">一括OFF</button></div>
 <div class="history-locked-note" hidden="" id="historyLockedNote">攻撃履歴は固定されています。上部の「対策を変えて比較」を押すと、現在のシナリオを保って対策を選び直せます。</div>
 <div aria-label="発生済みインシデントへの対応" class="recovery-actions" hidden="" id="recoveryActions">
 <div class="recovery-buttons"><button id="containButton" type="button">① 封じ込め実施</button><button id="restoreButton" type="button">② File Server復元</button></div>
 <p id="recoveryInfo">暗号化被害は発生済みです。攻撃履歴を消さず、順番に対応します。</p>
 </div>
 <div class="defense-controls" id="defenseControls"></div>
-<div class="outcome-summary"><div class="outcome-head"><span>今回の結果（学習用）</span><span class="outcome-mark" id="outcomeMark"></span></div><strong aria-live="polite" id="outcomeText">情報流出と暗号化被害が発生</strong><p id="outcomeDetail"></p></div>
+
 <div class="control-note"><span>ⓘ</span><p>開始前に選んだ対策は最初から有効。途中のON/OFFは次の未実行ステップから適用し、過去の侵害や流出は取り消しません。復旧は別操作です。</p></div>
 </div><section aria-labelledby="learningPanelTab" class="scenario-guide-panel" hidden="" id="scenarioGuidePanel" role="tabpanel">
 <header class="scenario-guide-head"><div><span class="section-id">SCENARIO GUIDE / 攻撃の全体像</span><h2 id="scenarioGuideTitle">ステップ解説</h2><p id="scenarioGuideTag"></p></div><button aria-label="シナリオ解説を閉じる" class="ghost-btn" id="closeScenarioGuideButton" type="button">対策に戻る</button></header>
