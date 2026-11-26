@@ -1,0 +1,75 @@
+name: Publish CIE v1.0.0 GitHub Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - README.md
+      - RELEASE_NOTES.md
+      - .github/workflows/release.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cie-release-v1.0.0
+  cancel-in-progress: false
+
+jobs:
+  validate-and-release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate target version
+        run: |
+          grep -Fq '<title>Cyber Incident Explorer v1.0.0 ' index.html
+          grep -Fq '# Cyber Incident Explorer v1.0.0' README.md
+          test -f RELEASE_NOTES.md
+          test -f LICENSE
+      - name: Install test dependencies
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Full browser QA before release
+        run: npm run test:browser
+      - name: Assemble minimal distribution
+        run: |
+          mkdir -p dist
+          zip -j -q dist/cyber-incident-explorer-v1.0.0.zip index.html README.md QA-REPORT.md LICENSE CONTRIBUTING.md
+          unzip -Z1 dist/cyber-incident-explorer-v1.0.0.zip | sort > /tmp/actual-files.txt
+          printf '%s\n' CONTRIBUTING.md LICENSE QA-REPORT.md README.md index.html | sort > /tmp/expected-files.txt
+          diff -u /tmp/expected-files.txt /tmp/actual-files.txt
+      - name: Create v1.0.0 tag and GitHub Release if absent
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v1.0.0 >/dev/null 2>&1; then
+            echo 'GitHub Release v1.0.0 already exists; keeping the existing release unchanged.'
+          else
+            gh release create v1.0.0 \
+              dist/cyber-incident-explorer-v1.0.0.zip \
+              --target "$GITHUB_SHA" \
+              --title 'Cyber Incident Explorer v1.0.0' \
+              --notes-file RELEASE_NOTES.md
+          fi
+      - name: Upload QA artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cie-release-v1.0.0-qa
+          path: |
+            tests/browser/test-results/
+            tests/browser/playwright-report/
+          if-no-files-found: warn
+          retention-days: 14
