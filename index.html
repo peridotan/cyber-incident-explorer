@@ -1892,7 +1892,7 @@ window.CyberGuides.insider={
     if(isDdos()){
       if(i<2)return 'affected';
       if(i===2)return e.saturated?'affected':'prevented';
-      return e.saturated?'affected':'notreached';
+      return 'affected'; // Normal access and availability checks still take place after mitigation.
     }
     if(isWeb()){
       if(i===0)return 'affected';
@@ -1956,7 +1956,7 @@ window.CyberGuides.insider={
     if(isDdos()){
       const ok=['大量トラフィックを送信','公開IPに通信集中','接続回線が飽和','一般利用者の通信が遅延','公開Webへの正常アクセスが困難','サービス停止・事業影響'];
       const protectedLabels=['','','上流で攻撃通信を緩和','一般利用者の通信は正常','公開Webに正常アクセス','Webサービスを継続利用可能'];
-      return st==='notreached'||st==='prevented'?protectedLabels[i]:ok[i];
+      return !e.saturated&&i>=2?protectedLabels[i]:ok[i];
     }
     if(isWeb()){
       const passed=['不審なHTTPリクエストが到達','WAFが要求を許可','脆弱なSQL処理が成立','機密テーブルの照会に成功','HTTPS応答で機密データが漏えい','脆弱性修正・影響調査が必要'];
@@ -2083,7 +2083,7 @@ window.CyberGuides.insider={
       if(e.lateral)return{text:'重要共有へのアクセスの履歴あり・EDRで後続を阻止',tone:'warn',detail:'重要共有へのアクセスまでは発生しましたが、EDRによる隔離で外部転送と暗号化の後続操作を阻止した想定です。関連端末とアカウントは引き続き調査が必要です。'};
       return{text:'EDRが検知・隔離し、後続の攻撃を阻止',tone:'warn',detail:isEmail()?'メール添付ファイルの実行は発生しましたが、PC EDRによる早期隔離後に重要共有へのアクセス・情報流出・暗号化を防ぎました。':'VPNへの不正ログインと内部探索は発生しましたが、EDRが侵害端末を隔離し、その後の重要共有へのアクセス・情報流出・暗号化を防いだ想定です。'};
     }
-    if(!e.lateral&&!e.writeAllowed)return e.fwPassed&&controlsAt(2).fileAcl?{text:isEmail()?'PC侵害済み・共有ファイルへのアクセス権限で拒否':'VPN侵入済み・共有ファイルへのアクセス権限で拒否',tone:'warn',detail:isEmail()?'PCから内部FWへの通信は成立しましたが、File Serverの権限不足で操作を拒否しました。感染PCの隔離と調査は引き続き必要です。':'VPN接続と内部FWの通過は成立しましたが、File Server上のアクセス権限によりファイル操作を拒否しました。侵害した認証情報とログを調査する必要があります。'}:{text:'重要資産への重要共有へのアクセスを阻止',tone:'warn',detail:'社内への侵入は発生しましたが、ネットワーク分離などにより重要サーバーへの到達を防ぎました。侵害端末・認証情報の調査は必要です。'};
+    if(!e.lateral&&!e.writeAllowed)return e.fwPassed&&controlsAt(2).fileAcl?{text:isEmail()?'PC侵害済み・共有ファイルへのアクセス権限で拒否':'VPN侵入済み・共有ファイルへのアクセス権限で拒否',tone:'warn',detail:isEmail()?'PCから内部FWへの通信は成立しましたが、File Serverの権限不足で操作を拒否しました。感染PCの隔離と調査は引き続き必要です。':'VPN接続と内部FWの通過は成立しましたが、File Server上のアクセス権限によりファイル操作を拒否しました。侵害した認証情報とログを調査する必要があります。'}:{text:'重要共有へのアクセスを阻止',tone:'warn',detail:'社内への侵入は発生しましたが、ネットワーク分離などにより重要サーバーへの到達を防ぎました。侵害端末・認証情報の調査は必要です。'};
     if(e.serverAlerted&&!e.serverBlocked&&e.encrypted)return{text:'Server EDRは検知のみ・暗号化被害が発生',tone:'danger',detail:'サーバー上の不正実行を検知・通知したものの、停止や隔離は実施されず暗号化が発生しました。既存の情報流出履歴も消えません。'};
     if(e.serverBlocked)return{text:e.exfil?'Server EDRで暗号化阻止（情報流出は発生済み）':'Server EDRで暗号化阻止（読取は拒否）',tone:'warn',detail:e.exfil?'サーバー上での悪性プログラム実行を検知・停止した想定です。過去の情報流出は取り消せません。':'サーバー上での悪性実行を検知・停止した想定です。ファイル読取は拒否されていますが、別の実行権限で暗号化が試みられました。'};
     if(e.exfil&&e.encrypted)return{text:e.restored?'File Server復旧済み（情報流出・侵害履歴あり）':'情報流出と暗号化被害が発生',tone:e.restored?'warn':'danger',detail:e.restored?'安全な復元を実施しました。過去の侵入・情報流出・暗号化被害は発生済みとして残り、漏えい対応は別途必要です。':e.recoverable?'侵入・流出・暗号化は発生済み。バックアップを利用できますが、封じ込めと安全な復元が必要です。流出は取り消せません。':'侵入・流出・暗号化は発生済み。安全な復元手段がなく、復旧方法の検討が必要です。'};
@@ -2096,7 +2096,7 @@ window.CyberGuides.insider={
       if(kind==='notreached')return ['SIM / 前段のIT対策で後続の不正操作は未到達'];
       return kind==='prevented'?(st.logs.blocked||[]):(st.logs.active||[]);
     }if(isDdos()){
-      if(kind==='notreached')return ['SIM / 上流緩和により、このイベントは未到達'];
+      if(kind==='notreached')return ['SIM / 前段階の条件により未到達']; if(!e.saturated&&i>=3)return [i===3?'USER / 正常利用者の通信は通過':i===4?'WEB / 公開Webに正常アクセス':'SERVICE / 公開Webサービスは継続利用可能'];
       if(i===2&&kind==='prevented')return ['UPSTREAM / 攻撃通信を上流で緩和し、正常通信を通過','LINK / 接続回線は飽和しなかった'];
       if(i===4)return ['WEB / 回線飽和により正常利用者がアクセス困難'];
       return st.logs.active||[];
@@ -2865,7 +2865,7 @@ window.CyberGuides.insider={
     }
     if(isPhishing()&&state.step===1){guide.passes='社員が偽サイトへパスワードを入力したため、攻撃者に知られた。';guide.stopped='社員は不審なURLを開かず、パスワードを入力しなかった。';}
     if(isPhishing()&&state.step===5){const responseSummary=!e.login?'不正ログインは成立していません。メールとIdPの記録を確認し、監視を継続します。':e.shareAllowed?'侵害アカウント・セッションを封じ込め、SaaS監査ログで閲覧・外部共有・実取得の有無を調査します。共有を解除しても既に閲覧された情報は消えず、実取得された複製は回収できません。':'侵害アカウント・セッションを封じ込め、SaaS監査ログを確認します。今回の外部共有はポリシーで阻止されました。';$('eventSummary').textContent=responseSummary;$('causeHint').textContent='対応手順の確認です。シミュレーションはセッション失効や共有解除を自動実行しません。実行済みの閲覧・共有がある場合、その履歴と露出は残ります。';}
-    if(isEmail()&&state.step<2){guide.passes=state.step===0?'メール検査がこの添付ファイルを隔離しなかったため配信された。':'社員が悪性添付ファイルを開いたことを仮定し、PC上で不正な処理が実行された。';guide.stopped=state.step===0?'メールセキュリティが添付ファイルを隔離した。':'PC EDRが悪性動作を検知し端末を隔離した。';}const blockedCause=isPhishing()?(state.step===2?(controlsAt(state.step).prMfa?'FIDO2の本人確認を満たさず認証拒否。':'端末準拠の条件を満たさず認証拒否。'):state.step===4?(controlsAt(state.step).sharePolicy?'外部共有設定で拒否。SaaS DLPには到達しません。':'SaaS DLPが機密情報の共有を拒否。'):guide.stopped):e.isolatedAt===state.step?`EDRがSTEP ${state.step+1}で端末を隔離。既に起きた行動は残りますが、以後の攻撃はこの端末から続きません。`:state.step===3&&status==='prevented'&&!e.isolated?(!e.egressAllowed?'SWGが接続先・アプリのポリシーで外向き通信を遮断。DLPには到達していません。':'SWGが通信を許可した後、DLPが機密データの送信を拒否。'):guide.stopped;$('causeHint').textContent=e.notStarted?'対策を事前設定できます。進行中のON/OFFは、次の未実行ステップから適用されます。':!isPhishing()&&!isVendor()&&state.step===5?'対応状態：'+(e.contained?'封じ込め済み':'封じ込め未完了')+'／'+(e.restored?'安全な復元を実施済み':e.recoverable?'バックアップは利用可能、復元未実施':'復元未実施')+'。既に発生した侵害・流出は変わりません。':status==='affected'?`通過の理由：${guide.passes}`:status==='prevented'?`阻止の理由：${blockedCause}`:`未到達：${e.isolated&&!isPhishing()?`EDRがSTEP ${e.isolatedAt+1}で侵害端末を隔離済み。後続操作は発生しません。`:'前の段階で阻止したため、この操作は発生しません。'}`;     if(isDdos()){
+    if(isEmail()&&state.step<2){guide.passes=state.step===0?'メール検査がこの添付ファイルを隔離しなかったため配信された。':'社員が悪性添付ファイルを開いたことを仮定し、PC上で不正な処理が実行された。';guide.stopped=state.step===0?'メールセキュリティが添付ファイルを隔離した。':'PC EDRが悪性動作を検知し端末を隔離した。';}const blockedCause=isPhishing()?(state.step===2?(controlsAt(state.step).prMfa?'FIDO2の本人確認を満たさず認証拒否。':'端末準拠の条件を満たさず認証拒否。'):state.step===4?(controlsAt(state.step).sharePolicy?'外部共有設定で拒否。SaaS DLPには到達しません。':'SaaS DLPが機密情報の共有を拒否。'):guide.stopped):e.isolatedAt===state.step?`EDRがSTEP ${state.step+1}で端末を隔離。既に起きた行動は残りますが、以後の攻撃はこの端末から続きません。`:!isAi()&&!isWeb()&&!isVendor()&&!isPhishing()&&!isDdos()&&!isBec()&&!isInsider()&&!isSupply()&&state.attackRoute!=='direct'&&state.step===3&&status==='prevented'&&!e.isolated?(!e.egressAllowed?'SWGが接続先・アプリのポリシーで外向き通信を遮断。DLPには到達していません。':'SWGが通信を許可した後、DLPが機密データの送信を拒否。'):guide.stopped;$('causeHint').textContent=e.notStarted?'対策を事前設定できます。進行中のON/OFFは、次の未実行ステップから適用されます。':!isPhishing()&&!isVendor()&&state.step===5?'対応状態：'+(e.contained?'封じ込め済み':'封じ込め未完了')+'／'+(e.restored?'安全な復元を実施済み':e.recoverable?'バックアップは利用可能、復元未実施':'復元未実施')+'。既に発生した侵害・流出は変わりません。':status==='affected'?`通過の理由：${guide.passes}`:status==='prevented'?`阻止の理由：${blockedCause}`:`未到達：${e.isolated&&!isPhishing()?`EDRがSTEP ${e.isolatedAt+1}で侵害端末を隔離済み。後続操作は発生しません。`:'前の段階で阻止したため、この操作は発生しません。'}`;     if(isDdos()){
       $('causeHint').textContent=e.notStarted?'上流DDoS対策は攻撃だけを緩和し、一般利用者の通信は通します。':!e.saturated&&state.step>=3?`正常利用：${guide.stopped}`:status==='affected'?`結果：${guide.passes}`:status==='prevented'?`阻止：${guide.stopped}`:'被害発生なし：上流で攻撃通信を緩和しました。';
     }
     if(isBec()){
@@ -2882,7 +2882,7 @@ window.CyberGuides.insider={
       $('eventSummary').textContent=notes[state.step];
       $('causeHint').textContent=state.step===1?'社員PCのEDRは攻撃者端末を監視しません。':state.step===2?'通信とファイル操作権限は別の判定です。':'通過の理由：VPN経由のデータ取得を許可。社内SWG・端末DLPはこの経路を検査しません。';
     }
-    if(isPhishing()&&state.step===1&&status==='prevented')$('eventSummary').textContent='メールは配信されたものの、社員がリンクを開かず入力しなかったため、認証情報の流出を防いだ例です。';
+    if(isPhishing()&&state.step===5){$('causeHint').textContent='対応手順の確認：侵害アカウント・セッション、閲覧履歴と共有状態を調査します。失効や共有解除を自動実行せず、過去の露出を取り消しません。';} if(isPhishing()&&state.step===1&&status==='prevented')$('eventSummary').textContent='メールは配信されたものの、社員がリンクを開かず入力しなかったため、認証情報の流出を防いだ例です。';
     if(!isPhishing()&&!isVendor()&&!isWeb()&&!isDdos()&&!isBec()&&!isInsider()&&!isAi()&&state.attackRoute!=='direct'&&e.edrAlertedAt!==null&&!e.isolated&&state.step>=e.edrAlertedAt){
       $('causeHint').textContent='EDRは不審な動作を検知・通知しましたが、隔離を実行していないため攻撃は継続します。';
     }
