@@ -673,15 +673,63 @@
 #architectureDiagram .map-foot-note{font-size:12px}
 #architectureDiagram .asset:focus-visible .asset-bg{stroke:#b5eaff;stroke-width:3}
 </style>
+<style id="preserved-core-preview">
+/* Layout only: the original SVG geometry, paths and model remain the authority. */
+:root:not([data-theme]),:root[data-theme="dark"]{--bg:#101722;--panel:#182330;--panel-2:#111c29;--line:#34465b;--text:#e9f0f7;--muted:#9fb0c3;--blue:#64c5ec}
+.top-header{gap:12px}.brand-name{letter-spacing:0;font-size:calc(18px * var(--font-scale,1))}.brand-symbol{display:none}
+.brand-sub{font-size:calc(10px * var(--font-scale,1))}.panel{border-radius:10px;box-shadow:none}
+.cie-side-timeline{flex:none;margin:0 0 8px;padding:0 0 8px;border-bottom:1px solid var(--line)}
+.cie-side-timeline .playback-head{display:flex;justify-content:space-between;gap:5px;margin:0 0 5px}
+.cie-side-timeline .playback-head h2{font-size:calc(13px * var(--font-scale,1));margin:0}
+.cie-side-timeline .playback-head .section-id{display:none}
+.cie-side-timeline .timeline{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:4px;margin:0;overflow:visible}
+.cie-side-timeline .timeline-step{height:38px;min-height:38px;padding:3px 6px;min-width:0;white-space:normal}
+.cie-side-timeline .timeline-step strong{white-space:normal;font-size:calc(10px * var(--font-scale,1));line-height:1.15}
+.cie-side-timeline .timeline-step small{display:none}
+.cie-bottom{flex:0 0 auto;display:grid;gap:5px;margin-top:5px;min-width:0}
+.cie-bottom .transport{display:flex;flex-direction:row;justify-content:space-between;align-items:center;gap:6px;flex-wrap:wrap;border-top:1px solid var(--line);padding:5px 0 0}
+.cie-bottom .transport-buttons{display:grid;grid-template-columns:86px 78px 78px 108px 108px;gap:4px;align-items:stretch}
+.cie-bottom .transport-buttons button{width:100%;height:32px;min-height:32px;padding:4px;font-size:calc(11px * var(--font-scale,1));white-space:nowrap}
+.cie-bottom .transport-advanced{margin-left:auto;min-width:0}
+.cie-bottom .transport-advanced-panel{position:absolute;right:0;bottom:100%;z-index:20}
+.cie-results{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px;min-width:0;align-items:stretch}
+.cie-results .outcome-summary{margin:0;min-width:0;padding:6px 8px}
+.cie-results .comparison-result{margin:0;min-width:0;max-height:80px;overflow:auto}
+.cie-results .outcome-summary p{font-size:calc(10px * var(--font-scale,1));line-height:1.35}
+.cie-results .outcome-summary>strong{font-size:calc(12px * var(--font-scale,1))}
+.defense-card{border-radius:6px;box-shadow:none}.sidebar-view-tabs{padding:0;border:0;background:transparent}
+.defense-copy small{display:block;line-height:1.35;font-size:calc(10px * var(--font-scale,1))}
+@media(min-width:1100px) and (min-height:650px){
+ .main{padding:7px 15px}.intro{min-height:58px;max-height:58px;flex-basis:58px;gap:8px}
+ .intro .kicker{display:block;font-size:calc(9px * var(--font-scale,1))}
+ .intro h1{font-size:calc(16px * var(--font-scale,1));line-height:1.2}
+ .intro .scenario-assumption{height:auto;max-height:58px;min-width:190px;overflow:auto}
+ .scenario-selector{flex-basis:310px;width:310px}
+ .scenario-selector label{display:block;font-size:calc(9px * var(--font-scale,1));margin:0 0 2px}
+ .work-area,.work-area.guide-active{grid-template-columns:minmax(0,1fr) 330px;gap:9px}
+ .diagram-panel,.defense-panel{padding:8px;min-height:0}
+ .diagram-scroller{flex:1;min-height:0}
+ .diagram-topline{margin:3px 0;gap:2px}
+ .diagram-head h2{font-size:calc(14px * var(--font-scale,1))}
+ .diagram-foot{min-height:0;max-height:55px;overflow:auto;flex:0 0 auto}
+ .cie-results{height:82px;overflow:auto}
+ .cie-bottom{flex:0 0 auto}
+ .defense-panel{overflow:hidden}
+ .sidebar-view{overflow:auto;min-height:0}
+ .defense-card{padding:5px 6px}.bulk-controls{margin:4px 0}
+}
+@media(max-width:1099px){.cie-bottom .transport-buttons{grid-template-columns:repeat(3,minmax(80px,1fr));width:100%}.cie-results{grid-template-columns:1fr}.cie-side-timeline .timeline-step{height:auto;min-height:40px}}
+@media(min-width:1100px) and (max-height:740px){.cie-side-timeline .timeline-step{height:35px;min-height:35px}.cie-results{height:69px}.intro{flex-basis:52px;min-height:52px;max-height:52px}.intro .scenario-assumption{max-height:52px}}
+</style>
 </head>
 <body>
 <div class="shell">
 <header class="top-header">
 <div class="brand-group">
 <div aria-hidden="true" class="brand-symbol"><svg viewbox="0 0 36 36"><path d="M18 3 31 9v11c0 8-5.5 11.5-13 14C10.5 31.5 5 28 5 20V9z" fill="none" stroke="currentColor" stroke-width="2.2"></path><path d="M11 18h14M18 11v14" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path></svg></div>
-<div><div class="brand-name">CYBER <span>INCIDENT</span> EXPLORER</div><div class="brand-sub">システム構成図で学ぶサイバーインシデント</div></div>
+<div><div class="brand-name">Cyber Incident Explorer</div><div class="brand-sub">システム構成図で学ぶサイバーインシデント</div></div>
 </div>
-<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><span class="vtag">v1.0.0</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
+<div class="header-right"><div class="appearance-settings"><button aria-controls="appearancePanel" aria-expanded="false" class="ghost-btn appearance-trigger" id="appearanceButton" type="button">◐ 表示設定</button><div class="appearance-panel" hidden="" id="appearancePanel"><div class="appearance-heading">画面の表示設定</div><label for="themeSelect">配色テーマ</label><select aria-label="配色テーマ" id="themeSelect"><option value="dark">🌙 ダーク（標準）</option><option value="slate">⬛ スレート（グレー）</option><option value="violet">🟣 バイオレット</option><option value="forest">🌲 フォレスト</option><option value="light">☀ ライト</option></select><label for="fontSizeSelect">文字サイズ</label><select aria-label="文字サイズ" id="fontSizeSelect"><option value="sm">小（90%）</option><option value="md">標準（100%）</option><option value="lg">大（120%）</option></select><p>攻撃線は赤、阻止線は緑、未到達線は灰色のまま。文字サイズも図と解説に反映します。</p><div aria-label="攻撃線の意味" class="appearance-route-key"><span><i class="swatch-pass"></i>通過</span><span><i class="swatch-stop"></i>阻止</span><span><i class="swatch-idle"></i>未到達</span></div><button class="appearance-reset" id="appearanceResetButton" type="button">初期設定に戻す</button></div></div><span class="vtag">v1.1.0 UI preview 11</span><button class="ghost-btn" id="guideButton" type="button">？ 使い方</button></div>
 </header>
 <main class="main">
 <section aria-label="シナリオの概要" class="intro">
@@ -690,42 +738,43 @@
 <h1 id="introTitle">VPNからサーバーへの侵入を、どう防ぐ？</h1>
 <p id="introDescription">侵入経路はリモートアクセスと悪性メールの2種類。通信・権限・不正実行を別々に評価します。</p>
 </div>
-<div class="scenario-selector"><label for="scenarioSelect">学習シナリオ</label><select aria-label="学習シナリオ" id="scenarioSelect"><optgroup label="01｜ランサムウェア"><option value="ransomware-direct">01-A　リモートアクセス経由</option><option value="ransomware-email">01-B　悪性メール添付経由</option></optgroup><optgroup label="02｜認証情報・SaaS"><option value="phishing">02　フィッシング → SaaS侵害</option></optgroup><optgroup label="03｜サプライチェーン"><option value="vendor-access">03-A　委託先・保守接続経由</option><option value="supply-chain">03-B　正規ソフトウェア更新経由</option></optgroup><optgroup label="04｜公開Webへの攻撃"><option value="web-app">04　公開WebアプリのSQLインジェクション</option></optgroup><optgroup label="05｜可用性"><option value="ddos">05　DDoS／サービス停止</option></optgroup><optgroup label="06｜メール詐欺"><option value="bec">06　ビジネスメール詐欺（BEC）</option></optgroup><optgroup label="07–08｜新しい脅威"><option value="insider">07　内部不正／情報持ち出し</option><option value="ai">08　AIアプリへの攻撃</option></optgroup></select><span>攻撃経路で対策の作用点が変化／今回は関係する機器のみ表示</span></div>
+<div class="scenario-selector"><label for="scenarioSelect">学習シナリオ</label><select aria-label="学習シナリオ" id="scenarioSelect"><optgroup label="01｜エンドポイント・インフラ"><option value="ransomware-direct">01-A ランサムウェア（VPN経由）</option><option value="ransomware-email">01-B ランサムウェア（メール添付）</option><option value="ddos">01-C DDoS／サービス停止</option></optgroup><optgroup label="02｜Web・API"><option value="web-app">02-A SQLインジェクション</option></optgroup><optgroup label="03｜アイデンティティ"><option value="phishing">03-A フィッシング→SaaS侵害</option></optgroup><optgroup label="05｜サプライチェーン"><option value="vendor-access">05-A 委託先・保守接続</option><option value="supply-chain">05-B 正規ソフトウェア更新</option></optgroup><optgroup label="06｜業務・内部不正"><option value="bec">06-A ビジネスメール詐欺</option><option value="insider">06-B 内部不正／情報持ち出し</option></optgroup><optgroup label="07｜AI・Agent"><option value="ai">07-A 間接プロンプトインジェクション</option></optgroup></select><span>攻撃経路で対策の作用点が変化／今回は関係する機器のみ表示</span></div>
 <div aria-label="今回のシナリオ前提" class="response-options scenario-assumption" id="scenarioOptions"><p id="edrExplanation">社員PC経由：この例ではPC EDRが探索時に検知・隔離に成功する想定です。</p></div>
 </section>
-<section aria-label="攻撃ステップと再生操作" class="playback panel">
-<div class="playback-head"><div><div class="section-id">01 / INCIDENT TIMELINE</div><h2>攻撃の進行</h2></div><span aria-live="polite" class="step-position" id="stepPosition">STEP 01 / 06</span></div>
-<div aria-label="攻撃ステップ" class="timeline" id="timeline"></div>
-<div class="transport">
-<div class="transport-buttons">
-<button aria-label="前のステップ" class="transport-icon" id="prevButton" title="前のステップ" type="button">‹</button>
+
+<div class="work-area">
+<section aria-labelledby="diagramTitle" class="diagram-panel panel">
+<div class="diagram-head"><div><div class="section-id">01 / 構成図・対策の作用点</div><h2 id="diagramTitle">構成図・対策の作用点</h2><p>機器を選ぶと、その場所の役割と対策を詳しく見られます。</p></div><div class="diagram-actions"><button aria-pressed="false" class="ghost-btn zoom-btn" id="zoomButton" type="button">⛶ 図を拡大</button><div aria-label="構成図の表示モード" class="view-switch" role="group"><button data-mode="system" type="button">通常構成</button><button aria-pressed="true" class="selected" data-mode="attack" type="button">攻撃経路</button><button data-mode="defense" type="button">防御対策</button></div></div></div>
+<div class="diagram-topline"><div class="mode-hint" id="modeHint">グレー線は論理接続（向きなし）。赤／緑の小矢印が進行・遮断方向を示します。通常構成線とは重ねません。</div><div class="legend"><span><i class="legend-mark danger"></i>通過済み</span><span><i class="legend-mark success"></i>阻止 ×</span><span><i class="legend-mark planned"></i>予定・未到達</span></div></div>
+<div aria-label="スクロール可能なシステム構成図" class="diagram-scroller" id="diagramScroller" tabindex="0"><svg aria-labelledby="svgDiagramTitle svgDiagramDesc" id="architectureDiagram" role="img" viewbox="0 0 1440 680" xmlns="http://www.w3.org/2000/svg"><title id="svgDiagramTitle">シナリオに関係する機器の構成図</title><desc id="svgDiagramDesc">社外、境界、社内LAN、認証基盤、サーバー群、クラウド、バックアップ、SOCの8領域。境界のWAFと出口SWG・DLPを別に表示。攻撃経路全体を描き、通過済みを赤、遮断地点を緑の×、予定・未到達を灰色で示します。</desc></svg></div>
+<div class="diagram-foot"><div class="selected-event"><span aria-hidden="true" class="event-indicator" id="eventIndicator"></span><div><strong id="eventTitle">初期侵入</strong><span id="eventSummary">VPNへの不正ログインを試みています。</span><span class="cause-hint" id="causeHint">なぜここを通れる？ ステップの条件を確認できます。</span></div></div><div class="small-meta">※ 通信線は教育上の概念表現です。図は実在企業の構成ではありません。</div></div>
+<div class="cie-bottom"><div class="transport">
+<div class="transport-buttons"><button class="action-button" id="startAttackButton" type="button">攻撃開始</button>
+<button aria-label="前のステップ" class="transport-icon" id="prevButton" title="前のステップ" type="button">◀ 戻る</button>
 <button class="action-button" id="playButton" type="button"><span aria-hidden="true" id="playIcon">▶</span><span id="playText">自動再生</span></button>
-<button aria-label="次のステップ" class="transport-icon" id="nextButton" title="次のステップ" type="button">›</button>
-<button class="transport-text" id="replayButton" title="条件を維持してやり直す／比較する" type="button">対策を変えて比較</button>
+<button aria-label="次のステップ" class="transport-icon" id="nextButton" title="次のステップ" type="button">次へ ▶</button>
+<button class="transport-text" id="replayButton" title="条件を維持してやり直す／比較する" type="button">リセット</button>
 </div>
 <details class="transport-advanced" id="transportAdvanced"><summary>その他の操作</summary>
 <div class="transport-advanced-panel"><div class="speed-group"><label for="speedSelect">再生速度</label><select id="speedSelect"><option value="3200">ゆっくり</option><option selected="" value="2200">標準</option><option value="1100">速い</option></select></div>
 <button class="transport-text" id="restartButton" title="対策も履歴も初期化" type="button">対策・履歴を全初期化</button></div></details>
 </div>
+<div class="cie-results"><div class="outcome-summary"><div class="outcome-head"><span>今回の結果（学習用）</span><span class="outcome-mark" id="outcomeMark"></span></div><strong aria-live="polite" id="outcomeText">情報流出と暗号化被害が発生</strong><p id="outcomeDetail"></p></div><p class="comparison-result" hidden="" id="comparisonResult" aria-live="polite"></p></div></div>
 </section>
-<div class="work-area">
-<section aria-labelledby="diagramTitle" class="diagram-panel panel">
-<div class="diagram-head"><div><div class="section-id">02 / SYSTEM ARCHITECTURE</div><h2 id="diagramTitle">システム構成図</h2><p>機器を選ぶと、その場所の役割と対策を詳しく見られます。</p></div><div class="diagram-actions"><button aria-pressed="false" class="ghost-btn zoom-btn" id="zoomButton" type="button">⛶ 図を拡大</button><div aria-label="構成図の表示モード" class="view-switch" role="group"><button data-mode="system" type="button">通常構成</button><button aria-pressed="true" class="selected" data-mode="attack" type="button">攻撃経路</button><button data-mode="defense" type="button">防御対策</button></div></div></div>
-<div class="diagram-topline"><div class="mode-hint" id="modeHint">グレー線は論理接続（向きなし）。赤／緑の小矢印が進行・遮断方向を示します。通常構成線とは重ねません。</div><div class="legend"><span><i class="legend-mark danger"></i>通過済み</span><span><i class="legend-mark success"></i>阻止 ×</span><span><i class="legend-mark planned"></i>予定・未到達</span></div></div>
-<div aria-label="スクロール可能なシステム構成図" class="diagram-scroller" id="diagramScroller" tabindex="0"><svg aria-labelledby="svgDiagramTitle svgDiagramDesc" id="architectureDiagram" role="img" viewbox="0 0 1440 680" xmlns="http://www.w3.org/2000/svg"><title id="svgDiagramTitle">シナリオに関係する機器の構成図</title><desc id="svgDiagramDesc">社外、境界、社内LAN、認証基盤、サーバー群、クラウド、バックアップ、SOCの8領域。境界のWAFと出口SWG・DLPを別に表示。攻撃経路全体を描き、通過済みを赤、遮断地点を緑の×、予定・未到達を灰色で示します。</desc></svg></div>
-<div class="diagram-foot"><div class="selected-event"><span aria-hidden="true" class="event-indicator" id="eventIndicator"></span><div><strong id="eventTitle">初期侵入</strong><span id="eventSummary">VPNへの不正ログインを試みています。</span><span class="cause-hint" id="causeHint">なぜここを通れる？ ステップの条件を確認できます。</span></div></div><div class="small-meta">※ 通信線は教育上の概念表現です。図は実在企業の構成ではありません。</div></div>
-</section>
-<aside aria-label="対策・攻撃解説パネル" class="defense-panel panel"><div aria-label="右側の表示" class="sidebar-view-tabs" role="tablist"><button aria-controls="defenseView" aria-selected="true" id="defensePanelTab" role="tab" type="button">⚙ 対策</button><button aria-controls="scenarioGuidePanel" aria-selected="false" id="learningPanelTab" role="tab" type="button">📖 ステップ解説</button></div><div aria-labelledby="defensePanelTab" class="sidebar-view" id="defenseView" role="tabpanel">
+<aside aria-label="対策・攻撃解説パネル" class="defense-panel panel"><section aria-label="攻撃ステップと再生操作" class="cie-side-timeline">
+<div class="playback-head"><div><div class="section-id">02 / 攻撃の進行</div><h2>攻撃の進行</h2></div><span aria-live="polite" class="step-position" id="stepPosition">STEP 01 / 06</span></div>
+<div aria-label="攻撃ステップ" class="timeline" id="timeline"></div>
+</section><div aria-label="右側の表示" class="sidebar-view-tabs" role="tablist"><button aria-controls="defenseView" aria-selected="true" id="defensePanelTab" role="tab" type="button">⚙ 対策</button><button aria-controls="scenarioGuidePanel" aria-selected="false" id="learningPanelTab" role="tab" type="button">📖 ステップ解説</button></div><div aria-labelledby="defensePanelTab" class="sidebar-view" id="defenseView" role="tabpanel">
 <div class="defense-title"><div><div class="section-id">03 / DEFENSE LAB · 攻撃履歴を維持</div><h2 id="defenseTitle">対策の切り替え</h2></div><span class="on-count" id="enabledCount">0 / 6 ON</span></div>
-<p aria-live="polite" class="defense-instruction" id="defenseInstruction">【初めての方】対策OFFで攻撃開始 → 最後に「対策を変えて比較」→ 対策ONでもう一度開始。</p>
-<p class="comparison-result" hidden="" id="comparisonResult" aria-live="polite"></p><div class="bulk-controls" id="allSetupControls"><button class="all-on" id="allOnButton" type="button">✓ 一括ON</button><button class="all-off" id="allOffButton" type="button">一括OFF</button></div>
-<div class="history-locked-note" hidden="" id="historyLockedNote">攻撃履歴は固定されています。上部の「対策を変えて比較」を押すと、現在のシナリオを保って対策を選び直せます。</div>
+<p aria-live="polite" class="defense-instruction" id="defenseInstruction">【初めての方】対策OFFで攻撃開始 → 最後に「リセット」→ 対策ONでもう一度開始。</p>
+<div class="bulk-controls" id="allSetupControls"><button class="all-on" id="allOnButton" type="button">✓ 一括ON</button><button class="all-off" id="allOffButton" type="button">一括OFF</button></div>
+<div class="history-locked-note" hidden="" id="historyLockedNote">実行済みの履歴は固定されています。対策は変更できます。開始前から比較する場合は「リセット」。</div>
 <div aria-label="発生済みインシデントへの対応" class="recovery-actions" hidden="" id="recoveryActions">
 <div class="recovery-buttons"><button id="containButton" type="button">① 封じ込め実施</button><button id="restoreButton" type="button">② File Server復元</button></div>
 <p id="recoveryInfo">暗号化被害は発生済みです。攻撃履歴を消さず、順番に対応します。</p>
 </div>
 <div class="defense-controls" id="defenseControls"></div>
-<div class="outcome-summary"><div class="outcome-head"><span>今回の結果（学習用）</span><span class="outcome-mark" id="outcomeMark"></span></div><strong aria-live="polite" id="outcomeText">情報流出と暗号化被害が発生</strong><p id="outcomeDetail"></p></div>
+
 <div class="control-note"><span>ⓘ</span><p>開始前に選んだ対策は最初から有効。途中のON/OFFは次の未実行ステップから適用し、過去の侵害や流出は取り消しません。復旧は別操作です。</p></div>
 </div><section aria-labelledby="learningPanelTab" class="scenario-guide-panel" hidden="" id="scenarioGuidePanel" role="tabpanel">
 <header class="scenario-guide-head"><div><span class="section-id">SCENARIO GUIDE / 攻撃の全体像</span><h2 id="scenarioGuideTitle">ステップ解説</h2><p id="scenarioGuideTag"></p></div><button aria-label="シナリオ解説を閉じる" class="ghost-btn" id="closeScenarioGuideButton" type="button">対策に戻る</button></header>
@@ -767,10 +816,10 @@
 <p class="guide-lead">この教材は、<strong>対策なしの結果</strong>と<strong>対策を入れた結果</strong>を比べながら学びます。</p>
 <ol class="guide-steps">
 <li><strong>① 対策なしで攻撃を体験</strong><span>シナリオを選び、右側の「対策」をすべてOFFにして「攻撃開始」。自動再生または「次へ」で最後まで進めます。</span></li>
-<li><strong>② 対策を変えて比べる</strong><span>最後に「対策を変えて比較」を押し、右側で対策をONにします。</span></li>
+<li><strong>② 対策を変えて比べる</strong><span>最後に「リセット」を押し、右側で対策をONにします。</span></li>
 <li><strong>③ 対策をONにしてもう一度開始</strong><span>もう一度「攻撃開始」。赤い通過経路と緑の阻止地点を比べましょう。</span></li>
 </ol>
-<p class="guide-compare-note">※「全初期化」は対策もOFFに戻します。比較したい場合は「対策を変えて比較」を使ってください。</p>
+<p class="guide-compare-note">※「全初期化」は対策もOFFに戻します。比較したい場合は「リセット」を使ってください。</p>
 <details class="guide-more"><summary>詳しい操作と注意点</summary><ul>
 <li>構成図では「通常構成／攻撃経路／防御対策」を切り替えられます。機器を選ぶと通過・阻止の理由が分かります。</li>
 <li>右側の「ステップ解説」では攻撃の流れと各ステップを確認できます。「対策」に戻すとON/OFFを操作できます。</li>
@@ -1856,12 +1905,12 @@ window.CyberGuides.insider={
       // Preserve the immediately previous outcome before clearing immutable history.
       if(state.step!==scenario.stages.length-1)setStep(scenario.stages.length-1);
       state.previousOutcome={label:state.historyControls.every(record=>activeControls().every(c=>!record[c.id]))?'対策OFF時':'前回',text:$('outcomeText').textContent};
-    }else state.previousOutcome=null;
-    state.compareMode=completed;
+    }else if(state.maxReached>=0){state.previousOutcome={label:'前回（途中）',text:$('outcomeText').textContent};}
+    state.compareMode=!!state.previousOutcome;
     resetIncident();state.step=0;state.selectedLocation=null;
     state.lastAction=completed?'対策を選び直して比較してください。':'シナリオと現在の対策を保持して開始前に戻りました。';
     if(typeof document!=='undefined'){
-      if(completed)setSideView('defense');
+      if(state.compareMode)setSideView('defense');
       render();
     }
   }
@@ -3053,15 +3102,16 @@ window.CyberGuides.insider={
     });
     $('prevButton').disabled=state.maxReached<0||state.step===0;
     $('nextButton').disabled=state.step===scenario.stages.length-1&&state.maxReached>=state.step;
-    $('nextButton').hidden=state.step===scenario.stages.length-1&&state.maxReached>=state.step;
+    $('nextButton').hidden=false;
     $('nextButton').title=start?'攻撃を開始':state.maxReached===state.step?'次の攻撃ステップへ':'記録済みの次ステップへ';
     const completed=state.maxReached===scenario.stages.length-1;
     $('playButton').disabled=completed;
-    $('playButton').hidden=completed;
-    if(!state.playing){$('playText').textContent=completed?'再生終了':start?'攻撃開始':'再生を続ける';}
+    $('playButton').hidden=false;
+    $('startAttackButton').disabled=!start;
+    if(!state.playing){$('playText').textContent='自動再生';}
     const replay=$('replayButton');
-    replay.hidden=start;
-    replay.textContent=completed?'対策を変えて比較':'↺ 最初から';
+    replay.hidden=false;
+    replay.textContent='リセット';
     replay.title=completed?'シナリオと現在の対策設定を保持して、対策を選び直す画面に戻ります':'シナリオと対策を維持して開始前に戻ります';
     replay.classList.toggle('compare-cta',completed);
   }
@@ -3069,12 +3119,12 @@ window.CyberGuides.insider={
     const inRecovery=!isPhishing()&&!isDdos()&&!isBec()&&!isInsider()&&!isAi()&&state.step===5;
     const supplyRecovery=isSupply()||isVendor()||isWeb();
     const fixed=!isPhishing()&&Boolean(state.incidentSnapshot);
-    $('allSetupControls').hidden=fixed;
+    $('allSetupControls').hidden=false;
     $('recoveryActions').hidden=!inRecovery;
     $('historyLockedNote').hidden=!fixed||inRecovery;
     $('defenseTitle').textContent=inRecovery?(isWeb()?'Webの停止・影響調査':isVendor()?'委託先接続の封じ込め':supplyRecovery?'配布停止・影響調査':'封じ込め・復旧'):fixed?'攻撃履歴（固定済み）':'対策の切り替え';
     const completed=state.maxReached===scenario.stages.length-1;
-    $('defenseInstruction').textContent=state.maxReached<0?(state.compareMode?'② 対策をONにして、もう一度「攻撃開始」。':'① 対策OFFで「攻撃開始」。完了後に結果を比べます。'):completed?'② 上の「対策を変えて比較」→ 対策をON → 再生。':state.step<state.maxReached?'記録済みのステップを確認中。':'攻撃の進行と対策の作用点を確認しましょう。';
+    $('defenseInstruction').textContent=state.maxReached<0?(state.compareMode?'② 対策をONにして、もう一度「攻撃開始」。':'① 対策OFFで「攻撃開始」。完了後に結果を比べます。'):completed?'② 上の「リセット」→ 対策をON → 再生。':state.step<state.maxReached?'記録済みのステップを確認中。':'攻撃の進行と対策の作用点を確認しましょう。';
     if(!inRecovery)return;
     const contain=$('containButton'),restore=$('restoreButton');
     restore.hidden=supplyRecovery;
@@ -3149,7 +3199,7 @@ window.CyberGuides.insider={
     if(!isAi()&&choices.length>1)root.append(assumption);
     activeControls().forEach(c=>{
       const enabled=state.controls[c.id],item=document.createElement('div');
-      const locked=(state.step<state.maxReached)||(c.id==='backup'&&state.maxReached>=0)||(state.maxReached===scenario.stages.length-1)||(!isPhishing()&&Boolean(state.incidentSnapshot));
+      const locked=c.id==='backup'&&state.maxReached>=0;
       const applicable=isPhishing()||relevantControl(c.id);
       item.className='defense-card'+(enabled?' on':'')+(locked?' locked':'')+(!applicable?' off-path':'');
       item.innerHTML=`<div class="defense-copy"><strong>${escapeHtml(c.label)}</strong><small>${escapeHtml(c.tag)} · ${escapeHtml(c.desc)}</small>${!applicable?'<span class="off-path-note">この攻撃経路では直接作用しない</span>':''}</div>`;
@@ -3185,7 +3235,7 @@ window.CyberGuides.insider={
     const count=activeControls().filter(c=>state.controls[c.id]).length;
     $('enabledCount').textContent=`${count} / ${activeControls().length} ON`;
     renderRecoveryActions(evaluation());
-    const bulkLocked=state.step<state.maxReached||state.maxReached===scenario.stages.length-1||(!isPhishing()&&Boolean(state.incidentSnapshot));
+    const bulkLocked=false;
     $('allOnButton').disabled=bulkLocked;$('allOffButton').disabled=bulkLocked;
     $('allOnButton').classList.toggle('is-current',count===activeControls().length);
     $('allOffButton').classList.toggle('is-current',count===0);
@@ -3276,7 +3326,6 @@ window.CyberGuides.insider={
     state.timer=setInterval(()=>{if(!advance()||state.step===scenario.stages.length-1)stopPlayback();},state.speed);
   }
   function controlsAll(value){
-    if(state.step<state.maxReached||state.maxReached===scenario.stages.length-1||state.incidentSnapshot)return;
     stopPlayback();activeControls().forEach(c=>{if(c.id!=='backup'||state.maxReached<0)state.controls[c.id]=value;});
     state.lastAction=`対策をすべて${value?'ON':'OFF'}。`;render();
   }
@@ -3291,7 +3340,7 @@ window.CyberGuides.insider={
     $('scenarioSelect').value=key;
     $('introTitle').textContent=key==='ai'?'外部文書の指示で、AIが社内情報を持ち出す？':key==='insider'?'正規従業員の機密情報持ち出しは、どこで止める？':key==='bec'?'メール乗っ取りから不正送信まで、IT対策はどこで効く？':key==='ddos'?'Webサーバーが侵害されなくても、サービスは止まる？':key==='web-app'?'公開WebアプリのSQLインジェクション、どこで防げる？':key==='vendor-access'?'信頼している保守委託先のアカウントが悪用されたら？':key==='supply-chain-tampered'?'配信された更新ファイルが、途中ですり替えられたら？':key==='supply-chain'?'正規ソフトの更新が、攻撃の入口になる？':key==='phishing'?'フィッシングからSaaS情報漏えいへ、どうつながる？':key==='ransomware-direct'?'VPNからサーバーへの直接侵入は、どう防ぐ？':key==='ransomware-email'?'悪性メールからランサムウェアへ、どうつながる？':'ランサムウェア攻撃は、どこから広がるのか？';
     $('introDescription').textContent=scenario.summary;
-    $('caseNumber').textContent=`INTERACTIVE SECURITY LEARNING / CASE ${key==='ransomware-direct'?'01-A':key==='ransomware-email'?'01-B':key==='vendor-access'?'03-A':key==='ai'?'08':key==='insider'?'07':key==='bec'?'06':key==='ddos'?'05':key==='web-app'?'04':key==='supply-chain'?'03-B':key==='supply-chain-tampered'?'補足例':scenario.number}`;
+    $('caseNumber').textContent='INTERACTIVE SECURITY LEARNING / CASE '+({"ransomware-direct":"01-A","ransomware-email":"01-B","ddos":"01-C","web-app":"02-A","phishing":"03-A","vendor-access":"05-A","supply-chain":"05-B","bec":"06-A","insider":"06-B","ai":"07-A"}[key]||scenario.number);
     document.title=`Cyber Incident Explorer v1.0.0 — ${scenario.category}`;if(sideView==='guide')renderScenarioGuide();
     const refs=$('referenceList');refs.replaceChildren();scenario.references.forEach(ref=>{const a=document.createElement('a');a.href=ref.url;a.textContent=ref.label+' ↗';a.target='_blank';a.rel='noopener noreferrer';refs.append(a);});render();
   }
@@ -3482,6 +3531,7 @@ window.CyberGuides.insider={
     $('replayButton').addEventListener('click',()=>{stopPlayback();replaySameSettings();});
     $('restartButton').addEventListener('click',()=>{stopPlayback();resetEntireSimulation();$('transportAdvanced').open=false;});
     $('playButton').addEventListener('click',togglePlayback);
+    $('startAttackButton').addEventListener('click',()=>{stopPlayback();if(state.maxReached<0)advance();});
     $('speedSelect').addEventListener('change',ev=>{state.speed=Number(ev.target.value);if(state.playing){stopPlayback();togglePlayback();}});
     document.addEventListener('pointerdown',event=>{const advanced=$('transportAdvanced');if(advanced.open&&!advanced.contains(event.target))advanced.open=false;},true);
     $('containButton').addEventListener('click',()=>{if(isPhishing()||state.step!==5||!state.incidentSnapshot||state.recovery.contained)return;stopPlayback();state.recovery.contained=true;render();});
@@ -3555,16 +3605,7 @@ window.CyberGuides.insider={
   'use strict';
   const select=document.getElementById('scenarioSelect');
   if(!select)return;
-  const shorter={
-    'ransomware-direct':'01-A リモートアクセス',
-    'ransomware-email':'01-B 悪性メール添付',
-    'phishing':'02 フィッシング→SaaS',
-    'vendor-access':'03-A 委託先・保守接続',
-    'supply-chain':'03-B ソフトウェア更新',
-    'web-app':'04 SQLインジェクション',
-    'ddos':'05 DDoS',
-    'bec':'06 ビジネスメール詐欺','insider':'07 内部不正','ai':'08 AIアプリへの攻撃'
-  };
+  const shorter={"ransomware-direct":"01-A ランサムウェア（VPN経由）","ransomware-email":"01-B ランサムウェア（メール添付）","ddos":"01-C DDoS／サービス停止","web-app":"02-A SQLインジェクション","phishing":"03-A フィッシング→SaaS侵害","vendor-access":"05-A 委託先・保守接続","supply-chain":"05-B 正規ソフトウェア更新","bec":"06-A ビジネスメール詐欺","insider":"06-B 内部不正／情報持ち出し","ai":"07-A 間接プロンプトインジェクション"};
   const options=[...select.options];
   options.forEach(o=>{o.dataset.fullLabel=o.textContent;o.title=o.textContent});
   const canvas=document.createElement('canvas');
