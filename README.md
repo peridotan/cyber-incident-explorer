@@ -1,9 +1,9 @@
-# Cyber Incident Explorer v0.5.44
+# Cyber Incident Explorer v1.0.0
 
 架空の企業システム構成図を見ながら、サイバー攻撃の進行、対策の作用点、効果の限界を学ぶ日本語のWeb教材です。
 
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
-**ソースZIP:** [cyber-incident-explorer-v0.5.44.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.44.zip)
+**ソースZIP:** [cyber-incident-explorer-v1.0.0.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.44.zip)
 
 ## 配布ZIPと検証用ソースの違い
 
@@ -37,6 +37,13 @@ GitHub Actionsの `CIE browser layout QA` でも同じブラウザーテスト�
 1. シナリオを選び、対策をOFFにして攻撃を最後まで実行します。
 2. 完了後の「対策を変えて比較」を押し、対策を選んで再実行します。
 3. 前回と今回の結果を比べ、「解説」で作用範囲と限界を確認します。
+
+## v1.0.0 正式公開（2026-11-26）
+
+- 全10シナリオ・39対策を収録。攻撃経路、機器の事象、操作の成功・阻止、復旧の違いを構成図とステップ解説で学習できます。
+- Workで発見された表示・説明の不整合をv0.5.44までに修正済み。修正対象7対策の独立再QAに合格。
+- v1.0.0公開前のChromium／Playwright 65件の回帰テストを実施。詳細は [QA-REPORT.md](QA-REPORT.md) と [リリース前レビュー](docs/v1-release-readiness.md) を参照してください。
+- 正式版の変更点と検証範囲は [RELEASE_NOTES.md](RELEASE_NOTES.md) に記載しています。
 
 ## v0.5.44の変更（Work独立操作QAで発見した表示不具合の修正）
 
