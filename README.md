@@ -1,9 +1,9 @@
-# Cyber Incident Explorer v0.5.43
+# Cyber Incident Explorer v0.5.44
 
 架空の企業システム構成図を見ながら、サイバー攻撃の進行、対策の作用点、効果の限界を学ぶ日本語のWeb教材です。
 
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
-**ソースZIP:** [cyber-incident-explorer-v0.5.43.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.43.zip)
+**ソースZIP:** [cyber-incident-explorer-v0.5.44.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.44.zip)
 
 ## 収録シナリオ
 
@@ -23,6 +23,14 @@
 1. シナリオを選び、対策をOFFにして攻撃を最後まで実行します。
 2. 完了後の「対策を変えて比較」を押し、対策を選んで再実行します。
 3. 前回と今回の結果を比べ、「解説」で作用範囲と限界を確認します。
+
+## v0.5.44の変更（Work独立操作QAで発見した表示不具合の修正）
+
+- Web DB／AI文書APIの最小権限で読取拒否した際、別の対策（SWG）の説明が表示される問題を修正。
+- フィッシング最終STEPの未定義な理由表示を修正。
+- DDoS上流緩和後の一般利用者の正常通信・サービス継続状態を修正。
+- 01-A／01-Bの重複した結果文言を改善。
+- Work独立再QAで既知の7対策が7/7件合格。Chromium回帰55/55件合格（版上げ前）。
 
 ## v0.5.43の変更（状態表示の明確化）
 
