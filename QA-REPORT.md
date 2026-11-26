@@ -1,3 +1,18 @@
+# Cyber Incident Explorer — 現行版のQA履歴
+
+## v0.5.44（2026-11-26）修正・公開確認サマリー
+
+- **Workによる独立の公開サイトQA（修正前v0.5.43）**：10シナリオ全OFF 10/10、39対策単独ON 32/39、画面表示30条件。重大1・中2・軽微1の説明／状態表示問題を報告。
+- **WorkによるPR #20修正版の独立操作再QA**：既知の不合格対策7/7件合格。フィッシング全OFF＋4対策の5条件、01-A／01-Bの重複文、途中変更・比較・全初期化について合格。今回の対象に限りマージ推奨。39対策・全画面条件を網羅的に再試験したわけではない。
+- **Playwright / Chromium**：v0.5.44のPR #20で55/55件合格（[Run 45758583142](https://github.com/peridotan/cyber-incident-explorer/actions/runs/45758583142)）。過去の39/39ロジック単独テストはv0.5.42の記録であり、現行版の網羅的な再検証を意味しない。
+- **公開画面**：利用者提供のスクリーンショットでGitHub Pagesのv0.5.44版表示と初期画面を確認。公開後の全操作は今回の証拠に含まない。
+- **v1.0.0に向けた追加E2E**：PR #19の10シナリオの全OFF→比較→先頭対策ON→再実行→全初期化テストをv0.5.44へ統合。**Chromium 65/65 PASS**（[Run 45762765201](https://github.com/peridotan/cyber-incident-explorer/actions/runs/45762765201)）。ただしWorkでの全39対策の再操作は今回の追加テストに含まれない。
+- 開発・配布の品質評価と残条件は[リリース前総合レビュー](docs/v1-release-readiness.md)を参照。
+
+---
+
+## 過去のQA記録（v0.5.42、2026-11-24）
+
 # Cyber Incident Explorer v0.5.42 公開前QAレポート
 
 - 対象：`peridotan/cyber-incident-explorer` 作業ブランチ `fix/v0.5.42-qa-fixes`

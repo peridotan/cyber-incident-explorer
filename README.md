@@ -5,6 +5,20 @@
 **公開サイト:** [Cyber Incident Explorer](https://peridotan.github.io/cyber-incident-explorer/)  
 **ソースZIP:** [cyber-incident-explorer-v0.5.44.zip](https://peridotan.github.io/cyber-incident-explorer/cyber-incident-explorer-v0.5.44.zip)
 
+## 配布ZIPと検証用ソースの違い
+
+上記の「ソースZIP」は、ブラウザーで教材を開いて利用・再配布するための**最小構成**です。収録するのは `index.html`、`README.md`、`QA-REPORT.md`、`LICENSE`、`CONTRIBUTING.md` の5ファイルで、開発・検証を再現するPlaywrightテスト群は含まれません。
+
+テストの再実行や変更提案には、[GitHubリポジトリ](https://github.com/peridotan/cyber-incident-explorer)全体を取得してください。Node.jsとChromiumが利用できる環境では以下を実行できます。
+
+```bash
+npm install
+npx playwright install --with-deps chromium
+npm run test:browser
+```
+
+GitHub Actionsの `CIE browser layout QA` でも同じブラウザーテストを実行します。QAは教材上の想定条件を検証するものであり、実製品の防御効果を保証するものではありません。
+
 ## 収録シナリオ
 
 - ランサムウェア（リモートアクセス経由）
